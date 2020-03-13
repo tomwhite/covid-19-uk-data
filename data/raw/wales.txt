@@ -2,6 +2,28 @@
 
 This is compiled into a machine-readable form in wales-new-cases.csv.
 
+2020-03-13
+https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/
+
+Total: 38
+New: 13
+
+“We can confirm that 13 new cases have tested positive for Novel Coronavirus (COVID-19) in Wales, bringing the total number of confirmed cases to 38.
+
+“The process of identifying and contacting close contacts of the new cases is underway, and we are taking all appropriate actions to protect the public’s health.
+
+“The local authority locations of the new cases are:
+
+Four in Caerphilly local authority area
+Two in Swansea local authority area
+One in Anglesey local authority area
+One Cardiff local authority area
+One Carmarthenshire local authority area
+One Flintshire local authority area
+One Monmouthshire local authority area
+One Newport local authority area
+One in Powys local authority area"
+
 2020-03-12
 https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/
 

@@ -29,10 +29,10 @@ def check_latest(totals_csv_file, cases_csv_file, country):
             "Mismatch. Total cases for {} on {} is {} from {} and {} from {}".format(
                 country,
                 date,
-                totals_csv_file,
                 total_cases,
-                cases_csv_file,
+                totals_csv_file,
                 total_cases_check,
+                cases_csv_file,
             )
         )
 

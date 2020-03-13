@@ -106,3 +106,45 @@ Run a sanity check that the area case numbers add up to the totals:
 ```bash
 ./tools/check_totals.py
 ```
+
+## Daily workflow
+
+England
+```bash
+DATE=$(date +'%Y-%m-%d')
+open https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6
+# Click on the "Download" link
+mv ~/Downloads/CountyUAs_cases_table.csv data/raw/CountyUAs_cases_table-$DATE.csv
+./tools/gen_daily_areas_england.py data/raw/CountyUAs_cases_table-$DATE.csv data/daily/covid-19-cases-$DATE-england.csv
+open https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases
+# Edit data/covid-19-totals-uk.csv
+```
+
+Wales
+```bash
+DATE=$(date +'%Y-%m-%d')
+open https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/
+# Edit data/raw/wales-new-cases.csv
+./tools/gen_daily_areas_wales.py data/daily/covid-19-cases-$DATE-wales.csv
+# Edit data/covid-19-totals-wales.csv on Thursdays
+```
+
+Scotland
+```bash
+DATE=$(date +'%Y-%m-%d')
+curl https://www.gov.scot/coronavirus-covid-19/ -o data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html
+./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html data/daily/covid-19-cases-$DATE-scotland.csv
+# Edit data/covid-19-totals-scotland.csv
+```
+
+Northern Ireland
+```bash
+open https://www.publichealth.hscni.net/news/covid-19-coronavirus
+# Edit data/covid-19-totals-northern-ireland.csv
+```
+
+Consolidate and check
+```bash
+./tools/consolidate_daily_areas.py
+./tools/check_totals.py
+```

@@ -1,0 +1,1290 @@
+Date,Country,AreaCode,Area,TotalCases
+2020-03-05,England,E09000002,Barking and Dagenham,0
+2020-03-05,England,E09000003,Barnet,1 to 4
+2020-03-05,England,E08000016,Barnsley,1 to 4
+2020-03-05,England,E06000022,Bath and North East Somerset,0
+2020-03-05,England,E06000055,Bedford,0
+2020-03-05,England,E09000004,Bexley,0
+2020-03-05,England,E08000025,Birmingham,1 to 4
+2020-03-05,England,E06000008,Blackburn with Darwen,0
+2020-03-05,England,E06000009,Blackpool,0
+2020-03-05,England,E08000001,Bolton,1 to 4
+2020-03-05,England,,Bournemouth,0
+2020-03-05,England,E06000036,Bracknell Forest,0
+2020-03-05,England,E08000032,Bradford,1 to 4
+2020-03-05,England,E09000005,Brent,0
+2020-03-05,England,E06000043,Brighton and Hove,6
+2020-03-05,England,E06000023,"Bristol, City of",0
+2020-03-05,England,E09000006,Bromley,1 to 4
+2020-03-05,England,E10000002,Buckinghamshire,0
+2020-03-05,England,E08000002,Bury,1 to 4
+2020-03-05,England,E08000033,Calderdale,0
+2020-03-05,England,E10000003,Cambridgeshire,0
+2020-03-05,England,E09000007,Camden,1 to 4
+2020-03-05,England,E06000056,Central Bedfordshire,0
+2020-03-05,England,E06000049,Cheshire East,0
+2020-03-05,England,E06000050,Cheshire West and Chester,0
+2020-03-05,England,E09000001,City of London,0
+2020-03-05,England,E06000052,Cornwall,1 to 4
+2020-03-05,England,E06000047,County Durham,0
+2020-03-05,England,E08000026,Coventry,0
+2020-03-05,England,E09000008,Croydon,0
+2020-03-05,England,E10000006,Cumbria,0
+2020-03-05,England,E06000005,Darlington,0
+2020-03-05,England,E06000015,Derby,0
+2020-03-05,England,E10000007,Derbyshire,1 to 4
+2020-03-05,England,E10000008,Devon,7
+2020-03-05,England,E08000017,Doncaster,0
+2020-03-05,England,E06000059,Dorset,0
+2020-03-05,England,E08000027,Dudley,0
+2020-03-05,England,E09000009,Ealing,1 to 4
+2020-03-05,England,E06000011,East Riding of Yorkshire,0
+2020-03-05,England,E10000011,East Sussex,0
+2020-03-05,England,E09000010,Enfield,0
+2020-03-05,England,E10000012,Essex,1 to 4
+2020-03-05,England,E08000037,Gateshead,0
+2020-03-05,England,E10000013,Gloucestershire,1 to 4
+2020-03-05,England,E09000011,Greenwich,0
+2020-03-05,England,E09000012,Hackney,0
+2020-03-05,England,E06000006,Halton,0
+2020-03-05,England,E09000013,Hammersmith and Fulham,0
+2020-03-05,England,E10000014,Hampshire,1 to 4
+2020-03-05,England,E09000014,Haringey,0
+2020-03-05,England,E09000015,Harrow,1 to 4
+2020-03-05,England,E06000001,Hartlepool,0
+2020-03-05,England,E09000016,Havering,0
+2020-03-05,England,E06000019,"Herefordshire, County of",0
+2020-03-05,England,E10000015,Hertfordshire,5
+2020-03-05,England,E09000017,Hillingdon,0
+2020-03-05,England,E09000018,Hounslow,1 to 4
+2020-03-05,England,E06000046,Isle of Wight,0
+2020-03-05,England,E06000053,Isles of Scilly,0
+2020-03-05,England,E09000019,Islington,0
+2020-03-05,England,E09000020,Kensington and Chelsea,1 to 4
+2020-03-05,England,E10000016,Kent,1 to 4
+2020-03-05,England,E06000010,"Kingston upon Hull, City of",1 to 4
+2020-03-05,England,E09000021,Kingston upon Thames,1 to 4
+2020-03-05,England,E08000034,Kirklees,0
+2020-03-05,England,E08000011,Knowsley,0
+2020-03-05,England,E09000022,Lambeth,0
+2020-03-05,England,E10000017,Lancashire,1 to 4
+2020-03-05,England,E08000035,Leeds,1 to 4
+2020-03-05,England,E06000016,Leicester,0
+2020-03-05,England,E10000018,Leicestershire,0
+2020-03-05,England,E09000023,Lewisham,1 to 4
+2020-03-05,England,E10000019,Lincolnshire,1 to 4
+2020-03-05,England,E08000012,Liverpool,0
+2020-03-05,England,E06000032,Luton,0
+2020-03-05,England,E08000003,Manchester,1 to 4
+2020-03-05,England,E06000035,Medway,0
+2020-03-05,England,E09000024,Merton,1 to 4
+2020-03-05,England,E06000002,Middlesbrough,0
+2020-03-05,England,E06000042,Milton Keynes,0
+2020-03-05,England,E08000021,Newcastle upon Tyne,1 to 4
+2020-03-05,England,E09000025,Newham,0
+2020-03-05,England,E10000020,Norfolk,0
+2020-03-05,England,E06000012,North East Lincolnshire,0
+2020-03-05,England,E06000013,North Lincolnshire,0
+2020-03-05,England,E06000024,North Somerset,0
+2020-03-05,England,E08000022,North Tyneside,0
+2020-03-05,England,E10000023,North Yorkshire,0
+2020-03-05,England,E10000021,Northamptonshire,1 to 4
+2020-03-05,England,E06000057,Northumberland,0
+2020-03-05,England,E06000018,Nottingham,1 to 4
+2020-03-05,England,E10000024,Nottinghamshire,0
+2020-03-05,England,E08000004,Oldham,1 to 4
+2020-03-05,England,E10000025,Oxfordshire,1 to 4
+2020-03-05,England,E06000031,Peterborough,1 to 4
+2020-03-05,England,E06000026,Plymouth,0
+2020-03-05,England,,Poole,0
+2020-03-05,England,E06000044,Portsmouth,0
+2020-03-05,England,E06000038,Reading,0
+2020-03-05,England,E09000026,Redbridge,0
+2020-03-05,England,E06000003,Redcar and Cleveland,0
+2020-03-05,England,E09000027,Richmond upon Thames,0
+2020-03-05,England,E08000005,Rochdale,0
+2020-03-05,England,E08000018,Rotherham,0
+2020-03-05,England,E06000017,Rutland,0
+2020-03-05,England,E08000006,Salford,0
+2020-03-05,England,E08000028,Sandwell,0
+2020-03-05,England,E08000014,Sefton,0
+2020-03-05,England,E08000019,Sheffield,0
+2020-03-05,England,E06000051,Shropshire,0
+2020-03-05,England,E06000039,Slough,0
+2020-03-05,England,E08000029,Solihull,0
+2020-03-05,England,E10000027,Somerset,1 to 4
+2020-03-05,England,E06000025,South Gloucestershire,0
+2020-03-05,England,E08000023,South Tyneside,0
+2020-03-05,England,E06000045,Southampton,0
+2020-03-05,England,E06000033,Southend-on-Sea,0
+2020-03-05,England,E09000028,Southwark,1 to 4
+2020-03-05,England,E08000013,St. Helens,0
+2020-03-05,England,E10000028,Staffordshire,1 to 4
+2020-03-05,England,E08000007,Stockport,0
+2020-03-05,England,E06000004,Stockton-on-Tees,0
+2020-03-05,England,E06000021,Stoke-on-Trent,0
+2020-03-05,England,E10000029,Suffolk,0
+2020-03-05,England,E08000024,Sunderland,0
+2020-03-05,England,E10000030,Surrey,1 to 4
+2020-03-05,England,E09000029,Sutton,0
+2020-03-05,England,E06000030,Swindon,0
+2020-03-05,England,E08000008,Tameside,0
+2020-03-05,England,E06000020,Telford and Wrekin,0
+2020-03-05,England,E06000034,Thurrock,0
+2020-03-05,England,E06000027,Torbay,1 to 4
+2020-03-05,England,E09000030,Tower Hamlets,0
+2020-03-05,England,E08000009,Trafford,1 to 4
+2020-03-05,England,E08000036,Wakefield,0
+2020-03-05,England,E08000030,Walsall,0
+2020-03-05,England,E09000031,Waltham Forest,0
+2020-03-05,England,E09000032,Wandsworth,1 to 4
+2020-03-05,England,E06000007,Warrington,0
+2020-03-05,England,E10000031,Warwickshire,0
+2020-03-05,England,E06000037,West Berkshire,0
+2020-03-05,England,E10000032,West Sussex,1 to 4
+2020-03-05,England,E09000033,Westminster,0
+2020-03-05,England,E08000010,Wigan,1 to 4
+2020-03-05,England,E06000054,Wiltshire,1 to 4
+2020-03-05,England,E06000040,Windsor and Maidenhead,0
+2020-03-05,England,E08000015,Wirral,1 to 4
+2020-03-05,England,E06000041,Wokingham,1 to 4
+2020-03-05,England,E08000031,Wolverhampton,0
+2020-03-05,England,E10000034,Worcestershire,0
+2020-03-05,England,E06000014,York,1 to 4
+2020-03-05,England,,awaiting clarification,8
+2020-03-05,Wales,W06000019,Blaenau Gwent,0
+2020-03-05,Wales,W06000013,Bridgend,0
+2020-03-05,Wales,W06000018,Caerphilly,0
+2020-03-05,Wales,W06000015,Cardiff,1
+2020-03-05,Wales,W06000010,Carmarthenshire,0
+2020-03-05,Wales,W06000008,Ceredigion,0
+2020-03-05,Wales,W06000003,Conwy,0
+2020-03-05,Wales,W06000004,Denbighshire,0
+2020-03-05,Wales,W06000005,Flintshire,0
+2020-03-05,Wales,W06000002,Gwynedd,0
+2020-03-05,Wales,W06000001,Isle of Anglesey,0
+2020-03-05,Wales,W06000024,Merthyr Tydfil,0
+2020-03-05,Wales,W06000021,Monmouthshire,0
+2020-03-05,Wales,W06000012,Neath Port Talbot,0
+2020-03-05,Wales,W06000022,Newport,0
+2020-03-05,Wales,W06000009,Pembrokeshire,0
+2020-03-05,Wales,W06000023,Powys,0
+2020-03-05,Wales,W06000016,Rhondda Cynon Taf,0
+2020-03-05,Wales,W06000011,Swansea,1
+2020-03-05,Wales,W06000020,Torfaen,0
+2020-03-05,Wales,W06000014,Vale of Glamorgan,0
+2020-03-05,Wales,W06000006,Wrexham,0
+2020-03-06,Scotland,,Tayside,1
+2020-03-06,Scotland,,Ayrshire & Arran,1
+2020-03-06,Scotland,,Forth Valley,2
+2020-03-06,Scotland,,Greater Glasgow and Clyde,1
+2020-03-06,Scotland,,Grampian,3
+2020-03-06,Scotland,,Fife,2
+2020-03-06,Scotland,,Lothian,1
+2020-03-06,Wales,W06000019,Blaenau Gwent,0
+2020-03-06,Wales,W06000013,Bridgend,0
+2020-03-06,Wales,W06000018,Caerphilly,0
+2020-03-06,Wales,W06000015,Cardiff,1
+2020-03-06,Wales,W06000010,Carmarthenshire,0
+2020-03-06,Wales,W06000008,Ceredigion,0
+2020-03-06,Wales,W06000003,Conwy,0
+2020-03-06,Wales,W06000004,Denbighshire,0
+2020-03-06,Wales,W06000005,Flintshire,0
+2020-03-06,Wales,W06000002,Gwynedd,0
+2020-03-06,Wales,W06000001,Isle of Anglesey,0
+2020-03-06,Wales,W06000024,Merthyr Tydfil,0
+2020-03-06,Wales,W06000021,Monmouthshire,0
+2020-03-06,Wales,W06000012,Neath Port Talbot,0
+2020-03-06,Wales,W06000022,Newport,0
+2020-03-06,Wales,W06000009,Pembrokeshire,0
+2020-03-06,Wales,W06000023,Powys,0
+2020-03-06,Wales,W06000016,Rhondda Cynon Taf,0
+2020-03-06,Wales,W06000011,Swansea,1
+2020-03-06,Wales,W06000020,Torfaen,0
+2020-03-06,Wales,W06000014,Vale of Glamorgan,0
+2020-03-06,Wales,W06000006,Wrexham,0
+2020-03-07,England,E09000002,Barking and Dagenham,0
+2020-03-07,England,E09000003,Barnet,3
+2020-03-07,England,E08000016,Barnsley,2
+2020-03-07,England,E06000022,Bath and North East Somerset,0
+2020-03-07,England,E06000055,Bedford,0
+2020-03-07,England,E09000004,Bexley,0
+2020-03-07,England,E08000025,Birmingham,1
+2020-03-07,England,E06000008,Blackburn with Darwen,0
+2020-03-07,England,E06000009,Blackpool,0
+2020-03-07,England,E08000001,Bolton,1
+2020-03-07,England,,Bournemouth,0
+2020-03-07,England,E06000036,Bracknell Forest,2
+2020-03-07,England,E08000032,Bradford,1
+2020-03-07,England,E09000005,Brent,1
+2020-03-07,England,E06000043,Brighton and Hove,7
+2020-03-07,England,E06000023,"Bristol, City of",1
+2020-03-07,England,E09000006,Bromley,1
+2020-03-07,England,E10000002,Buckinghamshire,1
+2020-03-07,England,E08000002,Bury,4
+2020-03-07,England,E08000033,Calderdale,0
+2020-03-07,England,E10000003,Cambridgeshire,0
+2020-03-07,England,E09000007,Camden,2
+2020-03-07,England,E06000056,Central Bedfordshire,0
+2020-03-07,England,E06000049,Cheshire East,0
+2020-03-07,England,E06000050,Cheshire West and Chester,0
+2020-03-07,England,E06000052,Cornwall and Isles of Scilly,2
+2020-03-07,England,E06000047,County Durham,0
+2020-03-07,England,E08000026,Coventry,1
+2020-03-07,England,E09000008,Croydon,0
+2020-03-07,England,E10000006,Cumbria,4
+2020-03-07,England,E06000005,Darlington,0
+2020-03-07,England,E06000015,Derby,0
+2020-03-07,England,E10000007,Derbyshire,3
+2020-03-07,England,E10000008,Devon,10
+2020-03-07,England,E08000017,Doncaster,0
+2020-03-07,England,E06000059,Dorset,0
+2020-03-07,England,E08000027,Dudley,0
+2020-03-07,England,E09000009,Ealing,5
+2020-03-07,England,E06000011,East Riding of Yorkshire,0
+2020-03-07,England,E10000011,East Sussex,0
+2020-03-07,England,E09000010,Enfield,0
+2020-03-07,England,E10000012,Essex,3
+2020-03-07,England,E08000037,Gateshead,0
+2020-03-07,England,E10000013,Gloucestershire,3
+2020-03-07,England,E09000011,Greenwich,0
+2020-03-07,England,E09000012,Hackney and City of London,2
+2020-03-07,England,E06000006,Halton,0
+2020-03-07,England,E09000013,Hammersmith and Fulham,1
+2020-03-07,England,E10000014,Hampshire,2
+2020-03-07,England,E09000014,Haringey,0
+2020-03-07,England,E09000015,Harrow,1
+2020-03-07,England,E06000001,Hartlepool,0
+2020-03-07,England,E09000016,Havering,0
+2020-03-07,England,E06000019,"Herefordshire, County of",0
+2020-03-07,England,E10000015,Hertfordshire,8
+2020-03-07,England,E09000017,Hillingdon,1
+2020-03-07,England,E09000018,Hounslow,3
+2020-03-07,England,E06000046,Isle of Wight,1
+2020-03-07,England,E09000019,Islington,0
+2020-03-07,England,E09000020,Kensington and Chelsea,6
+2020-03-07,England,E10000016,Kent,2
+2020-03-07,England,E06000010,"Kingston upon Hull, City of",1
+2020-03-07,England,E09000021,Kingston upon Thames,1
+2020-03-07,England,E08000034,Kirklees,0
+2020-03-07,England,E08000011,Knowsley,0
+2020-03-07,England,E09000022,Lambeth,2
+2020-03-07,England,E10000017,Lancashire,2
+2020-03-07,England,E08000035,Leeds,3
+2020-03-07,England,E06000016,Leicester,0
+2020-03-07,England,E10000018,Leicestershire,1
+2020-03-07,England,E09000023,Lewisham,2
+2020-03-07,England,E10000019,Lincolnshire,1
+2020-03-07,England,E08000012,Liverpool,3
+2020-03-07,England,E06000032,Luton,2
+2020-03-07,England,E08000003,Manchester,5
+2020-03-07,England,E06000035,Medway,2
+2020-03-07,England,E09000024,Merton,1
+2020-03-07,England,E06000002,Middlesbrough,0
+2020-03-07,England,E06000042,Milton Keynes,1
+2020-03-07,England,E08000021,Newcastle upon Tyne,3
+2020-03-07,England,E09000025,Newham,0
+2020-03-07,England,E10000020,Norfolk,0
+2020-03-07,England,E06000012,North East Lincolnshire,0
+2020-03-07,England,E06000013,North Lincolnshire,0
+2020-03-07,England,E06000024,North Somerset,0
+2020-03-07,England,E08000022,North Tyneside,1
+2020-03-07,England,E10000023,North Yorkshire,0
+2020-03-07,England,E10000021,Northamptonshire,2
+2020-03-07,England,E06000057,Northumberland,0
+2020-03-07,England,E06000018,Nottingham,2
+2020-03-07,England,E10000024,Nottinghamshire,3
+2020-03-07,England,E08000004,Oldham,2
+2020-03-07,England,E10000025,Oxfordshire,4
+2020-03-07,England,E06000031,Peterborough,1
+2020-03-07,England,E06000026,Plymouth,0
+2020-03-07,England,,Poole,0
+2020-03-07,England,E06000044,Portsmouth,0
+2020-03-07,England,E06000038,Reading,0
+2020-03-07,England,E09000026,Redbridge,1
+2020-03-07,England,E06000003,Redcar and Cleveland,0
+2020-03-07,England,E09000027,Richmond upon Thames,0
+2020-03-07,England,E08000005,Rochdale,0
+2020-03-07,England,E08000018,Rotherham,0
+2020-03-07,England,E06000017,Rutland,0
+2020-03-07,England,E08000006,Salford,0
+2020-03-07,England,E08000028,Sandwell,0
+2020-03-07,England,E08000014,Sefton,0
+2020-03-07,England,E08000019,Sheffield,0
+2020-03-07,England,E06000051,Shropshire,0
+2020-03-07,England,E06000039,Slough,0
+2020-03-07,England,E08000029,Solihull,0
+2020-03-07,England,E10000027,Somerset,1
+2020-03-07,England,E06000025,South Gloucestershire,0
+2020-03-07,England,E08000023,South Tyneside,0
+2020-03-07,England,E06000045,Southampton,0
+2020-03-07,England,E06000033,Southend-on-Sea,1
+2020-03-07,England,E09000028,Southwark,1
+2020-03-07,England,E08000013,St. Helens,0
+2020-03-07,England,E10000028,Staffordshire,4
+2020-03-07,England,E08000007,Stockport,0
+2020-03-07,England,E06000004,Stockton-on-Tees,0
+2020-03-07,England,E06000021,Stoke-on-Trent,0
+2020-03-07,England,E10000029,Suffolk,0
+2020-03-07,England,E08000024,Sunderland,0
+2020-03-07,England,E10000030,Surrey,4
+2020-03-07,England,E09000029,Sutton,0
+2020-03-07,England,E06000030,Swindon,1
+2020-03-07,England,E08000008,Tameside,0
+2020-03-07,England,E06000020,Telford and Wrekin,0
+2020-03-07,England,E06000034,Thurrock,0
+2020-03-07,England,E06000027,Torbay,4
+2020-03-07,England,E09000030,Tower Hamlets,0
+2020-03-07,England,E08000009,Trafford,4
+2020-03-07,England,E08000036,Wakefield,0
+2020-03-07,England,E08000030,Walsall,0
+2020-03-07,England,E09000031,Waltham Forest,0
+2020-03-07,England,E09000032,Wandsworth,2
+2020-03-07,England,E06000007,Warrington,0
+2020-03-07,England,E10000031,Warwickshire,0
+2020-03-07,England,E06000037,West Berkshire,0
+2020-03-07,England,E10000032,West Sussex,3
+2020-03-07,England,E09000033,Westminster,2
+2020-03-07,England,E08000010,Wigan,3
+2020-03-07,England,E06000054,Wiltshire,3
+2020-03-07,England,E06000040,Windsor and Maidenhead,0
+2020-03-07,England,E08000015,Wirral,1
+2020-03-07,England,E06000041,Wokingham,2
+2020-03-07,England,E08000031,Wolverhampton,0
+2020-03-07,England,E10000034,Worcestershire,0
+2020-03-07,England,E06000014,York,3
+2020-03-07,England,,awaiting clarification,14
+2020-03-07,Scotland,,Tayside,1
+2020-03-07,Scotland,,Ayrshire & Arran,1
+2020-03-07,Scotland,,Forth Valley,2
+2020-03-07,Scotland,,Greater Glasgow and Clyde,2
+2020-03-07,Scotland,,Grampian,4
+2020-03-07,Scotland,,Fife,2
+2020-03-07,Scotland,,Lothian,2
+2020-03-07,Scotland,,Lanarkshire,2
+2020-03-07,Wales,W06000019,Blaenau Gwent,0
+2020-03-07,Wales,W06000013,Bridgend,0
+2020-03-07,Wales,W06000018,Caerphilly,0
+2020-03-07,Wales,W06000015,Cardiff,1
+2020-03-07,Wales,W06000010,Carmarthenshire,0
+2020-03-07,Wales,W06000008,Ceredigion,0
+2020-03-07,Wales,W06000003,Conwy,0
+2020-03-07,Wales,W06000004,Denbighshire,0
+2020-03-07,Wales,W06000005,Flintshire,0
+2020-03-07,Wales,W06000002,Gwynedd,0
+2020-03-07,Wales,W06000001,Isle of Anglesey,0
+2020-03-07,Wales,W06000024,Merthyr Tydfil,0
+2020-03-07,Wales,W06000021,Monmouthshire,0
+2020-03-07,Wales,W06000012,Neath Port Talbot,0
+2020-03-07,Wales,W06000022,Newport,0
+2020-03-07,Wales,W06000009,Pembrokeshire,0
+2020-03-07,Wales,W06000023,Powys,0
+2020-03-07,Wales,W06000016,Rhondda Cynon Taf,0
+2020-03-07,Wales,W06000011,Swansea,1
+2020-03-07,Wales,W06000020,Torfaen,0
+2020-03-07,Wales,W06000014,Vale of Glamorgan,0
+2020-03-07,Wales,W06000006,Wrexham,0
+2020-03-08,England,E09000002,Barking and Dagenham,0
+2020-03-08,England,E09000003,Barnet,4
+2020-03-08,England,E08000016,Barnsley,2
+2020-03-08,England,E06000022,Bath and North East Somerset,0
+2020-03-08,England,E06000055,Bedford,0
+2020-03-08,England,E09000004,Bexley,0
+2020-03-08,England,E08000025,Birmingham,1
+2020-03-08,England,E06000008,Blackburn with Darwen,0
+2020-03-08,England,E06000009,Blackpool,0
+2020-03-08,England,E08000001,Bolton,2
+2020-03-08,England,E06000058,"Bournemouth, Christchurch and Poole",2
+2020-03-08,England,E06000036,Bracknell Forest,2
+2020-03-08,England,E08000032,Bradford,1
+2020-03-08,England,E09000005,Brent,3
+2020-03-08,England,E06000043,Brighton and Hove,7
+2020-03-08,England,E06000023,"Bristol, City of",2
+2020-03-08,England,E09000006,Bromley,1
+2020-03-08,England,E10000002,Buckinghamshire,1
+2020-03-08,England,E08000002,Bury,3
+2020-03-08,England,E08000033,Calderdale,0
+2020-03-08,England,E10000003,Cambridgeshire,0
+2020-03-08,England,E09000007,Camden,2
+2020-03-08,England,E06000056,Central Bedfordshire,0
+2020-03-08,England,E06000049,Cheshire East,0
+2020-03-08,England,E06000050,Cheshire West and Chester,0
+2020-03-08,England,E06000052,Cornwall,3
+2020-03-08,England,E06000047,County Durham,0
+2020-03-08,England,E08000026,Coventry,3
+2020-03-08,England,E09000008,Croydon,0
+2020-03-08,England,E10000006,Cumbria,5
+2020-03-08,England,E06000005,Darlington,0
+2020-03-08,England,E06000015,Derby,0
+2020-03-08,England,E10000007,Derbyshire,4
+2020-03-08,England,E10000008,Devon,12
+2020-03-08,England,E08000017,Doncaster,0
+2020-03-08,England,E06000059,Dorset,0
+2020-03-08,England,E08000027,Dudley,0
+2020-03-08,England,E09000009,Ealing,5
+2020-03-08,England,E06000011,East Riding of Yorkshire,0
+2020-03-08,England,E10000011,East Sussex,0
+2020-03-08,England,E09000010,Enfield,0
+2020-03-08,England,E10000012,Essex,5
+2020-03-08,England,E08000037,Gateshead,0
+2020-03-08,England,E10000013,Gloucestershire,3
+2020-03-08,England,E09000011,Greenwich,0
+2020-03-08,England,E09000012,Hackney,2
+2020-03-08,England,E06000006,Halton,0
+2020-03-08,England,E09000013,Hammersmith and Fulham,2
+2020-03-08,England,E10000014,Hampshire,8
+2020-03-08,England,E09000014,Haringey,0
+2020-03-08,England,E09000015,Harrow,1
+2020-03-08,England,E06000001,Hartlepool,0
+2020-03-08,England,E09000016,Havering,0
+2020-03-08,England,E06000019,"Herefordshire, County of",0
+2020-03-08,England,E10000015,Hertfordshire,13
+2020-03-08,England,E09000017,Hillingdon,1
+2020-03-08,England,E09000018,Hounslow,3
+2020-03-08,England,E06000046,Isle of Wight,1
+2020-03-08,England,E09000019,Islington,0
+2020-03-08,England,E09000020,Kensington and Chelsea,8
+2020-03-08,England,E10000016,Kent,4
+2020-03-08,England,E06000010,"Kingston upon Hull, City of",1
+2020-03-08,England,E09000021,Kingston upon Thames,1
+2020-03-08,England,E08000034,Kirklees,0
+2020-03-08,England,E08000011,Knowsley,0
+2020-03-08,England,E09000022,Lambeth,3
+2020-03-08,England,E10000017,Lancashire,4
+2020-03-08,England,E08000035,Leeds,3
+2020-03-08,England,E06000016,Leicester,0
+2020-03-08,England,E10000018,Leicestershire,1
+2020-03-08,England,E09000023,Lewisham,3
+2020-03-08,England,E10000019,Lincolnshire,1
+2020-03-08,England,E08000012,Liverpool,4
+2020-03-08,England,E06000032,Luton,2
+2020-03-08,England,E08000003,Manchester,5
+2020-03-08,England,E06000035,Medway,2
+2020-03-08,England,E09000024,Merton,1
+2020-03-08,England,E06000002,Middlesbrough,0
+2020-03-08,England,E06000042,Milton Keynes,1
+2020-03-08,England,E08000021,Newcastle upon Tyne,3
+2020-03-08,England,E09000025,Newham,0
+2020-03-08,England,E10000020,Norfolk,0
+2020-03-08,England,E06000012,North East Lincolnshire,0
+2020-03-08,England,E06000013,North Lincolnshire,0
+2020-03-08,England,E06000024,North Somerset,0
+2020-03-08,England,E08000022,North Tyneside,1
+2020-03-08,England,E10000023,North Yorkshire,0
+2020-03-08,England,E10000021,Northamptonshire,4
+2020-03-08,England,E06000057,Northumberland,0
+2020-03-08,England,E06000018,Nottingham,2
+2020-03-08,England,E10000024,Nottinghamshire,3
+2020-03-08,England,E08000004,Oldham,2
+2020-03-08,England,E10000025,Oxfordshire,5
+2020-03-08,England,E06000031,Peterborough,1
+2020-03-08,England,E06000026,Plymouth,0
+2020-03-08,England,E06000044,Portsmouth,0
+2020-03-08,England,E06000038,Reading,0
+2020-03-08,England,E09000026,Redbridge,1
+2020-03-08,England,E06000003,Redcar and Cleveland,0
+2020-03-08,England,E09000027,Richmond upon Thames,0
+2020-03-08,England,E08000005,Rochdale,0
+2020-03-08,England,E08000018,Rotherham,0
+2020-03-08,England,E06000017,Rutland,0
+2020-03-08,England,E08000006,Salford,0
+2020-03-08,England,E08000028,Sandwell,0
+2020-03-08,England,E08000014,Sefton,0
+2020-03-08,England,E08000019,Sheffield,0
+2020-03-08,England,E06000051,Shropshire,0
+2020-03-08,England,E06000039,Slough,0
+2020-03-08,England,E08000029,Solihull,0
+2020-03-08,England,E10000027,Somerset,2
+2020-03-08,England,E06000025,South Gloucestershire,0
+2020-03-08,England,E08000023,South Tyneside,0
+2020-03-08,England,E06000045,Southampton,0
+2020-03-08,England,E06000033,Southend-on-Sea,1
+2020-03-08,England,E09000028,Southwark,3
+2020-03-08,England,E08000013,St. Helens,0
+2020-03-08,England,E10000028,Staffordshire,4
+2020-03-08,England,E08000007,Stockport,0
+2020-03-08,England,E06000004,Stockton-on-Tees,0
+2020-03-08,England,E06000021,Stoke-on-Trent,0
+2020-03-08,England,E10000029,Suffolk,0
+2020-03-08,England,E08000024,Sunderland,0
+2020-03-08,England,E10000030,Surrey,5
+2020-03-08,England,E09000029,Sutton,0
+2020-03-08,England,E06000030,Swindon,2
+2020-03-08,England,E08000008,Tameside,1
+2020-03-08,England,E06000020,Telford and Wrekin,0
+2020-03-08,England,E06000034,Thurrock,0
+2020-03-08,England,E06000027,Torbay,6
+2020-03-08,England,E09000030,Tower Hamlets,1
+2020-03-08,England,E08000009,Trafford,4
+2020-03-08,England,E08000036,Wakefield,0
+2020-03-08,England,E08000030,Walsall,0
+2020-03-08,England,E09000031,Waltham Forest,0
+2020-03-08,England,E09000032,Wandsworth,3
+2020-03-08,England,E06000007,Warrington,0
+2020-03-08,England,E10000031,Warwickshire,3
+2020-03-08,England,E06000037,West Berkshire,0
+2020-03-08,England,E10000032,West Sussex,3
+2020-03-08,England,E09000033,Westminster,3
+2020-03-08,England,E08000010,Wigan,3
+2020-03-08,England,E06000054,Wiltshire,3
+2020-03-08,England,E06000040,Windsor and Maidenhead,0
+2020-03-08,England,E08000015,Wirral,1
+2020-03-08,England,E06000041,Wokingham,3
+2020-03-08,England,E08000031,Wolverhampton,0
+2020-03-08,England,E10000034,Worcestershire,0
+2020-03-08,England,E06000014,York,3
+2020-03-08,England,,Awaiting confirmation,20
+2020-03-08,Scotland,,Tayside,1
+2020-03-08,Scotland,,Ayrshire & Arran,1
+2020-03-08,Scotland,,Forth Valley,2
+2020-03-08,Scotland,,Greater Glasgow and Clyde,3
+2020-03-08,Scotland,,Grampian,4
+2020-03-08,Scotland,,Fife,2
+2020-03-08,Scotland,,Lothian,3
+2020-03-08,Scotland,,Lanarkshire,2
+2020-03-08,Wales,W06000019,Blaenau Gwent,0
+2020-03-08,Wales,W06000013,Bridgend,0
+2020-03-08,Wales,W06000018,Caerphilly,0
+2020-03-08,Wales,W06000015,Cardiff,1
+2020-03-08,Wales,W06000010,Carmarthenshire,0
+2020-03-08,Wales,W06000008,Ceredigion,0
+2020-03-08,Wales,W06000003,Conwy,0
+2020-03-08,Wales,W06000004,Denbighshire,0
+2020-03-08,Wales,W06000005,Flintshire,0
+2020-03-08,Wales,W06000002,Gwynedd,0
+2020-03-08,Wales,W06000001,Isle of Anglesey,0
+2020-03-08,Wales,W06000024,Merthyr Tydfil,0
+2020-03-08,Wales,W06000021,Monmouthshire,0
+2020-03-08,Wales,W06000012,Neath Port Talbot,0
+2020-03-08,Wales,W06000022,Newport,0
+2020-03-08,Wales,W06000009,Pembrokeshire,2
+2020-03-08,Wales,W06000023,Powys,0
+2020-03-08,Wales,W06000016,Rhondda Cynon Taf,0
+2020-03-08,Wales,W06000011,Swansea,1
+2020-03-08,Wales,W06000020,Torfaen,0
+2020-03-08,Wales,W06000014,Vale of Glamorgan,0
+2020-03-08,Wales,W06000006,Wrexham,0
+2020-03-09,England,E09000002,Barking and Dagenham,0
+2020-03-09,England,E09000003,Barnet,5
+2020-03-09,England,E08000016,Barnsley,2
+2020-03-09,England,E06000022,Bath and North East Somerset,0
+2020-03-09,England,E06000055,Bedford,0
+2020-03-09,England,E09000004,Bexley,0
+2020-03-09,England,E08000025,Birmingham,1
+2020-03-09,England,E06000008,Blackburn with Darwen,0
+2020-03-09,England,E06000009,Blackpool,0
+2020-03-09,England,E08000001,Bolton,3
+2020-03-09,England,E06000058,"Bournemouth, Christchurch and Poole",2
+2020-03-09,England,E06000036,Bracknell Forest,2
+2020-03-09,England,E08000032,Bradford,1
+2020-03-09,England,E09000005,Brent,3
+2020-03-09,England,E06000043,Brighton and Hove,8
+2020-03-09,England,E06000023,"Bristol, City of",2
+2020-03-09,England,E09000006,Bromley,1
+2020-03-09,England,E10000002,Buckinghamshire,1
+2020-03-09,England,E08000002,Bury,3
+2020-03-09,England,E08000033,Calderdale,0
+2020-03-09,England,E10000003,Cambridgeshire,0
+2020-03-09,England,E09000007,Camden,4
+2020-03-09,England,E06000056,Central Bedfordshire,0
+2020-03-09,England,E06000049,Cheshire East,0
+2020-03-09,England,E06000050,Cheshire West and Chester,0
+2020-03-09,England,E06000052,Cornwall and Isles of Scilly,4
+2020-03-09,England,E06000047,County Durham,0
+2020-03-09,England,E08000026,Coventry,2
+2020-03-09,England,E09000008,Croydon,0
+2020-03-09,England,E10000006,Cumbria,5
+2020-03-09,England,E06000005,Darlington,0
+2020-03-09,England,E06000015,Derby,0
+2020-03-09,England,E10000007,Derbyshire,4
+2020-03-09,England,E10000008,Devon,12
+2020-03-09,England,E08000017,Doncaster,0
+2020-03-09,England,E06000059,Dorset,0
+2020-03-09,England,E08000027,Dudley,1
+2020-03-09,England,E09000009,Ealing,5
+2020-03-09,England,E06000011,East Riding of Yorkshire,0
+2020-03-09,England,E10000011,East Sussex,0
+2020-03-09,England,E09000010,Enfield,1
+2020-03-09,England,E10000012,Essex,5
+2020-03-09,England,E08000037,Gateshead,0
+2020-03-09,England,E10000013,Gloucestershire,3
+2020-03-09,England,E09000011,Greenwich,0
+2020-03-09,England,E09000012,Hackney and City of London,2
+2020-03-09,England,E06000006,Halton,0
+2020-03-09,England,E09000013,Hammersmith and Fulham,2
+2020-03-09,England,E10000014,Hampshire,8
+2020-03-09,England,E09000014,Haringey,0
+2020-03-09,England,E09000015,Harrow,1
+2020-03-09,England,E06000001,Hartlepool,0
+2020-03-09,England,E09000016,Havering,2
+2020-03-09,England,E06000019,"Herefordshire, County of",0
+2020-03-09,England,E10000015,Hertfordshire,13
+2020-03-09,England,E09000017,Hillingdon,1
+2020-03-09,England,E09000018,Hounslow,3
+2020-03-09,England,E06000046,Isle of Wight,1
+2020-03-09,England,E09000019,Islington,0
+2020-03-09,England,E09000020,Kensington and Chelsea,8
+2020-03-09,England,E10000016,Kent,4
+2020-03-09,England,E06000010,"Kingston upon Hull, City of",1
+2020-03-09,England,E09000021,Kingston upon Thames,1
+2020-03-09,England,E08000034,Kirklees,0
+2020-03-09,England,E08000011,Knowsley,0
+2020-03-09,England,E09000022,Lambeth,3
+2020-03-09,England,E10000017,Lancashire,4
+2020-03-09,England,E08000035,Leeds,5
+2020-03-09,England,E06000016,Leicester,0
+2020-03-09,England,E10000018,Leicestershire,2
+2020-03-09,England,E09000023,Lewisham,3
+2020-03-09,England,E10000019,Lincolnshire,1
+2020-03-09,England,E08000012,Liverpool,5
+2020-03-09,England,E06000032,Luton,2
+2020-03-09,England,E08000003,Manchester,5
+2020-03-09,England,E06000035,Medway,2
+2020-03-09,England,E09000024,Merton,1
+2020-03-09,England,E06000002,Middlesbrough,0
+2020-03-09,England,E06000042,Milton Keynes,1
+2020-03-09,England,E08000021,Newcastle upon Tyne,4
+2020-03-09,England,E09000025,Newham,0
+2020-03-09,England,E10000020,Norfolk,0
+2020-03-09,England,E06000012,North East Lincolnshire,0
+2020-03-09,England,E06000013,North Lincolnshire,0
+2020-03-09,England,E06000024,North Somerset,0
+2020-03-09,England,E08000022,North Tyneside,1
+2020-03-09,England,E10000023,North Yorkshire,0
+2020-03-09,England,E10000021,Northamptonshire,4
+2020-03-09,England,E06000057,Northumberland,0
+2020-03-09,England,E06000018,Nottingham,2
+2020-03-09,England,E10000024,Nottinghamshire,5
+2020-03-09,England,E08000004,Oldham,4
+2020-03-09,England,E10000025,Oxfordshire,5
+2020-03-09,England,E06000031,Peterborough,1
+2020-03-09,England,E06000026,Plymouth,0
+2020-03-09,England,E06000044,Portsmouth,0
+2020-03-09,England,E06000038,Reading,0
+2020-03-09,England,E09000026,Redbridge,1
+2020-03-09,England,E06000003,Redcar and Cleveland,0
+2020-03-09,England,E09000027,Richmond upon Thames,0
+2020-03-09,England,E08000005,Rochdale,0
+2020-03-09,England,E08000018,Rotherham,0
+2020-03-09,England,E06000017,Rutland,0
+2020-03-09,England,E08000006,Salford,0
+2020-03-09,England,E08000028,Sandwell,0
+2020-03-09,England,E08000014,Sefton,0
+2020-03-09,England,E08000019,Sheffield,0
+2020-03-09,England,E06000051,Shropshire,0
+2020-03-09,England,E06000039,Slough,0
+2020-03-09,England,E08000029,Solihull,0
+2020-03-09,England,E10000027,Somerset,2
+2020-03-09,England,E06000025,South Gloucestershire,0
+2020-03-09,England,E08000023,South Tyneside,0
+2020-03-09,England,E06000045,Southampton,0
+2020-03-09,England,E06000033,Southend-on-Sea,1
+2020-03-09,England,E09000028,Southwark,5
+2020-03-09,England,E08000013,St. Helens,0
+2020-03-09,England,E10000028,Staffordshire,4
+2020-03-09,England,E08000007,Stockport,0
+2020-03-09,England,E06000004,Stockton-on-Tees,0
+2020-03-09,England,E06000021,Stoke-on-Trent,0
+2020-03-09,England,E10000029,Suffolk,1
+2020-03-09,England,E08000024,Sunderland,1
+2020-03-09,England,E10000030,Surrey,6
+2020-03-09,England,E09000029,Sutton,1
+2020-03-09,England,E06000030,Swindon,2
+2020-03-09,England,E08000008,Tameside,1
+2020-03-09,England,E06000020,Telford and Wrekin,0
+2020-03-09,England,E06000034,Thurrock,0
+2020-03-09,England,E06000027,Torbay,7
+2020-03-09,England,E09000030,Tower Hamlets,1
+2020-03-09,England,E08000009,Trafford,4
+2020-03-09,England,E08000036,Wakefield,0
+2020-03-09,England,E08000030,Walsall,0
+2020-03-09,England,E09000031,Waltham Forest,1
+2020-03-09,England,E09000032,Wandsworth,3
+2020-03-09,England,E06000007,Warrington,0
+2020-03-09,England,E10000031,Warwickshire,4
+2020-03-09,England,E06000037,West Berkshire,0
+2020-03-09,England,E10000032,West Sussex,3
+2020-03-09,England,E09000033,Westminster,3
+2020-03-09,England,E08000010,Wigan,3
+2020-03-09,England,E06000054,Wiltshire,3
+2020-03-09,England,E06000040,Windsor and Maidenhead,0
+2020-03-09,England,E08000015,Wirral,1
+2020-03-09,England,E06000041,Wokingham,3
+2020-03-09,England,E08000031,Wolverhampton,2
+2020-03-09,England,E10000034,Worcestershire,0
+2020-03-09,England,E06000014,York,3
+2020-03-09,England,,Awaiting confirmation,26
+2020-03-09,Scotland,,Ayrshire and Arran,1
+2020-03-09,Scotland,,Fife,2
+2020-03-09,Scotland,,Forth Valley,2
+2020-03-09,Scotland,,Grampian,4
+2020-03-09,Scotland,,Greater Glasgow and Clyde,3
+2020-03-09,Scotland,,Lanarkshire,3
+2020-03-09,Scotland,,Lothian,5
+2020-03-09,Scotland,,Shetland,2
+2020-03-09,Scotland,,Tayside,1
+2020-03-09,Wales,W06000019,Blaenau Gwent,0
+2020-03-09,Wales,W06000013,Bridgend,0
+2020-03-09,Wales,W06000018,Caerphilly,0
+2020-03-09,Wales,W06000015,Cardiff,1
+2020-03-09,Wales,W06000010,Carmarthenshire,0
+2020-03-09,Wales,W06000008,Ceredigion,0
+2020-03-09,Wales,W06000003,Conwy,0
+2020-03-09,Wales,W06000004,Denbighshire,0
+2020-03-09,Wales,W06000005,Flintshire,0
+2020-03-09,Wales,W06000002,Gwynedd,0
+2020-03-09,Wales,W06000001,Isle of Anglesey,0
+2020-03-09,Wales,W06000024,Merthyr Tydfil,0
+2020-03-09,Wales,W06000021,Monmouthshire,0
+2020-03-09,Wales,W06000012,Neath Port Talbot,1
+2020-03-09,Wales,W06000022,Newport,1
+2020-03-09,Wales,W06000009,Pembrokeshire,2
+2020-03-09,Wales,W06000023,Powys,0
+2020-03-09,Wales,W06000016,Rhondda Cynon Taf,0
+2020-03-09,Wales,W06000011,Swansea,1
+2020-03-09,Wales,W06000020,Torfaen,0
+2020-03-09,Wales,W06000014,Vale of Glamorgan,0
+2020-03-09,Wales,W06000006,Wrexham,0
+2020-03-10,England,E09000002,Barking and Dagenham,1
+2020-03-10,England,E09000003,Barnet,8
+2020-03-10,England,E08000016,Barnsley,2
+2020-03-10,England,E06000022,Bath and North East Somerset,0
+2020-03-10,England,E06000055,Bedford,0
+2020-03-10,England,E09000004,Bexley,0
+2020-03-10,England,E08000025,Birmingham,1
+2020-03-10,England,E06000008,Blackburn with Darwen,0
+2020-03-10,England,E06000009,Blackpool,0
+2020-03-10,England,E08000001,Bolton,3
+2020-03-10,England,E06000058,"Bournemouth, Christchurch and Poole",3
+2020-03-10,England,E06000036,Bracknell Forest,2
+2020-03-10,England,E08000032,Bradford,1
+2020-03-10,England,E09000005,Brent,3
+2020-03-10,England,E06000043,Brighton and Hove,8
+2020-03-10,England,E06000023,"Bristol, City of",2
+2020-03-10,England,E09000006,Bromley,2
+2020-03-10,England,E10000002,Buckinghamshire,2
+2020-03-10,England,E08000002,Bury,3
+2020-03-10,England,E08000033,Calderdale,0
+2020-03-10,England,E10000003,Cambridgeshire,1
+2020-03-10,England,E09000007,Camden,5
+2020-03-10,England,E06000056,Central Bedfordshire,0
+2020-03-10,England,E06000049,Cheshire East,0
+2020-03-10,England,E06000050,Cheshire West and Chester,0
+2020-03-10,England,E06000052,Cornwall and Isles of Scilly,4
+2020-03-10,England,E06000047,County Durham,1
+2020-03-10,England,E08000026,Coventry,3
+2020-03-10,England,E09000008,Croydon,1
+2020-03-10,England,E10000006,Cumbria,7
+2020-03-10,England,E06000005,Darlington,0
+2020-03-10,England,E06000015,Derby,0
+2020-03-10,England,E10000007,Derbyshire,4
+2020-03-10,England,E10000008,Devon,13
+2020-03-10,England,E08000017,Doncaster,0
+2020-03-10,England,E06000059,Dorset,0
+2020-03-10,England,E08000027,Dudley,1
+2020-03-10,England,E09000009,Ealing,5
+2020-03-10,England,E06000011,East Riding of Yorkshire,0
+2020-03-10,England,E10000011,East Sussex,0
+2020-03-10,England,E09000010,Enfield,1
+2020-03-10,England,E10000012,Essex,5
+2020-03-10,England,E08000037,Gateshead,0
+2020-03-10,England,E10000013,Gloucestershire,3
+2020-03-10,England,E09000011,Greenwich,1
+2020-03-10,England,E09000012,Hackney and City of London,3
+2020-03-10,England,E06000006,Halton,0
+2020-03-10,England,E09000013,Hammersmith and Fulham,2
+2020-03-10,England,E10000014,Hampshire,10
+2020-03-10,England,E09000014,Haringey,1
+2020-03-10,England,E09000015,Harrow,1
+2020-03-10,England,E06000001,Hartlepool,0
+2020-03-10,England,E09000016,Havering,2
+2020-03-10,England,E06000019,"Herefordshire, County of",1
+2020-03-10,England,E10000015,Hertfordshire,16
+2020-03-10,England,E09000017,Hillingdon,1
+2020-03-10,England,E09000018,Hounslow,5
+2020-03-10,England,E06000046,Isle of Wight,1
+2020-03-10,England,E09000019,Islington,1
+2020-03-10,England,E09000020,Kensington and Chelsea,13
+2020-03-10,England,E10000016,Kent,5
+2020-03-10,England,E06000010,"Kingston upon Hull, City of",1
+2020-03-10,England,E09000021,Kingston upon Thames,1
+2020-03-10,England,E08000034,Kirklees,0
+2020-03-10,England,E08000011,Knowsley,0
+2020-03-10,England,E09000022,Lambeth,4
+2020-03-10,England,E10000017,Lancashire,4
+2020-03-10,England,E08000035,Leeds,5
+2020-03-10,England,E06000016,Leicester,0
+2020-03-10,England,E10000018,Leicestershire,2
+2020-03-10,England,E09000023,Lewisham,3
+2020-03-10,England,E10000019,Lincolnshire,1
+2020-03-10,England,E08000012,Liverpool,5
+2020-03-10,England,E06000032,Luton,2
+2020-03-10,England,E08000003,Manchester,5
+2020-03-10,England,E06000035,Medway,2
+2020-03-10,England,E09000024,Merton,2
+2020-03-10,England,E06000002,Middlesbrough,0
+2020-03-10,England,E06000042,Milton Keynes,2
+2020-03-10,England,E08000021,Newcastle upon Tyne,4
+2020-03-10,England,E09000025,Newham,0
+2020-03-10,England,E10000020,Norfolk,0
+2020-03-10,England,E06000012,North East Lincolnshire,0
+2020-03-10,England,E06000013,North Lincolnshire,0
+2020-03-10,England,E06000024,North Somerset,1
+2020-03-10,England,E08000022,North Tyneside,1
+2020-03-10,England,E10000023,North Yorkshire,0
+2020-03-10,England,E10000021,Northamptonshire,5
+2020-03-10,England,E06000057,Northumberland,0
+2020-03-10,England,E06000018,Nottingham,2
+2020-03-10,England,E10000024,Nottinghamshire,5
+2020-03-10,England,E08000004,Oldham,4
+2020-03-10,England,E10000025,Oxfordshire,7
+2020-03-10,England,E06000031,Peterborough,1
+2020-03-10,England,E06000026,Plymouth,0
+2020-03-10,England,E06000044,Portsmouth,0
+2020-03-10,England,E06000038,Reading,0
+2020-03-10,England,E09000026,Redbridge,1
+2020-03-10,England,E06000003,Redcar and Cleveland,0
+2020-03-10,England,E09000027,Richmond upon Thames,1
+2020-03-10,England,E08000005,Rochdale,0
+2020-03-10,England,E08000018,Rotherham,1
+2020-03-10,England,E06000017,Rutland,0
+2020-03-10,England,E08000006,Salford,0
+2020-03-10,England,E08000028,Sandwell,0
+2020-03-10,England,E08000014,Sefton,0
+2020-03-10,England,E08000019,Sheffield,0
+2020-03-10,England,E06000051,Shropshire,1
+2020-03-10,England,E06000039,Slough,1
+2020-03-10,England,E08000029,Solihull,0
+2020-03-10,England,E10000027,Somerset,2
+2020-03-10,England,E06000025,South Gloucestershire,0
+2020-03-10,England,E08000023,South Tyneside,0
+2020-03-10,England,E06000045,Southampton,0
+2020-03-10,England,E06000033,Southend-on-Sea,1
+2020-03-10,England,E09000028,Southwark,8
+2020-03-10,England,E08000013,St. Helens,0
+2020-03-10,England,E10000028,Staffordshire,4
+2020-03-10,England,E08000007,Stockport,0
+2020-03-10,England,E06000004,Stockton-on-Tees,0
+2020-03-10,England,E06000021,Stoke-on-Trent,0
+2020-03-10,England,E10000029,Suffolk,1
+2020-03-10,England,E08000024,Sunderland,1
+2020-03-10,England,E10000030,Surrey,6
+2020-03-10,England,E09000029,Sutton,2
+2020-03-10,England,E06000030,Swindon,2
+2020-03-10,England,E08000008,Tameside,1
+2020-03-10,England,E06000020,Telford and Wrekin,0
+2020-03-10,England,E06000034,Thurrock,0
+2020-03-10,England,E06000027,Torbay,7
+2020-03-10,England,E09000030,Tower Hamlets,4
+2020-03-10,England,E08000009,Trafford,4
+2020-03-10,England,E08000036,Wakefield,0
+2020-03-10,England,E08000030,Walsall,0
+2020-03-10,England,E09000031,Waltham Forest,1
+2020-03-10,England,E09000032,Wandsworth,3
+2020-03-10,England,E06000007,Warrington,0
+2020-03-10,England,E10000031,Warwickshire,4
+2020-03-10,England,E06000037,West Berkshire,0
+2020-03-10,England,E10000032,West Sussex,3
+2020-03-10,England,E09000033,Westminster,5
+2020-03-10,England,E08000010,Wigan,3
+2020-03-10,England,E06000054,Wiltshire,4
+2020-03-10,England,E06000040,Windsor and Maidenhead,1
+2020-03-10,England,E08000015,Wirral,1
+2020-03-10,England,E06000041,Wokingham,3
+2020-03-10,England,E08000031,Wolverhampton,3
+2020-03-10,England,E10000034,Worcestershire,0
+2020-03-10,England,E06000014,York,3
+2020-03-10,England,,Awaiting confirmation,15
+2020-03-10,Scotland,,Ayrshire and Arran,1
+2020-03-10,Scotland,,Fife,2
+2020-03-10,Scotland,,Forth Valley,2
+2020-03-10,Scotland,,Grampian,6
+2020-03-10,Scotland,,Greater Glasgow and Clyde,3
+2020-03-10,Scotland,,Lanarkshire,3
+2020-03-10,Scotland,,Lothian,7
+2020-03-10,Scotland,,Shetland,2
+2020-03-10,Scotland,,Tayside,1
+2020-03-10,Wales,W06000019,Blaenau Gwent,0
+2020-03-10,Wales,W06000013,Bridgend,0
+2020-03-10,Wales,W06000018,Caerphilly,0
+2020-03-10,Wales,W06000015,Cardiff,2
+2020-03-10,Wales,W06000010,Carmarthenshire,2
+2020-03-10,Wales,W06000008,Ceredigion,0
+2020-03-10,Wales,W06000003,Conwy,0
+2020-03-10,Wales,W06000004,Denbighshire,0
+2020-03-10,Wales,W06000005,Flintshire,0
+2020-03-10,Wales,W06000002,Gwynedd,0
+2020-03-10,Wales,W06000001,Isle of Anglesey,0
+2020-03-10,Wales,W06000024,Merthyr Tydfil,0
+2020-03-10,Wales,W06000021,Monmouthshire,0
+2020-03-10,Wales,W06000012,Neath Port Talbot,6
+2020-03-10,Wales,W06000022,Newport,1
+2020-03-10,Wales,W06000009,Pembrokeshire,2
+2020-03-10,Wales,W06000023,Powys,0
+2020-03-10,Wales,W06000016,Rhondda Cynon Taf,0
+2020-03-10,Wales,W06000011,Swansea,2
+2020-03-10,Wales,W06000020,Torfaen,0
+2020-03-10,Wales,W06000014,Vale of Glamorgan,0
+2020-03-10,Wales,W06000006,Wrexham,0
+2020-03-11,England,E06000001,Hartlepool,0
+2020-03-11,England,E06000002,Middlesbrough,0
+2020-03-11,England,E06000003,Redcar and Cleveland,0
+2020-03-11,England,E06000004,Stockton-on-Tees,2
+2020-03-11,England,E06000005,Darlington,0
+2020-03-11,England,E06000006,Halton,0
+2020-03-11,England,E06000007,Warrington,1
+2020-03-11,England,E06000008,Blackburn with Darwen,0
+2020-03-11,England,E06000009,Blackpool,0
+2020-03-11,England,E06000010,"Kingston upon Hull, City of",1
+2020-03-11,England,E06000011,East Riding of Yorkshire,0
+2020-03-11,England,E06000012,North East Lincolnshire,0
+2020-03-11,England,E06000013,North Lincolnshire,1
+2020-03-11,England,E06000014,York,3
+2020-03-11,England,E06000015,Derby,1
+2020-03-11,England,E06000016,Leicester,0
+2020-03-11,England,E06000017,Rutland,0
+2020-03-11,England,E06000018,Nottingham,3
+2020-03-11,England,E06000019,"Herefordshire, County of",1
+2020-03-11,England,E06000020,Telford and Wrekin,0
+2020-03-11,England,E06000021,Stoke-on-Trent,0
+2020-03-11,England,E06000022,Bath and North East Somerset,0
+2020-03-11,England,E06000023,"Bristol, City of",3
+2020-03-11,England,E06000024,North Somerset,0
+2020-03-11,England,E06000025,South Gloucestershire,1
+2020-03-11,England,E06000026,Plymouth,0
+2020-03-11,England,E06000027,Torbay,7
+2020-03-11,England,E06000030,Swindon,2
+2020-03-11,England,E06000031,Peterborough,1
+2020-03-11,England,E06000032,Luton,2
+2020-03-11,England,E06000033,Southend-on-Sea,1
+2020-03-11,England,E06000034,Thurrock,0
+2020-03-11,England,E06000035,Medway,2
+2020-03-11,England,E06000036,Bracknell Forest,2
+2020-03-11,England,E06000037,West Berkshire,0
+2020-03-11,England,E06000038,Reading,0
+2020-03-11,England,E06000039,Slough,1
+2020-03-11,England,E06000040,Windsor and Maidenhead,1
+2020-03-11,England,E06000041,Wokingham,3
+2020-03-11,England,E06000042,Milton Keynes,2
+2020-03-11,England,E06000043,Brighton and Hove,8
+2020-03-11,England,E06000044,Portsmouth,0
+2020-03-11,England,E06000045,Southampton,0
+2020-03-11,England,E06000046,Isle of Wight,1
+2020-03-11,England,E06000047,County Durham,1
+2020-03-11,England,E06000049,Cheshire East,0
+2020-03-11,England,E06000050,Cheshire West and Chester,0
+2020-03-11,England,E06000051,Shropshire,2
+2020-03-11,England,E06000052,Cornwall and Isles of Scilly,5
+2020-03-11,England,E06000054,Wiltshire,4
+2020-03-11,England,E06000055,Bedford,0
+2020-03-11,England,E08000009,Trafford,4
+2020-03-11,England,E06000056,Central Bedfordshire,0
+2020-03-11,England,E06000057,Northumberland,0
+2020-03-11,England,E06000058,"Bournemouth, Christchurch and Poole",3
+2020-03-11,England,E06000059,Dorset,0
+2020-03-11,England,E08000001,Bolton,3
+2020-03-11,England,E08000002,Bury,3
+2020-03-11,England,E08000003,Manchester,5
+2020-03-11,England,E08000004,Oldham,4
+2020-03-11,England,E08000005,Rochdale,1
+2020-03-11,England,E08000006,Salford,0
+2020-03-11,England,E08000007,Stockport,0
+2020-03-11,England,E08000008,Tameside,1
+2020-03-11,England,E08000010,Wigan,3
+2020-03-11,England,E08000011,Knowsley,0
+2020-03-11,England,E08000012,Liverpool,6
+2020-03-11,England,E08000013,St. Helens,0
+2020-03-11,England,E08000014,Sefton,1
+2020-03-11,England,E08000015,Wirral,2
+2020-03-11,England,E08000016,Barnsley,2
+2020-03-11,England,E08000017,Doncaster,0
+2020-03-11,England,E08000018,Rotherham,1
+2020-03-11,England,E08000019,Sheffield,1
+2020-03-11,England,E08000021,Newcastle upon Tyne,6
+2020-03-11,England,E08000022,North Tyneside,2
+2020-03-11,England,E08000023,South Tyneside,0
+2020-03-11,England,E08000024,Sunderland,1
+2020-03-11,England,E08000025,Birmingham,2
+2020-03-11,England,E08000026,Coventry,3
+2020-03-11,England,E08000027,Dudley,1
+2020-03-11,England,E08000028,Sandwell,0
+2020-03-11,England,E08000029,Solihull,0
+2020-03-11,England,E08000030,Walsall,0
+2020-03-11,England,E08000031,Wolverhampton,4
+2020-03-11,England,E08000032,Bradford,1
+2020-03-11,England,E08000033,Calderdale,0
+2020-03-11,England,E08000034,Kirklees,1
+2020-03-11,England,E08000035,Leeds,5
+2020-03-11,England,E08000036,Wakefield,0
+2020-03-11,England,E08000037,Gateshead,0
+2020-03-11,England,E09000002,Barking and Dagenham,1
+2020-03-11,England,E09000003,Barnet,8
+2020-03-11,England,E09000004,Bexley,0
+2020-03-11,England,E09000005,Brent,3
+2020-03-11,England,E09000006,Bromley,2
+2020-03-11,England,E09000007,Camden,7
+2020-03-11,England,E09000008,Croydon,1
+2020-03-11,England,E09000009,Ealing,5
+2020-03-11,England,E09000010,Enfield,1
+2020-03-11,England,E09000011,Greenwich,1
+2020-03-11,England,E09000012,Hackney and City of London,4
+2020-03-11,England,E09000013,Hammersmith and Fulham,3
+2020-03-11,England,E09000014,Haringey,1
+2020-03-11,England,E09000015,Harrow,1
+2020-03-11,England,E09000016,Havering,2
+2020-03-11,England,E09000017,Hillingdon,3
+2020-03-11,England,E09000018,Hounslow,5
+2020-03-11,England,E09000019,Islington,1
+2020-03-11,England,E09000020,Kensington and Chelsea,15
+2020-03-11,England,E09000021,Kingston upon Thames,1
+2020-03-11,England,E09000022,Lambeth,5
+2020-03-11,England,E09000023,Lewisham,3
+2020-03-11,England,E09000024,Merton,2
+2020-03-11,England,E09000025,Newham,0
+2020-03-11,England,E09000026,Redbridge,1
+2020-03-11,England,E09000027,Richmond upon Thames,1
+2020-03-11,England,E09000028,Southwark,9
+2020-03-11,England,E09000029,Sutton,4
+2020-03-11,England,E09000030,Tower Hamlets,4
+2020-03-11,England,E09000031,Waltham Forest,1
+2020-03-11,England,E09000032,Wandsworth,3
+2020-03-11,England,E09000033,Westminster,6
+2020-03-11,England,E10000002,Buckinghamshire,2
+2020-03-11,England,E10000003,Cambridgeshire,1
+2020-03-11,England,E10000006,Cumbria,7
+2020-03-11,England,E10000007,Derbyshire,4
+2020-03-11,England,E10000008,Devon,13
+2020-03-11,England,E10000011,East Sussex,0
+2020-03-11,England,E10000012,Essex,6
+2020-03-11,England,E10000013,Gloucestershire,4
+2020-03-11,England,E10000014,Hampshire,13
+2020-03-11,England,E10000015,Hertfordshire,18
+2020-03-11,England,E10000016,Kent,5
+2020-03-11,England,E10000017,Lancashire,5
+2020-03-11,England,E10000018,Leicestershire,2
+2020-03-11,England,E10000019,Lincolnshire,1
+2020-03-11,England,E10000020,Norfolk,0
+2020-03-11,England,E10000021,Northamptonshire,5
+2020-03-11,England,E10000023,North Yorkshire,0
+2020-03-11,England,E10000024,Nottinghamshire,6
+2020-03-11,England,E10000025,Oxfordshire,9
+2020-03-11,England,E10000027,Somerset,2
+2020-03-11,England,E10000028,Staffordshire,4
+2020-03-11,England,E10000029,Suffolk,1
+2020-03-11,England,E10000030,Surrey,10
+2020-03-11,England,E10000031,Warwickshire,4
+2020-03-11,England,E10000032,West Sussex,3
+2020-03-11,England,E10000034,Worcestershire,0
+2020-03-11,Scotland,,Ayrshire and Arran,3
+2020-03-11,Scotland,,Borders,2
+2020-03-11,Scotland,,Fife,2
+2020-03-11,Scotland,,Forth Valley,2
+2020-03-11,Scotland,,Grampian,6
+2020-03-11,Scotland,,Greater Glasgow and Clyde,5
+2020-03-11,Scotland,,Lanarkshire,4
+2020-03-11,Scotland,,Lothian,8
+2020-03-11,Scotland,,Shetland,2
+2020-03-11,Scotland,,Tayside,2
+2020-03-11,Wales,W06000019,Blaenau Gwent,0
+2020-03-11,Wales,W06000013,Bridgend,0
+2020-03-11,Wales,W06000018,Caerphilly,1
+2020-03-11,Wales,W06000015,Cardiff,2
+2020-03-11,Wales,W06000010,Carmarthenshire,2
+2020-03-11,Wales,W06000008,Ceredigion,0
+2020-03-11,Wales,W06000003,Conwy,0
+2020-03-11,Wales,W06000004,Denbighshire,0
+2020-03-11,Wales,W06000005,Flintshire,0
+2020-03-11,Wales,W06000002,Gwynedd,0
+2020-03-11,Wales,W06000001,Isle of Anglesey,0
+2020-03-11,Wales,W06000024,Merthyr Tydfil,0
+2020-03-11,Wales,W06000021,Monmouthshire,0
+2020-03-11,Wales,W06000012,Neath Port Talbot,6
+2020-03-11,Wales,W06000022,Newport,1
+2020-03-11,Wales,W06000009,Pembrokeshire,2
+2020-03-11,Wales,W06000023,Powys,2
+2020-03-11,Wales,W06000016,Rhondda Cynon Taf,0
+2020-03-11,Wales,W06000011,Swansea,3
+2020-03-11,Wales,W06000020,Torfaen,0
+2020-03-11,Wales,W06000014,Vale of Glamorgan,0
+2020-03-11,Wales,W06000006,Wrexham,0
+2020-03-12,England,E06000001,Hartlepool,0
+2020-03-12,England,E06000002,Middlesbrough,0
+2020-03-12,England,E06000003,Redcar and Cleveland,0
+2020-03-12,England,E06000004,Stockton-on-Tees,2
+2020-03-12,England,E06000005,Darlington,0
+2020-03-12,England,E06000006,Halton,0
+2020-03-12,England,E06000007,Warrington,1
+2020-03-12,England,E06000008,Blackburn with Darwen,0
+2020-03-12,England,E06000009,Blackpool,0
+2020-03-12,England,E06000010,"Kingston upon Hull, City of",1
+2020-03-12,England,E06000011,East Riding of Yorkshire,0
+2020-03-12,England,E06000012,North East Lincolnshire,0
+2020-03-12,England,E06000013,North Lincolnshire,1
+2020-03-12,England,E06000014,York,3
+2020-03-12,England,E06000015,Derby,1
+2020-03-12,England,E06000016,Leicester,0
+2020-03-12,England,E06000017,Rutland,0
+2020-03-12,England,E06000018,Nottingham,3
+2020-03-12,England,E06000019,"Herefordshire, County of",1
+2020-03-12,England,E06000020,Telford and Wrekin,0
+2020-03-12,England,E06000021,Stoke-on-Trent,0
+2020-03-12,England,E06000022,Bath and North East Somerset,0
+2020-03-12,England,E06000023,"Bristol, City of",3
+2020-03-12,England,E06000024,North Somerset,0
+2020-03-12,England,E06000025,South Gloucestershire,1
+2020-03-12,England,E06000026,Plymouth,0
+2020-03-12,England,E06000027,Torbay,7
+2020-03-12,England,E06000030,Swindon,2
+2020-03-12,England,E06000031,Peterborough,1
+2020-03-12,England,E06000032,Luton,2
+2020-03-12,England,E06000033,Southend-on-Sea,1
+2020-03-12,England,E06000034,Thurrock,0
+2020-03-12,England,E06000035,Medway,2
+2020-03-12,England,E06000036,Bracknell Forest,2
+2020-03-12,England,E06000037,West Berkshire,0
+2020-03-12,England,E06000038,Reading,0
+2020-03-12,England,E06000039,Slough,1
+2020-03-12,England,E06000040,Windsor and Maidenhead,1
+2020-03-12,England,E06000041,Wokingham,3
+2020-03-12,England,E06000042,Milton Keynes,2
+2020-03-12,England,E06000043,Brighton and Hove,8
+2020-03-12,England,E06000044,Portsmouth,0
+2020-03-12,England,E06000045,Southampton,0
+2020-03-12,England,E06000046,Isle of Wight,1
+2020-03-12,England,E06000047,County Durham,1
+2020-03-12,England,E06000049,Cheshire East,0
+2020-03-12,England,E06000050,Cheshire West and Chester,0
+2020-03-12,England,E06000051,Shropshire,2
+2020-03-12,England,E06000052,Cornwall and Isles of Scilly,5
+2020-03-12,England,E06000054,Wiltshire,4
+2020-03-12,England,E06000055,Bedford,0
+2020-03-12,England,E08000009,Trafford,4
+2020-03-12,England,E06000056,Central Bedfordshire,0
+2020-03-12,England,E06000057,Northumberland,0
+2020-03-12,England,E06000058,"Bournemouth, Christchurch and Poole",3
+2020-03-12,England,E06000059,Dorset,0
+2020-03-12,England,E08000001,Bolton,3
+2020-03-12,England,E08000002,Bury,3
+2020-03-12,England,E08000003,Manchester,5
+2020-03-12,England,E08000004,Oldham,4
+2020-03-12,England,E08000005,Rochdale,1
+2020-03-12,England,E08000006,Salford,0
+2020-03-12,England,E08000007,Stockport,0
+2020-03-12,England,E08000008,Tameside,1
+2020-03-12,England,E08000010,Wigan,3
+2020-03-12,England,E08000011,Knowsley,0
+2020-03-12,England,E08000012,Liverpool,6
+2020-03-12,England,E08000013,St. Helens,0
+2020-03-12,England,E08000014,Sefton,1
+2020-03-12,England,E08000015,Wirral,2
+2020-03-12,England,E08000016,Barnsley,2
+2020-03-12,England,E08000017,Doncaster,0
+2020-03-12,England,E08000018,Rotherham,1
+2020-03-12,England,E08000019,Sheffield,1
+2020-03-12,England,E08000021,Newcastle upon Tyne,6
+2020-03-12,England,E08000022,North Tyneside,2
+2020-03-12,England,E08000023,South Tyneside,0
+2020-03-12,England,E08000024,Sunderland,1
+2020-03-12,England,E08000025,Birmingham,2
+2020-03-12,England,E08000026,Coventry,3
+2020-03-12,England,E08000027,Dudley,1
+2020-03-12,England,E08000028,Sandwell,0
+2020-03-12,England,E08000029,Solihull,0
+2020-03-12,England,E08000030,Walsall,0
+2020-03-12,England,E08000031,Wolverhampton,4
+2020-03-12,England,E08000032,Bradford,1
+2020-03-12,England,E08000033,Calderdale,0
+2020-03-12,England,E08000034,Kirklees,1
+2020-03-12,England,E08000035,Leeds,5
+2020-03-12,England,E08000036,Wakefield,0
+2020-03-12,England,E08000037,Gateshead,0
+2020-03-12,England,E09000002,Barking and Dagenham,1
+2020-03-12,England,E09000003,Barnet,8
+2020-03-12,England,E09000004,Bexley,0
+2020-03-12,England,E09000005,Brent,3
+2020-03-12,England,E09000006,Bromley,2
+2020-03-12,England,E09000007,Camden,7
+2020-03-12,England,E09000008,Croydon,1
+2020-03-12,England,E09000009,Ealing,5
+2020-03-12,England,E09000010,Enfield,1
+2020-03-12,England,E09000011,Greenwich,1
+2020-03-12,England,E09000012,Hackney and City of London,4
+2020-03-12,England,E09000013,Hammersmith and Fulham,3
+2020-03-12,England,E09000014,Haringey,1
+2020-03-12,England,E09000015,Harrow,1
+2020-03-12,England,E09000016,Havering,2
+2020-03-12,England,E09000017,Hillingdon,3
+2020-03-12,England,E09000018,Hounslow,5
+2020-03-12,England,E09000019,Islington,1
+2020-03-12,England,E09000020,Kensington and Chelsea,15
+2020-03-12,England,E09000021,Kingston upon Thames,1
+2020-03-12,England,E09000022,Lambeth,5
+2020-03-12,England,E09000023,Lewisham,3
+2020-03-12,England,E09000024,Merton,2
+2020-03-12,England,E09000025,Newham,0
+2020-03-12,England,E09000026,Redbridge,1
+2020-03-12,England,E09000027,Richmond upon Thames,1
+2020-03-12,England,E09000028,Southwark,9
+2020-03-12,England,E09000029,Sutton,4
+2020-03-12,England,E09000030,Tower Hamlets,4
+2020-03-12,England,E09000031,Waltham Forest,1
+2020-03-12,England,E09000032,Wandsworth,3
+2020-03-12,England,E09000033,Westminster,6
+2020-03-12,England,E10000002,Buckinghamshire,2
+2020-03-12,England,E10000003,Cambridgeshire,1
+2020-03-12,England,E10000006,Cumbria,7
+2020-03-12,England,E10000007,Derbyshire,4
+2020-03-12,England,E10000008,Devon,13
+2020-03-12,England,E10000011,East Sussex,0
+2020-03-12,England,E10000012,Essex,6
+2020-03-12,England,E10000013,Gloucestershire,4
+2020-03-12,England,E10000014,Hampshire,13
+2020-03-12,England,E10000015,Hertfordshire,18
+2020-03-12,England,E10000016,Kent,5
+2020-03-12,England,E10000017,Lancashire,5
+2020-03-12,England,E10000018,Leicestershire,2
+2020-03-12,England,E10000019,Lincolnshire,1
+2020-03-12,England,E10000020,Norfolk,0
+2020-03-12,England,E10000021,Northamptonshire,5
+2020-03-12,England,E10000023,North Yorkshire,0
+2020-03-12,England,E10000024,Nottinghamshire,6
+2020-03-12,England,E10000025,Oxfordshire,9
+2020-03-12,England,E10000027,Somerset,2
+2020-03-12,England,E10000028,Staffordshire,4
+2020-03-12,England,E10000029,Suffolk,1
+2020-03-12,England,E10000030,Surrey,10
+2020-03-12,England,E10000031,Warwickshire,4
+2020-03-12,England,E10000032,West Sussex,3
+2020-03-12,England,E10000034,Worcestershire,0
+2020-03-12,Scotland,,Ayrshire and Arran,4
+2020-03-12,Scotland,,Borders,2
+2020-03-12,Scotland,,Fife,3
+2020-03-12,Scotland,,Forth Valley,6
+2020-03-12,Scotland,,Grampian,7
+2020-03-12,Scotland,,Greater Glasgow and Clyde,10
+2020-03-12,Scotland,,Lanarkshire,7
+2020-03-12,Scotland,,Lothian,11
+2020-03-12,Scotland,,Shetland,6
+2020-03-12,Scotland,,Tayside,4
+2020-03-12,Wales,W06000019,Blaenau Gwent,1
+2020-03-12,Wales,W06000013,Bridgend,0
+2020-03-12,Wales,W06000018,Caerphilly,1
+2020-03-12,Wales,W06000015,Cardiff,3
+2020-03-12,Wales,W06000010,Carmarthenshire,2
+2020-03-12,Wales,W06000008,Ceredigion,0
+2020-03-12,Wales,W06000003,Conwy,0
+2020-03-12,Wales,W06000004,Denbighshire,0
+2020-03-12,Wales,W06000005,Flintshire,0
+2020-03-12,Wales,W06000002,Gwynedd,0
+2020-03-12,Wales,W06000001,Isle of Anglesey,0
+2020-03-12,Wales,W06000024,Merthyr Tydfil,0
+2020-03-12,Wales,W06000021,Monmouthshire,1
+2020-03-12,Wales,W06000012,Neath Port Talbot,8
+2020-03-12,Wales,W06000022,Newport,1
+2020-03-12,Wales,W06000009,Pembrokeshire,2
+2020-03-12,Wales,W06000023,Powys,2
+2020-03-12,Wales,W06000016,Rhondda Cynon Taf,0
+2020-03-12,Wales,W06000011,Swansea,3
+2020-03-12,Wales,W06000020,Torfaen,0
+2020-03-12,Wales,W06000014,Vale of Glamorgan,0
+2020-03-12,Wales,W06000006,Wrexham,1

@@ -1,0 +1,150 @@
+FID,GSS_CD,GSS_NM,TotalCases
+0,E06000001,Hartlepool,0
+1,E06000002,Middlesbrough,0
+2,E06000003,Redcar and Cleveland,0
+3,E06000004,Stockton-on-Tees,2
+4,E06000005,Darlington,0
+5,E06000006,Halton,0
+6,E06000007,Warrington,1
+7,E06000008,Blackburn with Darwen,0
+8,E06000009,Blackpool,0
+9,E06000010,"Kingston upon Hull, City of",1
+10,E06000011,East Riding of Yorkshire,0
+11,E06000012,North East Lincolnshire,0
+12,E06000013,North Lincolnshire,1
+13,E06000014,York,3
+14,E06000015,Derby,1
+15,E06000016,Leicester,0
+16,E06000017,Rutland,0
+17,E06000018,Nottingham,3
+18,E06000019,"Herefordshire, County of",1
+19,E06000020,Telford and Wrekin,0
+20,E06000021,Stoke-on-Trent,0
+21,E06000022,Bath and North East Somerset,0
+22,E06000023,"Bristol, City of",3
+23,E06000024,North Somerset,0
+24,E06000025,South Gloucestershire,1
+25,E06000026,Plymouth,0
+26,E06000027,Torbay,7
+27,E06000030,Swindon,2
+28,E06000031,Peterborough,1
+29,E06000032,Luton,2
+30,E06000033,Southend-on-Sea,1
+31,E06000034,Thurrock,0
+32,E06000035,Medway,2
+33,E06000036,Bracknell Forest,2
+34,E06000037,West Berkshire,0
+35,E06000038,Reading,0
+36,E06000039,Slough,1
+37,E06000040,Windsor and Maidenhead,1
+38,E06000041,Wokingham,3
+39,E06000042,Milton Keynes,2
+40,E06000043,Brighton and Hove,8
+41,E06000044,Portsmouth,0
+42,E06000045,Southampton,0
+43,E06000046,Isle of Wight,1
+44,E06000047,County Durham,1
+45,E06000049,Cheshire East,0
+46,E06000050,Cheshire West and Chester,0
+47,E06000051,Shropshire,2
+48,E06000052,Cornwall and Isles of Scilly,5
+49,E06000054,Wiltshire,4
+50,E06000055,Bedford,0
+51,E08000009,Trafford,4
+52,E06000056,Central Bedfordshire,0
+53,E06000057,Northumberland,0
+54,E06000058,"Bournemouth, Christchurch and Poole",3
+55,E06000059,Dorset,0
+56,E08000001,Bolton,3
+57,E08000002,Bury,3
+58,E08000003,Manchester,5
+59,E08000004,Oldham,4
+60,E08000005,Rochdale,1
+61,E08000006,Salford,0
+62,E08000007,Stockport,0
+63,E08000008,Tameside,1
+64,E08000010,Wigan,3
+65,E08000011,Knowsley,0
+66,E08000012,Liverpool,6
+67,E08000013,St. Helens,0
+68,E08000014,Sefton,1
+69,E08000015,Wirral,2
+70,E08000016,Barnsley,2
+71,E08000017,Doncaster,0
+72,E08000018,Rotherham,1
+73,E08000019,Sheffield,1
+74,E08000021,Newcastle upon Tyne,6
+75,E08000022,North Tyneside,2
+76,E08000023,South Tyneside,0
+77,E08000024,Sunderland,1
+78,E08000025,Birmingham,2
+79,E08000026,Coventry,3
+80,E08000027,Dudley,1
+81,E08000028,Sandwell,0
+82,E08000029,Solihull,0
+83,E08000030,Walsall,0
+84,E08000031,Wolverhampton,4
+85,E08000032,Bradford,1
+86,E08000033,Calderdale,0
+87,E08000034,Kirklees,1
+88,E08000035,Leeds,5
+89,E08000036,Wakefield,0
+90,E08000037,Gateshead,0
+91,E09000002,Barking and Dagenham,1
+92,E09000003,Barnet,8
+93,E09000004,Bexley,0
+94,E09000005,Brent,3
+95,E09000006,Bromley,2
+96,E09000007,Camden,7
+97,E09000008,Croydon,1
+98,E09000009,Ealing,5
+99,E09000010,Enfield,1
+100,E09000011,Greenwich,1
+101,E09000012,Hackney and City of London,4
+102,E09000013,Hammersmith and Fulham,3
+103,E09000014,Haringey,1
+104,E09000015,Harrow,1
+105,E09000016,Havering,2
+106,E09000017,Hillingdon,3
+107,E09000018,Hounslow,5
+108,E09000019,Islington,1
+109,E09000020,Kensington and Chelsea,15
+110,E09000021,Kingston upon Thames,1
+111,E09000022,Lambeth,5
+112,E09000023,Lewisham,3
+113,E09000024,Merton,2
+114,E09000025,Newham,0
+115,E09000026,Redbridge,1
+116,E09000027,Richmond upon Thames,1
+117,E09000028,Southwark,9
+118,E09000029,Sutton,4
+119,E09000030,Tower Hamlets,4
+120,E09000031,Waltham Forest,1
+121,E09000032,Wandsworth,3
+122,E09000033,Westminster,6
+123,E10000002,Buckinghamshire,2
+124,E10000003,Cambridgeshire,1
+125,E10000006,Cumbria,7
+126,E10000007,Derbyshire,4
+127,E10000008,Devon,13
+128,E10000011,East Sussex,0
+129,E10000012,Essex,6
+130,E10000013,Gloucestershire,4
+131,E10000014,Hampshire,13
+132,E10000015,Hertfordshire,18
+133,E10000016,Kent,5
+134,E10000017,Lancashire,5
+135,E10000018,Leicestershire,2
+136,E10000019,Lincolnshire,1
+137,E10000020,Norfolk,0
+138,E10000021,Northamptonshire,5
+139,E10000023,North Yorkshire,0
+140,E10000024,Nottinghamshire,6
+141,E10000025,Oxfordshire,9
+142,E10000027,Somerset,2
+143,E10000028,Staffordshire,4
+144,E10000029,Suffolk,1
+145,E10000030,Surrey,10
+146,E10000031,Warwickshire,4
+147,E10000032,West Sussex,3
+148,E10000034,Worcestershire,0

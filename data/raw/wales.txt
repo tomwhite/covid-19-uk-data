@@ -1,0 +1,74 @@
+# Notes on reported cases in England from Public Health Wales
+
+This is compiled into a machine-readable form in wales-new-cases.csv.
+
+2020-03-12
+https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/
+
+Total: 25
+New: 6
+
+“One case is in the Monmouthshire local authority area, and is associated with travel abroad.
+
+“One case is in the Cardiff local authority area, and is also associated with travel abroad.
+
+“Two of the new cases are in Neath Port Talbot local authority area, and are contacts of a previous case.
+
+“One case is in Blaenau Gwent local authority, and one is in Wrexham local authority area.  These two cases have no history of travel to a country where the virus is circulating, and are not known to have had contact with another confirmed case.
+
+2020-03-11
+https://gov.wales/chief-medical-officer-wales-confirms-four-new-cases-coronavirus-covid-19
+
+Total: 19
+New: 4
+
+Three of the new cases had returned to Wales from Northern Italy. Two of those are residents in the Powys local authority area, and the other is resident in the Swansea local authority area.
+
+The other new case, resident of the Caerphilly local authority area, has no history of travel to a country where the virus is circulating, and is not known to have had contact with another confirmed case.
+
+2020-03-10
+https://gov.wales/chief-medical-officer-for-wales-confirms-9-new-cases-of-coronavirus
+
+Total: 15
+New: 9
+
+2 of the patients have recently returned together from northern Italy, and are resident in the Carmarthenshire local authority area.
+
+The other 7 patients were tested following tracing in connection with the Neath Port Talbot Council resident who was tested positive at the weekend and which was announced yesterday. 
+
+One of the 7 is a resident of Cardiff local authority area, one is from Swansea local authority area and the other 5 are all from Neath Port Talbot local authority area.
+
+
+2020-03-09
+https://gov.wales/chief-medical-officer-wales-confirms-two-new-cases-coronavirus-covid-19-0
+
+Total: 6
+New: 2
+
+The first patient is resident in the Neath Port Talbot local authority area, and has recently returned from Southern Italy.
+
+The second patient is resident in the Newport local authority area, and has recently returned from Northern Italy.
+
+2020-03-08
+https://gov.wales/chief-medical-officer-wales-confirms-two-new-cases-coronavirus-covid-19
+
+Total: 4
+New: 2
+
+The patients, who are from the same household, are resident in the Pembrokeshire local authority area and have recently returned from Northern Italy. The patients are being managed in a clinically appropriate setting.
+
+2020-03-05
+https://gov.wales/wales-confirms-second-positive-case-coronavirus-covid-19
+
+Total: 2
+New: 1
+
+The patient is a resident in the Cardiff local authority area and has recently returned from Northern Italy, where the virus was contracted. The patient is being treated in a clinically appropriate setting. 
+
+2020-02-28
+https://gov.wales/wales-confirms-first-positive-case-coronavirus-covid-19
+
+Total: 1
+New: 1
+
+Swansea, according to https://www.bbc.co.uk/news/uk-wales-51852790

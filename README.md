@@ -120,13 +120,13 @@ open https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public
 # Edit data/covid-19-totals-uk.csv
 ```
 
-Wales
+Wales (11am)
 ```bash
 DATE=$(date +'%Y-%m-%d')
 open https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/
 # Edit data/raw/wales-new-cases.csv
 ./tools/gen_daily_areas_wales.py data/daily/covid-19-cases-$DATE-wales.csv
-# Edit data/covid-19-totals-wales.csv on Thursdays
+# Edit data/covid-19-totals-wales.csv (only have test numbers on Thursdays, leave column blank on other days)
 ```
 
 Scotland

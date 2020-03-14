@@ -109,7 +109,7 @@ Run a sanity check that the area case numbers add up to the totals:
 
 ## Daily workflow
 
-England
+England (2pm, with area totals an hour or two later)
 ```bash
 DATE=$(date +'%Y-%m-%d')
 open https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6
@@ -117,7 +117,9 @@ open https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6
 mv ~/Downloads/CountyUAs_cases_table.csv data/raw/CountyUAs_cases_table-$DATE.csv
 ./tools/gen_daily_areas_england.py data/raw/CountyUAs_cases_table-$DATE.csv data/daily/covid-19-cases-$DATE-england.csv
 open https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases
-# Edit data/covid-19-totals-uk.csv
+# Edit data/covid-19-totals-uk.csv with output from running the following (double check numbers)
+curl https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public -o uk-tmp.html
+./tools/extract_totals.py uk-tmp.html
 ```
 
 Wales (11am)
@@ -127,20 +129,25 @@ open https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavir
 # Edit data/raw/wales-new-cases.csv
 ./tools/gen_daily_areas_wales.py data/daily/covid-19-cases-$DATE-wales.csv
 # Edit data/covid-19-totals-wales.csv (only have test numbers on Thursdays, leave column blank on other days)
+curl https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/ -o wales-tmp.html
+./tools/extract_totals.py wales-tmp.html
 ```
 
-Scotland
+Scotland (2pm)
 ```bash
 DATE=$(date +'%Y-%m-%d')
 curl https://www.gov.scot/coronavirus-covid-19/ -o data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html
 ./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html data/daily/covid-19-cases-$DATE-scotland.csv
-# Edit data/covid-19-totals-scotland.csv
+# Edit data/covid-19-totals-scotland.csv with output from running the following (double check numbers)
+./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html
 ```
 
-Northern Ireland
+Northern Ireland (2pm)
 ```bash
 open https://www.publichealth.hscni.net/news/covid-19-coronavirus
-# Edit data/covid-19-totals-northern-ireland.csv
+# Edit data/covid-19-totals-northern-ireland.csv with output from running the following (double check numbers)
+curl https://www.publichealth.hscni.net/news/covid-19-coronavirus -o ni-tmp.html
+./tools/extract_totals.py ni-tmp.html
 ```
 
 Consolidate and check

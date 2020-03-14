@@ -165,12 +165,12 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-05,Wales,W06000001,Isle of Anglesey,0
 2020-03-05,Wales,W06000024,Merthyr Tydfil,0
 2020-03-05,Wales,W06000021,Monmouthshire,0
-2020-03-05,Wales,W06000012,Neath Port Talbot,0
+2020-03-05,Wales,W06000012,Neath Port Talbot,1
 2020-03-05,Wales,W06000022,Newport,0
 2020-03-05,Wales,W06000009,Pembrokeshire,0
 2020-03-05,Wales,W06000023,Powys,0
 2020-03-05,Wales,W06000016,Rhondda Cynon Taf,0
-2020-03-05,Wales,W06000011,Swansea,1
+2020-03-05,Wales,W06000011,Swansea,0
 2020-03-05,Wales,W06000020,Torfaen,0
 2020-03-05,Wales,W06000014,Vale of Glamorgan,0
 2020-03-05,Wales,W06000006,Wrexham,0
@@ -194,12 +194,12 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-06,Wales,W06000001,Isle of Anglesey,0
 2020-03-06,Wales,W06000024,Merthyr Tydfil,0
 2020-03-06,Wales,W06000021,Monmouthshire,0
-2020-03-06,Wales,W06000012,Neath Port Talbot,0
+2020-03-06,Wales,W06000012,Neath Port Talbot,1
 2020-03-06,Wales,W06000022,Newport,0
 2020-03-06,Wales,W06000009,Pembrokeshire,0
 2020-03-06,Wales,W06000023,Powys,0
 2020-03-06,Wales,W06000016,Rhondda Cynon Taf,0
-2020-03-06,Wales,W06000011,Swansea,1
+2020-03-06,Wales,W06000011,Swansea,0
 2020-03-06,Wales,W06000020,Torfaen,0
 2020-03-06,Wales,W06000014,Vale of Glamorgan,0
 2020-03-06,Wales,W06000006,Wrexham,0
@@ -375,12 +375,12 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-07,Wales,W06000001,Isle of Anglesey,0
 2020-03-07,Wales,W06000024,Merthyr Tydfil,0
 2020-03-07,Wales,W06000021,Monmouthshire,0
-2020-03-07,Wales,W06000012,Neath Port Talbot,0
+2020-03-07,Wales,W06000012,Neath Port Talbot,1
 2020-03-07,Wales,W06000022,Newport,0
 2020-03-07,Wales,W06000009,Pembrokeshire,0
 2020-03-07,Wales,W06000023,Powys,0
 2020-03-07,Wales,W06000016,Rhondda Cynon Taf,0
-2020-03-07,Wales,W06000011,Swansea,1
+2020-03-07,Wales,W06000011,Swansea,0
 2020-03-07,Wales,W06000020,Torfaen,0
 2020-03-07,Wales,W06000014,Vale of Glamorgan,0
 2020-03-07,Wales,W06000006,Wrexham,0
@@ -555,12 +555,12 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-08,Wales,W06000001,Isle of Anglesey,0
 2020-03-08,Wales,W06000024,Merthyr Tydfil,0
 2020-03-08,Wales,W06000021,Monmouthshire,0
-2020-03-08,Wales,W06000012,Neath Port Talbot,0
+2020-03-08,Wales,W06000012,Neath Port Talbot,1
 2020-03-08,Wales,W06000022,Newport,0
 2020-03-08,Wales,W06000009,Pembrokeshire,2
 2020-03-08,Wales,W06000023,Powys,0
 2020-03-08,Wales,W06000016,Rhondda Cynon Taf,0
-2020-03-08,Wales,W06000011,Swansea,1
+2020-03-08,Wales,W06000011,Swansea,0
 2020-03-08,Wales,W06000020,Torfaen,0
 2020-03-08,Wales,W06000014,Vale of Glamorgan,0
 2020-03-08,Wales,W06000006,Wrexham,0
@@ -736,12 +736,12 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-09,Wales,W06000001,Isle of Anglesey,0
 2020-03-09,Wales,W06000024,Merthyr Tydfil,0
 2020-03-09,Wales,W06000021,Monmouthshire,0
-2020-03-09,Wales,W06000012,Neath Port Talbot,1
+2020-03-09,Wales,W06000012,Neath Port Talbot,2
 2020-03-09,Wales,W06000022,Newport,1
 2020-03-09,Wales,W06000009,Pembrokeshire,2
 2020-03-09,Wales,W06000023,Powys,0
 2020-03-09,Wales,W06000016,Rhondda Cynon Taf,0
-2020-03-09,Wales,W06000011,Swansea,1
+2020-03-09,Wales,W06000011,Swansea,0
 2020-03-09,Wales,W06000020,Torfaen,0
 2020-03-09,Wales,W06000014,Vale of Glamorgan,0
 2020-03-09,Wales,W06000006,Wrexham,0
@@ -917,12 +917,12 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-10,Wales,W06000001,Isle of Anglesey,0
 2020-03-10,Wales,W06000024,Merthyr Tydfil,0
 2020-03-10,Wales,W06000021,Monmouthshire,0
-2020-03-10,Wales,W06000012,Neath Port Talbot,6
+2020-03-10,Wales,W06000012,Neath Port Talbot,7
 2020-03-10,Wales,W06000022,Newport,1
 2020-03-10,Wales,W06000009,Pembrokeshire,2
 2020-03-10,Wales,W06000023,Powys,0
 2020-03-10,Wales,W06000016,Rhondda Cynon Taf,0
-2020-03-10,Wales,W06000011,Swansea,2
+2020-03-10,Wales,W06000011,Swansea,1
 2020-03-10,Wales,W06000020,Torfaen,0
 2020-03-10,Wales,W06000014,Vale of Glamorgan,0
 2020-03-10,Wales,W06000006,Wrexham,0
@@ -1098,12 +1098,12 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-11,Wales,W06000001,Isle of Anglesey,0
 2020-03-11,Wales,W06000024,Merthyr Tydfil,0
 2020-03-11,Wales,W06000021,Monmouthshire,0
-2020-03-11,Wales,W06000012,Neath Port Talbot,6
+2020-03-11,Wales,W06000012,Neath Port Talbot,7
 2020-03-11,Wales,W06000022,Newport,1
 2020-03-11,Wales,W06000009,Pembrokeshire,2
 2020-03-11,Wales,W06000023,Powys,2
 2020-03-11,Wales,W06000016,Rhondda Cynon Taf,0
-2020-03-11,Wales,W06000011,Swansea,3
+2020-03-11,Wales,W06000011,Swansea,2
 2020-03-11,Wales,W06000020,Torfaen,0
 2020-03-11,Wales,W06000014,Vale of Glamorgan,0
 2020-03-11,Wales,W06000006,Wrexham,0
@@ -1279,12 +1279,12 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-12,Wales,W06000001,Isle of Anglesey,0
 2020-03-12,Wales,W06000024,Merthyr Tydfil,0
 2020-03-12,Wales,W06000021,Monmouthshire,1
-2020-03-12,Wales,W06000012,Neath Port Talbot,8
+2020-03-12,Wales,W06000012,Neath Port Talbot,9
 2020-03-12,Wales,W06000022,Newport,1
 2020-03-12,Wales,W06000009,Pembrokeshire,2
 2020-03-12,Wales,W06000023,Powys,2
 2020-03-12,Wales,W06000016,Rhondda Cynon Taf,0
-2020-03-12,Wales,W06000011,Swansea,3
+2020-03-12,Wales,W06000011,Swansea,2
 2020-03-12,Wales,W06000020,Torfaen,0
 2020-03-12,Wales,W06000014,Vale of Glamorgan,0
 2020-03-12,Wales,W06000006,Wrexham,1
@@ -1460,12 +1460,45 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-13,Wales,W06000001,Isle of Anglesey,1
 2020-03-13,Wales,W06000024,Merthyr Tydfil,0
 2020-03-13,Wales,W06000021,Monmouthshire,2
-2020-03-13,Wales,W06000012,Neath Port Talbot,8
+2020-03-13,Wales,W06000012,Neath Port Talbot,9
 2020-03-13,Wales,W06000022,Newport,2
 2020-03-13,Wales,W06000009,Pembrokeshire,2
 2020-03-13,Wales,W06000023,Powys,3
 2020-03-13,Wales,W06000016,Rhondda Cynon Taf,0
-2020-03-13,Wales,W06000011,Swansea,5
+2020-03-13,Wales,W06000011,Swansea,4
 2020-03-13,Wales,W06000020,Torfaen,0
 2020-03-13,Wales,W06000014,Vale of Glamorgan,0
 2020-03-13,Wales,W06000006,Wrexham,1
+2020-03-14,Scotland,,Ayrshire and Arran,6
+2020-03-14,Scotland,,Borders,5
+2020-03-14,Scotland,,Fife,6
+2020-03-14,Scotland,,Forth Valley,6
+2020-03-14,Scotland,,Grampian,9
+2020-03-14,Scotland,,Greater Glasgow and Clyde,31
+2020-03-14,Scotland,,Highland,1
+2020-03-14,Scotland,,Lanarkshire,10
+2020-03-14,Scotland,,Lothian,25
+2020-03-14,Scotland,,Shetland,11
+2020-03-14,Scotland,,Tayside,11
+2020-03-14,Wales,W06000019,Blaenau Gwent,1
+2020-03-14,Wales,W06000013,Bridgend,1
+2020-03-14,Wales,W06000018,Caerphilly,7
+2020-03-14,Wales,W06000015,Cardiff,5
+2020-03-14,Wales,W06000010,Carmarthenshire,4
+2020-03-14,Wales,W06000008,Ceredigion,0
+2020-03-14,Wales,W06000003,Conwy,1
+2020-03-14,Wales,W06000004,Denbighshire,0
+2020-03-14,Wales,W06000005,Flintshire,1
+2020-03-14,Wales,W06000002,Gwynedd,0
+2020-03-14,Wales,W06000001,Isle of Anglesey,1
+2020-03-14,Wales,W06000024,Merthyr Tydfil,0
+2020-03-14,Wales,W06000021,Monmouthshire,4
+2020-03-14,Wales,W06000012,Neath Port Talbot,11
+2020-03-14,Wales,W06000022,Newport,2
+2020-03-14,Wales,W06000009,Pembrokeshire,2
+2020-03-14,Wales,W06000023,Powys,5
+2020-03-14,Wales,W06000016,Rhondda Cynon Taf,0
+2020-03-14,Wales,W06000011,Swansea,14
+2020-03-14,Wales,W06000020,Torfaen,0
+2020-03-14,Wales,W06000014,Vale of Glamorgan,0
+2020-03-14,Wales,W06000006,Wrexham,1

@@ -1,0 +1,150 @@
+Date,Country,AreaCode,Area,TotalCases
+2020-03-14,England,E09000002,Barking and Dagenham,5
+2020-03-14,England,E09000003,Barnet,23
+2020-03-14,England,E08000016,Barnsley,3
+2020-03-14,England,E06000022,Bath and North East Somerset,1
+2020-03-14,England,E06000055,Bedford,0
+2020-03-14,England,E09000004,Bexley,5
+2020-03-14,England,E08000025,Birmingham,5
+2020-03-14,England,E06000008,Blackburn with Darwen,0
+2020-03-14,England,E06000009,Blackpool,1
+2020-03-14,England,E08000001,Bolton,3
+2020-03-14,England,E06000058,"Bournemouth, Christchurch and Poole",4
+2020-03-14,England,E06000036,Bracknell Forest,3
+2020-03-14,England,E08000032,Bradford,4
+2020-03-14,England,E09000005,Brent,14
+2020-03-14,England,E06000043,Brighton and Hove,9
+2020-03-14,England,E06000023,"Bristol, City of",4
+2020-03-14,England,E09000006,Bromley,5
+2020-03-14,England,E10000002,Buckinghamshire,13
+2020-03-14,England,E08000002,Bury,3
+2020-03-14,England,E08000033,Calderdale,3
+2020-03-14,England,E10000003,Cambridgeshire,4
+2020-03-14,England,E09000007,Camden,19
+2020-03-14,England,E06000056,Central Bedfordshire,1
+2020-03-14,England,E06000049,Cheshire East,1
+2020-03-14,England,E06000050,Cheshire West and Chester,3
+2020-03-14,England,E06000052,Cornwall and Isles of Scilly,4
+2020-03-14,England,E06000047,County Durham,1
+2020-03-14,England,E08000026,Coventry,3
+2020-03-14,England,E09000008,Croydon,1
+2020-03-14,England,E10000006,Cumbria,9
+2020-03-14,England,E06000005,Darlington,2
+2020-03-14,England,E06000015,Derby,3
+2020-03-14,England,E10000007,Derbyshire,9
+2020-03-14,England,E10000008,Devon,14
+2020-03-14,England,E08000017,Doncaster,2
+2020-03-14,England,E06000059,Dorset,1
+2020-03-14,England,E08000027,Dudley,4
+2020-03-14,England,E09000009,Ealing,18
+2020-03-14,England,E06000011,East Riding of Yorkshire,2
+2020-03-14,England,E10000011,East Sussex,1
+2020-03-14,England,E09000010,Enfield,5
+2020-03-14,England,E10000012,Essex,8
+2020-03-14,England,E08000037,Gateshead,1
+2020-03-14,England,E10000013,Gloucestershire,6
+2020-03-14,England,E09000011,Greenwich,10
+2020-03-14,England,E09000012,Hackney and City of London,11
+2020-03-14,England,E06000006,Halton,0
+2020-03-14,England,E09000013,Hammersmith and Fulham,10
+2020-03-14,England,E10000014,Hampshire,41
+2020-03-14,England,E09000014,Haringey,9
+2020-03-14,England,E09000015,Harrow,10
+2020-03-14,England,E06000001,Hartlepool,0
+2020-03-14,England,E09000016,Havering,2
+2020-03-14,England,E06000019,"Herefordshire, County of",1
+2020-03-14,England,E10000015,Hertfordshire,21
+2020-03-14,England,E09000017,Hillingdon,7
+2020-03-14,England,E09000018,Hounslow,10
+2020-03-14,England,E06000046,Isle of Wight,2
+2020-03-14,England,E09000019,Islington,3
+2020-03-14,England,E09000020,Kensington and Chelsea,27
+2020-03-14,England,E10000016,Kent,11
+2020-03-14,England,E06000010,"Kingston upon Hull, City of",1
+2020-03-14,England,E09000021,Kingston upon Thames,2
+2020-03-14,England,E08000034,Kirklees,1
+2020-03-14,England,E08000011,Knowsley,0
+2020-03-14,England,E09000022,Lambeth,25
+2020-03-14,England,E10000017,Lancashire,6
+2020-03-14,England,E08000035,Leeds,9
+2020-03-14,England,E06000016,Leicester,2
+2020-03-14,England,E10000018,Leicestershire,4
+2020-03-14,England,E09000023,Lewisham,6
+2020-03-14,England,E10000019,Lincolnshire,3
+2020-03-14,England,E08000012,Liverpool,6
+2020-03-14,England,E06000032,Luton,3
+2020-03-14,England,E08000003,Manchester,9
+2020-03-14,England,E06000035,Medway,2
+2020-03-14,England,E09000024,Merton,5
+2020-03-14,England,E06000002,Middlesbrough,0
+2020-03-14,England,E06000042,Milton Keynes,2
+2020-03-14,England,E08000021,Newcastle upon Tyne,5
+2020-03-14,England,E09000025,Newham,1
+2020-03-14,England,E10000020,Norfolk,0
+2020-03-14,England,E06000012,North East Lincolnshire,0
+2020-03-14,England,E06000013,North Lincolnshire,1
+2020-03-14,England,E06000024,North Somerset,0
+2020-03-14,England,E08000022,North Tyneside,2
+2020-03-14,England,E10000023,North Yorkshire,2
+2020-03-14,England,E10000021,Northamptonshire,8
+2020-03-14,England,E06000057,Northumberland,0
+2020-03-14,England,E06000018,Nottingham,5
+2020-03-14,England,E10000024,Nottinghamshire,6
+2020-03-14,England,E08000004,Oldham,6
+2020-03-14,England,E10000025,Oxfordshire,21
+2020-03-14,England,E06000031,Peterborough,1
+2020-03-14,England,E06000026,Plymouth,1
+2020-03-14,England,E06000044,Portsmouth,1
+2020-03-14,England,E06000038,Reading,3
+2020-03-14,England,E09000026,Redbridge,1
+2020-03-14,England,E06000003,Redcar and Cleveland,1
+2020-03-14,England,E09000027,Richmond upon Thames,2
+2020-03-14,England,E08000005,Rochdale,2
+2020-03-14,England,E08000018,Rotherham,2
+2020-03-14,England,E06000017,Rutland,0
+2020-03-14,England,E08000006,Salford,0
+2020-03-14,England,E08000028,Sandwell,0
+2020-03-14,England,E08000014,Sefton,1
+2020-03-14,England,E08000019,Sheffield,13
+2020-03-14,England,E06000051,Shropshire,3
+2020-03-14,England,E06000039,Slough,2
+2020-03-14,England,E08000029,Solihull,0
+2020-03-14,England,E10000027,Somerset,2
+2020-03-14,England,E06000025,South Gloucestershire,2
+2020-03-14,England,E08000023,South Tyneside,0
+2020-03-14,England,E06000045,Southampton,0
+2020-03-14,England,E06000033,Southend-on-Sea,2
+2020-03-14,England,E09000028,Southwark,28
+2020-03-14,England,E08000013,St. Helens,1
+2020-03-14,England,E10000028,Staffordshire,4
+2020-03-14,England,E08000007,Stockport,3
+2020-03-14,England,E06000004,Stockton-on-Tees,2
+2020-03-14,England,E06000021,Stoke-on-Trent,0
+2020-03-14,England,E10000029,Suffolk,1
+2020-03-14,England,E08000024,Sunderland,1
+2020-03-14,England,E10000030,Surrey,15
+2020-03-14,England,E09000029,Sutton,6
+2020-03-14,England,E06000030,Swindon,2
+2020-03-14,England,E08000008,Tameside,2
+2020-03-14,England,E06000020,Telford and Wrekin,0
+2020-03-14,England,E06000034,Thurrock,0
+2020-03-14,England,E06000027,Torbay,7
+2020-03-14,England,E09000030,Tower Hamlets,8
+2020-03-14,England,E08000009,Trafford,7
+2020-03-14,England,E08000036,Wakefield,1
+2020-03-14,England,E08000030,Walsall,1
+2020-03-14,England,E09000031,Waltham Forest,2
+2020-03-14,England,E09000032,Wandsworth,9
+2020-03-14,England,E06000007,Warrington,1
+2020-03-14,England,E10000031,Warwickshire,4
+2020-03-14,England,E06000037,West Berkshire,3
+2020-03-14,England,E10000032,West Sussex,6
+2020-03-14,England,E09000033,Westminster,24
+2020-03-14,England,E08000010,Wigan,3
+2020-03-14,England,E06000054,Wiltshire,5
+2020-03-14,England,E06000040,Windsor and Maidenhead,5
+2020-03-14,England,E08000015,Wirral,5
+2020-03-14,England,E06000041,Wokingham,6
+2020-03-14,England,E08000031,Wolverhampton,9
+2020-03-14,England,E10000034,Worcestershire,2
+2020-03-14,England,E06000014,York,4

@@ -3,9 +3,7 @@
 # Extract daily totals from an HTML page and emit a CSV row (for appending to totals files)
 
 from bs4 import BeautifulSoup
-import pandas as pd
 import dateparser
-from datetime import datetime
 import math
 import re
 import sys

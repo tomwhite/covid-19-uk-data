@@ -11,7 +11,6 @@ import re
 import sys
 
 html_file = sys.argv[1]
-csv_out_file = sys.argv[2]
 
 html = open(html_file).read()
 soup = BeautifulSoup(html, features="html.parser")

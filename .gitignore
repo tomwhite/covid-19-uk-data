@@ -1,1 +1,5 @@
 venv
+# vscode settings
+.vscode/
+# UK totals temp HTML files
+data/raw/uk-totals-temp-*.html

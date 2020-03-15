@@ -27,7 +27,7 @@ soup = BeautifulSoup(html, features="html.parser")
 table = soup.find_all("table")[-1]
 
 text = soup.get_text()
-text = text.replace(u'\xa0', u' ') # replace non-breaking spaces with regular spaces
+text = text.replace(u"\xa0", u" ")  # replace non-breaking spaces with regular spaces
 
 pattern = re.compile(r"(?s)Updated: (?P<time>.+?), \S+ (?P<date>\d+\s\w+\s\d{4})")
 m = re.search(pattern, text)
@@ -41,8 +41,18 @@ for table_row in table.findAll("tr"):
         continue
     if columns[0].text.strip() == "Local Authority":
         continue
-    la = columns[0].text.strip().replace("City and County of Swansea", "Swansea").replace("City of Cardiff", "Cardiff").replace("Newport City", "Newport").replace("County Borough Council", "").replace("County Council", "").replace("Council", "").strip()
-    if la == 'Residential area to be confirmed':
+    la = (
+        columns[0]
+        .text.strip()
+        .replace("City and County of Swansea", "Swansea")
+        .replace("City of Cardiff", "Cardiff")
+        .replace("Newport City", "Newport")
+        .replace("County Borough Council", "")
+        .replace("County Council", "")
+        .replace("Council", "")
+        .strip()
+    )
+    if la == "Residential area to be confirmed":
         cases = columns[2].text.strip()
     else:
         cases = columns[3].text.strip()

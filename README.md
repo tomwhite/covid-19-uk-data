@@ -137,7 +137,7 @@ curl https://www.gov.scot/coronavirus-covid-19/ -o data/raw/coronavirus-covid-19
 
 Northern Ireland (2pm)
 ```bash
-open https://www.publichealth.hscni.net/news/covid-19-coronavirus
+open https://www.publichealth.hscni.net/news/covid-19-coronavirus#situation-in-northern-ireland
 # Edit data/covid-19-totals-northern-ireland.csv with output from running the following (double check numbers)
 curl https://www.publichealth.hscni.net/news/covid-19-coronavirus -o ni-tmp.html
 ./tools/extract_totals.py ni-tmp.html

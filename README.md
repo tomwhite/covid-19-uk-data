@@ -41,14 +41,14 @@ Updates are published daily at https://phw.nhs.wales/news/public-health-wales-st
 
 * Test numbers are published _weekly_ on Thursday. The count is added to _data/covid-19-totals-wales.csv_ manually.
     * Improvement: automatically download this page every Thursday
-* Case numbers by local authority are published daily in prose form. They are manually added to _data/raw/wales-new-cases.csv_.
+* Case numbers by local authority are published daily. The HTML file is saved in _data/raw_.
 
 ### Scotland
 
 Updates are published daily at https://www.gov.scot/coronavirus-covid-19/, overwriting previous updates. (Note however that this page is being archived by https://web.archive.org/.)
 
 * Test numbers are published daily and added to _data/covid-19-totals-scotland.csv_ manually.
-* Case numbers by health board are published daily. The HTML file is save in _data/raw_. 
+* Case numbers by health board are published daily. The HTML file is saved in _data/raw_. 
 
 ### Northern Ireland
 
@@ -92,11 +92,6 @@ Convert case numbers for Scotland:
 ./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-scotland-2020-03-12.html data/daily/covid-19-cases-2020-03-12-scotland.csv
 ```
 
-Convert case numbers for Wales:
-```bash
-./tools/gen_daily_areas_wales.py data/daily/covid-19-cases-2020-03-12-wales.csv
-```
-
 Create a single consolidated CSV with all case numbers in it:
 ```bash
 ./tools/consolidate_daily_areas.py
@@ -125,12 +120,10 @@ curl https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public
 Wales (11am)
 ```bash
 DATE=$(date +'%Y-%m-%d')
-open https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/
-# Edit data/raw/wales-new-cases.csv
-./tools/gen_daily_areas_wales.py data/daily/covid-19-cases-$DATE-wales.csv
+curl https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/ -o data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
+./tools/gen_daily_areas_wales.py data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html data/daily/covid-19-cases-$DATE-wales.csv
 # Edit data/covid-19-totals-wales.csv (only have test numbers on Thursdays, leave column blank on other days)
-curl https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/ -o wales-tmp.html
-./tools/extract_totals.py wales-tmp.html
+./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
 ```
 
 Scotland (2pm)

@@ -1,19 +1,18 @@
 #!/usr/bin/env python
 
-# Convert local authority case data (Wales) from daily cases counts (manually entered CSV) to a common CSV format.
+# Extract local authority case data (Wales) from an HTML page and save in CSV format.
 
+from bs4 import BeautifulSoup
+import csv
+import dateparser
 import pandas as pd
 import re
 import sys
 
-csv_in_file = "data/raw/wales-new-cases.csv"
-csv_out_file = sys.argv[1]
+html_file = sys.argv[1]
+csv_file = sys.argv[2]
 
-m = re.match(".+(\d{4}-\d{2}-\d{2})-wales\.csv", csv_out_file)
-date = m.group(1)
-
-new_cases = pd.read_csv(csv_in_file)
-
+# Get upper tier local authority name to code mapping.
 la_mapping = pd.read_csv(
     "data/raw/Lower_Tier_Local_Authority_to_Upper_Tier_Local_Authority_April_2019_Lookup_in_England_and_Wales.csv"
 )
@@ -21,52 +20,35 @@ la_name_to_code = dict(zip(la_mapping["UTLA19NM"], la_mapping["UTLA19CD"]))
 la_name_to_code["Cornwall and Isles of Scilly"] = la_name_to_code["Cornwall"]
 la_name_to_code["Hackney and City of London"] = la_name_to_code["Hackney"]
 
-# Find total (cumulative) cases for each LA in the data.
-# (Note that some LAs don't have new cases every day)
-new_cases["TotalCases"] = new_cases.groupby("Area")["NewCases"].transform(
-    pd.Series.cumsum
-)
+country = "Wales"
 
-# Filter to date of interest
-new_cases_filtered = new_cases[new_cases["Date"] <= date].groupby("Area").tail(1)
+html = open(html_file).read()
+soup = BeautifulSoup(html, features="html.parser")
+table = soup.find_all("table")[-1]
 
-# Create a row for every Welsh area
-welsh_las = pd.DataFrame(
-    [
-        ["Blaenau Gwent"],
-        ["Bridgend"],
-        ["Caerphilly"],
-        ["Cardiff"],
-        ["Carmarthenshire"],
-        ["Ceredigion"],
-        ["Conwy"],
-        ["Denbighshire"],
-        ["Flintshire"],
-        ["Gwynedd"],
-        ["Isle of Anglesey"],
-        ["Merthyr Tydfil"],
-        ["Monmouthshire"],
-        ["Neath Port Talbot"],
-        ["Newport"],
-        ["Pembrokeshire"],
-        ["Powys"],
-        ["Rhondda Cynon Taf"],
-        ["Swansea"],
-        ["Torfaen"],
-        ["Vale of Glamorgan"],
-        ["Wrexham"],
-    ],
-    columns=["Area"],
-)
+text = soup.get_text()
+text = text.replace(u'\xa0', u' ') # replace non-breaking spaces with regular spaces
 
-total_cases = pd.merge(welsh_las, new_cases_filtered, how="left", on="Area")
-total_cases = total_cases.fillna(0)
-total_cases = total_cases.astype({"TotalCases": "int64"})
-total_cases["Date"] = date
-total_cases["Country"] = "Wales"
-total_cases["AreaCode"] = total_cases.apply(
-    lambda x: la_name_to_code.get(x["Area"], ""), axis=1
-)
-total_cases = total_cases[["Date", "Country", "AreaCode", "Area", "TotalCases"]]
+pattern = re.compile(r"(?s)Updated: (?P<time>.+?), \S+ (?P<date>\d+\s\w+\s\d{4})")
+m = re.search(pattern, text)
+groups = m.groupdict()
+date = dateparser.parse(groups["date"]).strftime("%Y-%m-%d")
 
-total_cases.to_csv(csv_out_file, index=False)
+output_rows = [["Date", "Country", "AreaCode", "Area", "TotalCases"]]
+for table_row in table.findAll("tr"):
+    columns = table_row.findAll("td")
+    if len(columns) == 0:
+        continue
+    if columns[0].text.strip() == "Local Authority":
+        continue
+    la = columns[0].text.strip().replace("City and County of Swansea", "Swansea").replace("City of Cardiff", "Cardiff").replace("Newport City", "Newport").replace("County Borough Council", "").replace("County Council", "").replace("Council", "").strip()
+    if la == 'Residential area to be confirmed':
+        cases = columns[2].text.strip()
+    else:
+        cases = columns[3].text.strip()
+    output_row = [date, country, la_name_to_code.get(la, ""), la, cases]
+    output_rows.append(output_row)
+
+with open(csv_file, "w") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerows(output_rows)

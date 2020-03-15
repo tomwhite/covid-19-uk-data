@@ -3,12 +3,15 @@
 # Extract daily totals from an HTML page and emit a CSV row (for appending to totals files)
 
 from bs4 import BeautifulSoup
+import pandas as pd
 import dateparser
+from datetime import datetime
 import math
 import re
 import sys
 
 html_file = sys.argv[1]
+csv_out_file = sys.argv[2]
 
 html = open(html_file).read()
 soup = BeautifulSoup(html, features="html.parser")
@@ -44,15 +47,22 @@ for pattern in patterns:
         groups = m.groupdict()
         date = dateparser.parse(groups["date"]).strftime("%Y-%m-%d")
         tests = normalize_int(groups.get("tests", float("nan")))
+
+        tests = normalize_int(groups.get("tests", float('nan')))
         positive_tests = normalize_int(groups["positive_tests"])
         negative_tests = normalize_int(groups.get("negative_tests", float("nan")))
-        # TODO: check tests = positive_tests + negative_tests
         deaths = groups.get("deaths", 0)  # TODO: parse #deaths for all countries
         print(
             "{},{},{},{}".format(
                 date, "" if math.isnan(tests) else tests, positive_tests, deaths
             )
         )
+        if tests != (positive_tests + negative_tests):
+            sys.stderr.write("Total tests not equal to positive_tests + negative_tests\n")
+            sys.exit(1)
+
+        deaths = groups.get("deaths", 0) # TODO: parse #deaths for all countries
+
         sys.exit(0)
 
 sys.stderr.write("Can't find case numbers. Perhaps the page format has changed?\n")

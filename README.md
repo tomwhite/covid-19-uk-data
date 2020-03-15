@@ -29,30 +29,30 @@ The following dataset is used to map between (upper tier) local authority names 
 
 ### England
 
-Updates are published daily at https://www.gov.uk/government/publications/covid-19-track-coronavirus-cases.
+Updates are published daily at [www.gov.uk/government/publications/covid-19-track-coronavirus-cases](https://www.gov.uk/government/publications/covid-19-track-coronavirus-cases).
 
-* Test numbers are published daily on Twitter by https://twitter.com/DHSCgovuk. The count is added to _data/covid-19-totals-uk.csv_ manually. Note that there isn't a separate breakdown of the England numbers - they cover the whole of the UK.
+* Test numbers are published daily on Twitter by [https://twitter.com/DHSCgovuk](twitter.com/DHSCgovuk). The count is added to _data/covid-19-totals-uk.csv_ manually. Note that there isn't a separate breakdown of the England numbers - they cover the whole of the UK.
 * Case numbers by local authority are published daily in the [UTLA cases table](https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6), updating previous updates. There is no way to get historical data from this source (as far I can tell). The CSV file from this page is saved in _data/raw_.
-    * Note that prior to 11 March 2020 case numbers were published in HTML format.
+  * Note that prior to 11 March 2020 case numbers were published in HTML format.
 
 ### Wales
 
-Updates are published daily at https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/, overwriting previous updates. (Note however that this page is being archived by https://web.archive.org/.) Prior to 12 March 2020 updates were published at https://gov.wales/announcements.
+Updates are published daily at [phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/](https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/), overwriting previous updates. (Note however that this page is being archived by [web.archive.org/](https://web.archive.org/)) Prior to 12 March 2020 updates were published at [gov.wales/announcements](https://gov.wales/announcements).
 
 * Test numbers are published _weekly_ on Thursday. The count is added to _data/covid-19-totals-wales.csv_ manually.
-    * Improvement: automatically download this page every Thursday
-* Case numbers by local authority are published daily. The HTML file is saved in _data/raw_.
+  * Improvement: automatically download this page every Thursday
+* Case numbers by local authority are published daily in prose form. They are manually added to _data/raw/wales-new-cases.csv_.
 
 ### Scotland
 
-Updates are published daily at https://www.gov.scot/coronavirus-covid-19/, overwriting previous updates. (Note however that this page is being archived by https://web.archive.org/.)
+Updates are published daily at [www.gov.scot/coronavirus-covid-19](https://www.gov.scot/coronavirus-covid-19/), overwriting previous updates. (Note however that this page is being archived by [web.archive.org](https://web.archive.org/)).
 
 * Test numbers are published daily and added to _data/covid-19-totals-scotland.csv_ manually.
-* Case numbers by health board are published daily. The HTML file is saved in _data/raw_. 
+* Case numbers by health board are published daily. The HTML file is save in _data/raw_.
 
 ### Northern Ireland
 
-Updates are published daily at https://www.publichealth.hscni.net/news/covid-19-coronavirus and https://twitter.com/publichealthni.
+Updates are published daily at [www.publichealth.hscni.net/news/covid-19-coronavirus](https://www.publichealth.hscni.net/news/covid-19-coronavirus) and [https://twitter.com/publichealthni](twitter.com/publichealthni).
 
 * Test numbers are published daily and added to _data/covid-19-totals-northern-ireland.csv_ manually.
 * Case numbers by local authority are not available.
@@ -66,7 +66,7 @@ Create a virtual environment, activate it, then install the required packages:
 ```bash
 python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt 
+pip install -r requirements.txt
 ```
 
 The following shows some illustrative commands.
@@ -78,37 +78,59 @@ Convert case numbers for England:
 ```
 
 Convert case numbers for England prior to 11 March 2020 (note that the `gen_daily_areas_scotland.py` tool is used since the HTML pages have the same format):
+
 ```bash
 ./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-england-2020-03-05.html data/daily/covid-19-cases-2020-03-05-england.csv
 ./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-england-2020-03-07.html data/daily/covid-19-cases-2020-03-07-england.csv
 ./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-england-2020-03-08.html data/daily/covid-19-cases-2020-03-08-england.csv
 ./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-england-2020-03-09.html data/daily/covid-19-cases-2020-03-09-england.csv
 ./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-england-2020-03-10.html data/daily/covid-19-cases-2020-03-10-england.csv
-
 ```
 
 Convert case numbers for Scotland:
+
 ```bash
 ./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-scotland-2020-03-12.html data/daily/covid-19-cases-2020-03-12-scotland.csv
 ```
 
 Create a single consolidated CSV with all case numbers in it:
+
 ```bash
 ./tools/consolidate_daily_areas.py
 ```
 
 Run a sanity check that the area case numbers add up to the totals:
+
 ```bash
 ./tools/check_totals.py
 ```
 
 ## Daily workflow
 
-England (2pm, with area totals an hour or two later)
+England (2pm, with area totals an hour or two later):
+
+### Make commands
+
+1. `make england-all`: Runs all of the `UA Daily` and `Totals` commands listed below in a single master command
+
+#### UA Daily
+
+1. `make england-ua-dailies`: Runs all of the commands below
+1. `make england-ua-dailies-download`: Download the daily UAs
+1. `make england-ua-dailies-generate`: Generate the daily UAs (requires `make england-ua-dailies-generate` to be run first)
+
+#### Totals
+
+1. `make england-ua-dailies`: Runs all of the commands below
+1. `make england-totals-download`: Download a temp HTML file containing the totals
+1. `make england-totals-generate`: Generate the totals from the temp HTML file (requires `make england-totals-download` to be run first) will append to the `./data/covid-19-totals-uk.csv` if the temp HTML file contains today's date
+1. `make england-totals-cleanup`: Removed the temp HTML file (requires `make england-totals-download` to be run first)
+
+### Manually running scripts
+
 ```bash
 DATE=$(date +'%Y-%m-%d')
-open https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6
-# Click on the "Download" link
+open https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6/data
 mv ~/Downloads/CountyUAs_cases_table.csv data/raw/CountyUAs_cases_table-$DATE.csv
 ./tools/gen_daily_areas_england.py data/raw/CountyUAs_cases_table-$DATE.csv data/daily/covid-19-cases-$DATE-england.csv
 open https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases
@@ -118,6 +140,7 @@ curl https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public
 ```
 
 Wales (11am)
+
 ```bash
 DATE=$(date +'%Y-%m-%d')
 curl https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/ -o data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
@@ -127,6 +150,7 @@ curl https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavir
 ```
 
 Scotland (2pm)
+
 ```bash
 DATE=$(date +'%Y-%m-%d')
 curl https://www.gov.scot/coronavirus-covid-19/ -o data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html
@@ -136,6 +160,7 @@ curl https://www.gov.scot/coronavirus-covid-19/ -o data/raw/coronavirus-covid-19
 ```
 
 Northern Ireland (2pm)
+
 ```bash
 open https://www.publichealth.hscni.net/news/covid-19-coronavirus#situation-in-northern-ireland
 # Edit data/covid-19-totals-northern-ireland.csv with output from running the following (double check numbers)
@@ -144,6 +169,7 @@ curl https://www.publichealth.hscni.net/news/covid-19-coronavirus -o ni-tmp.html
 ```
 
 Consolidate and check
+
 ```bash
 ./tools/consolidate_daily_areas.py
 ./tools/check_totals.py

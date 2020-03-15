@@ -136,7 +136,7 @@ mv ~/Downloads/CountyUAs_cases_table.csv data/raw/CountyUAs_cases_table-$DATE.cs
 open https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases
 # Edit data/covid-19-totals-uk.csv with output from running the following (double check numbers)
 curl https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public -o uk-tmp.html
-./tools/extract_totals.py uk-tmp.html ./data/covid-19-totals-uk.csv
+./tools/extract_totals.py uk-tmp.html
 ```
 
 Wales (11am)

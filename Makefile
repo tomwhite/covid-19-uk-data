@@ -14,7 +14,6 @@ ENGLAND_UA_RAW_CSV=./data/raw/CountyUAs_cases_table-$(DATE).csv
 ENGLAND_UA_CSV=./data/daily/covid-19-cases-$(DATE)-england.csv
 ENGLAND_TOTALS_URL=https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public
 ENGLAND_TOTALS_TEMP_HTML=./data/raw/uk-totals-temp-$(DATE).html
-ENGLAND_TOTALS_CSV=./data/covid-19-totals-uk.csv
 
 england-ua-dailies-download:
 	@echo ">>> Downloading England UA Dailies\n"
@@ -37,7 +36,7 @@ england-totals-download:
 england-totals-generate:
 	@make dev-setup
 	@. venv/bin/activate && \
-	python ./tools/extract_totals.py $(ENGLAND_TOTALS_TEMP_HTML) $(ENGLAND_TOTALS_CSV)
+	python ./tools/extract_totals.py $(ENGLAND_TOTALS_TEMP_HTML)
 
 england-totals-cleanup:
 	@echo ">>> Removing temp England totals HTML\n"

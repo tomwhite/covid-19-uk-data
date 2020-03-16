@@ -11,6 +11,13 @@ import sys
 html_file = sys.argv[1]
 csv_file = sys.argv[2]
 
+
+def normalize_whitespace(text):
+    return text.replace(
+        u"\xa0", u" "
+    ).strip()  # replace non-breaking spaces with regular spaces
+
+
 # Get upper tier local authority name to code mapping.
 # Note that this does not include Scotland, but that's OK as Scotland areas are health boards, not local authorities.
 la_mapping = pd.read_csv(
@@ -35,7 +42,7 @@ for table_row in table.findAll("tr"):
         continue
     output_row = [date, country, la_name_to_code.get(columns[0].text, "")]
     for column in columns:
-        output_row.append(column.text)
+        output_row.append(normalize_whitespace(column.text))
     output_rows.append(output_row)
 
 with open(csv_file, "w") as csvfile:

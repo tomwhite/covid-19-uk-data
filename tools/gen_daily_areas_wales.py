@@ -12,6 +12,13 @@ import sys
 html_file = sys.argv[1]
 csv_file = sys.argv[2]
 
+
+def normalize_whitespace(text):
+    return text.replace(
+        u"\xa0", u" "
+    ).strip()  # replace non-breaking spaces with regular spaces
+
+
 # Get upper tier local authority name to code mapping.
 la_mapping = pd.read_csv(
     "data/raw/Lower_Tier_Local_Authority_to_Upper_Tier_Local_Authority_April_2019_Lookup_in_England_and_Wales.csv"
@@ -39,11 +46,10 @@ for table_row in table.findAll("tr"):
     columns = table_row.findAll("td")
     if len(columns) == 0:
         continue
-    if columns[0].text.strip() == "Local Authority":
+    if normalize_whitespace(columns[0].text) == "Local Authority":
         continue
     la = (
-        columns[0]
-        .text.strip()
+        normalize_whitespace(columns[0].text)
         .replace("City and County of Swansea", "Swansea")
         .replace("City of Cardiff", "Cardiff")
         .replace("Newport City", "Newport")
@@ -53,9 +59,9 @@ for table_row in table.findAll("tr"):
         .strip()
     )
     if la == "Residential area to be confirmed":
-        cases = columns[2].text.strip()
+        cases = normalize_whitespace(columns[2].text)
     else:
-        cases = columns[3].text.strip()
+        cases = normalize_whitespace(columns[3].text)
     output_row = [date, country, la_name_to_code.get(la, ""), la, cases]
     output_rows.append(output_row)
 

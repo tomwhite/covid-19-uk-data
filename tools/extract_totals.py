@@ -45,7 +45,7 @@ for pattern in patterns:
         date = dateparser.parse(groups["date"]).strftime("%Y-%m-%d")
         tests = normalize_int(groups.get("tests", float("nan")))
 
-        tests = normalize_int(groups.get("tests", float('nan')))
+        tests = normalize_int(groups.get("tests", float("nan")))
         positive_tests = normalize_int(groups["positive_tests"])
         negative_tests = normalize_int(groups.get("negative_tests", float("nan")))
         deaths = groups.get("deaths", 0)  # TODO: parse #deaths for all countries
@@ -55,10 +55,12 @@ for pattern in patterns:
             )
         )
         if tests != (positive_tests + negative_tests):
-            sys.stderr.write("Total tests not equal to positive_tests + negative_tests\n")
+            sys.stderr.write(
+                "Total tests not equal to positive_tests + negative_tests\n"
+            )
             sys.exit(1)
 
-        deaths = groups.get("deaths", 0) # TODO: parse #deaths for all countries
+        deaths = groups.get("deaths", 0)  # TODO: parse #deaths for all countries
 
         sys.exit(0)
 

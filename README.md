@@ -121,7 +121,7 @@ England (2pm, with area totals an hour or two later):
 
 #### Totals
 
-1. `make england-ua-dailies`: Runs all of the commands below
+1. `make england-totals`: Runs all of the commands below
 1. `make england-totals-download`: Download a temp HTML file containing the totals
 1. `make england-totals-generate`: Generate the totals from the temp HTML file (requires `make england-totals-download` to be run first) will append to the `./data/covid-19-totals-uk.csv` if the temp HTML file contains today's date
 1. `make england-totals-cleanup`: Removed the temp HTML file (requires `make england-totals-download` to be run first)

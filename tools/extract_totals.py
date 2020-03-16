@@ -54,7 +54,9 @@ for pattern in patterns:
                 date, "" if math.isnan(tests) else tests, positive_tests, deaths
             )
         )
-        if tests != (positive_tests + negative_tests):
+        if all(
+            [not math.isnan(t) for t in (tests, positive_tests, negative_tests)]
+        ) and tests != (positive_tests + negative_tests):
             sys.stderr.write(
                 "Total tests not equal to positive_tests + negative_tests\n"
             )

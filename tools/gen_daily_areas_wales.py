@@ -43,13 +43,13 @@ date = dateparser.parse(groups["date"]).strftime("%Y-%m-%d")
 
 output_rows = [["Date", "Country", "AreaCode", "Area", "TotalCases"]]
 for table_row in table.findAll("tr"):
-    columns = table_row.findAll("td")
+    columns = [normalize_whitespace(col.text) for col in table_row.findAll("td")]
     if len(columns) == 0:
         continue
-    if normalize_whitespace(columns[0].text) == "Local Authority":
+    if columns[0] == "Local Authority" or columns[0] == "Total:":
         continue
     la = (
-        normalize_whitespace(columns[0].text)
+        columns[0]
         .replace("City and County of Swansea", "Swansea")
         .replace("City of Cardiff", "Cardiff")
         .replace("Newport City", "Newport")
@@ -58,10 +58,7 @@ for table_row in table.findAll("tr"):
         .replace("Council", "")
         .strip()
     )
-    if la == "Residential area to be confirmed":
-        cases = normalize_whitespace(columns[2].text)
-    else:
-        cases = normalize_whitespace(columns[3].text)
+    cases = columns[3]
     output_row = [date, country, la_name_to_code.get(la, ""), la, cases]
     output_rows.append(output_row)
 

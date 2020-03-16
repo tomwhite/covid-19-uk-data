@@ -23,9 +23,11 @@ You can use these files without reading the rest of this document.
 
 A lot of the collation process is manual, however there are a few command line tools to help process the data into its final form.
 
-### Local Authority data
+### Local Authority and Health Board data
 
 The following dataset is used to map between (upper tier) local authority names and codes : [Lower Tier Local Authority to Upper Tier Local Authority (April 2019) Lookup in England and Wales](http://geoportal1-ons.opendata.arcgis.com/datasets/lower-tier-local-authority-to-upper-tier-local-authority-april-2019-lookup-in-england-and-wales/data)
+
+This dataset is a list of Scottish Health Boards: [Health Board 2014](https://www.opendata.nhs.scot/dataset/geography-codes-and-labels/resource/652ff726-e676-4a20-abda-435b98dd7bdc)
 
 ### England
 

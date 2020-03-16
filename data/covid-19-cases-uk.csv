@@ -174,13 +174,13 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-05,Wales,W06000020,Torfaen,0
 2020-03-05,Wales,W06000014,Vale of Glamorgan,0
 2020-03-05,Wales,W06000006,Wrexham,0
-2020-03-06,Scotland,,Tayside,1
-2020-03-06,Scotland,,Ayrshire and Arran,1
-2020-03-06,Scotland,,Forth Valley,2
-2020-03-06,Scotland,,Greater Glasgow and Clyde,1
-2020-03-06,Scotland,,Grampian,3
-2020-03-06,Scotland,,Fife,2
-2020-03-06,Scotland,,Lothian,1
+2020-03-06,Scotland,S08000030,Tayside,1
+2020-03-06,Scotland,S08000015,Ayrshire and Arran,1
+2020-03-06,Scotland,S08000019,Forth Valley,2
+2020-03-06,Scotland,S08000031,Greater Glasgow and Clyde,1
+2020-03-06,Scotland,S08000020,Grampian,3
+2020-03-06,Scotland,S08000029,Fife,2
+2020-03-06,Scotland,S08000024,Lothian,1
 2020-03-06,Wales,W06000019,Blaenau Gwent,0
 2020-03-06,Wales,W06000013,Bridgend,0
 2020-03-06,Wales,W06000018,Caerphilly,0
@@ -354,14 +354,14 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-07,England,E10000034,Worcestershire,0
 2020-03-07,England,E06000014,York,3
 2020-03-07,England,,awaiting clarification,14
-2020-03-07,Scotland,,Tayside,1
-2020-03-07,Scotland,,Ayrshire and Arran,1
-2020-03-07,Scotland,,Forth Valley,2
-2020-03-07,Scotland,,Greater Glasgow and Clyde,2
-2020-03-07,Scotland,,Grampian,4
-2020-03-07,Scotland,,Fife,2
-2020-03-07,Scotland,,Lothian,2
-2020-03-07,Scotland,,Lanarkshire,2
+2020-03-07,Scotland,S08000030,Tayside,1
+2020-03-07,Scotland,S08000015,Ayrshire and Arran,1
+2020-03-07,Scotland,S08000019,Forth Valley,2
+2020-03-07,Scotland,S08000031,Greater Glasgow and Clyde,2
+2020-03-07,Scotland,S08000020,Grampian,4
+2020-03-07,Scotland,S08000029,Fife,2
+2020-03-07,Scotland,S08000024,Lothian,2
+2020-03-07,Scotland,S08000032,Lanarkshire,2
 2020-03-07,Wales,W06000019,Blaenau Gwent,0
 2020-03-07,Wales,W06000013,Bridgend,0
 2020-03-07,Wales,W06000018,Caerphilly,0
@@ -534,14 +534,14 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-08,England,E10000034,Worcestershire,0
 2020-03-08,England,E06000014,York,3
 2020-03-08,England,,Awaiting confirmation,20
-2020-03-08,Scotland,,Tayside,1
-2020-03-08,Scotland,,Ayrshire and Arran,1
-2020-03-08,Scotland,,Forth Valley,2
-2020-03-08,Scotland,,Greater Glasgow and Clyde,3
-2020-03-08,Scotland,,Grampian,4
-2020-03-08,Scotland,,Fife,2
-2020-03-08,Scotland,,Lothian,3
-2020-03-08,Scotland,,Lanarkshire,2
+2020-03-08,Scotland,S08000030,Tayside,1
+2020-03-08,Scotland,S08000015,Ayrshire and Arran,1
+2020-03-08,Scotland,S08000019,Forth Valley,2
+2020-03-08,Scotland,S08000031,Greater Glasgow and Clyde,3
+2020-03-08,Scotland,S08000020,Grampian,4
+2020-03-08,Scotland,S08000029,Fife,2
+2020-03-08,Scotland,S08000024,Lothian,3
+2020-03-08,Scotland,S08000032,Lanarkshire,2
 2020-03-08,Wales,W06000019,Blaenau Gwent,0
 2020-03-08,Wales,W06000013,Bridgend,0
 2020-03-08,Wales,W06000018,Caerphilly,0
@@ -714,15 +714,15 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-09,England,E10000034,Worcestershire,0
 2020-03-09,England,E06000014,York,3
 2020-03-09,England,,Awaiting confirmation,26
-2020-03-09,Scotland,,Ayrshire and Arran,1
-2020-03-09,Scotland,,Fife,2
-2020-03-09,Scotland,,Forth Valley,2
-2020-03-09,Scotland,,Grampian,4
-2020-03-09,Scotland,,Greater Glasgow and Clyde,3
-2020-03-09,Scotland,,Lanarkshire,3
-2020-03-09,Scotland,,Lothian,5
-2020-03-09,Scotland,,Shetland,2
-2020-03-09,Scotland,,Tayside,1
+2020-03-09,Scotland,S08000015,Ayrshire and Arran,1
+2020-03-09,Scotland,S08000029,Fife,2
+2020-03-09,Scotland,S08000019,Forth Valley,2
+2020-03-09,Scotland,S08000020,Grampian,4
+2020-03-09,Scotland,S08000031,Greater Glasgow and Clyde,3
+2020-03-09,Scotland,S08000032,Lanarkshire,3
+2020-03-09,Scotland,S08000024,Lothian,5
+2020-03-09,Scotland,S08000026,Shetland,2
+2020-03-09,Scotland,S08000030,Tayside,1
 2020-03-09,Wales,W06000019,Blaenau Gwent,0
 2020-03-09,Wales,W06000013,Bridgend,0
 2020-03-09,Wales,W06000018,Caerphilly,0
@@ -895,15 +895,15 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-10,England,E10000034,Worcestershire,0
 2020-03-10,England,E06000014,York,3
 2020-03-10,England,,Awaiting confirmation,15
-2020-03-10,Scotland,,Ayrshire and Arran,1
-2020-03-10,Scotland,,Fife,2
-2020-03-10,Scotland,,Forth Valley,2
-2020-03-10,Scotland,,Grampian,6
-2020-03-10,Scotland,,Greater Glasgow and Clyde,3
-2020-03-10,Scotland,,Lanarkshire,3
-2020-03-10,Scotland,,Lothian,7
-2020-03-10,Scotland,,Shetland,2
-2020-03-10,Scotland,,Tayside,1
+2020-03-10,Scotland,S08000015,Ayrshire and Arran,1
+2020-03-10,Scotland,S08000029,Fife,2
+2020-03-10,Scotland,S08000019,Forth Valley,2
+2020-03-10,Scotland,S08000020,Grampian,6
+2020-03-10,Scotland,S08000031,Greater Glasgow and Clyde,3
+2020-03-10,Scotland,S08000032,Lanarkshire,3
+2020-03-10,Scotland,S08000024,Lothian,7
+2020-03-10,Scotland,S08000026,Shetland,2
+2020-03-10,Scotland,S08000030,Tayside,1
 2020-03-10,Wales,W06000019,Blaenau Gwent,0
 2020-03-10,Wales,W06000013,Bridgend,0
 2020-03-10,Wales,W06000018,Caerphilly,0
@@ -1075,16 +1075,16 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-11,England,E10000031,Warwickshire,4
 2020-03-11,England,E10000032,West Sussex,3
 2020-03-11,England,E10000034,Worcestershire,0
-2020-03-11,Scotland,,Ayrshire and Arran,3
-2020-03-11,Scotland,,Borders,2
-2020-03-11,Scotland,,Fife,2
-2020-03-11,Scotland,,Forth Valley,2
-2020-03-11,Scotland,,Grampian,6
-2020-03-11,Scotland,,Greater Glasgow and Clyde,5
-2020-03-11,Scotland,,Lanarkshire,4
-2020-03-11,Scotland,,Lothian,8
-2020-03-11,Scotland,,Shetland,2
-2020-03-11,Scotland,,Tayside,2
+2020-03-11,Scotland,S08000015,Ayrshire and Arran,3
+2020-03-11,Scotland,S08000016,Borders,2
+2020-03-11,Scotland,S08000029,Fife,2
+2020-03-11,Scotland,S08000019,Forth Valley,2
+2020-03-11,Scotland,S08000020,Grampian,6
+2020-03-11,Scotland,S08000031,Greater Glasgow and Clyde,5
+2020-03-11,Scotland,S08000032,Lanarkshire,4
+2020-03-11,Scotland,S08000024,Lothian,8
+2020-03-11,Scotland,S08000026,Shetland,2
+2020-03-11,Scotland,S08000030,Tayside,2
 2020-03-11,Wales,W06000019,Blaenau Gwent,0
 2020-03-11,Wales,W06000013,Bridgend,0
 2020-03-11,Wales,W06000018,Caerphilly,1
@@ -1256,16 +1256,16 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-12,England,E10000031,Warwickshire,4
 2020-03-12,England,E10000032,West Sussex,3
 2020-03-12,England,E10000034,Worcestershire,0
-2020-03-12,Scotland,,Ayrshire and Arran,4
-2020-03-12,Scotland,,Borders,2
-2020-03-12,Scotland,,Fife,3
-2020-03-12,Scotland,,Forth Valley,6
-2020-03-12,Scotland,,Grampian,7
-2020-03-12,Scotland,,Greater Glasgow and Clyde,10
-2020-03-12,Scotland,,Lanarkshire,7
-2020-03-12,Scotland,,Lothian,11
-2020-03-12,Scotland,,Shetland,6
-2020-03-12,Scotland,,Tayside,4
+2020-03-12,Scotland,S08000015,Ayrshire and Arran,4
+2020-03-12,Scotland,S08000016,Borders,2
+2020-03-12,Scotland,S08000029,Fife,3
+2020-03-12,Scotland,S08000019,Forth Valley,6
+2020-03-12,Scotland,S08000020,Grampian,7
+2020-03-12,Scotland,S08000031,Greater Glasgow and Clyde,10
+2020-03-12,Scotland,S08000032,Lanarkshire,7
+2020-03-12,Scotland,S08000024,Lothian,11
+2020-03-12,Scotland,S08000026,Shetland,6
+2020-03-12,Scotland,S08000030,Tayside,4
 2020-03-12,Wales,W06000019,Blaenau Gwent,1
 2020-03-12,Wales,W06000013,Bridgend,0
 2020-03-12,Wales,W06000018,Caerphilly,1
@@ -1437,16 +1437,16 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-13,England,E08000031,Wolverhampton,8
 2020-03-13,England,E10000034,Worcestershire,2
 2020-03-13,England,E06000014,York,4
-2020-03-13,Scotland,,Ayrshire and Arran,4
-2020-03-13,Scotland,,Borders,3
-2020-03-13,Scotland,,Fife,4
-2020-03-13,Scotland,,Forth Valley,6
-2020-03-13,Scotland,,Grampian,11
-2020-03-13,Scotland,,Greater Glasgow and Clyde,21
-2020-03-13,Scotland,,Lanarkshire,7
-2020-03-13,Scotland,,Lothian,20
-2020-03-13,Scotland,,Shetland,6
-2020-03-13,Scotland,,Tayside,3
+2020-03-13,Scotland,S08000015,Ayrshire and Arran,4
+2020-03-13,Scotland,S08000016,Borders,3
+2020-03-13,Scotland,S08000029,Fife,4
+2020-03-13,Scotland,S08000019,Forth Valley,6
+2020-03-13,Scotland,S08000020,Grampian,11
+2020-03-13,Scotland,S08000031,Greater Glasgow and Clyde,21
+2020-03-13,Scotland,S08000032,Lanarkshire,7
+2020-03-13,Scotland,S08000024,Lothian,20
+2020-03-13,Scotland,S08000026,Shetland,6
+2020-03-13,Scotland,S08000030,Tayside,3
 2020-03-13,Wales,W06000019,Blaenau Gwent,1
 2020-03-13,Wales,W06000013,Bridgend,0
 2020-03-13,Wales,W06000018,Caerphilly,5
@@ -1618,17 +1618,17 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-14,England,E08000031,Wolverhampton,9
 2020-03-14,England,E10000034,Worcestershire,2
 2020-03-14,England,E06000014,York,4
-2020-03-14,Scotland,,Ayrshire and Arran,6
-2020-03-14,Scotland,,Borders,5
-2020-03-14,Scotland,,Fife,6
-2020-03-14,Scotland,,Forth Valley,6
-2020-03-14,Scotland,,Grampian,9
-2020-03-14,Scotland,,Greater Glasgow and Clyde,31
-2020-03-14,Scotland,,Highland,1
-2020-03-14,Scotland,,Lanarkshire,10
-2020-03-14,Scotland,,Lothian,25
-2020-03-14,Scotland,,Shetland,11
-2020-03-14,Scotland,,Tayside,11
+2020-03-14,Scotland,S08000015,Ayrshire and Arran,6
+2020-03-14,Scotland,S08000016,Borders,5
+2020-03-14,Scotland,S08000029,Fife,6
+2020-03-14,Scotland,S08000019,Forth Valley,6
+2020-03-14,Scotland,S08000020,Grampian,9
+2020-03-14,Scotland,S08000031,Greater Glasgow and Clyde,31
+2020-03-14,Scotland,S08000022,Highland,1
+2020-03-14,Scotland,S08000032,Lanarkshire,10
+2020-03-14,Scotland,S08000024,Lothian,25
+2020-03-14,Scotland,S08000026,Shetland,11
+2020-03-14,Scotland,S08000030,Tayside,11
 2020-03-14,Wales,W06000019,Blaenau Gwent,1
 2020-03-14,Wales,W06000013,Bridgend,1
 2020-03-14,Wales,W06000018,Caerphilly,7
@@ -1800,17 +1800,17 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-15,England,E08000031,Wolverhampton,8
 2020-03-15,England,E10000034,Worcestershire,3
 2020-03-15,England,E06000014,York,4
-2020-03-15,Scotland,,Ayrshire and Arran,6
-2020-03-15,Scotland,,Borders,7
-2020-03-15,Scotland,,Fife,7
-2020-03-15,Scotland,,Forth Valley,10
-2020-03-15,Scotland,,Grampian,12
-2020-03-15,Scotland,,Greater Glasgow and Clyde,39
-2020-03-15,Scotland,,Highland,2
-2020-03-15,Scotland,,Lanarkshire,16
-2020-03-15,Scotland,,Lothian,28
-2020-03-15,Scotland,,Shetland,11
-2020-03-15,Scotland,,Tayside,15
+2020-03-15,Scotland,S08000015,Ayrshire and Arran,6
+2020-03-15,Scotland,S08000016,Borders,7
+2020-03-15,Scotland,S08000029,Fife,7
+2020-03-15,Scotland,S08000019,Forth Valley,10
+2020-03-15,Scotland,S08000020,Grampian,12
+2020-03-15,Scotland,S08000031,Greater Glasgow and Clyde,39
+2020-03-15,Scotland,S08000022,Highland,2
+2020-03-15,Scotland,S08000032,Lanarkshire,16
+2020-03-15,Scotland,S08000024,Lothian,28
+2020-03-15,Scotland,S08000026,Shetland,11
+2020-03-15,Scotland,S08000030,Tayside,15
 2020-03-15,Wales,W06000019,Blaenau Gwent,4
 2020-03-15,Wales,W06000013,Bridgend,1
 2020-03-15,Wales,W06000018,Caerphilly,11
@@ -1833,18 +1833,18 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-15,Wales,W06000020,Torfaen,2
 2020-03-15,Wales,W06000014,Vale of Glamorgan,1
 2020-03-15,Wales,W06000006,Wrexham,1
-2020-03-16,Scotland,,Ayrshire and Arran,7
-2020-03-16,Scotland,,Borders,7
-2020-03-16,Scotland,,Dumfries and Galloway,1
-2020-03-16,Scotland,,Fife,7
-2020-03-16,Scotland,,Forth Valley,10
-2020-03-16,Scotland,,Grampian,12
-2020-03-16,Scotland,,Greater Glasgow and Clyde,44
-2020-03-16,Scotland,,Highland,2
-2020-03-16,Scotland,,Lanarkshire,20
-2020-03-16,Scotland,,Lothian,29
-2020-03-16,Scotland,,Shetland,15
-2020-03-16,Scotland,,Tayside,17
+2020-03-16,Scotland,S08000015,Ayrshire and Arran,7
+2020-03-16,Scotland,S08000016,Borders,7
+2020-03-16,Scotland,S08000017,Dumfries and Galloway,1
+2020-03-16,Scotland,S08000029,Fife,7
+2020-03-16,Scotland,S08000019,Forth Valley,10
+2020-03-16,Scotland,S08000020,Grampian,12
+2020-03-16,Scotland,S08000031,Greater Glasgow and Clyde,44
+2020-03-16,Scotland,S08000022,Highland,2
+2020-03-16,Scotland,S08000032,Lanarkshire,20
+2020-03-16,Scotland,S08000024,Lothian,29
+2020-03-16,Scotland,S08000026,Shetland,15
+2020-03-16,Scotland,S08000030,Tayside,17
 2020-03-16,Wales,W06000019,Blaenau Gwent,5
 2020-03-16,Wales,W06000013,Bridgend,1
 2020-03-16,Wales,W06000018,Caerphilly,14

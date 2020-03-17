@@ -36,7 +36,7 @@ table = soup.find_all("table")[-1]
 text = soup.get_text()
 text = text.replace(u"\xa0", u" ")  # replace non-breaking spaces with regular spaces
 
-pattern = re.compile(r"(?s)Updated: (?P<time>.+?), \S+ (?P<date>\d+\s\w+\s\d{4})")
+pattern = re.compile(r"(?s)Updated: (?P<time>.+?),? \S+ (?P<date>\d+\s\w+\s\d{4})")
 m = re.search(pattern, text)
 groups = m.groupdict()
 date = dateparser.parse(groups["date"]).strftime("%Y-%m-%d")

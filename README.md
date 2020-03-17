@@ -10,14 +10,18 @@ Ideally the data publishers will start doing this so this site becomes redundant
 
 The following CSV files are available:
 
+* [data/covid-19-cases-uk.csv](data/covid-19-cases-uk.csv): daily counts of confirmed cases for (upper tier) local authorities in England and Wales, and health boards in Scotland. No data for Northern Ireland is currently available.
+* [data/covid-19-indicators-uk.csv](data/covid-19-indicators-uk.csv): daily counts of tests, confirmed cases, deaths for the whole of the UK and individual countries in the UK (England, Scotland, Wales, Northern Ireland)
+* _data/daily/*.csv_: daily counts, with a separate file for each date and country.
+
+You can use these files without reading the rest of this document.
+
+The following CSV files are deprecated:
+
 * [data/covid-19-totals-uk.csv](data/covid-19-totals-uk.csv): daily counts of tests, confirmed cases, deaths for the whole of the UK
 * [data/covid-19-totals-northern-ireland.csv](data/covid-19-totals-northern-ireland.csv): daily counts of tests, confirmed cases, deaths for Northern Ireland
 * [data/covid-19-totals-scotland.csv](data/covid-19-totals-scotland.csv): daily counts of tests, confirmed cases, deaths for Scotland
 * [data/covid-19-totals-wales.csv](data/covid-19-totals-wales.csv): daily counts of tests, confirmed cases, deaths for Wales
-* [data/covid-19-cases-uk.csv](data/covid-19-cases-uk.csv): daily counts of confirmed cases for (upper tier) local authorities in England and Wales, and health boards in Scotland. No data for Northern Ireland is currently available.
-* _data/daily/*.csv_: daily counts, with a separate file for each date and country.
-
-You can use these files without reading the rest of this document.
 
 ## Data sources and the collation process
 
@@ -137,8 +141,11 @@ mv ~/Downloads/CountyUAs_cases_table.csv data/raw/CountyUAs_cases_table-$DATE.cs
 ./tools/gen_daily_areas_england.py data/raw/CountyUAs_cases_table-$DATE.csv data/daily/covid-19-cases-$DATE-england.csv
 open https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases
 # Edit data/covid-19-totals-uk.csv with output from running the following (double check numbers)
-curl https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public -o uk-tmp.html
-./tools/extract_totals.py uk-tmp.html
+curl https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public -o data/raw/coronavirus-covid-19-number-of-cases-in-uk-$DATE.html
+./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-uk-$DATE.html
+# Also edit data/covid-19-indicators.csv with output from running the following
+curl -L https://www.arcgis.com/sharing/rest/content/items/bc8ee90225644ef7a6f4dd1b13ea1d67/data -o data/raw/DailyIndicators-$DATE.xslx
+./tools/extract_indicators.py data/raw/DailyIndicators-$DATE.xslx
 ```
 
 Wales (11am)
@@ -148,6 +155,7 @@ DATE=$(date +'%Y-%m-%d')
 curl https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/ -o data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
 ./tools/gen_daily_areas_wales.py data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html data/daily/covid-19-cases-$DATE-wales.csv
 # Edit data/covid-19-totals-wales.csv (only have test numbers on Thursdays, leave column blank on other days)
+# Also edit data/covid-19-indicators.csv
 ./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
 ```
 
@@ -158,6 +166,7 @@ DATE=$(date +'%Y-%m-%d')
 curl https://www.gov.scot/coronavirus-covid-19/ -o data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html
 ./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html data/daily/covid-19-cases-$DATE-scotland.csv
 # Edit data/covid-19-totals-scotland.csv with output from running the following (double check numbers)
+# Also edit data/covid-19-indicators.csv
 ./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html
 ```
 

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UK COVID-19 indicators</title>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.10.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.7.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.3.2"></script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>
+            <div id="p1"></div>
+            <div id="p2"></div>
+            <div id="p3"></div>    
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="p4"></div>
+            <div id="p5"></div>
+            <div id="p6"></div>    
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div id="p7"></div>
+            <div id="p8"></div>
+            <div id="p9"></div>    
+        </td>
+    </tr>
+</table>
+<a href="index.html">Home</a>
+<script type="text/javascript">
+const p1 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "UK daily tests",
+    "data": {"url": "data/covid-19-totals-uk.csv"},
+    "transform": [{
+        "window": [{"op": "lag", "field": "Tests", "as": "PreviousTests"}]
+    },{
+        "calculate": "if(datum.PreviousTests == null, NaN, datum.Tests - datum.PreviousTests)",
+        "as": "DailyTests"
+    }],
+    "mark": "line",
+    "encoding": {
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {"field": "DailyTests", "type": "quantitative"}
+    }
+};
+const p2 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "UK cumulative tests",
+    "data": {"url": "data/covid-19-totals-uk.csv"},
+    "mark": "line",
+    "encoding": {
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {"field": "Tests", "type": "quantitative"}
+    }
+};
+const p3 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "UK cumulative tests (log scale)",
+    "data": {"url": "data/covid-19-totals-uk.csv"},
+    "mark": "line",
+    "encoding": {
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {"field": "Tests", "type": "quantitative", "scale": {"type": "log"}}
+    }
+};
+const p4 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "UK daily confirmed cases",
+    "data": {"url": "data/covid-19-totals-uk.csv"},
+    "transform": [{
+        "window": [{"op": "lag", "field": "ConfirmedCases", "as": "PreviousConfirmedCases"}]
+    },{
+        "calculate": "if(datum.PreviousConfirmedCases == null, NaN, datum.ConfirmedCases - datum.PreviousConfirmedCases)",
+        "as": "DailyCases"
+    }],
+    "mark": "line",
+    "encoding": {
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {"field": "DailyCases", "type": "quantitative"}
+    }
+};
+const p5 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "UK cumulative confirmed cases",
+    "data": {"url": "data/covid-19-totals-uk.csv"},
+    "mark": "line",
+    "encoding": {
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {"field": "ConfirmedCases", "type": "quantitative"}
+    }
+};
+const p6 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "UK cumulative confirmed cases (log scale)",
+    "data": {"url": "data/covid-19-totals-uk.csv"},
+    "mark": "line",
+    "encoding": {
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {"field": "ConfirmedCases", "type": "quantitative", "scale": {"type": "log"}}
+    }
+};
+const p7 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "UK daily deaths",
+    "data": {"url": "data/covid-19-totals-uk.csv"},
+    "transform": [{
+        "window": [{"op": "lag", "field": "Deaths", "as": "PreviousDeaths"}]
+    },{
+        "calculate": "datum.Deaths - datum.PreviousDeaths",
+        "as": "DailyDeaths"
+    }],
+    "mark": "line",
+    "encoding": {
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {"field": "DailyDeaths", "type": "quantitative"}
+    }
+};
+const p8 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "UK cumulative deaths",
+    "data": {"url": "data/covid-19-totals-uk.csv"},
+    "mark": "line",
+    "encoding": {
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {"field": "Deaths", "type": "quantitative"}
+    }
+};
+const p9 = {
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "UK cumulative deaths (log scale)",
+    "data": {"url": "data/covid-19-totals-uk.csv"},
+    "transform": [{
+        "calculate": "if(datum.Deaths == 0, NaN, datum.Deaths)",
+        "as": "Deaths"
+    }],
+    "mark": "line",
+    "encoding": {
+        "x": {"field": "Date", "type": "temporal"},
+        "y": {"field": "Deaths", "type": "quantitative", "scale": {"type": "log"}}
+    }
+};
+vegaEmbed('#p1', p1);
+vegaEmbed('#p2', p2);
+vegaEmbed('#p3', p3);
+vegaEmbed('#p4', p4);
+vegaEmbed('#p5', p5);
+vegaEmbed('#p6', p6);
+vegaEmbed('#p7', p7);
+vegaEmbed('#p8', p8);
+vegaEmbed('#p9', p9);
+</script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<title>UK COVID-19 confirmed cases by local authority or health board</title>
+<script src="https://d3js.org/d3.v4.js"></script>
+<script src="https://d3js.org/d3-array.v2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
+<style>
+    body {
+        margin:0;
+        position:fixed;
+        top:0;
+        right:0;
+        bottom:0;
+        left:0;
+    }
+    #dataviz {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow-x: scroll;
+        overflow-y: scroll;
+    }
+    .area-text {
+        font-size: 10px;
+    }
+    .cases-line {
+        fill: none;
+        stroke: black;
+        stroke-width: 0.75;
+    }
+    .latest-case {
+        stroke: red;
+        fill: red;
+        fill-opacity: 0.5;
+        }
+    .latest-case-text {
+        font-size: 10px;
+    }
+    .d3-tip {
+        line-height: 1;
+        font-size: 12px;
+        padding: 12px;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        border-radius: 2px;
+        pointer-events: none;
+    }
+</style>
+</head>
+
+<body>
+<div id="dataviz"></div>
+<script>
+    const perCellWidth = 200;
+    const perCellHeight = 18;
+    const numCellsX = 7;
+    const numCellsY = 30;
+
+    const casesLineOffsetX = 100;
+    const casesLineWidth = 60;
+
+    const titleHeight = 20;
+    const subtitleHeight = 15;
+    const captionHeight = 20;
+
+    const padding = 20;
+
+    const width = perCellWidth * numCellsX + 2 * padding,
+        height = titleHeight + subtitleHeight + perCellHeight * numCellsY + captionHeight + 2 * padding;
+
+    const parseDate = d3.timeParse("%Y-%m-%d");
+    const formatDate = d3.timeFormat("%d %B %Y");
+    
+    const svg = d3.select("#dataviz")
+        .append("svg")
+        .attr("width", width)
+        .attr("height", height);
+
+    function onlyUnique(value, index, self) { 
+        return self.indexOf(value) === index;
+    }
+
+    function last(arr) {
+        return arr[arr.length - 1];
+    }
+
+    d3.csv("data/covid-19-cases-uk.csv", function(d) {
+        return {
+            date: parseDate(d['Date']),
+            country: d['Country'],
+            areaCode: d['AreaCode'],
+            area: d['Area'],
+            cases: +d['TotalCases'] // TODO: how to handle old data of form "1 to 4"
+        }
+    }, function(data) {
+        // Remove areas that aren't confirmed, or are combined (e.g. "Cornwall and Isles of Scilly")
+        // TODO: this should be done at source
+        data = data.filter(d => d.area !== 'Awaiting confirmation')
+            .filter(d => d.area !== 'awaiting clarification')
+            .filter(d => d.area !== 'Cornwall')
+            .filter(d => d.area !== 'Bournemouth')
+            .filter(d => d.area !== 'Poole')
+            .filter(d => d.area !== 'Isles of Scilly')
+            .filter(d => d.area !== 'City of London')
+            .filter(d => d.area !== 'Hackney');
+
+        const maxCases = d3.max(data, d => d.cases);
+        const latestDate = d3.max(data, d => d.date);
+
+        function countryToOrdinal(country) {
+            switch (country) {
+                case "England":
+                    return 0;            
+                case "Scotland":
+                    return 1;            
+                case "Wales":
+                    return 2;            
+                default:
+                    return 3;            
+            }
+        }
+        function areaOrdering(a, b) {
+            const lastEntryA = last(a[1]);
+            const lastEntryB = last(b[1]);
+            if (lastEntryA.country !== lastEntryB.country) {
+                return countryToOrdinal(lastEntryA.country) - countryToOrdinal(lastEntryB.country);
+            }
+            return last(b[1]).cases - last(a[1]).cases;
+        }
+        const grouped = d3.groups(data, d => d.area)
+            .sort(areaOrdering)
+
+        const indexOffsets = {
+            "England": grouped.map(d => last(d[1]).country).indexOf("England"),
+            "Scotland": grouped.map(d => last(d[1]).country).indexOf("Scotland"),
+            "Wales": grouped.map(d => last(d[1]).country).indexOf("Wales"),
+        };
+
+        function getCellOffset(d, i) {
+            let countryCellXOffset = 0;
+            if (i >= indexOffsets["Scotland"] && i < indexOffsets["Wales"]) {
+                countryCellXOffset = 5;
+                i -= indexOffsets["Scotland"];
+            } else if (i >= indexOffsets["Wales"]) {
+                countryCellXOffset = 6;
+                i -= indexOffsets["Wales"];
+            }
+            const cellX = Math.floor(i / numCellsY) + countryCellXOffset;
+            const cellY = i % numCellsY;
+            return {
+                x: cellX * perCellWidth + padding,
+                y: cellY * perCellHeight + padding + titleHeight + subtitleHeight
+            }
+        }
+
+        const xScale = d3.scaleTime()
+         .domain([
+            d3.min(data, d => d.date),
+            d3.max(data, d => d.date)
+         ])
+         .range([casesLineOffsetX, casesLineOffsetX + casesLineWidth]);
+
+        const yScale = d3.scaleLinear()
+            .domain([0, maxCases])
+            .range([perCellHeight, 0]);
+
+        const line = d3.line()
+            .x(d => xScale(d[1].date))
+            .y(d => yScale(d[1].cases));
+
+        svg.selectAll(".cases-line")
+            .data(grouped)
+            .enter()
+            .append("path")
+            .attr("d", (d, i) => {
+                return d3.line()
+                    .defined(d => !isNaN(d.cases))
+                    .x(d => xScale(d.date) + getCellOffset(d, i).x)
+                    .y(d => yScale(d.cases) + getCellOffset(d, i).y)
+                    (d[1]);
+            })
+            .attr("class", "cases-line")
+
+         svg.selectAll(".latest-case")
+            .data(grouped)
+            .enter()
+            .append("circle")
+            .attr("r", 1)
+            .attr("cx", (d, i) => xScale(last(d[1]).date) + getCellOffset(d, i).x)
+            .attr("cy", (d, i) => yScale(last(d[1]).cases) + getCellOffset(d, i).y)
+            .attr("class", "latest-case")
+
+         svg.selectAll(".latest-case-text")
+            .data(grouped)
+            .enter()
+            .append("text")
+            .text(d => last(d[1]).cases)
+            .attr("x", (d, i) => 5 + xScale(last(d[1]).date) + getCellOffset(d, i).x)
+            .attr("y", (d, i) => yScale(last(d[1]).cases) + 3 + getCellOffset(d, i).y)
+            .attr("class", "latest-case-text")
+
+         svg.selectAll(".area-text")
+            .data(grouped)
+            .enter()
+            .append("text")
+            .text(d => d[0])
+            .attr("x", (d, i) => getCellOffset(d, i).x)
+            .attr("y", (d, i) => perCellHeight - 3 + getCellOffset(d, i).y)
+            .attr("class", "area-text")
+
+        svg.append("text")
+            .attr("x", padding)
+            .attr("y", titleHeight + subtitleHeight + 10)
+            .attr("text-anchor", "left")
+            .style("font-size", "16px")
+            .text("England");
+
+        svg.append("text")
+            .attr("x", padding + 5 * perCellWidth)
+            .attr("y", titleHeight + subtitleHeight + 10)
+            .attr("text-anchor", "left")
+            .style("font-size", "16px")
+            .text("Scotland");
+
+        svg.append("text")
+            .attr("x", padding + 6 * perCellWidth)
+            .attr("y", titleHeight + subtitleHeight + 10)
+            .attr("text-anchor", "left")
+            .style("font-size", "16px")
+            .text("Wales");
+
+        svg.append("text")
+            .attr("x", padding)
+            .attr("y", titleHeight)
+            .attr("text-anchor", "left")
+            .style("font-size", "20px")
+            .text("UK COVID-19 confirmed cases by local authority or health board");
+
+        svg.append("text")
+            .attr("x", padding)
+            .attr("y", height - padding)
+            .attr("text-anchor", "left")
+            .style("font-size", "10px")
+            .text("Data up to " + formatDate(latestDate) + ". Data source: Public Health England, Scotland, Wales. NI does not provide area data. Code: https://github.com/tomwhite/covid-19-uk-data");
+    });    
+</script>
+</body>

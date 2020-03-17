@@ -152,10 +152,13 @@ Date,Country,Indicator,Value
 2020-03-16,UK,Tests,44105
 2020-03-16,Wales,ConfirmedCases,124
 2020-03-16,Wales,Deaths,1
+2020-03-17,England,ConfirmedCases,1557
+2020-03-17,Northern Ireland,ConfirmedCases,62
 2020-03-17,Scotland,ConfirmedCases,195
 2020-03-17,Scotland,Deaths,2
 2020-03-17,Scotland,Tests,5246
 2020-03-17,UK,ConfirmedCases,1950
+2020-03-17,UK,Deaths,60
 2020-03-17,UK,Tests,50442
 2020-03-17,Wales,ConfirmedCases,136
 2020-03-17,Wales,Deaths,1

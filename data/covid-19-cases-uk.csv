@@ -1994,30 +1994,40 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-16,Scotland,S08000024,Lothian,29
 2020-03-16,Scotland,S08000026,Shetland,15
 2020-03-16,Scotland,S08000030,Tayside,17
-2020-03-16,Wales,W06000019,Blaenau Gwent,5
+2020-03-16,Wales,W06000019,Blaenau Gwent,7
 2020-03-16,Wales,W06000013,Bridgend,1
 2020-03-16,Wales,W06000018,Caerphilly,14
 2020-03-16,Wales,W06000010,Carmarthenshire,7
 2020-03-16,Wales,W06000008,Ceredigion,1
-2020-03-16,Wales,W06000011,Swansea,23
-2020-03-16,Wales,W06000015,Cardiff,11
+2020-03-16,Wales,W06000011,Swansea,21
+2020-03-16,Wales,W06000015,Cardiff,13
 2020-03-16,Wales,W06000003,Conwy,1
 2020-03-16,Wales,W06000004,Denbighshire,0
 2020-03-16,Wales,W06000005,Flintshire,1
 2020-03-16,Wales,W06000002,Gwynedd,0
 2020-03-16,Wales,W06000001,Isle of Anglesey,2
 2020-03-16,Wales,W06000024,Merthyr Tydfil,0
-2020-03-16,Wales,W06000021,Monmouthshire,7
+2020-03-16,Wales,W06000021,Monmouthshire,8
 2020-03-16,Wales,W06000012,Neath Port Talbot,11
-2020-03-16,Wales,W06000022,Newport,14
+2020-03-16,Wales,W06000022,Newport,21
 2020-03-16,Wales,W06000009,Pembrokeshire,2
-2020-03-16,Wales,W06000023,Powys,3
+2020-03-16,Wales,W06000023,Powys,5
 2020-03-16,Wales,W06000016,Rhondda Cynon Taf,2
 2020-03-16,Wales,W06000020,Torfaen,2
 2020-03-16,Wales,W06000014,Vale of Glamorgan,1
 2020-03-16,Wales,W06000006,Wrexham,2
-2020-03-16,Wales,,Residential area to be confirmed,12
-2020-03-16,Wales,,Resident outside Wales,2
+2020-03-17,Scotland,S08000015,Ayrshire and Arran,6
+2020-03-17,Scotland,S08000016,Borders,7
+2020-03-17,Scotland,S08000017,Dumfries and Galloway,1
+2020-03-17,Scotland,S08000029,Fife,7
+2020-03-17,Scotland,S08000019,Forth Valley,12
+2020-03-17,Scotland,S08000020,Grampian,26
+2020-03-17,Scotland,S08000031,Greater Glasgow and Clyde,49
+2020-03-17,Scotland,S08000022,Highland,5
+2020-03-17,Scotland,S08000032,Lanarkshire,21
+2020-03-17,Scotland,S08000024,Lothian,30
+2020-03-17,Scotland,S08000026,Shetland,11
+2020-03-17,Scotland,S08000030,Tayside,20
 2020-03-17,Wales,W06000019,Blaenau Gwent,8
 2020-03-17,Wales,W06000013,Bridgend,3
 2020-03-17,Wales,W06000018,Caerphilly,15

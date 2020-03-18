@@ -64,7 +64,7 @@ A lot of the collation process is manual, however there are a few command line t
 
 ### Northern Ireland
 
-* Number of **tests** are not published
+* Number of **tests** are published at [https://www.health-ni.gov.uk/news/][https://www.health-ni.gov.uk/news/] at 2pm in HTML format
 * Number of **confirmed cases** are published at [www.publichealth.hscni.net/news/covid-19-coronavirus](https://www.publichealth.hscni.net/news/covid-19-coronavirus) in the evening in HTML format
 * Number of **deaths** are not published
 * Number of **confirmed cases by local authority** are not published
@@ -189,6 +189,10 @@ curl -L https://www.arcgis.com/sharing/rest/content/items/ca796627a2294c51926865
 curl -L https://www.arcgis.com/sharing/rest/content/items/bc8ee90225644ef7a6f4dd1b13ea1d67/data -o data/raw/DailyIndicators-$DATE.xslx
 ./tools/extract_indicators.py data/raw/DailyIndicators-$DATE.xslx
 ```
+
+Northern Ireland (2pm)
+
+* Get test numbers from [https://www.health-ni.gov.uk/news/][https://www.health-ni.gov.uk/news/]
 
 Northern Ireland (evening)
 

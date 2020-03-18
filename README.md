@@ -40,7 +40,7 @@ A lot of the collation process is manual, however there are a few command line t
 
 ### UK
 
-* Number of **tests** and **confirmed cases** are published at [www.gov.uk/government/publications/covid-19-track-coronavirus-cases](https://www.gov.uk/government/publications/covid-19-track-coronavirus-cases) at 2pm in HTML format
+* Number of **tests** and **confirmed cases** are published at [https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases) at 2pm in HTML format
 * Number of **deaths** are published in the [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67) at 6pm in XLSX format
 
 ### England

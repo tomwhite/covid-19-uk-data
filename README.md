@@ -111,6 +111,10 @@ Run a sanity check that the area case numbers add up to the totals:
 ./tools/check_totals.py
 ```
 
+## News
+
+* 18 March 2020. PHW is no longer providing LA area breakdowns. "Novel Coronavirus (COVID-19) is now circulating in every part of Wales. For this reason, we will not be reporting cases by local authority area from today. From tomorrow, we will update daily at 12 noon the case numbers by health board of residence."
+
 ## Daily workflow
 
 England (2pm, with area totals an hour or two later):

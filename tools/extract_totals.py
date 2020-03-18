@@ -7,6 +7,7 @@ import dateparser
 import math
 import re
 import sys
+from word2number import w2n
 
 html_file = sys.argv[1]
 
@@ -25,7 +26,7 @@ def normalize_whitespace(text):
 
 def normalize_int(num):
     if isinstance(num, str):
-        return int(num.replace(",", ""))
+        return w2n.word_to_num(num.replace(",", ""))
     return num
 
 
@@ -36,7 +37,7 @@ wales_pattern = re.compile(
     r"(?s)Updated: (?P<time>.+?),? \S+ (?P<date>\d+\s\w+\s\d{4}).+? new cases have tested positive.+in (?P<country>.+?), bringing the total number of confirmed cases to (?P<positive_tests>\w+)"
 )
 scotland_pattern = re.compile(
-    r"(?s)A total of (?P<tests>.+?) (?P<country>.+?) tests.+Of these:\s+(?P<negative_tests>.+?) tests were.+?negative\s+(?P<positive_tests>.+?) tests were.+?positive.+Last updated: (?P<time>.+?) on (?P<date>[^.]+)"
+    r"(?s)A total of (?P<tests>.+?) (?P<country>.+?) tests.+Of these:\s+(?P<negative_tests>.+?) tests were.+?negative\s+(?P<positive_tests>.+?) tests were.+?positive.+Sadly, (?P<deaths>.+?) patients? in Scotland who tested positive for Coronavirus have died.+Last updated: (?P<time>.+?) on (?P<date>[^.]+)"
 )
 ni_pattern = re.compile(
     r"As of (?P<time>.+?) on (?P<date>.+?), testing has resulted in .+? new positive cases bringing the total number of cases in (?P<country>.+?) to (?P<positive_tests>.+?)\."
@@ -55,7 +56,7 @@ for pattern in patterns:
         tests = normalize_int(groups.get("tests", float("nan")))
         positive_tests = normalize_int(groups["positive_tests"])
         negative_tests = normalize_int(groups.get("negative_tests", float("nan")))
-        deaths = groups.get("deaths", float("nan"))
+        deaths = normalize_int(groups.get("deaths", float("nan")))
         if not math.isnan(tests):
             print("{},{},{},{}".format(date, country, "Tests", tests))
         if not math.isnan(positive_tests):

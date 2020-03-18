@@ -163,3 +163,6 @@ Date,Country,Indicator,Value
 2020-03-17,Wales,ConfirmedCases,136
 2020-03-17,Wales,Deaths,1
 2020-03-18,Wales,ConfirmedCases,149
+2020-03-18,Scotland,Tests,6091
+2020-03-18,Scotland,ConfirmedCases,227
+2020-03-18,Scotland,Deaths,3

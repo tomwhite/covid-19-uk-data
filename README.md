@@ -16,16 +16,21 @@ The following CSV files are available:
 
 You can use these files without reading the rest of this document.
 
-The following CSV files are deprecated:
+The following CSV files are deprecated, please use [data/covid-19-indicators-uk.csv](data/covid-19-indicators-uk.csv) instead:
 
 * [data/covid-19-totals-uk.csv](data/covid-19-totals-uk.csv): daily counts of tests, confirmed cases, deaths for the whole of the UK
 * [data/covid-19-totals-northern-ireland.csv](data/covid-19-totals-northern-ireland.csv): daily counts of tests, confirmed cases, deaths for Northern Ireland
 * [data/covid-19-totals-scotland.csv](data/covid-19-totals-scotland.csv): daily counts of tests, confirmed cases, deaths for Scotland
 * [data/covid-19-totals-wales.csv](data/covid-19-totals-wales.csv): daily counts of tests, confirmed cases, deaths for Wales
 
+## News
+
+* 18 March 2020. PHW is no longer providing LA area breakdowns. "Novel Coronavirus (COVID-19) is now circulating in every part of Wales. For this reason, we will not be reporting cases by local authority area from today. From tomorrow, we will update daily at 12 noon the case numbers by health board of residence."
+
 ## Data sources and the collation process
 
-A lot of the collation process is manual, however there are a few command line tools to help process the data into its final form.
+A lot of the collation process is manual, however there are a few command line tools to help process the data into its final form. The data sources are changing from day to day, which means the process is constantly changing.
+
 
 ### Local Authority and Health Board data
 
@@ -33,35 +38,39 @@ The following dataset is used to map between (upper tier) local authority names 
 
 This dataset is a list of Scottish Health Boards: [Health Board 2014](https://www.opendata.nhs.scot/dataset/geography-codes-and-labels/resource/652ff726-e676-4a20-abda-435b98dd7bdc)
 
+### UK
+
+* Number of **tests** and **confirmed cases** are published at [www.gov.uk/government/publications/covid-19-track-coronavirus-cases](https://www.gov.uk/government/publications/covid-19-track-coronavirus-cases) at 2pm in HTML format
+* Number of **deaths** are published in the [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67) at 6pm in XLSX format
+
 ### England
 
-Updates are published daily at [www.gov.uk/government/publications/covid-19-track-coronavirus-cases](https://www.gov.uk/government/publications/covid-19-track-coronavirus-cases).
-
-* Test numbers are published daily on Twitter by [https://twitter.com/DHSCgovuk](twitter.com/DHSCgovuk). The count is added to _data/covid-19-totals-uk.csv_ manually. Note that there isn't a separate breakdown of the England numbers - they cover the whole of the UK.
-* Case numbers by local authority are published daily in the [UTLA cases table](https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6), updating previous updates. There is no way to get historical data from this source (as far I can tell). The CSV file from this page is saved in _data/raw_.
-  * Note that prior to 11 March 2020 case numbers were published in HTML format.
-
-### Wales
-
-Updates are published daily at [phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/](https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/), overwriting previous updates. (Note however that this page is being archived by [web.archive.org/](https://web.archive.org/)) Prior to 12 March 2020 updates were published at [gov.wales/announcements](https://gov.wales/announcements).
-
-* Test numbers are published _weekly_ on Thursday. The count is added to _data/covid-19-totals-wales.csv_ manually.
-  * Improvement: automatically download this page every Thursday
-* Case numbers by local authority are published daily in prose form. They are manually added to _data/raw/wales-new-cases.csv_.
+* Number of **tests** are not published
+* Number of **confirmed cases** are published in the [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67) at 6pm in XLSX format
+* Number of **deaths** are not published
+* Number of **confirmed cases by local authority** are published in the [UTLA cases table](https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6)
+    * Note that prior to 11 March 2020 case numbers were published in HTML format.
 
 ### Scotland
 
-Updates are published daily at [www.gov.scot/coronavirus-covid-19](https://www.gov.scot/coronavirus-covid-19/), overwriting previous updates. (Note however that this page is being archived by [web.archive.org](https://web.archive.org/)).
+* Number of **tests, confirmed cases and deaths**, and **confirmed cases by local authority**, are published at [www.gov.scot/coronavirus-covid-19](https://www.gov.scot/coronavirus-covid-19/) at 2pm in HTML format
 
-* Test numbers are published daily and added to _data/covid-19-totals-scotland.csv_ manually.
-* Case numbers by health board are published daily. The HTML file is save in _data/raw_.
+### Wales
+
+* Number of **tests** are not published
+* Number of **confirmed cases and deaths**, and **confirmed cases by local authority**, are published at [phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/](https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/) at 11am in HTML format
+* Number of **confirmed cases by local authority** are published in the [UTLA cases table](https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6)
+    * Note that prior to 11 March 2020 case numbers were published in HTML format.
 
 ### Northern Ireland
 
-Updates are published daily at [www.publichealth.hscni.net/news/covid-19-coronavirus](https://www.publichealth.hscni.net/news/covid-19-coronavirus) and [https://twitter.com/publichealthni](twitter.com/publichealthni).
+* Number of **tests** are not published
+* Number of **confirmed cases** are published at [www.publichealth.hscni.net/news/covid-19-coronavirus](https://www.publichealth.hscni.net/news/covid-19-coronavirus) in the evening in HTML format
+* Number of **deaths** are not published
+* Number of **confirmed cases by local authority** are not published
+* Twitter updates: [https://twitter.com/publichealthni](twitter.com/publichealthni)
 
-* Test numbers are published daily and added to _data/covid-19-totals-northern-ireland.csv_ manually.
-* Case numbers by local authority are not available.
+Note that [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67) includes confirmed cases for all countries.
 
 ## Tools
 
@@ -111,9 +120,7 @@ Run a sanity check that the area case numbers add up to the totals:
 ./tools/check_totals.py
 ```
 
-## News
 
-* 18 March 2020. PHW is no longer providing LA area breakdowns. "Novel Coronavirus (COVID-19) is now circulating in every part of Wales. For this reason, we will not be reporting cases by local authority area from today. From tomorrow, we will update daily at 12 noon the case numbers by health board of residence."
 
 ## Daily workflow
 
@@ -138,20 +145,6 @@ England (2pm, with area totals an hour or two later):
 
 ### Manually running scripts
 
-```bash
-DATE=$(date +'%Y-%m-%d')
-open https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6/data
-mv ~/Downloads/CountyUAs_cases_table.csv data/raw/CountyUAs_cases_table-$DATE.csv
-./tools/gen_daily_areas_england.py data/raw/CountyUAs_cases_table-$DATE.csv data/daily/covid-19-cases-$DATE-england.csv
-open https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases
-# Edit data/covid-19-totals-uk.csv with output from running the following (double check numbers)
-curl -L https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public -o data/raw/coronavirus-covid-19-number-of-cases-in-uk-$DATE.html
-./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-uk-$DATE.html
-# Also edit data/covid-19-indicators.csv with output from running the following
-curl -L https://www.arcgis.com/sharing/rest/content/items/bc8ee90225644ef7a6f4dd1b13ea1d67/data -o data/raw/DailyIndicators-$DATE.xslx
-./tools/extract_indicators.py data/raw/DailyIndicators-$DATE.xslx
-```
-
 Wales (11am)
 
 ```bash
@@ -174,7 +167,32 @@ curl -L https://www.gov.scot/coronavirus-covid-19/ -o data/raw/coronavirus-covid
 ./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html
 ```
 
-Northern Ireland (2pm)
+England (2pm):
+
+```bash
+DATE=$(date +'%Y-%m-%d')
+# Edit data/covid-19-totals-uk.csv with output from running the following (double check numbers)
+# Also edit data/covid-19-indicators.csv
+curl -L https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public -o data/raw/coronavirus-covid-19-number-of-cases-in-uk-$DATE.html
+./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-uk-$DATE.html
+```
+
+England (6pm):
+
+```bash
+DATE=$(date +'%Y-%m-%d')
+curl -L https://www.arcgis.com/sharing/rest/content/items/b684319181f94875a6879bbc833ca3a6/data -o data/raw/CountyUAs_cases_table-$DATE.csv
+curl -L https://www.arcgis.com/sharing/rest/content/items/ca796627a2294c51926865748c4a56e8/data -o data/raw/NHSR_Cases_table-$DATE.csv
+./tools/gen_daily_areas_england.py data/raw/CountyUAs_cases_table-$DATE.csv data/daily/covid-19-cases-$DATE-england.csv
+# Edit data/covid-19-totals-uk.csv with output from running the following (double check numbers)
+# Also edit data/covid-19-indicators.csv
+curl -L https://www.arcgis.com/sharing/rest/content/items/bc8ee90225644ef7a6f4dd1b13ea1d67/data -o data/raw/DailyIndicators-$DATE.xslx
+./tools/extract_indicators.py data/raw/DailyIndicators-$DATE.xslx
+```
+
+Northern Ireland (evening)
+
+_This is often no longer needed since the numbers come from the daily indicators_
 
 ```bash
 open https://www.publichealth.hscni.net/news/covid-19-coronavirus#situation-in-northern-ireland
@@ -187,5 +205,6 @@ Consolidate and check
 
 ```bash
 ./tools/consolidate_daily_areas.py
+./tools/sort_indicators.py
 ./tools/check_totals.py
 ```

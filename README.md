@@ -34,9 +34,9 @@ A lot of the collation process is manual, however there are a few command line t
 
 ### Local Authority and Health Board data
 
-The following dataset is used to map between (upper tier) local authority names and codes : [Lower Tier Local Authority to Upper Tier Local Authority (April 2019) Lookup in England and Wales](http://geoportal1-ons.opendata.arcgis.com/datasets/lower-tier-local-authority-to-upper-tier-local-authority-april-2019-lookup-in-england-and-wales/data)
-
-This dataset is a list of Scottish Health Boards: [Health Board 2014](https://www.opendata.nhs.scot/dataset/geography-codes-and-labels/resource/652ff726-e676-4a20-abda-435b98dd7bdc)
+* English and Welsh local authorities: [Lower Tier Local Authority to Upper Tier Local Authority (April 2019) Lookup in England and Wales](http://geoportal1-ons.opendata.arcgis.com/datasets/lower-tier-local-authority-to-upper-tier-local-authority-april-2019-lookup-in-england-and-wales/data)
+* Scottish Health Boards: [Health Board 2014](https://www.opendata.nhs.scot/dataset/geography-codes-and-labels/resource/652ff726-e676-4a20-abda-435b98dd7bdc)
+* Welsh Health Boards: [Local Health Boards (April 2019) Names and Codes in Wales](https://geoportal.statistics.gov.uk/datasets/local-health-boards-april-2019-names-and-codes-in-wales)
 
 ### UK
 
@@ -68,7 +68,7 @@ This dataset is a list of Scottish Health Boards: [Health Board 2014](https://ww
 * Number of **confirmed cases** are published at [www.publichealth.hscni.net/news/covid-19-coronavirus](https://www.publichealth.hscni.net/news/covid-19-coronavirus) in the evening in HTML format
 * Number of **deaths** are not published
 * Number of **confirmed cases by local authority** are not published
-* Twitter updates: [https://twitter.com/publichealthni](twitter.com/publichealthni)
+* Twitter updates: [https://twitter.com/publichealthni](https://twitter.com/publichealthni)
 
 Note that [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67) includes confirmed cases for all countries.
 

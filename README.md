@@ -145,7 +145,7 @@ mv ~/Downloads/CountyUAs_cases_table.csv data/raw/CountyUAs_cases_table-$DATE.cs
 ./tools/gen_daily_areas_england.py data/raw/CountyUAs_cases_table-$DATE.csv data/daily/covid-19-cases-$DATE-england.csv
 open https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases
 # Edit data/covid-19-totals-uk.csv with output from running the following (double check numbers)
-curl https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public -o data/raw/coronavirus-covid-19-number-of-cases-in-uk-$DATE.html
+curl -L https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public -o data/raw/coronavirus-covid-19-number-of-cases-in-uk-$DATE.html
 ./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-uk-$DATE.html
 # Also edit data/covid-19-indicators.csv with output from running the following
 curl -L https://www.arcgis.com/sharing/rest/content/items/bc8ee90225644ef7a6f4dd1b13ea1d67/data -o data/raw/DailyIndicators-$DATE.xslx
@@ -156,7 +156,7 @@ Wales (11am)
 
 ```bash
 DATE=$(date +'%Y-%m-%d')
-curl https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/ -o data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
+curl -L https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/ -o data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
 ./tools/gen_daily_areas_wales.py data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html data/daily/covid-19-cases-$DATE-wales.csv
 # Edit data/covid-19-totals-wales.csv (only have test numbers on Thursdays, leave column blank on other days)
 # Also edit data/covid-19-indicators.csv
@@ -167,7 +167,7 @@ Scotland (2pm)
 
 ```bash
 DATE=$(date +'%Y-%m-%d')
-curl https://www.gov.scot/coronavirus-covid-19/ -o data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html
+curl -L https://www.gov.scot/coronavirus-covid-19/ -o data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html
 ./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html data/daily/covid-19-cases-$DATE-scotland.csv
 # Edit data/covid-19-totals-scotland.csv with output from running the following (double check numbers)
 # Also edit data/covid-19-indicators.csv
@@ -179,7 +179,7 @@ Northern Ireland (2pm)
 ```bash
 open https://www.publichealth.hscni.net/news/covid-19-coronavirus#situation-in-northern-ireland
 # Edit data/covid-19-totals-northern-ireland.csv with output from running the following (double check numbers)
-curl https://www.publichealth.hscni.net/news/covid-19-coronavirus -o ni-tmp.html
+curl -L https://www.publichealth.hscni.net/news/covid-19-coronavirus -o ni-tmp.html
 ./tools/extract_totals.py ni-tmp.html
 ```
 

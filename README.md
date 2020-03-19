@@ -10,7 +10,7 @@ Ideally the data publishers will start doing this so this site becomes redundant
 
 The following CSV files are available:
 
-* [data/covid-19-cases-uk.csv](data/covid-19-cases-uk.csv): daily counts of confirmed cases for (upper tier) local authorities in England and Wales, and health boards in Scotland. No data for Northern Ireland is currently available.
+* [data/covid-19-cases-uk.csv](data/covid-19-cases-uk.csv): daily counts of confirmed cases for (upper tier) local authorities in England, and health boards in Scotland and Wales (prior to 19 March 2020 Wales counts were by local authority). No data for Northern Ireland is currently available.
 * [data/covid-19-indicators-uk.csv](data/covid-19-indicators-uk.csv): daily counts of tests, confirmed cases, deaths for the whole of the UK and individual countries in the UK (England, Scotland, Wales, Northern Ireland)
 * _data/daily/*.csv_: daily counts, with a separate file for each date and country.
 

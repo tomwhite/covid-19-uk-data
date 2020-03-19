@@ -35,6 +35,7 @@
 const p1 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "description": "UK daily tests",
+    "width": 300,
     "data": {"url": "data/covid-19-indicators-uk.csv"},
     "transform": [{
         "filter": "datum.Country == 'UK' && datum.Indicator == 'Tests'"
@@ -53,6 +54,7 @@ const p1 = {
 const p2 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "description": "UK cumulative tests",
+    "width": 300,
     "data": {"url": "data/covid-19-indicators-uk.csv"},
     "transform": [{
         "filter": "datum.Country == 'UK' && datum.Indicator == 'Tests'"
@@ -66,6 +68,7 @@ const p2 = {
 const p3 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "description": "UK cumulative tests (log scale)",
+    "width": 300,
     "data": {"url": "data/covid-19-indicators-uk.csv"},
     "transform": [{
         "filter": "datum.Country == 'UK' && datum.Indicator == 'Tests'"
@@ -79,6 +82,7 @@ const p3 = {
 const p4 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "description": "UK daily confirmed cases",
+    "width": 300,
     "data": {"url": "data/covid-19-indicators-uk.csv"},
     "transform": [{
         "filter": "datum.Country == 'UK' && datum.Indicator == 'ConfirmedCases'"
@@ -97,6 +101,7 @@ const p4 = {
 const p5 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "description": "UK cumulative confirmed cases",
+    "width": 300,
     "data": {"url": "data/covid-19-indicators-uk.csv"},
     "transform": [{
         "filter": "datum.Country == 'UK' && datum.Indicator == 'ConfirmedCases'"
@@ -110,19 +115,24 @@ const p5 = {
 const p6 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "description": "UK cumulative confirmed cases (log scale)",
+    "width": 300,
     "data": {"url": "data/covid-19-indicators-uk.csv"},
     "transform": [{
         "filter": "datum.Country == 'UK' && datum.Indicator == 'ConfirmedCases'"
+    }, {
+        "calculate": "if(datum.Value == 0, NaN, datum.Value)",
+        "as": "ConfirmedCases"
     }],
     "mark": "line",
     "encoding": {
         "x": {"field": "Date", "type": "temporal"},
-        "y": {"field": "Value", "type": "quantitative", "scale": {"type": "log"}}
+        "y": {"field": "ConfirmedCases", "type": "quantitative", "scale": {"type": "log"}}
     }
 };
 const p7 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "description": "UK daily deaths",
+    "width": 300,
     "data": {"url": "data/covid-19-indicators-uk.csv"},
     "transform": [{
         "filter": "datum.Country == 'UK' && datum.Indicator == 'Deaths'"
@@ -141,6 +151,7 @@ const p7 = {
 const p8 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "description": "UK cumulative deaths",
+    "width": 300,
     "data": {"url": "data/covid-19-indicators-uk.csv"},
     "transform": [{
         "filter": "datum.Country == 'UK' && datum.Indicator == 'Deaths'"
@@ -154,6 +165,7 @@ const p8 = {
 const p9 = {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
     "description": "UK cumulative deaths (log scale)",
+    "width": 300,
     "data": {"url": "data/covid-19-indicators-uk.csv"},
     "transform": [{
         "filter": "datum.Country == 'UK' && datum.Indicator == 'Deaths'"

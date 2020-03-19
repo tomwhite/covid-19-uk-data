@@ -19,9 +19,12 @@ def convert(totals_csv_file, country):
 
 
 if __name__ == "__main__":
-    df1 = convert("data/covid-19-totals-northern-ireland.csv", "Northern Ireland")
-    df2 = convert("data/covid-19-totals-scotland.csv", "Scotland")
-    df3 = convert("data/covid-19-totals-uk.csv", "UK")
-    df4 = convert("data/covid-19-totals-wales.csv", "Wales")
-    df = pd.concat([df1, df2, df3, df4]).sort_values(["Date", "Country", "Indicator"])
+    dfs = [
+        convert("data/covid-19-totals-england.csv", "England"),
+        convert("data/covid-19-totals-northern-ireland.csv", "Northern Ireland"),
+        convert("data/covid-19-totals-scotland.csv", "Scotland"),
+        convert("data/covid-19-totals-uk.csv", "UK"),
+        convert("data/covid-19-totals-wales.csv", "Wales"),
+    ]
+    df = pd.concat(dfs).sort_values(["Date", "Country", "Indicator"])
     df.to_csv("data/covid-19-indicators-uk-tmp.csv", index=False)

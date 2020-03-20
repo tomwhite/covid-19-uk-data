@@ -41,7 +41,7 @@ A lot of the collation process is manual, however there are a few command line t
 * Number of **tests** are not published
 * Number of **confirmed cases** are published in the [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67) at 6pm in XLSX format
 * Number of **deaths** are not published
-* Number of **confirmed cases by local authority** are published in the [UTLA cases table](https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6)
+* Number of **confirmed cases by local authority** are published in the [UTLA cases table](https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6) at 6pm in CSV format
     * Note that prior to 11 March 2020 case numbers were published in HTML format.
 
 ### Scotland
@@ -71,8 +71,8 @@ Note that [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225
 |---|----|----|------|---------|
 |https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public|UK tests, UK confirmed cases|2pm|HTML|Yes|
 |https://www.arcgis.com/sharing/rest/content/items/bc8ee90225644ef7a6f4dd1b13ea1d67/data|UK tests, England/Scotland/Wales/NI confirmed cases, UK deaths ("daily indicators")|6pm|XLSX|No|
-|https://www.arcgis.com/sharing/rest/content/items/b684319181f94875a6879bbc833ca3a6/data|England confirmed cases by local authority ("UTLA cases table")|6pm|XLSX|No|
-|https://www.arcgis.com/sharing/rest/content/items/ca796627a2294c51926865748c4a56e8/data|England confirmed cases by NHS region ("NHA regional cases table")|6pm|XLSX|No|
+|https://www.arcgis.com/sharing/rest/content/items/b684319181f94875a6879bbc833ca3a6/data|England confirmed cases by local authority ("UTLA cases table")|6pm|CSV|No|
+|https://www.arcgis.com/sharing/rest/content/items/ca796627a2294c51926865748c4a56e8/data|England confirmed cases by NHS region ("NHA regional cases table")|6pm|CSV|No|
 |https://www.gov.scot/coronavirus-covid-19/|Scotland tests, confirmed cases, deaths, confirmed cases by local authority|2pm|HTML|Yes|
 |https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/|Wales confirmed cases, deaths, confirmed cases by local authority|midday|HTML|Yes|
 |https://www.health-ni.gov.uk/news/|Northern Ireland tests|evening|HTML|No|

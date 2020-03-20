@@ -3,7 +3,7 @@
 import pandas as pd
 import sys
 
-# Extract daily totals (indictors) from an XLSX file and print. (Not yet used.)
+# Extract daily totals (indicators) from an XLSX file and print.
 
 xslx_file = sys.argv[1]
 

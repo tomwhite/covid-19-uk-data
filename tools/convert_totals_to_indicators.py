@@ -27,4 +27,4 @@ if __name__ == "__main__":
         convert("data/covid-19-totals-wales.csv", "Wales"),
     ]
     df = pd.concat(dfs).sort_values(["Date", "Country", "Indicator"])
-    df.to_csv("data/covid-19-indicators-uk-tmp.csv", index=False)
+    df.to_csv("data/covid-19-indicators-uk.csv", index=False)

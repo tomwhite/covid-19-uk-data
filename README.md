@@ -11,17 +11,15 @@ Ideally the data publishers will start doing this so this site becomes redundant
 The following CSV files are available:
 
 * [data/covid-19-cases-uk.csv](data/covid-19-cases-uk.csv): daily counts of confirmed cases for (upper tier) local authorities in England, and health boards in Scotland and Wales (prior to 19 March 2020 Wales counts were by local authority). No data for Northern Ireland is currently available.
-* [data/covid-19-indicators-uk.csv](data/covid-19-indicators-uk.csv): daily counts of tests, confirmed cases, deaths for the whole of the UK and individual countries in the UK (England, Scotland, Wales, Northern Ireland)
-* _data/daily/*.csv_: daily counts, with a separate file for each date and country.
-
-You can use these files without reading the rest of this document.
-
-The following CSV files are deprecated, please use [data/covid-19-indicators-uk.csv](data/covid-19-indicators-uk.csv) instead:
-
 * [data/covid-19-totals-uk.csv](data/covid-19-totals-uk.csv): daily counts of tests, confirmed cases, deaths for the whole of the UK
+* [data/covid-19-totals-england.csv](data/covid-19-totals-uk.csv): daily counts of tests, confirmed cases, deaths for England
 * [data/covid-19-totals-northern-ireland.csv](data/covid-19-totals-northern-ireland.csv): daily counts of tests, confirmed cases, deaths for Northern Ireland
 * [data/covid-19-totals-scotland.csv](data/covid-19-totals-scotland.csv): daily counts of tests, confirmed cases, deaths for Scotland
 * [data/covid-19-totals-wales.csv](data/covid-19-totals-wales.csv): daily counts of tests, confirmed cases, deaths for Wales
+* [data/covid-19-indicators-uk.csv](data/covid-19-indicators-uk.csv): daily counts of tests, confirmed cases, deaths for the whole of the UK and individual countries in the UK (England, Scotland, Wales, Northern Ireland). This is a tidy-data version of _covid-19-totals-*.csv_ combined into one file.
+* _data/daily/*.csv_: daily counts, with a separate file for each date and country.
+
+You can use these files without reading the rest of this document.
 
 ## News
 
@@ -167,7 +165,6 @@ DATE=$(date +'%Y-%m-%d')
 curl -L https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/ -o data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
 ./tools/gen_daily_areas_wales.py data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html data/daily/covid-19-cases-$DATE-wales.csv
 # Edit data/covid-19-totals-wales.csv (only have test numbers on Thursdays, leave column blank on other days)
-# Also edit data/covid-19-indicators.csv
 ./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
 ```
 
@@ -178,7 +175,6 @@ DATE=$(date +'%Y-%m-%d')
 curl -L https://www.gov.scot/coronavirus-covid-19/ -o data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html
 ./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html data/daily/covid-19-cases-$DATE-scotland.csv
 # Edit data/covid-19-totals-scotland.csv with output from running the following (double check numbers)
-# Also edit data/covid-19-indicators.csv
 ./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-scotland-$DATE.html
 ```
 
@@ -187,7 +183,6 @@ England (2pm):
 ```bash
 DATE=$(date +'%Y-%m-%d')
 # Edit data/covid-19-totals-uk.csv with output from running the following (double check numbers)
-# Also edit data/covid-19-indicators.csv
 curl -L https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public -o data/raw/coronavirus-covid-19-number-of-cases-in-uk-$DATE.html
 ./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-uk-$DATE.html
 ```
@@ -224,7 +219,7 @@ Consolidate and check
 
 ```bash
 ./tools/consolidate_daily_areas.py
-./tools/sort_indicators.py
+./tools/convert_totals_to_indicators.py
 ./tools/check_indicators.py
 ./tools/check_totals.py
 ```

@@ -224,5 +224,6 @@ Consolidate and check
 ```bash
 ./tools/consolidate_daily_areas.py
 ./tools/sort_indicators.py
+./tools/check_indicators.py
 ./tools/check_totals.py
 ```

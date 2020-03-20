@@ -7,40 +7,24 @@ import pandas as pd
 
 def check_latest(indicators_csv_file, cases_csv_file, country):
     indicators = pd.read_csv(indicators_csv_file)
-    last_row = indicators.to_dict("records")[-1]
-    date = last_row["Date"]
-
-    indicators_on_date = indicators[
-        (indicators["Date"] == date)
-        & (indicators["Country"] == country)
+    indicators = indicators[
+        (indicators["Country"] == country)
         & (indicators["Indicator"] == "ConfirmedCases")
     ]
-    total_cases = indicators_on_date.to_dict("records")[-1]["Value"]
 
     cases_uk = pd.read_csv(cases_csv_file)
-    cases_uk_on_date = cases_uk[
-        (cases_uk["Date"] == date) & (cases_uk["Country"] == country)
-    ]
-    cases_uk_on_date = cases_uk_on_date.astype({"TotalCases": "int64"})
-    total_cases_check = cases_uk_on_date["TotalCases"].sum()
+    cases_uk = cases_uk[cases_uk["Country"] == country]
+    cases_uk = cases_uk.astype({"TotalCases": "int64"})
+    cases_uk = cases_uk.groupby("Date").sum()
 
-    if total_cases == total_cases_check:
-        print(
-            "Total cases for {} on {} checks out at {}".format(
-                country, date, total_cases
-            )
-        )
+    df = cases_uk.join(indicators.set_index('Date'))
+    df = df[df["TotalCases"] != df["Value"]]
+
+    if len(df) == 0:
+        print("Total cases for {} checks out".format(country))
     else:
-        print(
-            "Mismatch. Total cases for {} on {} is {} from {} and {} from {}".format(
-                country,
-                date,
-                total_cases,
-                totals_csv_file,
-                total_cases_check,
-                cases_csv_file,
-            )
-        )
+        print("Mismatch for {}".format(country))
+        print(df)
 
 
 if __name__ == "__main__":

@@ -8,7 +8,7 @@ import math
 import re
 import sys
 
-from util import normalize_int, normalize_whitespace
+from util import format_country, normalize_int, normalize_whitespace
 
 html_file = sys.argv[1]
 
@@ -49,10 +49,35 @@ for pattern in patterns:
         deaths = normalize_int(groups.get("deaths", float("nan")))
         if not math.isnan(tests):
             print("{},{},{},{}".format(date, country, "Tests", tests))
+            # with open(
+            #     "data/daily/indicators/covid-19-{}-{}-tests.csv".format(
+            #         date, format_country(country)
+            #     ),
+            #     "w",
+            # ) as f:
+            #     f.write("{},{},{},{}\n".format(date, country, "Tests", tests))
         if not math.isnan(positive_tests):
             print("{},{},{},{}".format(date, country, "ConfirmedCases", positive_tests))
+            # with open(
+            #     "data/daily/indicators/covid-19-{}-{}-confirmed-cases.csv".format(
+            #         date, format_country(country)
+            #     ),
+            #     "w",
+            # ) as f:
+            #     f.write(
+            #         "{},{},{},{}\n".format(
+            #             date, country, "ConfirmedCases", positive_tests
+            #         )
+            #     )
         if not math.isnan(deaths):
             print("{},{},{},{}".format(date, country, "Deaths", deaths))
+            # with open(
+            #     "data/daily/indicators/covid-19-{}-{}-deaths.csv".format(
+            #         date, format_country(country)
+            #     ),
+            #     "w",
+            # ) as f:
+            #     f.write("{},{},{},{}\n".format(date, country, "Deaths", deaths))
         print(
             "{},{},{},{}".format(
                 date,

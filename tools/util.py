@@ -25,7 +25,23 @@ def is_blank(text):
     """Return True if the string is composed of whitespace only"""
     return len(normalize_whitespace(text)) == 0
 
+
+def camel_to_hyphens(name):
+    return re.sub(r"(?<!^)(?=[A-Z])", "-", name).lower()
+
+
+def format_country(name):
+    return name.replace(" ", "-").lower()
+
+
+def format_int(val):
+    if math.isnan(val):
+        return ""
+    return int(val)
+
+
 la_name_to_code = None
+
 
 def lookup_local_authority_code(name):
     # Get upper tier local authority name to code mapping.
@@ -41,18 +57,26 @@ def lookup_local_authority_code(name):
 
     return la_name_to_code.get(name, "")
 
+
 hb_name_to_code = None
+
 
 def lookup_health_board_code(name):
     global hb_name_to_code
     if hb_name_to_code is None:
         # Scotland
-        hb_mapping = pd.read_csv("data/raw/geography_codes_and_labels_hb2014_01042019.csv")
+        hb_mapping = pd.read_csv(
+            "data/raw/geography_codes_and_labels_hb2014_01042019.csv"
+        )
         hb_mapping = hb_mapping[
             hb_mapping.HB2014QF != "x"
         ]  # drop those marked with an 'x' since they are no longer in use
-        hb_name_to_code_scotland = dict(zip(hb_mapping["HB2014Name"], hb_mapping["HB2014"]))
-        hb_name_to_code_scotland = {k.replace("NHS ", ""): v for k, v in hb_name_to_code_scotland.items()}
+        hb_name_to_code_scotland = dict(
+            zip(hb_mapping["HB2014Name"], hb_mapping["HB2014"])
+        )
+        hb_name_to_code_scotland = {
+            k.replace("NHS ", ""): v for k, v in hb_name_to_code_scotland.items()
+        }
 
         # Wales
         hb_mapping = pd.read_csv(
@@ -60,7 +84,9 @@ def lookup_health_board_code(name):
         )
         hb_name_to_code_wales = dict(zip(hb_mapping["LHB19NM"], hb_mapping["LHB19CD"]))
         hb_name_to_code_wales = {
-            k.replace(" Teaching Health Board", "").replace(" University Health Board", ""): v
+            k.replace(" Teaching Health Board", "").replace(
+                " University Health Board", ""
+            ): v
             for k, v in hb_name_to_code_wales.items()
         }
         hb_name_to_code_wales["Cwm Taf"] = "W11000030"

@@ -14,6 +14,8 @@ def check_latest(indicators_csv_file, cases_csv_file, country):
 
     cases_uk = pd.read_csv(cases_csv_file)
     cases_uk = cases_uk[cases_uk["Country"] == country]
+    if country == "England":
+        cases_uk = cases_uk[cases_uk["Date"] >= "2020-03-06"]
     cases_uk = cases_uk.astype({"TotalCases": "int64"})
     cases_uk = cases_uk.groupby("Date").sum()
 
@@ -28,6 +30,9 @@ def check_latest(indicators_csv_file, cases_csv_file, country):
 
 
 if __name__ == "__main__":
+    check_latest(
+        "data/covid-19-indicators-uk.csv", "data/covid-19-cases-uk.csv", "England"
+    )
     check_latest(
         "data/covid-19-indicators-uk.csv", "data/covid-19-cases-uk.csv", "Scotland"
     )

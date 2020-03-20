@@ -2,7 +2,7 @@
 
 Data on testing and case numbers for coronavirus (COVID-19) in the UK is published by the government, but it is fragmented and not always provided in consistent or machine-friendly formats. Also, in many cases only the latest numbers are available so it's not possible to look at changes over time.
 
-This site collates the historical data and provides it in an easily consumable format (CSV), in [tidy data](https://en.wikipedia.org/wiki/Tidy_data) form.
+This site collates the historical data and provides it in an easily consumable format (CSV), in both wide and [tidy data](https://en.wikipedia.org/wiki/Tidy_data) forms.
 
 Ideally the data publishers will start doing this so this site becomes redundant.
 
@@ -29,6 +29,8 @@ You can use these files without reading the rest of this document.
 ## Data sources and the collation process
 
 A lot of the collation process is manual, however there are a few command line tools to help process the data into its final form. The data sources are changing from day to day, which means the process is constantly changing.
+
+Raw data is archived under _data/raw_, it should never be edited.
 
 ### UK
 

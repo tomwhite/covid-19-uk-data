@@ -163,7 +163,7 @@ Wales (11am)
 
 ```bash
 DATE=$(date +'%Y-%m-%d')
-curl -L https://phw.nhs.wales/ -o data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
+curl -L https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/ -o data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
 ./tools/gen_daily_areas_wales.py data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html data/daily/covid-19-cases-$DATE-wales.csv
 # Edit data/covid-19-totals-wales.csv (only have test numbers on Thursdays, leave column blank on other days)
 # Also edit data/covid-19-indicators.csv

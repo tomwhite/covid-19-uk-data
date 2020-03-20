@@ -34,7 +34,7 @@ uk_pattern = re.compile(
     r"As of (?P<time>.+?) on (?P<date>.+?), (?P<tests>.+?) people have been tested in the (?P<country>.+?), of which (?P<negative_tests>.+?) were confirmed negative and (?P<positive_tests>.+?) were confirmed.+?positive."
 )
 wales_pattern = re.compile(
-    r"(?s)Updated: (?P<time>.+?),? \S+ (?P<date>\d+\s\w+\s\d{4}).+? new cases have tested positive.+in (?P<country>.+?), bringing the total number of confirmed cases to (?P<positive_tests>\w+).+?(?P<deaths>.+?) people in Wales.+?have died"
+    r"(?s)Updated: (?P<time>.+?),? \S+ (?P<date>\d+\s\w+\s\d{4}).+“(?P<deaths>.+?) people in Wales.+? died.+? new cases have tested positive.+in (?P<country>.+?), bringing the total number of confirmed cases to (?P<positive_tests>\w+)"
 )
 scotland_pattern = re.compile(
     r"(?s)A total of (?P<tests>.+?) (?P<country>.+?) tests.+Of these:\s+(?P<negative_tests>.+?) tests were.+?negative\s+(?P<positive_tests>.+?) tests were.+?positive.+Sadly, (?P<deaths>.+?) patients? in Scotland who tested positive.+?have died.+Last updated: (?P<time>.+?) on (?P<date>[^.]+)"

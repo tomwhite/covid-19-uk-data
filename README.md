@@ -31,13 +31,6 @@ The following CSV files are deprecated, please use [data/covid-19-indicators-uk.
 
 A lot of the collation process is manual, however there are a few command line tools to help process the data into its final form. The data sources are changing from day to day, which means the process is constantly changing.
 
-
-### Local Authority and Health Board data
-
-* English and Welsh local authorities: [Lower Tier Local Authority to Upper Tier Local Authority (April 2019) Lookup in England and Wales](http://geoportal1-ons.opendata.arcgis.com/datasets/lower-tier-local-authority-to-upper-tier-local-authority-april-2019-lookup-in-england-and-wales/data)
-* Scottish Health Boards: [Health Board 2014](https://www.opendata.nhs.scot/dataset/geography-codes-and-labels/resource/652ff726-e676-4a20-abda-435b98dd7bdc)
-* Welsh Health Boards: [Local Health Boards (April 2019) Names and Codes in Wales](https://geoportal.statistics.gov.uk/datasets/local-health-boards-april-2019-names-and-codes-in-wales)
-
 ### UK
 
 * Number of **tests** and **confirmed cases** are published at [https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases) at 2pm in HTML format
@@ -58,19 +51,40 @@ A lot of the collation process is manual, however there are a few command line t
 ### Wales
 
 * Number of **tests** are not published
-* Number of **confirmed cases and deaths**, and **confirmed cases by local authority**, are published at [phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/](https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/) at 11am in HTML format
+* Number of **confirmed cases and deaths**, and **confirmed cases by local authority**, are published at [https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/](https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/) at midday in HTML format
 * Number of **confirmed cases by local authority** are published in the [UTLA cases table](https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6)
     * Note that prior to 11 March 2020 case numbers were published in HTML format.
 
 ### Northern Ireland
 
 * Number of **tests** are published at [https://www.health-ni.gov.uk/news/][https://www.health-ni.gov.uk/news/] at 2pm in HTML format
-* Number of **confirmed cases** are published at [www.publichealth.hscni.net/news/covid-19-coronavirus](https://www.publichealth.hscni.net/news/covid-19-coronavirus) in the evening in HTML format
+* Number of **confirmed cases** are published at [https://www.publichealth.hscni.net/news/covid-19-coronavirus](https://www.publichealth.hscni.net/news/covid-19-coronavirus) in the evening in HTML format
 * Number of **deaths** are not published
 * Number of **confirmed cases by local authority** are not published
 * Twitter updates: [https://twitter.com/publichealthni](https://twitter.com/publichealthni)
 
 Note that [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67) includes confirmed cases for all countries.
+
+### By URL
+
+|URL|What|When|Format|Archived?|
+|---|----|----|------|---------|
+|https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public|UK tests, UK confirmed cases|2pm|HTML|Yes|
+|https://www.arcgis.com/sharing/rest/content/items/bc8ee90225644ef7a6f4dd1b13ea1d67/data|UK tests, England/Scotland/Wales/NI confirmed cases, UK deaths ("daily indicators")|6pm|XLSX|No|
+|https://www.arcgis.com/sharing/rest/content/items/b684319181f94875a6879bbc833ca3a6/data|England confirmed cases by local authority ("UTLA cases table")|6pm|XLSX|No|
+|https://www.arcgis.com/sharing/rest/content/items/ca796627a2294c51926865748c4a56e8/data|England confirmed cases by NHS region ("NHA regional cases table")|6pm|XLSX|No|
+|https://www.gov.scot/coronavirus-covid-19/|Scotland tests, confirmed cases, deaths, confirmed cases by local authority|2pm|HTML|Yes|
+|https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/|Wales confirmed cases, deaths, confirmed cases by local authority|midday|HTML|Yes|
+|https://www.health-ni.gov.uk/news/|Northern Ireland tests|evening|HTML|No|
+|https://www.publichealth.hscni.net/news/covid-19-coronavirus|Northern Ireland confirmed cases|evening|HTML|Yes|
+
+Note that the arcgis.com links are direct links to the data.
+
+### Local Authority and Health Board metadata
+
+* English and Welsh local authorities: [Lower Tier Local Authority to Upper Tier Local Authority (April 2019) Lookup in England and Wales](http://geoportal1-ons.opendata.arcgis.com/datasets/lower-tier-local-authority-to-upper-tier-local-authority-april-2019-lookup-in-england-and-wales/data)
+* Scottish Health Boards: [Health Board 2014](https://www.opendata.nhs.scot/dataset/geography-codes-and-labels/resource/652ff726-e676-4a20-abda-435b98dd7bdc)
+* Welsh Health Boards: [Local Health Boards (April 2019) Names and Codes in Wales](https://geoportal.statistics.gov.uk/datasets/local-health-boards-april-2019-names-and-codes-in-wales)
 
 ## Tools
 

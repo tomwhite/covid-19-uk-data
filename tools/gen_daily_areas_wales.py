@@ -20,6 +20,18 @@ def normalize_whitespace(text):
     return re.sub('\s+', ' ', s).strip()
 
 
+def is_blank(text):
+    return len(normalize_whitespace(text)) == 0
+
+
+# Get upper tier local authority name to code mapping.
+la_mapping = pd.read_csv(
+    "data/raw/Lower_Tier_Local_Authority_to_Upper_Tier_Local_Authority_April_2019_Lookup_in_England_and_Wales.csv"
+)
+la_name_to_code = dict(zip(la_mapping["UTLA19NM"], la_mapping["UTLA19CD"]))
+la_name_to_code["Cornwall and Isles of Scilly"] = la_name_to_code["Cornwall"]
+la_name_to_code["Hackney and City of London"] = la_name_to_code["Hackney"]
+
 hb_mapping = pd.read_csv("data/raw/Local_Health_Boards_April_2019_Names_and_Codes_in_Wales.csv")
 hb_name_to_code = dict(zip(hb_mapping["LHB19NM"], hb_mapping["LHB19CD"]))
 hb_name_to_code = {k.replace(" Teaching Health Board", "").replace(" University Health Board", ""): v for k, v in hb_name_to_code.items()}
@@ -46,8 +58,10 @@ for table_row in table.findAll("tr"):
         continue
     if columns[0] == "Health Board" or columns[0] == "Wales":
         continue
+    if is_blank(columns[3]):
+        continue
     la = (
-        columns[0]
+        columns[1]
         .replace("City and County of Swansea", "Swansea")
         .replace("City of Cardiff", "Cardiff")
         .replace("Newport City", "Newport")
@@ -56,8 +70,10 @@ for table_row in table.findAll("tr"):
         .replace("Council", "")
         .strip()
     )
-    cases = columns[2]
-    output_row = [date, country, hb_name_to_code.get(la, ""), la, cases]
+    if is_blank(la):
+        la = columns[0]
+    cases = columns[3]
+    output_row = [date, country, la_name_to_code.get(la, ""), la, cases]
     output_rows.append(output_row)
 
 with open(csv_file, "w") as csvfile:

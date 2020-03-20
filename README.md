@@ -25,6 +25,7 @@ The following CSV files are deprecated, please use [data/covid-19-indicators-uk.
 
 ## News
 
+* 20 March 2020. PHW is providing LA area breakdowns again, after not doing so for two days.
 * 18 March 2020. PHW is no longer providing LA area breakdowns. "Novel Coronavirus (COVID-19) is now circulating in every part of Wales. For this reason, we will not be reporting cases by local authority area from today. From tomorrow, we will update daily at 12 noon the case numbers by health board of residence."
 
 ## Data sources and the collation process

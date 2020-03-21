@@ -8,7 +8,7 @@ import dateparser
 import re
 import sys
 
-from util import is_blank, normalize_whitespace, lookup_local_authority_code
+from util import is_blank, normalize_whitespace, lookup_health_board_code
 
 html_file = sys.argv[1]
 csv_file = sys.argv[2]
@@ -32,12 +32,12 @@ for table_row in table.findAll("tr"):
     columns = [normalize_whitespace(col.text) for col in table_row.findAll("td")]
     if len(columns) == 0:
         continue
-    if columns[0] == "Health Board" or columns[0] == "Wales":
+    if columns[0] == "Health Board" or columns[0] == "Wales" or columns[0] == "TOTAL":
         continue
-    if is_blank(columns[3]):
+    if is_blank(columns[2]):
         continue
-    la = (
-        columns[1]
+    area = (
+        columns[0]
         .replace("City and County of Swansea", "Swansea")
         .replace("City of Cardiff", "Cardiff")
         .replace("Newport City", "Newport")
@@ -46,10 +46,10 @@ for table_row in table.findAll("tr"):
         .replace("Council", "")
         .strip()
     )
-    if is_blank(la):
-        la = columns[0]
-    cases = columns[3]
-    output_row = [date, country, lookup_local_authority_code(la), la, cases]
+    if is_blank(area):
+        area = columns[0]
+    cases = columns[2]
+    output_row = [date, country, lookup_health_board_code(area), area, cases]
     output_rows.append(output_row)
 
 with open(csv_file, "w") as csvfile:

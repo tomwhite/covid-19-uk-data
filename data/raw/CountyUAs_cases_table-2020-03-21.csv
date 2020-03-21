@@ -1,0 +1,150 @@
+GSS_CD,GSS_NM,TotalCases
+E09000002,Barking and Dagenham, 30
+E09000003,Barnet, 81
+E08000016,Barnsley,  7
+E06000022,Bath and North East Somerset, 11
+E06000055,Bedford,  4
+E09000004,Bexley, 37
+E08000025,Birmingham, 75
+E06000008,Blackburn with Darwen,  1
+E06000009,Blackpool,  5
+E08000001,Bolton, 15
+E06000058,"Bournemouth, Christchurch and Poole", 11
+E06000036,Bracknell Forest,  3
+E08000032,Bradford, 10
+E09000005,Brent,108
+E06000043,Brighton and Hove, 17
+E06000023,"Bristol, City of", 20
+E09000006,Bromley, 63
+E10000002,Buckinghamshire, 41
+E08000002,Bury, 11
+E08000033,Calderdale,  5
+E10000003,Cambridgeshire, 17
+E09000007,Camden, 51
+E06000056,Central Bedfordshire, 11
+E06000049,Cheshire East, 11
+E06000050,Cheshire West and Chester, 10
+E06000052,Cornwall and Isles of Scilly, 20
+E06000047,County Durham, 11
+E08000026,Coventry,  9
+E09000008,Croydon, 81
+E10000006,Cumbria, 57
+E06000005,Darlington,  3
+E06000015,Derby, 18
+E10000007,Derbyshire, 64
+E10000008,Devon, 42
+E08000017,Doncaster,  5
+E06000059,Dorset,  8
+E08000027,Dudley, 19
+E09000009,Ealing, 80
+E06000011,East Riding of Yorkshire, 15
+E10000011,East Sussex,  8
+E09000010,Enfield, 54
+E10000012,Essex, 45
+E08000037,Gateshead,  2
+E10000013,Gloucestershire, 27
+E09000011,Greenwich, 54
+E09000012,Hackney and City of London, 52
+E06000006,Halton,  7
+E09000013,Hammersmith and Fulham, 45
+E10000014,Hampshire,138
+E09000014,Haringey, 51
+E09000015,Harrow, 89
+E06000001,Hartlepool,  2
+E09000016,Havering, 30
+E06000019,"Herefordshire, County of",  7
+E10000015,Hertfordshire, 75
+E09000017,Hillingdon, 50
+E09000018,Hounslow, 52
+E06000046,Isle of Wight,  2
+E09000019,Islington, 48
+E09000020,Kensington and Chelsea, 75
+E10000016,Kent, 45
+E06000010,"Kingston upon Hull, City of",  1
+E09000021,Kingston upon Thames, 22
+E08000034,Kirklees,  8
+E08000011,Knowsley,  4
+E09000022,Lambeth,118
+E10000017,Lancashire, 30
+E08000035,Leeds, 20
+E06000016,Leicester, 14
+E10000018,Leicestershire, 29
+E09000023,Lewisham, 60
+E10000019,Lincolnshire,  9
+E08000012,Liverpool, 18
+E06000032,Luton,  5
+E08000003,Manchester, 28
+E06000035,Medway, 11
+E09000024,Merton, 56
+E06000002,Middlesbrough,  1
+E06000042,Milton Keynes,  7
+E08000021,Newcastle upon Tyne, 28
+E09000025,Newham, 51
+E10000020,Norfolk, 24
+E06000012,North East Lincolnshire,  0
+E06000013,North Lincolnshire,  2
+E06000024,North Somerset,  5
+E08000022,North Tyneside, 17
+E10000023,North Yorkshire, 16
+E10000021,Northamptonshire, 20
+E06000057,Northumberland, 10
+E06000018,Nottingham, 22
+E10000024,Nottinghamshire, 45
+E08000004,Oldham, 15
+E10000025,Oxfordshire, 44
+E06000031,Peterborough,  2
+E06000026,Plymouth, 11
+E06000044,Portsmouth, 22
+E06000038,Reading,  7
+E09000026,Redbridge, 42
+E06000003,Redcar and Cleveland,  3
+E09000027,Richmond upon Thames, 22
+E08000005,Rochdale, 13
+E08000018,Rotherham,  6
+E06000017,Rutland,  0
+E08000006,Salford, 12
+E08000028,Sandwell, 15
+E08000014,Sefton,  7
+E08000019,Sheffield, 61
+E06000051,Shropshire,  3
+E06000039,Slough, 21
+E08000029,Solihull,  4
+E10000027,Somerset, 12
+E06000025,South Gloucestershire, 14
+E08000023,South Tyneside,  5
+E06000045,Southampton,  8
+E06000033,Southend-on-Sea,  8
+E09000028,Southwark,134
+E08000013,St. Helens,  3
+E10000028,Staffordshire, 35
+E08000007,Stockport, 24
+E06000004,Stockton-on-Tees, 10
+E06000021,Stoke-on-Trent,  2
+E10000029,Suffolk, 15
+E08000024,Sunderland, 11
+E10000030,Surrey, 65
+E09000029,Sutton, 23
+E06000030,Swindon,  5
+E08000008,Tameside, 21
+E06000020,Telford and Wrekin,  0
+E06000034,Thurrock,  8
+E06000027,Torbay, 10
+E09000030,Tower Hamlets, 51
+E08000009,Trafford, 19
+E08000036,Wakefield,  8
+E08000030,Walsall, 28
+E09000031,Waltham Forest, 38
+E09000032,Wandsworth,107
+E06000007,Warrington,  4
+E10000031,Warwickshire, 17
+E06000037,West Berkshire,  7
+E10000032,West Sussex, 27
+E09000033,Westminster,110
+E08000010,Wigan,  9
+E06000054,Wiltshire, 20
+E06000040,Windsor and Maidenhead, 13
+E08000015,Wirral, 10
+E06000041,Wokingham, 13
+E08000031,Wolverhampton, 45
+E10000034,Worcestershire, 12
+E06000014,York,  8

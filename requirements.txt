@@ -1,5 +1,6 @@
 beautifulsoup4
 dateparser
 pandas
+requests
 word2number
 xlrd

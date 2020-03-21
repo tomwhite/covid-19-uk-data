@@ -8,6 +8,7 @@ import math
 import re
 import sys
 
+from parsers import uk_pattern, wales_pattern, scotland_pattern, ni_pattern
 from util import format_country, normalize_int, normalize_whitespace
 
 html_file = sys.argv[1]
@@ -18,19 +19,6 @@ soup = BeautifulSoup(html, features="html.parser")
 text = soup.get_text()
 text = text.replace(u"\xa0", u" ")  # replace non-breaking spaces with regular spaces
 
-
-uk_pattern = re.compile(
-    r"As of (?P<time>.+?) on (?P<date>.+?), (?P<tests>.+?) people have been tested in the (?P<country>.+?), of which (?P<negative_tests>.+?) were confirmed negative and (?P<positive_tests>.+?) were confirmed.+?positive."
-)
-wales_pattern = re.compile(
-    r"(?s)Updated: (?P<time>.+?),? \S+ (?P<date>\d+\s\w+\s\d{4}).+? new cases have tested positive.+in (?P<country>.+?), bringing the total number of confirmed cases to (?P<positive_tests>\w+).+“(?P<deaths>.+?) people in Wales.+? died"
-)
-scotland_pattern = re.compile(
-    r"(?s)Scottish test numbers: (?P<date>\d+\s\w+\s\d{4}).+?A total of (?P<tests>.+?) (?P<country>.+?) tests have concluded.+?(?P<negative_tests>[\d,]+?) tests were.+?negative.+?(?P<positive_tests>[\d,]+?) tests were.+?positive.+?(?P<deaths>.+?) patients?.+?have died"
-)
-ni_pattern = re.compile(
-    r"As of (?P<time>.+?) on (?P<date>.+?), testing has resulted in .+? new positive cases bringing the total number of cases in (?P<country>.+?) to (?P<positive_tests>.+?)\."
-)
 
 patterns = [uk_pattern, wales_pattern, scotland_pattern, ni_pattern]
 

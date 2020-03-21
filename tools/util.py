@@ -15,9 +15,7 @@ def normalize_whitespace(text):
     Replace non-breaking spaces with regular spaces,
     collapse runs of whitespace, and strip whitespace from the ends of the string.
     """
-    s = text.replace(u"\xa0", u" ").replace(
-        r"\S+", " "
-    )  # replace non-breaking spaces with regular spaces
+    s = text.replace(u"\xa0", u" ").replace(u"&nbsp;", " ").replace(r"\S+", " ")
     return re.sub("\s+", " ", s).strip()
 
 

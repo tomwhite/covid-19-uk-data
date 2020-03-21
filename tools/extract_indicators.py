@@ -23,6 +23,7 @@ print("{},{},{},{}".format(date, "Scotland", "ConfirmedCases", d["ScotlandCases"
 print("{},{},{},{}".format(date, "Wales", "ConfirmedCases", d["WalesCases"]))
 print("{},{},{},{}".format(date, "Northern Ireland", "ConfirmedCases", d["NICases"]))
 
+
 def write_indicator_file(date, country, indicator, value):
     with open(
         "data/daily/indicators/covid-19-{}-{}-{}.csv".format(

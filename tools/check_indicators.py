@@ -19,7 +19,7 @@ def check_latest(indicators_csv_file, cases_csv_file, country):
     cases_uk = cases_uk.astype({"TotalCases": "int64"})
     cases_uk = cases_uk.groupby("Date").sum()
 
-    df = cases_uk.join(indicators.set_index('Date'))
+    df = cases_uk.join(indicators.set_index("Date"))
     df = df[df["TotalCases"] != df["Value"]]
 
     if len(df) == 0:

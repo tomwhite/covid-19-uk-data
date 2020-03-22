@@ -61,7 +61,7 @@ if __name__ == "__main__":
 
     # export from sqlite to cases csv
     with sqlite3.connect('data/covid-19-uk.db') as conn:
-        df = pd.read_sql('SELECT * FROM cases', conn)
+        df = pd.read_sql('SELECT * FROM cases ORDER BY Date, Country, rowid', conn)
         df.to_csv("data/covid-19-cases-uk.csv", index=False)
 
     # convert indicators csv to totals csvs

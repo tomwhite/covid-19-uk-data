@@ -14,7 +14,9 @@ from parsers import (
     print_totals,
     scotland_pattern,
     save_indicators,
+    save_indicators_to_sqlite,
     save_daily_areas,
+    save_daily_areas_to_sqlite,
 )
 from util import format_country, normalize_int, normalize_whitespace
 
@@ -33,7 +35,7 @@ if country == "UK":
 elif country == "Scotland":
     html_url = "https://www.gov.scot/coronavirus-covid-19/"
 elif country == "Wales":
-    html_url = "https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/"
+    html_url = "https://covid19-phwstatement.nhs.wales/"
 elif country == "Northern Ireland":
     count = (dateparser.parse(date) - dateparser.parse("2020-03-08")).days
     html_url = "https://www.health-ni.gov.uk/news/latest-update-coronavirus-covid-19-{}".format(count)
@@ -64,9 +66,11 @@ daily_areas = parse_daily_areas(date, country, html)
 
 print_totals(results)
 #save_indicators(results)
+save_indicators_to_sqlite(results)
 
 if daily_areas is not None:
     save_daily_areas(date, country, daily_areas)
+    save_daily_areas_to_sqlite(date, country, daily_areas)
 
 if save_html_file:
     with open(local_html_file, "w") as f:

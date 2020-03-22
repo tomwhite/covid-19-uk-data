@@ -226,3 +226,20 @@ Consolidate and check
 ./tools/check_indicators.py
 ./tools/check_totals.py
 ```
+
+### New sqlite process
+
+A sqlite DB is now used to store and aggregate intermediate data. The CSV files remain the point of record.
+
+```bash
+DATE=$(date +'%Y-%m-%d')
+./tools/crawl.py $DATE Wales
+./tools/convert_sqlite_to_csvs.py
+git add data; git commit -am "Update for $DATE for Wales"
+```
+
+Check data consistency
+```bash
+./tools/check_indicators.py
+./tools/check_totals.py
+```

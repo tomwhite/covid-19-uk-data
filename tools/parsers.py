@@ -207,3 +207,12 @@ def save_daily_areas_to_sqlite(date, country, rows):
             print(row)
             c.execute(f"INSERT OR REPLACE INTO cases VALUES ('{row[0]}', '{row[1]}', '{row[2]}', '{row[3]}', {row[4]})")
 
+def parse_arcgis_page(date, country, html):
+    text = get_text_from_html(html)
+    print(text)
+    pattern = r"Updated: (?P<date>\d+\s\w+\s\d{4})"
+    m = re.search(pattern, text)
+    if m is not None:
+        groups = m.groupdict()
+        updated_date = dateparser.parse(groups["date"]).strftime("%Y-%m-%d")
+        print(updated_date)

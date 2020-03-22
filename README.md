@@ -245,6 +245,33 @@ DATE=$(date +'%Y-%m-%d')
 git add data; git commit -am "Update for $DATE for Scotland"
 ```
 
+```bash
+DATE=$(date +'%Y-%m-%d')
+./tools/crawl.py $DATE 'Northern Ireland'
+./tools/convert_sqlite_to_csvs.py
+git add data; git commit -am "Update for $DATE for Northern Ireland"
+```
+
+```bash
+DATE=$(date +'%Y-%m-%d')
+./tools/crawl.py $DATE UK
+./tools/convert_sqlite_to_csvs.py
+git add data; git commit -am "Update for $DATE for UK"
+```
+
+```bash
+DATE=$(date +'%Y-%m-%d')
+./tools/crawl.py $DATE UK daily-indicators
+./tools/convert_sqlite_to_csvs.py
+git add data; git commit -am "Update for $DATE for UK"
+```
+
+```bash
+DATE=$(date +'%Y-%m-%d')
+./tools/crawl.py $DATE England daily-cases
+./tools/convert_sqlite_to_csvs.py
+git add data; git commit -am "Update for $DATE for England"
+```
 
 Check data consistency
 ```bash

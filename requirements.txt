@@ -1,6 +1,8 @@
 beautifulsoup4
+csvs-to-sqlite
 dateparser
 pandas
 requests
 word2number
+sqlite3
 xlrd

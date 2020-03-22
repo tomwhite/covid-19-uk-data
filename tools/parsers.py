@@ -3,6 +3,7 @@ import csv
 import dateparser
 import math
 import re
+import sqlite3
 
 from util import (
     format_country,
@@ -123,6 +124,22 @@ def save_indicators(results):
             f.write("{},{},{},{}\n".format(date, country, "Deaths", deaths))
 
 
+def save_indicators_to_sqlite(results):
+    date = results["Date"]
+    country = results["Country"]
+    tests = results["Tests"]
+    confirmed_cases = results["ConfirmedCases"]
+    deaths = results["Deaths"]
+    with sqlite3.connect('data/covid-19-uk.db') as conn:
+        c = conn.cursor()
+        if not math.isnan(tests):
+            c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', '{country}', 'Tests', {tests})")
+        if not math.isnan(confirmed_cases):
+            c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', '{country}', 'ConfirmedCases', {confirmed_cases})")
+        if not math.isnan(deaths):
+            c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', '{country}', 'Deaths', {deaths})")
+
+
 def parse_daily_areas(date, country, html):
     if country in ("Northern Ireland", "UK"):
         return None
@@ -183,3 +200,7 @@ def save_daily_areas(date, country, rows):
     with open(csv_file, "w") as csvfile:
         writer = csv.writer(csvfile)
         writer.writerows(rows)
+
+
+def save_daily_areas_to_sqlite(date, country, rows):
+    pass

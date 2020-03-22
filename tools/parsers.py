@@ -23,7 +23,7 @@ scotland_pattern = re.compile(
     r"(?s)Scottish test numbers: (?P<date>\d+\s\w+\s\d{4}).+?A total of (?P<tests>.+?) (?P<country>.+?) tests have concluded.+?(?P<negative_tests>[\d,]+?) tests were.+?negative.+?(?P<positive_tests>[\d,]+?) tests were.+?positive.+?(?P<deaths>.+?) patients?.+?have died"
 )
 ni_pattern = re.compile(
-    r"(?s)As of (?P<time>.+?) on (?P<date>.+?), testing has resulted in .+? new positive cases,? bringing the total number of confirmed cases in (?P<country>.+?) to (?P<positive_tests>.+?)\..+?To date (?P<deaths>.+?) person who tested positive has sadly died\..*?The total number of tests completed in Northern Ireland is (?P<tests>.+?)\."
+    r"(?s)As of (?P<time>.+?) on (?P<date>.+?), testing has resulted in .+? new positive cases,? bringing the total number of confirmed cases in (?P<country>.+?) to (?P<positive_tests>.+?)\..+?To date (?P<deaths>.+?) people who tested positive have sadly died\..*?The total number of tests completed in Northern Ireland is (?P<tests>.+?)\."
 )
 
 

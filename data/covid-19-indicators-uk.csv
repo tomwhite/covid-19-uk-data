@@ -438,6 +438,9 @@ Date,Country,Indicator,Value
 2020-03-21,Wales,ConfirmedCases,280
 2020-03-21,Wales,Deaths,3
 2020-03-22,163,164,166
+2020-03-22,Northern Ireland,ConfirmedCases,128
+2020-03-22,Northern Ireland,Deaths,2
+2020-03-22,Northern Ireland,Tests,2484
 2020-03-22,Scotland,ConfirmedCases,416
 2020-03-22,Scotland,Deaths,10
 2020-03-22,Scotland,Tests,8679

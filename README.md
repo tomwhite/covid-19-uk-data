@@ -238,6 +238,14 @@ DATE=$(date +'%Y-%m-%d')
 git add data; git commit -am "Update for $DATE for Wales"
 ```
 
+```bash
+DATE=$(date +'%Y-%m-%d')
+./tools/crawl.py $DATE Scotland
+./tools/convert_sqlite_to_csvs.py
+git add data; git commit -am "Update for $DATE for Scotland"
+```
+
+
 Check data consistency
 ```bash
 ./tools/check_indicators.py

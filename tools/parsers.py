@@ -30,9 +30,7 @@ ni_pattern = re.compile(
 def get_text_from_html(html):
     soup = BeautifulSoup(html, features="html.parser")
     text = soup.get_text(separator=" ")
-    text = text.replace(
-        u"\xa0", u" "
-    )  # replace non-breaking spaces with regular spaces
+    text = normalize_whitespace(text)
     return text
 
 

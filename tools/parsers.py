@@ -54,14 +54,20 @@ def parse_totals_general(pattern_dict, country, text):
     result = {
         "Country": country
     }
-    for (name, (pattern, value_parser_fn)) in pattern_dict.items():
-        if pattern is None:
+    for (name, (patterns, value_parser_fn)) in pattern_dict.items():
+        if patterns is None:
             result[name] = value_parser_fn(None)
             continue
-        value = get_match(pattern, text, name)
-        if value is None:
+        if type(patterns) is not tuple:
+            patterns = (patterns,)
+        for pattern in patterns:
+            value = get_match(pattern, text, name)
+            if value is None:
+                continue
+            result[name] = value_parser_fn(value)
+            break
+        if not name in result:
             return None
-        result[name] = value_parser_fn(value)
     return result
 
 def parse_totals(country, html):
@@ -89,7 +95,7 @@ def parse_totals(country, html):
             "Date": (r"Updated: (?P<Time>.+?),? \S+ (?P<Date>\d+\s\w+(\s\d{4})?)", date_value_parser_fn),
             "Tests": (None, nan_value_parser_fn),
             "ConfirmedCases": (r"total number of confirmed cases to (?P<ConfirmedCases>\w+)", int_value_parser_fn),
-            "Deaths": (r"(?P<Deaths>\w+) people in Wales who tested positive.+? died", int_value_parser_fn),
+            "Deaths": ((r"(?P<Deaths>\w+) people in Wales who tested positive.+? died", r"the number of deaths in Wales to (?P<Deaths>\w+)"), int_value_parser_fn),
         }
         result = parse_totals_general(pattern_dict, country, text)
         return result
@@ -209,7 +215,7 @@ def parse_daily_areas(date, country, html):
                 or columns[0] == "TOTAL"
             ):
                 continue
-            if is_blank(columns[2]):
+            if is_blank(columns[-1]):
                 continue
             area = (
                 columns[0]
@@ -223,7 +229,7 @@ def parse_daily_areas(date, country, html):
             )
             if is_blank(area):
                 area = columns[0]
-            cases = columns[2]
+            cases = columns[-1]
             output_row = [date, country, lookup_health_board_code(area), area, cases]
             output_rows.append(output_row)
         return output_rows

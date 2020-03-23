@@ -37,6 +37,7 @@ Raw data is archived under _data/raw_, it should never be edited.
 
 * Number of **tests** and **confirmed cases** are published at [https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases) at 2pm in HTML format
 * Number of **deaths** are published in the [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67) at 6pm in XLSX format
+* Twitter updates: [@DHSCgovuk](https://twitter.com/DHSCgovuk)
 
 ### England
 
@@ -53,17 +54,16 @@ Raw data is archived under _data/raw_, it should never be edited.
 ### Wales
 
 * Number of **tests** are not published
-* Number of **confirmed cases and deaths**, and **confirmed cases by local authority**, are published at [https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/](https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/) at midday in HTML format
+* Number of **confirmed cases and deaths**, and **confirmed cases by local authority**, are published at [https://covid19-phwstatement.nhs.wales/](https://covid19-phwstatement.nhs.wales/) at midday in HTML format
 * Number of **confirmed cases by local authority** are published in the [UTLA cases table](https://www.arcgis.com/home/item.html?id=b684319181f94875a6879bbc833ca3a6)
     * Note that prior to 11 March 2020 case numbers were published in HTML format.
+* Twitter updates: [@PublicHealthW](https://twitter.com/publichealthw)
 
 ### Northern Ireland
 
-* Number of **tests** are published at [https://www.health-ni.gov.uk/news/][https://www.health-ni.gov.uk/news/] at 2pm in HTML format
-* Number of **confirmed cases** are published at [https://www.publichealth.hscni.net/news/covid-19-coronavirus](https://www.publichealth.hscni.net/news/covid-19-coronavirus) in the evening in HTML format
-* Number of **deaths** are not published
+* Number of **tests, confirmed cases and deaths** are published at [https://www.health-ni.gov.uk/news/](https://www.health-ni.gov.uk/news/) at 2pm in HTML format (on a new page each day)
 * Number of **confirmed cases by local authority** are not published
-* Twitter updates: [https://twitter.com/publichealthni](https://twitter.com/publichealthni)
+* Twitter updates: [@publichealthni](https://twitter.com/publichealthni)
 
 Note that [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67) includes confirmed cases for all countries.
 
@@ -76,9 +76,8 @@ Note that [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225
 |https://www.arcgis.com/sharing/rest/content/items/b684319181f94875a6879bbc833ca3a6/data|England confirmed cases by local authority ("UTLA cases table")|6pm|CSV|No|
 |https://www.arcgis.com/sharing/rest/content/items/ca796627a2294c51926865748c4a56e8/data|England confirmed cases by NHS region ("NHA regional cases table")|6pm|CSV|No|
 |https://www.gov.scot/coronavirus-covid-19/|Scotland tests, confirmed cases, deaths, confirmed cases by local authority|2pm|HTML|Yes|
-|https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/|Wales confirmed cases, deaths, confirmed cases by local authority|midday|HTML|Yes|
-|https://www.health-ni.gov.uk/news/|Northern Ireland tests|evening|HTML|No|
-|https://www.publichealth.hscni.net/news/covid-19-coronavirus|Northern Ireland confirmed cases|evening|HTML|Yes|
+|https://covid19-phwstatement.nhs.wales/|Wales confirmed cases, deaths, confirmed cases by local authority|midday|HTML|Yes|
+|https://www.health-ni.gov.uk/news/|Northern Ireland tests, confirmed cases, deaths|2pm|HTML|No|
 
 Note that the arcgis.com links are direct links to the data.
 
@@ -90,9 +89,9 @@ Note that the arcgis.com links are direct links to the data.
 
 ## Tools
 
-The command line tools rely on Python 3.
+There are command line tools for downloading, parsing, and processing the data. They rely on Python 3.
 
-Create a virtual environment, activate it, then install the required packages:
+To install the tools, create a virtual environment, activate it, then install the required packages:
 
 ```bash
 python3 -m venv venv
@@ -100,45 +99,63 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-The following shows some illustrative commands.
+## Daily workflow
 
-Convert case numbers for England:
+A sqlite DB is now used to store and aggregate intermediate data. The CSV files remain the point of record.
+
+The **crawl** tool will see if the reseouce (webpage, date file) has already been downloaded, and if it hasn't download it if it's available for the specified date (today). (If not available the tool will exit.) If available, the tool will then extract the relevant information from it and update the sqlite database. This means that you can just run **crawl** until it finds new updates.
+
+The **convert_sqlite_to_csvs** tool will extract the data from sqlite and update the CSV files.
 
 ```bash
-./tools/gen_daily_areas_england.py data/raw/CountyUAs_cases_table-2020-03-11.csv data/daily/covid-19-cases-2020-03-11-england.csv
+DATE=$(date +'%Y-%m-%d')
+./tools/crawl.py $DATE Wales
+./tools/convert_sqlite_to_csvs.py
+git add data; git commit -am "Update for $DATE for Wales"
 ```
 
-Convert case numbers for England prior to 11 March 2020 (note that the `gen_daily_areas_scotland.py` tool is used since the HTML pages have the same format):
-
 ```bash
-./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-england-2020-03-05.html data/daily/covid-19-cases-2020-03-05-england.csv
-./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-england-2020-03-07.html data/daily/covid-19-cases-2020-03-07-england.csv
-./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-england-2020-03-08.html data/daily/covid-19-cases-2020-03-08-england.csv
-./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-england-2020-03-09.html data/daily/covid-19-cases-2020-03-09-england.csv
-./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-england-2020-03-10.html data/daily/covid-19-cases-2020-03-10-england.csv
+DATE=$(date +'%Y-%m-%d')
+./tools/crawl.py $DATE Scotland
+./tools/convert_sqlite_to_csvs.py
+git add data; git commit -am "Update for $DATE for Scotland"
 ```
 
-Convert case numbers for Scotland:
-
 ```bash
-./tools/gen_daily_areas_scotland.py data/raw/coronavirus-covid-19-number-of-cases-in-scotland-2020-03-12.html data/daily/covid-19-cases-2020-03-12-scotland.csv
+DATE=$(date +'%Y-%m-%d')
+./tools/crawl.py $DATE 'Northern Ireland'
+./tools/convert_sqlite_to_csvs.py
+git add data; git commit -am "Update for $DATE for Northern Ireland"
 ```
 
-Create a single consolidated CSV with all case numbers in it:
-
 ```bash
-./tools/consolidate_daily_areas.py
+DATE=$(date +'%Y-%m-%d')
+./tools/crawl.py $DATE UK
+./tools/convert_sqlite_to_csvs.py
+git add data; git commit -am "Update for $DATE for UK"
 ```
 
-Run a sanity check that the area case numbers add up to the totals:
+```bash
+DATE=$(date +'%Y-%m-%d')
+./tools/crawl.py $DATE UK daily-indicators
+./tools/convert_sqlite_to_csvs.py
+git add data; git commit -am "Update for $DATE for UK"
+```
 
 ```bash
+DATE=$(date +'%Y-%m-%d')
+./tools/crawl.py $DATE England daily-cases
+./tools/convert_sqlite_to_csvs.py
+git add data; git commit -am "Update for $DATE for England"
+```
+
+Check data consistency
+```bash
+./tools/check_indicators.py
 ./tools/check_totals.py
 ```
 
-
-
-## Daily workflow
+## Daily workflow (obsolete)
 
 England (2pm, with area totals an hour or two later):
 
@@ -165,7 +182,7 @@ Wales (11am)
 
 ```bash
 DATE=$(date +'%Y-%m-%d')
-curl -L https://phw.nhs.wales/news/public-health-wales-statement-on-novel-coronavirus-outbreak/ -o data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
+curl -L https://covid19-phwstatement.nhs.wales/ -o data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
 ./tools/gen_daily_areas_wales.py data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html data/daily/covid-19-cases-$DATE-wales.csv
 # Edit data/covid-19-totals-wales.csv (only have test numbers on Thursdays, leave column blank on other days)
 ./tools/extract_totals.py data/raw/coronavirus-covid-19-number-of-cases-in-wales-$DATE.html
@@ -223,58 +240,6 @@ Consolidate and check
 ```bash
 ./tools/consolidate_daily_areas.py
 ./tools/convert_totals_to_indicators.py
-./tools/check_indicators.py
-./tools/check_totals.py
-```
-
-### New sqlite process
-
-A sqlite DB is now used to store and aggregate intermediate data. The CSV files remain the point of record.
-
-```bash
-DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE Wales
-./tools/convert_sqlite_to_csvs.py
-git add data; git commit -am "Update for $DATE for Wales"
-```
-
-```bash
-DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE Scotland
-./tools/convert_sqlite_to_csvs.py
-git add data; git commit -am "Update for $DATE for Scotland"
-```
-
-```bash
-DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE 'Northern Ireland'
-./tools/convert_sqlite_to_csvs.py
-git add data; git commit -am "Update for $DATE for Northern Ireland"
-```
-
-```bash
-DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE UK
-./tools/convert_sqlite_to_csvs.py
-git add data; git commit -am "Update for $DATE for UK"
-```
-
-```bash
-DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE UK daily-indicators
-./tools/convert_sqlite_to_csvs.py
-git add data; git commit -am "Update for $DATE for UK"
-```
-
-```bash
-DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE England daily-cases
-./tools/convert_sqlite_to_csvs.py
-git add data; git commit -am "Update for $DATE for England"
-```
-
-Check data consistency
-```bash
 ./tools/check_indicators.py
 ./tools/check_totals.py
 ```

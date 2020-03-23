@@ -137,14 +137,14 @@ git add data; git commit -am "Update for $DATE for UK"
 
 ```bash
 DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE UK daily-indicators
+./tools/crawl.py $DATE UK-daily-indicators
 ./tools/convert_sqlite_to_csvs.py
-git add data; git commit -am "Update for $DATE for UK"
+git add data; git commit -am "Update for $DATE for UK daily indicators"
 ```
 
 ```bash
 DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE England daily-cases
+./tools/crawl.py $DATE England
 ./tools/convert_sqlite_to_csvs.py
 git add data; git commit -am "Update for $DATE for England"
 ```

@@ -33,36 +33,75 @@ def get_text_from_html(html):
     text = normalize_whitespace(text)
     return text
 
+def date_value_parser_fn(value):
+    return dateparser.parse(value).strftime("%Y-%m-%d")
+
+
+def int_value_parser_fn(value):
+    return normalize_int(value)
+
+
+def nan_value_parser_fn(value):
+    return float("nan")
+
+
+def get_match(pattern, text, group_name):
+    m = re.search(pattern, text)
+    return m.group(group_name) if m else None
+
+
+def parse_totals_general(pattern_dict, country, text):
+    result = {
+        "Country": country
+    }
+    for (name, (pattern, value_parser_fn)) in pattern_dict.items():
+        if pattern is None:
+            result[name] = value_parser_fn(None)
+            continue
+        value = get_match(pattern, text, name)
+        if value is None:
+            return None
+        result[name] = value_parser_fn(value)
+    return result
 
 def parse_totals(country, html):
     text = get_text_from_html(html)
     if country == "UK":
-        pattern = uk_pattern
-    elif country == "Scotland":
-        pattern = scotland_pattern
-    elif country == "Wales":
-        pattern = wales_pattern
-    elif country == "Northern Ireland":
-        pattern = ni_pattern
-    m = re.search(pattern, text)
-    if m is not None:
-        groups = m.groupdict()
-        date = dateparser.parse(groups["date"]).strftime("%Y-%m-%d")
-        country = normalize_whitespace(groups.get("country")).replace(
-            "Scottish", "Scotland"
-        )
-        tests = normalize_int(groups.get("tests", float("nan")))
-        positive_tests = normalize_int(groups["positive_tests"])
-        negative_tests = normalize_int(groups.get("negative_tests", float("nan")))
-        deaths = normalize_int(groups.get("deaths", float("nan")))
-
-        return {
-            "Date": date,
-            "Country": country,
-            "Tests": tests,
-            "ConfirmedCases": positive_tests,
-            "Deaths": deaths,
+        pattern_dict = {
+            "Date": (r"As of (?P<Time>.+?) on (?P<Date>.+?),", date_value_parser_fn),
+            "Tests": (r"As of (?P<Time>.+?) on (?P<Date>.+?), (?P<Tests>[\d,]+?) people have been tested in the UK", int_value_parser_fn),
+            "ConfirmedCases": (r"and (?P<ConfirmedCases>[\d,]+?) were confirmed (as )?positive", int_value_parser_fn),
+            "Deaths": (None, nan_value_parser_fn),
         }
+        result = parse_totals_general(pattern_dict, country, text)
+        return result
+    elif country == "Scotland":
+        pattern_dict = {
+            "Date": (r"Scottish test numbers: (?P<Date>\d+\s\w+\s\d{4})", date_value_parser_fn),
+            "Tests": (r"A total of (?P<Tests>.+?) Scottish tests have concluded", int_value_parser_fn),
+            "ConfirmedCases": (r"(?P<ConfirmedCases>[\d,]+?) tests were.+?positive", int_value_parser_fn),
+            "Deaths": (r"(?P<Deaths>\w+) patients?.+?have died", int_value_parser_fn),
+        }
+        result = parse_totals_general(pattern_dict, country, text)
+        return result
+    elif country == "Wales":
+        pattern_dict = {
+            "Date": (r"Updated: (?P<Time>.+?),? \S+ (?P<Date>\d+\s\w+(\s\d{4})?)", date_value_parser_fn),
+            "Tests": (None, nan_value_parser_fn),
+            "ConfirmedCases": (r"total number of confirmed cases to (?P<ConfirmedCases>\w+)", int_value_parser_fn),
+            "Deaths": (r"(?P<Deaths>\w+) people in Wales who tested positive.+? died", int_value_parser_fn),
+        }
+        result = parse_totals_general(pattern_dict, country, text)
+        return result
+    elif country == "Northern Ireland":
+        pattern_dict = {
+            "Date": (r"As of (?P<Time>.+?) on (?P<Date>.+?),", date_value_parser_fn),
+            "Tests": (r"total number of tests completed in Northern Ireland is (?P<Tests>.+?)\.", int_value_parser_fn),
+            "ConfirmedCases": (r"total number of confirmed cases in Northern Ireland to (?P<ConfirmedCases>.+?)\.", int_value_parser_fn),
+            "Deaths": (r"To date (?P<Deaths>.+?) people who tested positive have sadly died\.", int_value_parser_fn),
+        }
+        result = parse_totals_general(pattern_dict, country, text)
+        return result
     return None
 
 

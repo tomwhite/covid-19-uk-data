@@ -26,6 +26,7 @@ def is_blank(text):
 
 
 def camel_to_hyphens(name):
+    """Turn a string in camel case to one with hyphens, and lowercase (e.g. ThisName -> this-name)"""
     return re.sub(r"(?<!^)(?=[A-Z])", "-", name).lower()
 
 

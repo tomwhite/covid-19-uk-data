@@ -85,7 +85,7 @@ def parse_totals(country, html):
         pattern_dict = {
             "Date": (r"Scottish test numbers: (?P<Date>\d+\s\w+\s\d{4})", date_value_parser_fn),
             "Tests": (r"A total of (?P<Tests>.+?) Scottish tests have concluded", int_value_parser_fn),
-            "ConfirmedCases": (r"(?P<ConfirmedCases>[\d,]+?) tests were.+?positive", int_value_parser_fn),
+            "ConfirmedCases": (r"(?P<ConfirmedCases>[\d,]+?) tests were (confirmed)?positive", int_value_parser_fn),
             "Deaths": (r"(?P<Deaths>\w+) patients?.+?have died", int_value_parser_fn),
         }
         result = parse_totals_general(pattern_dict, country, text)

@@ -455,5 +455,7 @@ Date,Country,Indicator,Value
 2020-03-23,Scotland,ConfirmedCases,499
 2020-03-23,Scotland,Deaths,14
 2020-03-23,Scotland,Tests,9364
+2020-03-23,UK,ConfirmedCases,6650
+2020-03-23,UK,Tests,83945
 2020-03-23,Wales,ConfirmedCases,418
 2020-03-23,Wales,Deaths,16

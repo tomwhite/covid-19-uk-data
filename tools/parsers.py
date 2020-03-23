@@ -75,7 +75,7 @@ def parse_totals(country, html):
     if country == "UK":
         pattern_dict = {
             "Date": (r"As of (?P<Time>.+?) on (?P<Date>.+?),", date_value_parser_fn),
-            "Tests": (r"As of (?P<Time>.+?) on (?P<Date>.+?), (?P<Tests>[\d,]+?) people have been tested in the UK", int_value_parser_fn),
+            "Tests": (r"As of (?P<Time>.+?) on (?P<Date>.+?), (a total of )?(?P<Tests>[\d,]+?) people have been tested", int_value_parser_fn),
             "ConfirmedCases": (r"and (?P<ConfirmedCases>[\d,]+?) were confirmed (as )?positive", int_value_parser_fn),
             "Deaths": (None, nan_value_parser_fn),
         }

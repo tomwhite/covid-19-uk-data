@@ -10,8 +10,8 @@ Ideally the data publishers will start doing this so this site becomes redundant
 
 The following CSV files are available:
 
-* [data/covid-19-cases-uk.csv](data/covid-19-cases-uk.csv): daily counts of confirmed cases for (upper tier) local authorities in England and Wales, and health boards in Scotland. No data for Northern Ireland is currently available.
-    * Note that for 18 March 2020 there was no local authority data for Wales, and for 19 March there was only health board-level data for Wales.
+* [data/covid-19-cases-uk.csv](data/covid-19-cases-uk.csv): daily counts of confirmed cases for (upper tier) local authorities in England, and health boards in Scotland and Wales. No data for Northern Ireland is currently available.
+    * Note that prior to 18 March 2020 Wales data was broken down by local authority, not heath board.
 * [data/covid-19-totals-uk.csv](data/covid-19-totals-uk.csv): daily counts of tests, confirmed cases, deaths for the whole of the UK
 * [data/covid-19-totals-england.csv](data/covid-19-totals-uk.csv): daily counts of tests, confirmed cases, deaths for England
 * [data/covid-19-totals-northern-ireland.csv](data/covid-19-totals-northern-ireland.csv): daily counts of tests, confirmed cases, deaths for Northern Ireland
@@ -24,8 +24,35 @@ You can use these files without reading the rest of this document.
 
 ## News
 
+* 21 March 2020. PHW is back to health board (not LA) breakdowns again, this time it looks permanent.
 * 20 March 2020. PHW is providing LA area breakdowns again, after not doing so for two days.
 * 18 March 2020. PHW is no longer providing LA area breakdowns. "Novel Coronavirus (COVID-19) is now circulating in every part of Wales. For this reason, we will not be reporting cases by local authority area from today. From tomorrow, we will update daily at 12 noon the case numbers by health board of residence."
+
+## Wishlist
+
+Here are my suggestions for how to improve the data being published by public bodies.
+
+The short version: **publish everything in CSV format, and include historical data!**
+
+Department of Health and Social Care, and Public Health England
+1. Publish historical data, not just the current day's data.
+2. Add a column for number of recovered patients to the [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67). (It is published on the dashboard, but nowhere else.)
+
+Public Health Wales
+1. Publish the number of tests being performed every day.
+2. Publish daily totals (tests, confirmed cases, deaths) in machine readable form (CSV). Or failing that, at least in a consistent format on a web page.
+3. Publish confirmed cases by local authority/health board in machine readable form (CSV).
+4. Publish historical data, not just the current day's data.
+
+Public Health Scotland
+1. Publish daily totals (tests, confirmed cases, deaths) in machine readable form (CSV).
+2. Publish confirmed cases by local authority/health board in machine readable form (CSV).
+3. Publish historical data, not just the current day's data.
+
+Public Health Northern Ireland
+1. Publish daily totals (tests, confirmed cases, deaths) in machine readable form (CSV).
+2. Publish confirmed cases by local authority/health board in machine readable form (CSV). These are not currently being published, so it would be good to be able to get these figures, even if just on a web page.
+3. Publish historical data, not just the current day's data.
 
 ## Data sources and the collation process
 

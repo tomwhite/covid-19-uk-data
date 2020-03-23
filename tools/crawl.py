@@ -13,7 +13,6 @@ import sqlite3
 import sys
 
 from parsers import (
-    parse_arcgis_page,
     parse_daily_areas,
     parse_totals,
     print_totals,
@@ -90,28 +89,31 @@ def crawl_html(date, country):
         with open(local_html_file, "w") as f:
             f.write(html)
 
+
+def download_arcgis_item(date, item_id, local_data_file):
+    json_url = "https://www.arcgis.com/sharing/rest/content/items/{}?f=json".format(item_id)
+    data_url = "https://www.arcgis.com/sharing/rest/content/items/{}/data".format(item_id)
+    if not os.path.exists(local_data_file):
+        r = requests.get(json_url)
+        # https://developers.arcgis.com/rest/users-groups-and-items/item.htm
+        item = json.loads(r.text)
+        unixtimestamp = item['modified'] / 1000
+        updated_date = datetime.datetime.fromtimestamp(unixtimestamp).strftime('%Y-%m-%d')
+
+        if updated_date != date:
+            sys.stderr.write("Page is dated {}, but want {}\n".format(updated_date, date))
+            sys.exit(1)
+
+        r = requests.get(data_url)
+
+        with open(local_data_file, "wb") as f:
+            f.write(r.content)
+
 def crawl_arcgis(date, country):
-    if country == "England":
-        json_url = "https://www.arcgis.com/sharing/rest/content/items/bc8ee90225644ef7a6f4dd1b13ea1d67?f=json"
-        data_url = "https://www.arcgis.com/sharing/rest/content/items/bc8ee90225644ef7a6f4dd1b13ea1d67/data"
-
+    if country == "UK":
+        item_id = "bc8ee90225644ef7a6f4dd1b13ea1d67"
         local_data_file = "data/raw/DailyIndicators-{}.xslx".format(date)
-
-        if not os.path.exists(local_data_file):
-            r = requests.get(json_url)
-            # https://developers.arcgis.com/rest/users-groups-and-items/item.htm
-            item = json.loads(r.text)
-            unixtimestamp = item['modified'] / 1000
-            updated_date = datetime.datetime.fromtimestamp(unixtimestamp).strftime('%Y-%m-%d')
-
-            if updated_date != date:
-                sys.stderr.write("Page is dated {}, but want {}\n".format(updated_date, date))
-                sys.exit(1)
-
-            r = requests.get(data_url)
-
-            with open(local_data_file, "wb") as f:
-                f.write(r.content)
+        download_arcgis_item(date, item_id, local_data_file)
 
         df = pd.read_excel(local_data_file)
         print(df)
@@ -129,26 +131,9 @@ def crawl_arcgis(date, country):
             c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'Northern Ireland', 'ConfirmedCases', {d['NICases']})")
 
     elif country == "England":
-        json_url = "https://www.arcgis.com/sharing/rest/content/items/b684319181f94875a6879bbc833ca3a6?f=json"
-        data_url = "https://www.arcgis.com/sharing/rest/content/items/b684319181f94875a6879bbc833ca3a6/data"
-
+        item_id = "b684319181f94875a6879bbc833ca3a6"
         local_data_file = "data/raw/CountyUAs_cases_table-{}.csv".format(date)
-
-        if not os.path.exists(local_data_file):
-            r = requests.get(json_url)
-            # https://developers.arcgis.com/rest/users-groups-and-items/item.htm
-            item = json.loads(r.text)
-            unixtimestamp = item['modified'] / 1000
-            updated_date = datetime.datetime.fromtimestamp(unixtimestamp).strftime('%Y-%m-%d')
-
-            if updated_date != date:
-                sys.stderr.write("Page is dated {}, but want {}\n".format(updated_date, date))
-                sys.exit(1)
-
-            r = requests.get(data_url)
-
-            with open(local_data_file, "wb") as f:
-                f.write(r.content)
+        download_arcgis_item(date, item_id, local_data_file)
 
         df = pd.read_csv(local_data_file)
         df["Date"] = date

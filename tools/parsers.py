@@ -187,9 +187,9 @@ def parse_daily_areas(date, country, html):
     if country in ("Northern Ireland", "UK"):
         return None
     soup = BeautifulSoup(html, features="html.parser")
-    table = soup.find_all("table")[-1]
     output_rows = [["Date", "Country", "AreaCode", "Area", "TotalCases"]]
     if country == "Scotland":
+        table = soup.find_all("table")[-1]
         for table_row in table.findAll("tr"):
             columns = [
                 normalize_whitespace(col.text) for col in table_row.findAll("td")
@@ -203,6 +203,7 @@ def parse_daily_areas(date, country, html):
             output_rows.append(output_row)
         return output_rows
     elif country == "Wales":
+        table = soup.find_all("table")[0]
         for table_row in table.findAll("tr"):
             columns = [
                 normalize_whitespace(col.text) for col in table_row.findAll("td")

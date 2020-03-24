@@ -37,22 +37,26 @@ The short version: **publish everything in CSV format, and include historical da
 Department of Health and Social Care, and Public Health England
 1. Publish historical data, not just the current day's data.
 2. Add a column for number of recovered patients to the [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67). (It is published on the dashboard, but nowhere else.)
+3. Publish deaths by hospital every day.
 
 Public Health Wales
 1. Publish the number of tests being performed every day.
 2. Publish daily totals (tests, confirmed cases, deaths) in machine readable form (CSV). Or failing that, at least in a consistent format on a web page.
 3. Publish confirmed cases by local authority/health board in machine readable form (CSV).
 4. Publish historical data, not just the current day's data.
+5. Publish deaths by hospital every day.
 
 Public Health Scotland
 1. Publish daily totals (tests, confirmed cases, deaths) in machine readable form (CSV).
 2. Publish confirmed cases by local authority/health board in machine readable form (CSV).
 3. Publish historical data, not just the current day's data.
+4. Publish deaths by hospital every day.
 
 Public Health Northern Ireland
 1. Publish daily totals (tests, confirmed cases, deaths) in machine readable form (CSV).
 2. Publish confirmed cases by local authority/health board in machine readable form (CSV). These are not currently being published, so it would be good to be able to get these figures, even if just on a web page.
 3. Publish historical data, not just the current day's data.
+4. Publish deaths by hospital every day.
 
 ## Data sources and the collation process
 

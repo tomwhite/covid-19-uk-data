@@ -118,6 +118,11 @@ Note that the arcgis.com links are direct links to the data.
 * Scottish Health Boards: [Health Board 2014](https://www.opendata.nhs.scot/dataset/geography-codes-and-labels/resource/652ff726-e676-4a20-abda-435b98dd7bdc)
 * Welsh Health Boards: [Local Health Boards (April 2019) Names and Codes in Wales](https://geoportal.statistics.gov.uk/datasets/local-health-boards-april-2019-names-and-codes-in-wales)
 
+## Related projects
+
+* Ian Watt's [COVID-19 Scotland dataset](https://github.com/watty62/Scot_covid19)
+* Emma Dought's [UK COVID-19 data](https://github.com/emmadoughty/Daily_COVID-19)
+
 ## Tools
 
 There are command line tools for downloading, parsing, and processing the data. They rely on Python 3.

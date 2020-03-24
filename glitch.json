@@ -1,0 +1,21 @@
+{
+    "install": "source install.sh",
+    "start": "source start.sh",
+    "watch": {
+      "install": {
+        "include": [
+          "\\.csv$",
+          "^requirements-glitch.txt$",
+          "^install.sh$"
+        ]
+      },
+      "restart": {
+        "include": [
+          "^metadata.json$",
+          "^start.sh$"
+        ]
+      },
+      "throttle": 1000
+    }
+  }
+  

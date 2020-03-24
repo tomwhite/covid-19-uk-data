@@ -191,6 +191,17 @@ Check data consistency
 ./tools/check_totals.py
 ```
 
+### Manual overrides
+
+Sometimes it's necessary to fix data by hand. In this case the following tools are useful:
+
+Repopulate the sqlite database from the CSV files:
+```bash
+rm data/covid-19-uk.db
+csvs-to-sqlite --replace-tables -t indicators -pk Date -pk Country -pk Indicator data/covid-19-indicators-uk.csv data/covid-19-uk.db
+csvs-to-sqlite --replace-tables -t cases -pk Date -pk Country -pk AreaCode -pk Area data/covid-19-cases-uk.csv data/covid-19-uk.db
+```
+
 ## Daily workflow (obsolete)
 
 England (2pm, with area totals an hour or two later):

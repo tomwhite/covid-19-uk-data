@@ -141,7 +141,9 @@ def crawl_arcgis(date, country):
         df = df.rename(columns={"GSS_CD": "AreaCode", "GSS_NM": "Area"})
         df = df[["Date", "Country", "AreaCode", "Area", "TotalCases"]]
         daily_areas = df.to_dict("split")["data"]
+        daily_areas = [["Date", "Country", "AreaCode", "Area", "TotalCases"]] + daily_areas
 
+        save_daily_areas(date, country, daily_areas)
         save_daily_areas_to_sqlite(date, country, daily_areas)
 
 

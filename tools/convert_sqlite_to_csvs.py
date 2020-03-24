@@ -10,23 +10,6 @@ import pandas as pd
 
 from util import camel_to_hyphens, format_country, format_int
 
-# import csvs with:
-# rm data/covid-19-uk.db
-# csvs-to-sqlite --replace-tables -t indicators -pk Date -pk Country -pk Indicator data/covid-19-indicators-uk.csv data/covid-19-uk.db
-# csvs-to-sqlite --replace-tables -t cases -pk Date -pk Country -pk AreaCode -pk Area data/covid-19-cases-uk.csv data/covid-19-uk.db
-
-# simple query
-# with sqlite3.connect('covid-19-uk.db') as conn:
-#     c = conn.cursor()
-#     for row in c.execute('SELECT * FROM "covid-19-totals-uk" ORDER BY Date'):
-#         print(row)
-
-# insert a row if it doesn't already exist, or update value if it does
-# with sqlite3.connect('data/covid-19-uk.db') as conn:
-#     c = conn.cursor()
-#     result = {'Date': '2020-03-22', 'Country': "England", 'Indicator': "Tests", "Value": 16}
-#     c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{result['Date']}', '{result['Country']}', '{result['Indicator']}', {result['Value']})")
-
 
 def convert(indicators_csv_file):
     indicators = pd.read_csv(indicators_csv_file)

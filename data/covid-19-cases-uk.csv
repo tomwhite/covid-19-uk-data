@@ -9,10 +9,10 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-01,Scotland,S08000022,Highland,0
 2020-03-01,Scotland,S08000032,Lanarkshire,0
 2020-03-01,Scotland,S08000024,Lothian,0
-2020-03-01,Scotland,S08000024,Orkney,0
+2020-03-01,Scotland,S08000025,Orkney,0
 2020-03-01,Scotland,S08000026,Shetland,0
 2020-03-01,Scotland,S08000030,Tayside,0
-2020-03-01,Scotland,S08000030,Western Isles,0
+2020-03-01,Scotland,S08000028,Western Isles,0
 2020-03-02,Scotland,S08000015,Ayrshire and Arran,0
 2020-03-02,Scotland,S08000016,Borders,0
 2020-03-02,Scotland,S08000017,Dumfries and Galloway,0
@@ -23,10 +23,10 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-02,Scotland,S08000022,Highland,0
 2020-03-02,Scotland,S08000032,Lanarkshire,0
 2020-03-02,Scotland,S08000024,Lothian,0
-2020-03-02,Scotland,S08000024,Orkney,0
+2020-03-02,Scotland,S08000025,Orkney,0
 2020-03-02,Scotland,S08000026,Shetland,0
 2020-03-02,Scotland,S08000030,Tayside,1
-2020-03-02,Scotland,S08000030,Western Isles,0
+2020-03-02,Scotland,S08000028,Western Isles,0
 2020-03-03,Scotland,S08000015,Ayrshire and Arran,0
 2020-03-03,Scotland,S08000016,Borders,0
 2020-03-03,Scotland,S08000017,Dumfries and Galloway,0
@@ -37,10 +37,10 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-03,Scotland,S08000022,Highland,0
 2020-03-03,Scotland,S08000032,Lanarkshire,0
 2020-03-03,Scotland,S08000024,Lothian,0
-2020-03-03,Scotland,S08000024,Orkney,0
+2020-03-03,Scotland,S08000025,Orkney,0
 2020-03-03,Scotland,S08000026,Shetland,0
 2020-03-03,Scotland,S08000030,Tayside,1
-2020-03-03,Scotland,S08000030,Western Isles,0
+2020-03-03,Scotland,S08000028,Western Isles,0
 2020-03-04,Scotland,S08000015,Ayrshire and Arran,1
 2020-03-04,Scotland,S08000016,Borders,0
 2020-03-04,Scotland,S08000017,Dumfries and Galloway,0
@@ -51,10 +51,10 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-04,Scotland,S08000022,Highland,0
 2020-03-04,Scotland,S08000032,Lanarkshire,0
 2020-03-04,Scotland,S08000024,Lothian,0
-2020-03-04,Scotland,S08000024,Orkney,0
+2020-03-04,Scotland,S08000025,Orkney,0
 2020-03-04,Scotland,S08000026,Shetland,0
 2020-03-04,Scotland,S08000030,Tayside,1
-2020-03-04,Scotland,S08000030,Western Isles,0
+2020-03-04,Scotland,S08000028,Western Isles,0
 2020-03-05,England,E09000002,Barking and Dagenham,0
 2020-03-05,England,E09000003,Barnet,1 to 4
 2020-03-05,England,E08000016,Barnsley,1 to 4
@@ -218,10 +218,10 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-05,Scotland,S08000022,Highland,0
 2020-03-05,Scotland,S08000032,Lanarkshire,0
 2020-03-05,Scotland,S08000024,Lothian,0
-2020-03-05,Scotland,S08000024,Orkney,0
+2020-03-05,Scotland,S08000025,Orkney,0
 2020-03-05,Scotland,S08000026,Shetland,0
 2020-03-05,Scotland,S08000030,Tayside,1
-2020-03-05,Scotland,S08000030,Western Isles,0
+2020-03-05,Scotland,S08000028,Western Isles,0
 2020-03-05,Wales,W06000019,Blaenau Gwent,0
 2020-03-05,Wales,W06000013,Bridgend,0
 2020-03-05,Wales,W06000018,Caerphilly,0

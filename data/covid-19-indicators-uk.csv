@@ -463,6 +463,8 @@ Date,Country,Indicator,Value
 2020-03-23,Wales,Deaths,16
 2020-03-24,England,ConfirmedCases,6843
 2020-03-24,Northern Ireland,ConfirmedCases,172
+2020-03-24,Northern Ireland,Deaths,5
+2020-03-24,Northern Ireland,Tests,2989
 2020-03-24,Scotland,ConfirmedCases,584
 2020-03-24,Scotland,Deaths,16
 2020-03-24,Scotland,Tests,9968

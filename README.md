@@ -184,6 +184,7 @@ git add data; git commit -am "Update for $DATE for UK daily indicators"
 DATE=$(date +'%Y-%m-%d')
 ./tools/crawl.py $DATE England
 ./tools/convert_sqlite_to_csvs.py
+curl -L https://www.arcgis.com/sharing/rest/content/items/ca796627a2294c51926865748c4a56e8/data -o data/raw/NHSR_Cases_table-$DATE.csv
 git add data; git commit -am "Update for $DATE for England"
 ```
 

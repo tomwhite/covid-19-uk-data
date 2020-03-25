@@ -7,6 +7,7 @@ import json
 import math
 import os
 import pandas as pd
+import pdfplumber
 import re
 import requests
 import sqlite3
@@ -15,6 +16,7 @@ import sys
 from parsers import (
     parse_daily_areas,
     parse_totals,
+    parse_totals_pdf_text,
     print_totals,
     scotland_pattern,
     save_indicators,
@@ -31,7 +33,7 @@ def crawl(date, dataset):
     elif dataset.lower() == "scotland":
         crawl_html(date, "Scotland")
     elif dataset.lower() in ("ni", "northern ireland"):
-        crawl_html(date, "Northern Ireland")
+        crawl_pdf(date, "Northern Ireland")
     elif dataset.lower() == "uk":
         crawl_html(date, "UK")
     elif dataset.lower() == "england":
@@ -48,6 +50,7 @@ def get_html_url(date, country):
     elif country == "Wales":
         return "https://covid19-phwstatement.nhs.wales/"
     elif country == "Northern Ireland":
+        # prior to 2020-03-24
         count = (dateparser.parse(date) - dateparser.parse("2020-03-08")).days
         return "https://www.health-ni.gov.uk/news/latest-update-coronavirus-covid-19-{}".format(count)
 
@@ -88,6 +91,35 @@ def crawl_html(date, country):
     if save_html_file:
         with open(local_html_file, "w") as f:
             f.write(html)
+
+
+def crawl_pdf(date, country):
+    if country == "Northern Ireland":
+        ym = dateparser.parse(date).strftime('%Y-%m')
+        dmy = dateparser.parse(date).strftime('%d%m%y')
+        pdf_url = "https://www.publichealth.hscni.net/sites/default/files/{}/Daily_bulletin_DoH_{}.pdf".format(ym, dmy)
+        local_pdf_file = "data/raw/Daily_bulletin_DoH_{}.pdf".format(date)
+
+        if not os.path.exists(local_pdf_file):
+            r = requests.get(pdf_url)
+            with open(local_pdf_file, "wb") as f:
+                f.write(r.content)
+
+        pdf = pdfplumber.open(local_pdf_file)
+        page = pdf.pages[0]
+        text = page.extract_text()
+        results = parse_totals_pdf_text(country, text)
+
+        if results is None:
+            sys.stderr.write("Can't find numbers. Perhaps the page format has changed?\n")
+            sys.exit(1)
+        elif results["Date"] != date:
+            sys.stderr.write("Page is dated {}, but want {}\n".format(results["Date"], date))
+            sys.exit(1)
+
+        print_totals(results)
+        #save_indicators(results)
+        save_indicators_to_sqlite(results)
 
 
 def download_arcgis_item(date, item_id, local_data_file):

@@ -26,6 +26,7 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-data.glitch.
 
 ## News
 
+* 24 March 2020. Northern Ireland's Public Health Agency (PHA) started producing a Daily COVID-19 Surveillance Bulletin in PDF form. It contains test numbers (also broken down by Health and Social Care Trust), and case numbers *but only on a choropleth map* (and broken down by age and gender).
 * 21 March 2020. PHW is back to health board (not LA) breakdowns again, this time it looks permanent.
 * 20 March 2020. PHW is providing LA area breakdowns again, after not doing so for two days.
 * 18 March 2020. PHW is no longer providing LA area breakdowns. "Novel Coronavirus (COVID-19) is now circulating in every part of Wales. For this reason, we will not be reporting cases by local authority area from today. From tomorrow, we will update daily at 12 noon the case numbers by health board of residence."

@@ -111,6 +111,16 @@ def parse_totals(country, html):
         return result
     return None
 
+def parse_totals_pdf_text(country, text):
+    if country == "Northern Ireland":
+        pattern_dict = {
+            "Date": (r"Date generated: (?P<Date>[\d,]+/[\d,]+/[\d,]+)", date_value_parser_fn),
+            "Tests": (r"Number of Individuals tested: (?P<Tests>[\d,]+)", int_value_parser_fn),
+            "ConfirmedCases": (r"Number of Individuals with confirmed COVID-19: (?P<ConfirmedCases>[\d,]+)", int_value_parser_fn),
+            "Deaths": (r"Cumulative number of deaths associated with COVID-19: (?P<Deaths>[\d,]+)", int_value_parser_fn),
+        }
+        result = parse_totals_general(pattern_dict, country, text)
+        return result
 
 def print_totals(results):
     date = results["Date"]

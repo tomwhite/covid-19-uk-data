@@ -67,6 +67,7 @@ def parse_totals_general(pattern_dict, country, text):
             result[name] = value_parser_fn(value)
             break
         if not name in result:
+            print("Could not parse '{}'".format(name))
             return None
     return result
 
@@ -84,7 +85,7 @@ def parse_totals(country, html):
     elif country == "Scotland":
         pattern_dict = {
             "Date": (r"Scottish test numbers: (?P<Date>\d+\s\w+\s\d{4})", date_value_parser_fn),
-            "Tests": (r"A total of (?P<Tests>.+?) Scottish tests have concluded", int_value_parser_fn),
+            "Tests": (r"total of (?P<Tests>.+?) Scottish tests have concluded", int_value_parser_fn),
             "ConfirmedCases": (r"(?P<ConfirmedCases>[\d,]+?) tests were (confirmed)?positive", int_value_parser_fn),
             "Deaths": (r"(?P<Deaths>\w+) patients?.+?have died", int_value_parser_fn),
         }

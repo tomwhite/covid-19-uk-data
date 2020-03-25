@@ -22,6 +22,8 @@ The following CSV files are available:
 
 You can use these files without reading the rest of this document.
 
+There is an *experimental* [Datasette instance](https://covid-19-uk-data.glitch.me/) hosting the data. This is useful for running simple SQL on the data, or exporting in JSON format. Note that there may be a lag in publishing the data to Datasette.
+
 ## News
 
 * 21 March 2020. PHW is back to health board (not LA) breakdowns again, this time it looks permanent.

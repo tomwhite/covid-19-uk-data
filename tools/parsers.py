@@ -221,12 +221,7 @@ def parse_daily_areas(date, country, html):
             ]
             if len(columns) == 0:
                 continue
-            if (
-                columns[0] == "Health Board"
-                or columns[0] == "Wales"
-                or columns[0] == "TOTAL"
-                or columns[0] == ""
-            ):
+            if columns[0].lower() in ("", "health board", "wales", "total", "wales total"):
                 continue
             if is_blank(columns[-1]):
                 continue

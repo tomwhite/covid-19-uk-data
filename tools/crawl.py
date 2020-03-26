@@ -18,7 +18,6 @@ from parsers import (
     parse_totals,
     parse_totals_pdf_text,
     print_totals,
-    scotland_pattern,
     save_indicators,
     save_indicators_to_sqlite,
     save_daily_areas,

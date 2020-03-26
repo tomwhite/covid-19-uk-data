@@ -3,6 +3,7 @@ csvs-to-sqlite
 dateparser
 pandas
 pdfplumber
+pytest
 requests
 word2number
 sqlite3

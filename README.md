@@ -195,6 +195,12 @@ Check data consistency
 ./tools/check_totals.py
 ```
 
+Update Dataset instance: https://glitch.com/edit/#!/covid-19-uk-data, then click on Tools > Terminal
+```bash
+curl https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-uk.db -o data/covid-19-uk.db
+```
+Check: https://covid-19-uk-data.glitch.me/
+
 ### Manual overrides
 
 Sometimes it's necessary to fix data by hand. In this case the following tools are useful:

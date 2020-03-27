@@ -394,7 +394,7 @@ Date,Country,Indicator,Value
 2020-03-17,UK,Deaths,60
 2020-03-17,UK,Tests,50442
 2020-03-17,Wales,ConfirmedCases,136
-2020-03-17,Wales,Deaths,1
+2020-03-17,Wales,Deaths,2
 2020-03-18,England,ConfirmedCases,2182
 2020-03-18,Northern Ireland,ConfirmedCases,68
 2020-03-18,Northern Ireland,Deaths,0
@@ -469,7 +469,7 @@ Date,Country,Indicator,Value
 2020-03-23,Wales,Deaths,16
 2020-03-24,England,ConfirmedCases,6843
 2020-03-24,Northern Ireland,ConfirmedCases,172
-2020-03-24,Northern Ireland,Deaths,5
+2020-03-24,Northern Ireland,Deaths,4
 2020-03-24,Northern Ireland,Tests,2989
 2020-03-24,Scotland,ConfirmedCases,584
 2020-03-24,Scotland,Deaths,16

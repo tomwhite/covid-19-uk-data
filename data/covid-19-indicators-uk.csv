@@ -503,6 +503,7 @@ Date,Country,Indicator,Value
 2020-03-26,UK,Tests,104866
 2020-03-26,Wales,ConfirmedCases,741
 2020-03-26,Wales,Deaths,28
+2020-03-27,England,ConfirmedCases,12288
 2020-03-27,Northern Ireland,ConfirmedCases,275
 2020-03-27,Northern Ireland,Deaths,13
 2020-03-27,Northern Ireland,Tests,4014

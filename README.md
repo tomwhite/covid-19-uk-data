@@ -124,7 +124,7 @@ Note that the arcgis.com links are direct links to the data.
 ## Related projects
 
 * Ian Watt's [COVID-19 Scotland dataset](https://github.com/watty62/Scot_covid19)
-* Emma Dought's [UK COVID-19 data](https://github.com/emmadoughty/Daily_COVID-19)
+* Emma Doughty's [UK COVID-19 data](https://github.com/emmadoughty/Daily_COVID-19)
 
 ## Tools
 

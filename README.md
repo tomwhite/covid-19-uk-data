@@ -154,6 +154,7 @@ The **convert_sqlite_to_csvs** tool will extract the data from sqlite and update
 ./tools/update.sh UK
 ./tools/update.sh UK-daily-indicators
 ./tools/update.sh England
+DATE=$(date +'%Y-%m-%d')
 curl -L https://www.arcgis.com/sharing/rest/content/items/ca796627a2294c51926865748c4a56e8/data -o data/raw/NHSR_Cases_table-$DATE.csv
 ```
 

@@ -7,13 +7,13 @@ import json
 import math
 import os
 import pandas as pd
-import pdfplumber
 import re
 import requests
 import sqlite3
 import sys
 
 from parsers import (
+    get_text_from_pdf,
     parse_daily_areas,
     parse_totals,
     parse_totals_pdf_text,
@@ -104,9 +104,7 @@ def crawl_pdf(date, country):
             with open(local_pdf_file, "wb") as f:
                 f.write(r.content)
 
-        pdf = pdfplumber.open(local_pdf_file)
-        page = pdf.pages[0]
-        text = page.extract_text()
+        text = get_text_from_pdf(local_pdf_file)
         results = parse_totals_pdf_text(country, text)
 
         if results is None:

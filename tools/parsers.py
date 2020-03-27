@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import csv
 import dateparser
 import math
+import pdfplumber
 import re
 import sqlite3
 
@@ -96,6 +97,14 @@ def parse_totals(country, html):
         result = parse_totals_general(pattern_dict, country, text)
         return result
     return None
+
+
+def get_text_from_pdf(local_pdf_file):
+    pdf = pdfplumber.open(local_pdf_file)
+    page = pdf.pages[0] # just extract first page
+    text = page.extract_text()
+    return text
+
 
 def parse_totals_pdf_text(country, text):
     if country == "Northern Ireland":

@@ -148,46 +148,13 @@ The **crawl** tool will see if the reseouce (webpage, date file) has already bee
 The **convert_sqlite_to_csvs** tool will extract the data from sqlite and update the CSV files.
 
 ```bash
-DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE Wales
-./tools/convert_sqlite_to_csvs.py
-git add data; git commit -am "Update for $DATE for Wales"
-```
-
-```bash
-DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE Scotland
-./tools/convert_sqlite_to_csvs.py
-git add data; git commit -am "Update for $DATE for Scotland"
-```
-
-```bash
-DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE 'Northern Ireland'
-./tools/convert_sqlite_to_csvs.py
-git add data; git commit -am "Update for $DATE for Northern Ireland"
-```
-
-```bash
-DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE UK
-./tools/convert_sqlite_to_csvs.py
-git add data; git commit -am "Update for $DATE for UK"
-```
-
-```bash
-DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE UK-daily-indicators
-./tools/convert_sqlite_to_csvs.py
-git add data; git commit -am "Update for $DATE for UK daily indicators"
-```
-
-```bash
-DATE=$(date +'%Y-%m-%d')
-./tools/crawl.py $DATE England
-./tools/convert_sqlite_to_csvs.py
+./tools/update.sh Wales
+./tools/update.sh Scotland
+./tools/update.sh 'Northern Ireland'
+./tools/update.sh UK
+./tools/update.sh UK-daily-indicators
+./tools/update.sh England
 curl -L https://www.arcgis.com/sharing/rest/content/items/ca796627a2294c51926865748c4a56e8/data -o data/raw/NHSR_Cases_table-$DATE.csv
-git add data; git commit -am "Update for $DATE for England"
 ```
 
 Check data consistency

@@ -26,6 +26,7 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-data.glitch.
 
 ## News
 
+* 25 March 2020. The reporting period for number of deaths changed. Previously it was for the 24 hour period starting and ending at 9am. The new period starts and ends at 5pm, and is reported the following afternoon at 2pm. (So the number of deaths reported on 25 March (cumulative total 463) represents the period 9am to 5pm on 24 March.) The testing and case numbers continue to be the 9am period.
 * 24 March 2020. Northern Ireland's Public Health Agency (PHA) started producing a Daily COVID-19 Surveillance Bulletin in PDF form. It contains test numbers (also broken down by Health and Social Care Trust), and case numbers *but only on a choropleth map* (and broken down by age and gender).
 * 21 March 2020. PHW is back to health board (not LA) breakdowns again, this time it looks permanent.
 * 20 March 2020. PHW is providing LA area breakdowns again, after not doing so for two days.

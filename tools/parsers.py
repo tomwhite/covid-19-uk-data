@@ -103,6 +103,7 @@ def get_text_from_pdf(local_pdf_file):
     pdf = pdfplumber.open(local_pdf_file)
     page = pdf.pages[0] # just extract first page
     text = page.extract_text()
+    text = normalize_whitespace(text)
     return text
 
 
@@ -110,9 +111,9 @@ def parse_totals_pdf_text(country, text):
     if country == "Northern Ireland":
         pattern_dict = {
             "Date": (r"Date generated: (?P<Date>[\d,]+/[\d,]+/[\d,]+)", date_value_parser_fn),
-            "Tests": (r"Number of Individuals tested: (?P<Tests>[\d,]+)", int_value_parser_fn),
-            "ConfirmedCases": (r"Number of Individuals (with confirmed|testing positive for) COVID-19: (?P<ConfirmedCases>[\d,]+)", int_value_parser_fn),
-            "Deaths": (r"(Total|Cumulative) number of deaths associated with COVID-19: (?P<Deaths>[\d,]+)", int_value_parser_fn),
+            "Tests": (r"Number of Individuals tested( for COVID-19)?:? (?P<Tests>[\d,]+)", int_value_parser_fn),
+            "ConfirmedCases": (r"Number of Individuals (with confirmed|testing positive for) COVID-19:? (?P<ConfirmedCases>[\d,]+)", int_value_parser_fn),
+            "Deaths": (r"(Total|Cumulative) number of deaths( associated with COVID-19)?: (?P<Deaths>[\d,]+)", int_value_parser_fn),
         }
         result = parse_totals_general(pattern_dict, country, text)
         return result

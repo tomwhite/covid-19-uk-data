@@ -185,7 +185,7 @@ Date,Country,Indicator,Value
 2020-02-23,Scotland,ConfirmedCases,0
 2020-02-23,Scotland,Deaths,0
 2020-02-23,Scotland,Tests,393
-2020-02-23,UK,ConfirmedCases,13
+2020-02-23,UK,ConfirmedCases,9
 2020-02-23,UK,Deaths,0
 2020-02-23,UK,Tests,6324
 2020-02-24,Scotland,ConfirmedCases,0
@@ -212,13 +212,13 @@ Date,Country,Indicator,Value
 2020-02-27,Scotland,ConfirmedCases,0
 2020-02-27,Scotland,Deaths,0
 2020-02-27,Scotland,Tests,470
-2020-02-27,UK,ConfirmedCases,15
+2020-02-27,UK,ConfirmedCases,13
 2020-02-27,UK,Deaths,0
 2020-02-27,UK,Tests,7690
 2020-02-28,Scotland,ConfirmedCases,0
 2020-02-28,Scotland,Deaths,0
 2020-02-28,Scotland,Tests,500
-2020-02-28,UK,ConfirmedCases,20
+2020-02-28,UK,ConfirmedCases,19
 2020-02-28,UK,Deaths,0
 2020-02-28,UK,Tests,8986
 2020-02-28,Wales,ConfirmedCases,1
@@ -261,7 +261,7 @@ Date,Country,Indicator,Value
 2020-03-05,Scotland,ConfirmedCases,6
 2020-03-05,Scotland,Deaths,0
 2020-03-05,Scotland,Tests,1256
-2020-03-05,UK,ConfirmedCases,115
+2020-03-05,UK,ConfirmedCases,114
 2020-03-05,UK,Deaths,0
 2020-03-05,UK,Tests,18083
 2020-03-05,Wales,ConfirmedCases,2
@@ -273,7 +273,7 @@ Date,Country,Indicator,Value
 2020-03-06,Scotland,ConfirmedCases,11
 2020-03-06,Scotland,Deaths,0
 2020-03-06,Scotland,Tests,1525
-2020-03-06,UK,ConfirmedCases,163
+2020-03-06,UK,ConfirmedCases,160
 2020-03-06,UK,Deaths,1
 2020-03-06,UK,Tests,20338
 2020-03-06,Wales,ConfirmedCases,2
@@ -295,7 +295,7 @@ Date,Country,Indicator,Value
 2020-03-08,Scotland,ConfirmedCases,18
 2020-03-08,Scotland,Deaths,0
 2020-03-08,Scotland,Tests,1957
-2020-03-08,UK,ConfirmedCases,273
+2020-03-08,UK,ConfirmedCases,271
 2020-03-08,UK,Deaths,2
 2020-03-08,UK,Tests,23513
 2020-03-08,Wales,ConfirmedCases,4
@@ -305,7 +305,7 @@ Date,Country,Indicator,Value
 2020-03-09,Scotland,ConfirmedCases,23
 2020-03-09,Scotland,Deaths,0
 2020-03-09,Scotland,Tests,2101
-2020-03-09,UK,ConfirmedCases,319
+2020-03-09,UK,ConfirmedCases,321
 2020-03-09,UK,Deaths,3
 2020-03-09,UK,Tests,24960
 2020-03-09,Wales,ConfirmedCases,6
@@ -356,7 +356,7 @@ Date,Country,Indicator,Value
 2020-03-13,Scotland,ConfirmedCases,85
 2020-03-13,Scotland,Deaths,0
 2020-03-13,Scotland,Tests,3314
-2020-03-13,UK,ConfirmedCases,798
+2020-03-13,UK,ConfirmedCases,797
 2020-03-13,UK,Deaths,10
 2020-03-13,UK,Tests,32771
 2020-03-13,Wales,ConfirmedCases,38
@@ -367,7 +367,7 @@ Date,Country,Indicator,Value
 2020-03-14,Scotland,ConfirmedCases,121
 2020-03-14,Scotland,Deaths,1
 2020-03-14,Scotland,Tests,3715
-2020-03-14,UK,ConfirmedCases,1140
+2020-03-14,UK,ConfirmedCases,1061
 2020-03-14,UK,Deaths,21
 2020-03-14,UK,Tests,37746
 2020-03-14,Wales,ConfirmedCases,60
@@ -379,7 +379,7 @@ Date,Country,Indicator,Value
 2020-03-15,Scotland,ConfirmedCases,153
 2020-03-15,Scotland,Deaths,1
 2020-03-15,Scotland,Tests,4240
-2020-03-15,UK,ConfirmedCases,1372
+2020-03-15,UK,ConfirmedCases,1391
 2020-03-15,UK,Deaths,35
 2020-03-15,UK,Tests,40279
 2020-03-15,Wales,ConfirmedCases,94

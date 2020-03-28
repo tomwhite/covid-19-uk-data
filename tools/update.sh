@@ -7,7 +7,9 @@ fi
 
 COUNTRY=$1
 DATE=${2:-$(date +'%Y-%m-%d')}
-./tools/crawl.py $DATE $COUNTRY
+if ! ./tools/crawl.py $DATE $COUNTRY; then
+    exit $?
+fi
 ./tools/convert_sqlite_to_csvs.py
 git diff
 read -p "Commit changes? [y/n] " yn

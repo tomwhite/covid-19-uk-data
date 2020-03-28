@@ -155,9 +155,13 @@ def crawl_arcgis(date, country):
             c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'UK', 'ConfirmedCases', {d['TotalUKCases']})")
             c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'UK', 'Deaths', {d['TotalUKDeaths']})")
             c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'England', 'ConfirmedCases', {d['EnglandCases']})")
+            c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'England', 'Deaths', {d['EnglandDeaths']})")
             c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'Scotland', 'ConfirmedCases', {d['ScotlandCases']})")
+            c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'Scotland', 'Deaths', {d['ScotlandDeaths']})")
             c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'Wales', 'ConfirmedCases', {d['WalesCases']})")
+            c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'Wales', 'Deaths', {d['WalesDeaths']})")
             c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'Northern Ireland', 'ConfirmedCases', {d['NICases']})")
+            c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'Northern Ireland', 'Deaths', {d['NIDeaths']})")
 
     elif country == "England":
         item_id = "b684319181f94875a6879bbc833ca3a6"

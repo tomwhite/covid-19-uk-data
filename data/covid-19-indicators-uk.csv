@@ -221,6 +221,8 @@ Date,Country,Indicator,Value
 2020-02-28,UK,ConfirmedCases,20
 2020-02-28,UK,Deaths,0
 2020-02-28,UK,Tests,8986
+2020-02-28,Wales,ConfirmedCases,1
+2020-02-28,Wales,Deaths,0
 2020-02-29,Scotland,ConfirmedCases,0
 2020-02-29,Scotland,Deaths,0
 2020-02-29,Scotland,Tests,630

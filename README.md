@@ -151,7 +151,7 @@ The **convert_sqlite_to_csvs** tool will extract the data from sqlite and update
 ```bash
 ./tools/update.sh Wales
 ./tools/update.sh Scotland
-./tools/update.sh 'Northern Ireland'
+./tools/update.sh NI
 ./tools/update.sh UK
 ./tools/update.sh UK-daily-indicators
 ./tools/update.sh England

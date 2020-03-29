@@ -201,11 +201,13 @@ def parse_daily_areas(date, country, html):
             columns = [
                 normalize_whitespace(col.text) for col in table_row.findAll("td")
             ]
+            if columns[0].lower() in ("", "health board"):
+                continue
             if len(columns) == 0:
                 continue
             area = columns[0].replace("Ayrshire & Arran", "Ayrshire and Arran")
             area_code = lookup_health_board_code(area)
-            cases = columns[1]
+            cases = columns[1].replace("*", "")
             output_row = [date, country, area_code, area, cases]
             output_rows.append(output_row)
         return output_rows

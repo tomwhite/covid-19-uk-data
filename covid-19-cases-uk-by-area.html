@@ -150,8 +150,10 @@
                     return 1;            
                 case "Wales":
                     return 2;            
-                default:
+                case "Northern Ireland":
                     return 3;            
+                default:
+                    return 4;            
             }
         }
         function areaOrdering(a, b) {
@@ -169,22 +171,28 @@
             "England": grouped.map(d => last(d[1]).country).indexOf("England"),
             "Scotland": grouped.map(d => last(d[1]).country).indexOf("Scotland"),
             "Wales": grouped.map(d => last(d[1]).country).indexOf("Wales"),
+            "Northern Ireland": grouped.map(d => last(d[1]).country).indexOf("Northern Ireland"),
         };
 
         function getCellOffset(d, i) {
             let countryCellXOffset = 0;
+            let yExtra = 0;
             if (i >= indexOffsets["Scotland"] && i < indexOffsets["Wales"]) {
                 countryCellXOffset = 5;
                 i -= indexOffsets["Scotland"];
-            } else if (i >= indexOffsets["Wales"]) {
+            } else if (i >= indexOffsets["Wales"] && i < indexOffsets["Northern Ireland"]) {
                 countryCellXOffset = 6;
                 i -= indexOffsets["Wales"];
+            } else if (i >= indexOffsets["Northern Ireland"]) {
+                countryCellXOffset = 5;
+                i -= indexOffsets["Northern Ireland"];
+                yExtra = 300;
             }
             const cellX = Math.floor(i / numCellsY) + countryCellXOffset;
             const cellY = i % numCellsY;
             return {
                 x: cellX * perCellWidth + padding,
-                y: cellY * perCellHeight + padding + titleHeight + subtitleHeight
+                y: cellY * perCellHeight + padding + titleHeight + subtitleHeight + yExtra
             }
         }
 
@@ -258,6 +266,13 @@
             .text("Scotland");
 
         svg.append("text")
+            .attr("x", padding + 5 * perCellWidth)
+            .attr("y", titleHeight + subtitleHeight + 10 + 300)
+            .attr("text-anchor", "left")
+            .style("font-size", "16px")
+            .text("Northern Ireland");
+
+        svg.append("text")
             .attr("x", padding + 6 * perCellWidth)
             .attr("y", titleHeight + subtitleHeight + 10)
             .attr("text-anchor", "left")
@@ -269,14 +284,14 @@
             .attr("y", titleHeight)
             .attr("text-anchor", "left")
             .style("font-size", "20px")
-            .text("UK COVID-19 confirmed cases by local authority or health board");
+            .text("UK COVID-19 confirmed cases by local authority, health board, or local government district");
 
         svg.append("text")
             .attr("x", padding)
             .attr("y", height - padding)
             .attr("text-anchor", "left")
             .style("font-size", "10px")
-            .text("Data up to " + formatDate(latestDate) + ". Data source: Public Health England, Scotland, Wales. NI does not provide area data. Code: https://github.com/tomwhite/covid-19-uk-data");
+            .text("Data up to " + formatDate(latestDate) + ". Data source: Public Health England, Scotland, Wales, Northern Ireland. Code: https://github.com/tomwhite/covid-19-uk-data");
     });    
 </script>
 </body>

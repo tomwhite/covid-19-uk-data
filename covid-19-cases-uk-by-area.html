@@ -85,6 +85,38 @@
         return arr[arr.length - 1];
     }
 
+    // from data/raw/coronavirus-covid-19-number-of-cases-in-wales-2020-03-20.html
+    const walesLAToHB = {
+        "Neath Port Talbot": "Swansea Bay",
+        "Swansea": "Swansea Bay",
+
+        "Blaenau Gwent": "Aneurin Bevan",
+        "Caerphilly": "Aneurin Bevan",
+        "Monmouthshire": "Aneurin Bevan",
+        "Newport": "Aneurin Bevan",
+        "Torfaen": "Aneurin Bevan",
+
+        "Conwy": "Betsi Cadwaladr",
+        "Denbighshire": "Betsi Cadwaladr",
+        "Flintshire": "Betsi Cadwaladr",
+        "Gwynedd": "Betsi Cadwaladr",
+        "Isle of Anglesey": "Betsi Cadwaladr",
+        "Wrexham": "Betsi Cadwaladr",
+
+        "Cardiff": "Cardiff and Vale",
+        "Vale of Glamorgan": "Cardiff and Vale",
+
+        "Bridgend": "Cwm Taf",
+        "Rhondda Cynon Taf": "Cwm Taf",
+        "Merthyr Tydfil": "Cwm Taf",
+
+        "Carmarthenshire": "Hywel Dda",
+        "Ceredigion": "Hywel Dda",
+        "Pembrokeshire": "Hywel Dda",
+
+        "Powys": "Powys",
+    }
+
     d3.csv("data/covid-19-cases-uk.csv", function(d) {
         return {
             date: parseDate(d['Date']),
@@ -98,12 +130,14 @@
         // TODO: this should be done at source
         data = data.filter(d => d.area !== 'Awaiting confirmation')
             .filter(d => d.area !== 'awaiting clarification')
+            .filter(d => d.area !== 'To be confirmed')
             .filter(d => d.area !== 'Cornwall')
             .filter(d => d.area !== 'Bournemouth')
             .filter(d => d.area !== 'Poole')
             .filter(d => d.area !== 'Isles of Scilly')
             .filter(d => d.area !== 'City of London')
-            .filter(d => d.area !== 'Hackney');
+            .filter(d => d.area !== 'Hackney')
+            .map(d => { d.area = walesLAToHB[d.area] || d.area; return d; });
 
         const maxCases = d3.max(data, d => d.cases);
         const latestDate = d3.max(data, d => d.date);

@@ -26,7 +26,9 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-data.glitch.
 
 ## News
 
+* 29 March 2020. There's a [new spreadsheet](https://fingertips.phe.org.uk/documents/Historic%20COVID-19%20Dashboard%20Data.xlsx) that includes historical data for the dashboard. This includes cases (by country, English UTLA, English NHS region), deaths (by country), and recovered patients (although this isn't being updated at the time of writing).
 * 27 March 2020. UK daily indicators now include number of deaths for UK, England, Scotland, Wales, and Northern Ireland.
+* 26 March 2020. Northern Ireland's Public Health Agency (PHA) started publishing confirmed cases by Local Government District (LGD) on weekdays.
 * 25 March 2020. The reporting period for number of deaths changed. Previously it was for the 24 hour period starting and ending at 9am. The new period starts and ends at 5pm, and is reported the following afternoon at 2pm. (So the number of deaths reported on 25 March (cumulative total 463) represents the period 9am to 5pm on 24 March.) The testing and case numbers continue to be the 9am period.
 * 24 March 2020. Northern Ireland's Public Health Agency (PHA) started producing a Daily COVID-19 Surveillance Bulletin in PDF form. It contains test numbers (also broken down by Health and Social Care Trust), and case numbers *but only on a choropleth map* (and broken down by age and gender).
 * 21 March 2020. PHW is back to health board (not LA) breakdowns again, this time it looks permanent.
@@ -40,8 +42,8 @@ Here are my suggestions for how to improve the data being published by public bo
 The short version: **publish everything in CSV format, and include historical data!**
 
 Department of Health and Social Care, and Public Health England
-1. Publish historical data, not just the current day's data.
-2. Add a column for number of recovered patients to the [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67). (It is published on the dashboard, but nowhere else.)
+1. ~~Publish historical data, not just the current day's data.~~ _New spreadsheet of historical data since 29 March 2020._
+2. ~~Add a column for number of recovered patients to the [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67). (It is published on the dashboard, but nowhere else.)~~ _Provided in the new spreadsheet of historical data since 29 March 2020 - but not being updated at the time of writing._
 3. Publish deaths by hospital every day.
 
 Public Health Wales
@@ -59,8 +61,8 @@ Public Health Scotland
 
 Public Health Northern Ireland
 1. Publish daily totals (tests, confirmed cases, deaths) in machine readable form (CSV).
-2. Publish confirmed cases by local authority/health board in machine readable form (CSV). These are not currently being published, so it would be good to be able to get these figures, even if just on a web page.
-3. Publish historical data, not just the current day's data.
+2. Publish confirmed cases by local authority/health board in machine readable form (CSV). ~~These are not currently being published, so it would be good to be able to get these figures, even if just on a web page.~~ _Published by LGD on weekdays since 26 March 2020._
+3. ~~Publish historical data, not just the current day's data.~~ _An archive of surveillance bulletins is being published since 24 March 2020._
 4. Publish deaths by hospital every day.
 
 ## Data sources and the collation process

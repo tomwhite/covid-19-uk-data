@@ -599,6 +599,8 @@ Date,Country,Indicator,Value
 2020-03-29,UK,Tests,127737
 2020-03-29,Wales,ConfirmedCases,1241
 2020-03-29,Wales,Deaths,48
+2020-03-30,England,ConfirmedCases,18594
+2020-03-30,England,Deaths,1284
 2020-03-30,Northern Ireland,ConfirmedCases,533
 2020-03-30,Northern Ireland,Deaths,22
 2020-03-30,Northern Ireland,Tests,5541

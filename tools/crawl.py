@@ -15,6 +15,7 @@ import sys
 from parsers import (
     get_text_from_pdf,
     parse_daily_areas,
+    parse_daily_areas_pdf,
     parse_totals,
     parse_totals_pdf_text,
     print_totals,
@@ -117,6 +118,13 @@ def crawl_pdf(date, country):
         print_totals(results)
         #save_indicators(results)
         save_indicators_to_sqlite(results)
+
+        daily_areas = parse_daily_areas_pdf(date, country, local_pdf_file)
+        if daily_areas is not None:
+            save_daily_areas(date, country, daily_areas)
+            save_daily_areas_to_sqlite(date, country, daily_areas)
+
+
 
 
 def download_arcgis_item(date, item_id, local_data_file):

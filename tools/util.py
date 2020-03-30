@@ -17,7 +17,7 @@ def normalize_whitespace(text):
     collapse runs of whitespace, and strip whitespace from the ends of the string.
     """
     s = text.replace(u"\xa0", u" ").replace(u"&nbsp;", " ").replace(r"\S+", " ")
-    return re.sub("\s+", " ", s).strip()
+    return re.sub(r"\s+", " ", s).strip()
 
 
 def is_blank(text):
@@ -94,3 +94,23 @@ def lookup_health_board_code(name):
         hb_name_to_code = {**hb_name_to_code_scotland, **hb_name_to_code_wales}
 
     return hb_name_to_code.get(name, "")
+
+
+lgd_name_to_code = None
+
+
+def lookup_local_government_district_code(name):
+    global lgd_name_to_code
+    if lgd_name_to_code is None:
+        lgd_mapping = pd.read_csv(
+            "data/raw/Local_Government_Districts_December_2016_Names_and_Codes_in_Northern_Ireland.csv"
+        )
+        lgd_name_to_code = dict(
+            zip(lgd_mapping["LGD16NM"], lgd_mapping["LGD16CD"])
+        )
+        lgd_name_to_code["Armagh, Banbridge and Craigavon"] = lgd_name_to_code["Armagh City, Banbridge and Craigavon"]
+        lgd_name_to_code["Derry and Strabane"] = lgd_name_to_code["Derry City and Strabane"]
+        lgd_name_to_code["North Down and Ards"] = lgd_name_to_code["Ards and North Down"]
+        
+    name = name.replace("`", "")
+    return lgd_name_to_code.get(name, "")

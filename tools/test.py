@@ -1,9 +1,10 @@
+import dateparser
 import glob
 import math
-from parsers import get_text_from_html, get_text_from_pdf, parse_daily_areas, parse_totals, parse_totals_pdf_text
+from parsers import get_text_from_html, get_text_from_pdf, parse_daily_areas, parse_daily_areas_pdf, parse_totals, parse_totals_pdf_text
 import pdfplumber
 import re
-from util import lookup_local_authority_code, lookup_health_board_code, normalize_int, normalize_whitespace
+from util import lookup_local_authority_code, lookup_health_board_code, lookup_local_government_district_code, normalize_int, normalize_whitespace
 
 # Run these tests with `pytest tools/test.py`
 
@@ -22,6 +23,10 @@ def test_lookup_local_authority_code():
 def test_lookup_health_board_code():
     assert lookup_health_board_code("Fife") == "S08000029"
     assert lookup_health_board_code("Bogus") == ""
+
+def test_lookup_local_government_district_code():
+    assert lookup_local_government_district_code("Antrim and Newtownabbey") == "N09000001"
+    assert lookup_local_government_district_code("Bogus") == ""
 
 def test_get_text_from_html():
     html = "<b>Some bold  text</b>"
@@ -127,3 +132,24 @@ def test_parse_daily_areas_wales():
                 assert row[2] is not None # Area code can be blank (e.g. 'To be confirmed')
                 assert len(row[3]) > 0
                 assert int(row[4]) >= 0
+
+def test_parse_daily_areas_ni():
+    for file in sorted(glob.glob("data/raw/Daily_bulletin_DoH_*.pdf")):
+        m = re.match(r".+(\d{4}-\d{2}-\d{2})\.pdf", file)
+        date = m.group(1)
+        if date <= "2020-03-25":
+            # older pages don't have case numbers
+            continue
+        weekday = dateparser.parse(date).weekday()
+        if weekday >= 5:
+            # weekends don't have case numbers
+            continue
+        result = parse_daily_areas_pdf(date, "Northern Ireland", file)
+        assert len(result) > 1
+        assert result[0] == ['Date', 'Country', 'AreaCode', 'Area', 'TotalCases']
+        for row in result[1:]:
+            assert row[0] == date
+            assert row[1] == "Northern Ireland"
+            assert row[2] is not None # Area code can be blank (e.g. 'Unknown')
+            assert len(row[3]) > 0
+            assert int(row[4]) >= 0

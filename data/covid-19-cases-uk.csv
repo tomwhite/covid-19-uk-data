@@ -3783,6 +3783,18 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-26,England,E08000031,Wolverhampton,103
 2020-03-26,England,E10000034,Worcestershire,76
 2020-03-26,England,E06000014,York,14
+2020-03-26,Northern Ireland,N09000001,Antrim and Newtownabbey,17
+2020-03-26,Northern Ireland,N09000002,"Armagh, Banbridge and Craigavon",22
+2020-03-26,Northern Ireland,N09000003,Belfast,75
+2020-03-26,Northern Ireland,N09000004,Causeway Coast and Glens,5
+2020-03-26,Northern Ireland,N09000005,Derry and Strabane,8
+2020-03-26,Northern Ireland,N09000006,Fermanagh and Omagh,15
+2020-03-26,Northern Ireland,N09000007,Lisburn and Castlereagh,33
+2020-03-26,Northern Ireland,N09000008,Mid and East Antrim,16
+2020-03-26,Northern Ireland,N09000009,Mid Ulster,8
+2020-03-26,Northern Ireland,N09000010,"Newry, Mourne and Down",13
+2020-03-26,Northern Ireland,N09000011,North Down and Ards,22
+2020-03-26,Northern Ireland,,Unknown,7
 2020-03-26,Scotland,S08000015,Ayrshire and Arran,74
 2020-03-26,Scotland,S08000016,Borders,23
 2020-03-26,Scotland,S08000017,Dumfries and Galloway,39
@@ -3953,6 +3965,18 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-27,England,E08000031,Wolverhampton,128
 2020-03-27,England,E10000034,Worcestershire,93
 2020-03-27,England,E06000014,York,17
+2020-03-27,Northern Ireland,N09000001,Antrim and Newtownabbey,18
+2020-03-27,Northern Ireland,N09000002,"Armagh, Banbridge and Craigavon",29
+2020-03-27,Northern Ireland,N09000003,Belfast,86
+2020-03-27,Northern Ireland,N09000004,Causeway Coast and Glens,5
+2020-03-27,Northern Ireland,N09000005,Derry and Strabane,9
+2020-03-27,Northern Ireland,N09000006,Fermanagh and Omagh,17
+2020-03-27,Northern Ireland,N09000007,Lisburn and Castlereagh,39
+2020-03-27,Northern Ireland,N09000008,Mid and East Antrim,16
+2020-03-27,Northern Ireland,N09000009,Mid Ulster,8
+2020-03-27,Northern Ireland,N09000010,"Newry, Mourne and Down",16
+2020-03-27,Northern Ireland,N09000011,North Down and Ards,25
+2020-03-27,Northern Ireland,,Unknown,7
 2020-03-27,Scotland,S08000015,Ayrshire and Arran,75
 2020-03-27,Scotland,S08000016,Borders,28
 2020-03-27,Scotland,S08000017,Dumfries and Galloway,47
@@ -4463,6 +4487,18 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-30,England,E10000031,Warwickshire,148
 2020-03-30,England,E10000032,West Sussex,113
 2020-03-30,England,E10000034,Worcestershire,146
+2020-03-30,Northern Ireland,N09000001,Antrim and Newtownabbey,34
+2020-03-30,Northern Ireland,N09000002,"Armagh, Banbridge and Craigavon",53
+2020-03-30,Northern Ireland,N09000003,Belfast,160
+2020-03-30,Northern Ireland,N09000004,Causeway Coast and Glens,11
+2020-03-30,Northern Ireland,N09000005,Derry and Strabane,23
+2020-03-30,Northern Ireland,N09000006,Fermanagh and Omagh,27
+2020-03-30,Northern Ireland,N09000007,Lisburn and Castlereagh,66
+2020-03-30,Northern Ireland,N09000008,Mid and East Antrim,28
+2020-03-30,Northern Ireland,N09000009,Mid Ulster,16
+2020-03-30,Northern Ireland,N09000010,"Newry, Mourne and Down",41
+2020-03-30,Northern Ireland,N09000011,North Down and Ards,52
+2020-03-30,Northern Ireland,,Unknown,22
 2020-03-30,Scotland,S08000015,Ayrshire and Arran,154
 2020-03-30,Scotland,S08000016,Borders,63
 2020-03-30,Scotland,S08000017,Dumfries and Galloway,74

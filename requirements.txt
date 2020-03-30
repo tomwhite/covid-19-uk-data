@@ -5,6 +5,6 @@ pandas
 pdfplumber
 pytest
 requests
+titlecase
 word2number
-sqlite3
 xlrd

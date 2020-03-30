@@ -124,6 +124,7 @@ Note that the arcgis.com links are direct links to the data.
 * English and Welsh local authorities: [Lower Tier Local Authority to Upper Tier Local Authority (April 2019) Lookup in England and Wales](http://geoportal1-ons.opendata.arcgis.com/datasets/lower-tier-local-authority-to-upper-tier-local-authority-april-2019-lookup-in-england-and-wales/data)
 * Scottish Health Boards: [Health Board 2014](https://www.opendata.nhs.scot/dataset/geography-codes-and-labels/resource/652ff726-e676-4a20-abda-435b98dd7bdc)
 * Welsh Health Boards: [Local Health Boards (April 2019) Names and Codes in Wales](https://geoportal.statistics.gov.uk/datasets/local-health-boards-april-2019-names-and-codes-in-wales)
+* Northern Irish Local Government Districts: [Local Government Districts (December 2016) Names and Codes in Northern Ireland](https://data.gov.uk/dataset/923eca81-ca9c-44a9-921e-031d28fafd1e/local-government-districts-december-2016-names-and-codes-in-northern-ireland)
 
 ## Related projects
 

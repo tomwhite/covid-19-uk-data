@@ -5,6 +5,7 @@ import math
 import pdfplumber
 import re
 import sqlite3
+from titlecase import titlecase
 
 from util import (
     format_country,
@@ -12,6 +13,7 @@ from util import (
     normalize_int,
     normalize_whitespace,
     lookup_health_board_code,
+    lookup_local_government_district_code,
 )
 
 def get_text_from_html(html):
@@ -239,6 +241,28 @@ def parse_daily_areas(date, country, html):
             output_row = [date, country, lookup_health_board_code(area), area, cases]
             output_rows.append(output_row)
         return output_rows
+    return None
+
+
+def parse_daily_areas_pdf(date, country, local_pdf_file):
+    if country == "Northern Ireland":
+        pdf = pdfplumber.open(local_pdf_file)
+        for page in pdf.pages:
+            try:
+                table = page.extract_table()
+                if table[0][0] == "Local Government District":
+                    output_rows = [["Date", "Country", "AreaCode", "Area", "TotalCases"]]
+                    for table_row in table[1:]:
+                        if table_row[0].lower() == "total":
+                            continue
+                        area = normalize_whitespace(titlecase(table_row[0]))
+                        area_code = lookup_local_government_district_code(area)
+                        cases = normalize_int(table_row[1])
+                        output_row = [date, country, area_code, area, cases]
+                        output_rows.append(output_row)
+                    return output_rows
+            except IndexError:
+                pass # no table on page
     return None
 
 

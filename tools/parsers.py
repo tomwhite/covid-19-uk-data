@@ -112,7 +112,7 @@ def parse_totals_pdf_text(country, text):
         pattern_dict = {
             "Date": (r"Date generated: (?P<Date>[\d,]+/[\d,]+/[\d,]+)", date_value_parser_fn),
             "Tests": (r"Number of Individuals tested( for COVID-19| for SARS-COV2 Virus)?:? (?P<Tests>[\d,]+)", int_value_parser_fn),
-            "ConfirmedCases": (r"Number of Individuals (with confirmed|testing positive for) (COVID-19|SARS-COV2 Virus):? (?P<ConfirmedCases>[\d,]+)", int_value_parser_fn),
+            "ConfirmedCases": (r"(Number of Individuals (with confirmed|testing positive for) (COVID-19|SARS-COV2 Virus)|Cumulative number of laboratory confirmed COVID-19 cases):? (?P<ConfirmedCases>[\d,]+)", int_value_parser_fn),
             "Deaths": (r"(Total|Cumulative) number of (Trust )?deaths( associated with COVID-19)?: (?P<Deaths>[\d,]+)", int_value_parser_fn),
         }
         result = parse_totals_general(pattern_dict, country, text)

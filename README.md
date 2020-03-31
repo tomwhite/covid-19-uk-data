@@ -73,8 +73,8 @@ Raw data (including HTML pages, PDFs, CSV and XLSX files), is archived under _da
 
 ### UK
 
-* Number of **tests** and **confirmed cases** are published at [https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases) at 2pm in HTML format
-* Number of **deaths** are published in the [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67) at 6pm in XLSX format
+* Number of **tests, confirmed cases and deaths** are published at [https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases) at 2pm in HTML format
+* Number of historical **confirmed cases and deaths** are published in the [historical dashboard data](https://fingertips.phe.org.uk/documents/Historic%20COVID-19%20Dashboard%20Data.xlsx) at 6pm in XLSX format
 * Twitter updates: [@DHSCgovuk](https://twitter.com/DHSCgovuk)
 
 ### England
@@ -108,6 +108,7 @@ Note that [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225
 |URL|What|When|Format|Archived?|
 |---|----|----|------|---------|
 |https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public|UK tests, confirmed cases, deaths|2pm|HTML|Yes|
+|https://fingertips.phe.org.uk/documents/Historic%20COVID-19%20Dashboard%20Data.xlsx|cases (by country, English UTLA, English NHS region), deaths (by country) ("historical dashboard data")|6pm|XLSX|No|
 |https://www.arcgis.com/sharing/rest/content/items/bc8ee90225644ef7a6f4dd1b13ea1d67/data|UK tests, UK/England/Scotland/Wales/NI confirmed cases, UK/England/Scotland/Wales/NI deaths ("daily indicators")|6pm|XLSX|No|
 |https://www.arcgis.com/sharing/rest/content/items/b684319181f94875a6879bbc833ca3a6/data|England confirmed cases by local authority ("UTLA cases table")|6pm|CSV|No|
 |https://www.arcgis.com/sharing/rest/content/items/ca796627a2294c51926865748c4a56e8/data|England confirmed cases by NHS region ("NHA regional cases table")|6pm|CSV|No|

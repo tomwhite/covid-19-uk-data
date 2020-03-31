@@ -237,7 +237,7 @@ def parse_daily_areas(date, country, html):
             )
             if is_blank(area):
                 area = columns[0]
-            cases = columns[-1]
+            cases = columns[-1].replace("*","")
             output_row = [date, country, lookup_health_board_code(area), area, cases]
             output_rows.append(output_row)
         return output_rows

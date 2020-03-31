@@ -24,7 +24,7 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-08,England,E06000056,Central Bedfordshire,0
 2020-03-08,England,E06000049,Cheshire East,0
 2020-03-08,England,E06000050,Cheshire West and Chester,0
-2020-03-08,England,E06000052,Cornwall,3
+2020-03-08,England,E06000052,Cornwall and Isles of Scilly,3
 2020-03-08,England,E06000047,County Durham,0
 2020-03-08,England,E08000026,Coventry,3
 2020-03-08,England,E09000008,Croydon,0
@@ -44,7 +44,7 @@ Date,Country,AreaCode,Area,TotalCases
 2020-03-08,England,E08000037,Gateshead,0
 2020-03-08,England,E10000013,Gloucestershire,3
 2020-03-08,England,E09000011,Greenwich,0
-2020-03-08,England,E09000012,Hackney,2
+2020-03-08,England,E09000012,Hackney and City of London,2
 2020-03-08,England,E06000006,Halton,0
 2020-03-08,England,E09000013,Hammersmith and Fulham,2
 2020-03-08,England,E10000014,Hampshire,8

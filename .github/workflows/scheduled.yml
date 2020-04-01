@@ -28,7 +28,7 @@ jobs:
     - name: Set variables to decide if we should deploy
       id: decide_variables
       run: |-
-        echo "##[set-output name=latest;]$(datasette inspect data/covid-19-uk.db | jq '.covid-19-uk.hash' -r)"
+        echo "##[set-output name=latest;]$(datasette inspect data/covid-19-uk.db | jq '."covid-19-uk".hash' -r)"
         echo "##[set-output name=deployed;]$(curl -s https://covid-19-uk-datasette-65tzkjlxkq-ew.a.run.app/-/databases.json | jq '.[0].hash' -r)"
     - name: Set up Cloud Run
       if: steps.decide_variables.outputs.latest != steps.decide_variables.outputs.deployed

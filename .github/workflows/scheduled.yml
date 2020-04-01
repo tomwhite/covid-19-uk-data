@@ -33,3 +33,8 @@ jobs:
         service_account_email: ${{ secrets.GCP_SA_EMAIL }}
         service_account_key: ${{ secrets.GCP_SA_KEY }}
     - run: gcloud info
+    - name: Deploy to Cloud Run
+      run: |-
+        gcloud components install beta
+        gcloud config set run/region europe-west1
+

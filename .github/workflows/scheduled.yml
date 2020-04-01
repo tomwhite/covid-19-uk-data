@@ -37,4 +37,5 @@ jobs:
       run: |-
         gcloud components install beta
         gcloud config set run/region europe-west1
-
+        gcloud config set project tom-white
+        datasette publish cloudrun data/covid-19-uk.db --service covid-19-uk-datasette -m metadata.json

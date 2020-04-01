@@ -1,0 +1,14 @@
+name: Deploy with Datasette
+
+# TODO: run on a schedule
+on:
+  repository_dispatch: 
+  push:
+  pull_request:
+
+jobs:
+  scheduled:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@v2

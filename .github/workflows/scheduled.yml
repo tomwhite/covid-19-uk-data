@@ -1,6 +1,7 @@
 name: Deploy with Datasette
 
 # TODO: run on a schedule
+#
 on:
   repository_dispatch: 
   push:

@@ -23,7 +23,7 @@ def get_text_from_html(html):
     return text
 
 def date_value_parser_fn(value):
-    return dateparser.parse(value).strftime("%Y-%m-%d")
+    return dateparser.parse(value, locales=["en-GB"]).strftime("%Y-%m-%d")
 
 
 def int_value_parser_fn(value):

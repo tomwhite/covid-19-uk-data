@@ -26,3 +26,10 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements-datasette.txt
+    - name: Set up Cloud Run
+      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      with:
+        version: '275.0.0'
+        service_account_email: ${{ secrets.GCP_SA_EMAIL }}
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+    - run: gcloud info

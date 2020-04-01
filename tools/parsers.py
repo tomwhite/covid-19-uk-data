@@ -208,6 +208,7 @@ def parse_daily_areas(date, country, html):
             if columns[0].lower() in ("", "health board"):
                 continue
             area = columns[0].replace("Ayrshire & Arran", "Ayrshire and Arran")
+            area = columns[0].replace("Eileanan Siar (Western Isles)", "Western Isles")
             area_code = lookup_health_board_code(area)
             cases = columns[1].replace("*", "")
             output_row = [date, country, area_code, area, cases]

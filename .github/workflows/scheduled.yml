@@ -1,13 +1,11 @@
 name: Deploy with Datasette
 
-# TODO: run on a schedule
-#
 on:
   repository_dispatch: 
   push:
 
 jobs:
-  scheduled:
+  deploy-datasette:
     runs-on: ubuntu-latest
     steps:
     - name: Check out repo
@@ -27,14 +25,20 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements-datasette.txt
+    - name: Set variables to decide if we should deploy
+      id: decide_variables
+      run: |-
+        echo "##[set-output name=latest;]$(datasette inspect data/covid-19-uk.db | jq '.covid-19-uk.hash' -r)"
+        echo "##[set-output name=deployed;]$(curl -s https://covid-19-uk-datasette-65tzkjlxkq-ew.a.run.app/-/databases.json | jq '.[0].hash' -r)"
     - name: Set up Cloud Run
+      if: steps.decide_variables.outputs.latest != steps.decide_variables.outputs.deployed
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
       with:
         version: '275.0.0'
         service_account_email: ${{ secrets.GCP_SA_EMAIL }}
         service_account_key: ${{ secrets.GCP_SA_KEY }}
-    - run: gcloud info
     - name: Deploy to Cloud Run
+      if: steps.decide_variables.outputs.latest != steps.decide_variables.outputs.deployed
       run: |-
         gcloud components install beta
         gcloud config set run/region europe-west1

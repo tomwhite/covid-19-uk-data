@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 <meta charset="utf-8">
-<title>UK COVID-19 cumulative confirmed cases by local authority, health board, or local government district</title>
+<title>UK COVID-19 daily confirmed cases by local authority, health board, or local government district</title>
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="https://d3js.org/d3-array.v2.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
@@ -162,10 +162,16 @@
             if (lastEntryA.country !== lastEntryB.country) {
                 return countryToOrdinal(lastEntryA.country) - countryToOrdinal(lastEntryB.country);
             }
-            return last(b[1]).cases - last(a[1]).cases;
+            return last(b[1]).dailyCases - last(a[1]).dailyCases;
         }
         const grouped = d3.groups(data, d => d.area)
+            .map(d => {
+                // calculate new daily cases for each area
+                d[1].forEach((elt, i) => elt.dailyCases = i == 0 ? null : elt.cases - d[1][i - 1].cases);
+                return d;
+            })
             .sort(areaOrdering)
+        const maxDailyCases = d3.max(grouped.map(d => d3.max(d[1].map(e => e.dailyCases))))
 
         const indexOffsets = {
             "England": grouped.map(d => last(d[1]).country).indexOf("England"),
@@ -204,22 +210,23 @@
          .range([casesLineOffsetX, casesLineOffsetX + casesLineWidth]);
 
         const yScale = d3.scaleLinear()
-            .domain([0, maxCases])
+            .domain([0, maxDailyCases])
             .range([perCellHeight, 0]);
 
         const line = d3.line()
             .x(d => xScale(d[1].date))
-            .y(d => yScale(d[1].cases));
+            .y(d => yScale(d[1].dailyCases));
 
         svg.selectAll(".cases-line")
             .data(grouped)
             .enter()
             .append("path")
             .attr("d", (d, i) => {
+                console.log(d[1])
                 return d3.line()
-                    .defined(d => !isNaN(d.cases))
+                    .defined(d => !isNaN(d.dailyCases))
                     .x(d => xScale(d.date) + getCellOffset(d, i).x)
-                    .y(d => yScale(d.cases) + getCellOffset(d, i).y)
+                    .y(d => yScale(d.dailyCases) + getCellOffset(d, i).y)
                     (d[1]);
             })
             .attr("class", "cases-line")
@@ -230,16 +237,16 @@
             .append("circle")
             .attr("r", 1)
             .attr("cx", (d, i) => xScale(last(d[1]).date) + getCellOffset(d, i).x)
-            .attr("cy", (d, i) => yScale(last(d[1]).cases) + getCellOffset(d, i).y)
+            .attr("cy", (d, i) => yScale(last(d[1]).dailyCases) + getCellOffset(d, i).y)
             .attr("class", "latest-case")
 
          svg.selectAll(".latest-case-text")
             .data(grouped)
             .enter()
             .append("text")
-            .text(d => last(d[1]).cases)
+            .text(d => last(d[1]).dailyCases)
             .attr("x", (d, i) => 5 + xScale(last(d[1]).date) + getCellOffset(d, i).x)
-            .attr("y", (d, i) => yScale(last(d[1]).cases) + 3 + getCellOffset(d, i).y)
+            .attr("y", (d, i) => yScale(last(d[1]).dailyCases) + 3 + getCellOffset(d, i).y)
             .attr("class", "latest-case-text")
 
          svg.selectAll(".area-text")
@@ -284,7 +291,7 @@
             .attr("y", titleHeight)
             .attr("text-anchor", "left")
             .style("font-size", "20px")
-            .text("UK COVID-19 cumulative confirmed cases by local authority, health board, or local government district");
+            .text("UK COVID-19 daily confirmed cases by local authority, health board, or local government district");
 
         svg.append("text")
             .attr("x", padding)

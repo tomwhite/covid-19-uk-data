@@ -4887,6 +4887,18 @@ Date,Country,AreaCode,Area,TotalCases
 2020-04-01,Wales,W11000031,Swansea Bay,213
 2020-04-01,Wales,,Resident outside Wales,14
 2020-04-01,Wales,,To be confirmed,32
+2020-04-02,Northern Ireland,N09000001,Antrim and Newtownabbey,51
+2020-04-02,Northern Ireland,N09000002,"Armagh, Banbridge and Craigavon",79
+2020-04-02,Northern Ireland,N09000003,Belfast,226
+2020-04-02,Northern Ireland,N09000004,Causeway Coast and Glens,19
+2020-04-02,Northern Ireland,N09000005,Derry and Strabane,30
+2020-04-02,Northern Ireland,N09000006,Fermanagh and Omagh,37
+2020-04-02,Northern Ireland,N09000007,Lisburn and Castlereagh,97
+2020-04-02,Northern Ireland,N09000008,Mid and East Antrim,37
+2020-04-02,Northern Ireland,N09000009,Mid Ulster,21
+2020-04-02,Northern Ireland,N09000010,"Newry, Mourne and Down",55
+2020-04-02,Northern Ireland,N09000011,North Down and Ards,75
+2020-04-02,Northern Ireland,,Unknown,47
 2020-04-02,Scotland,S08000015,Ayrshire and Arran,221
 2020-04-02,Scotland,S08000016,Borders,93
 2020-04-02,Scotland,S08000017,Dumfries and Galloway,104

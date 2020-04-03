@@ -1,13 +1,8 @@
-function drawChart(indicator, cutoff) {
+function drawChart(indicator, cutoff, daily) {
 
     const width = 800;
     const height = 600;
     const margin = ({top: 40, right: 45, bottom: 30, left: 45})
-
-    // const indicator = "Deaths"
-    // const cutoff = 10;
-    // const indicator = "ConfirmedCases"
-    // const cutoff = 100;
 
     const parseDate = d3.timeParse("%Y-%m-%d");
 
@@ -27,11 +22,26 @@ function drawChart(indicator, cutoff) {
             value: +d['Value']
         }
     }, function(data) {
-        const indictorData = data.filter(d => d.indicator === indicator);
+        const indicatorData = data.filter(d => d.indicator === indicator)
+            //.filter(d => d.country === "UK")
+
+        const indicatorDataGrouped = d3.groups(indicatorData, d => d.country)
+
+        let grouped = indicatorDataGrouped
+        if (daily) {
+            grouped = indicatorDataGrouped
+                // calculate daily values from cumulative values
+                .map(d => { dailyValues(d[1]); return d })
+                .map(d => { d[1].forEach(e => e.value = e.dailyValue); return d })
+                // apply moving average to last 7 days for smoothing
+                .map(d => { 
+                    d[1] = d3.zip(d[1], movingAverage(d[1], 7)).map(e => { e[0].value = e[1]; return e[0]});
+                    return d
+                })
+        }
         
-        const grouped = d3.groups(indictorData, d => d.country)
-            // .map(d => { dailyValues(d[1]); return d })
-            // .map(d => { d[1].forEach(e => e.value = e.dailyValue); return d })
+        grouped = grouped
+            // truncate to cutoff
             .map(d => {
                 d[1] = truncate(d[1], cutoff)
                 return d;
@@ -91,6 +101,62 @@ function drawChart(indicator, cutoff) {
                 .tickFormat(d3.format(",d"))
             )
 
+        // Doubling lines
+        if (!daily) {
+            const maxX = x.domain()[1];
+            svg.append("g")
+                .append("clipPath")
+                    .attr("id", "rect-clip")
+                .append("rect")
+                    .attr("x", x(x.domain()[0]))
+                    .attr("y", y(y.domain()[1]))
+                    .attr("width", x(x.domain()[1]) - x(x.domain()[0]))
+                    .attr("height", y(y.domain()[0]) - y(y.domain()[1]))
+                    .style("stroke-opacity", 0)
+                    .style("fill-opacity", 0);
+            svg.append("path")
+                .attr("class", "doubling-line")
+                .attr("clip-path", "url(#rect-clip)")
+                .attr('d', d3.line()([[x(0), y(cutoff)], [x(maxX), y(doubling(cutoff, maxX, 1))]]))
+            svg.append("path")
+                .attr("class", "doubling-line")
+                .attr("clip-path", "url(#rect-clip)")
+                .attr('d', d3.line()([[x(0), y(cutoff)], [x(maxX), y(doubling(cutoff, maxX, 2))]]))
+            svg.append("path")
+                .attr("class", "doubling-line")
+                .attr("clip-path", "url(#rect-clip)")
+                .attr('d', d3.line()([[x(0), y(cutoff)], [x(maxX), y(doubling(cutoff, maxX, 3))]]))
+            svg.append("path")
+                .attr("class", "doubling-line")
+                .attr("clip-path", "url(#rect-clip)")
+                .attr('d', d3.line()([[x(0), y(cutoff)], [x(maxX), y(doubling(cutoff, maxX, 7))]]))
+
+            svg.append("text")
+                .attr("class", "doubling-text")
+                .text("Doubling every day")
+                .attr("x", x(inverseDoubling(cutoff, y.domain()[1], 1)))
+                .attr("y", y(y.domain()[1]) + 20)
+                .attr("fill", "black")
+            svg.append("text")
+                .attr("class", "doubling-text")
+                .text("2 days")
+                .attr("x", x(inverseDoubling(cutoff, y.domain()[1], 2)))
+                .attr("y", y(y.domain()[1]) + 20)
+                .attr("fill", "black")
+            svg.append("text")
+                .attr("class", "doubling-text")
+                .text("3 days")
+                .attr("x", x(inverseDoubling(cutoff, y.domain()[1], 3)))
+                .attr("y", y(y.domain()[1]) + 20)
+                .attr("fill", "black")
+            svg.append("text")
+                .attr("class", "doubling-text")
+                .text("week")
+                .attr("x", x(maxX) - 20)
+                .attr("y", y(doubling(cutoff, maxX, 7)) + 20)
+                .attr("fill", "black")
+        }
+
         const line = d3.line()
             .x((d, i) => x(i))
             .y(d => y(d.value))
@@ -129,12 +195,21 @@ function drawChart(indicator, cutoff) {
 
         const indicatorLower = indicator.replace(/([A-Z])/g, " $1").toLowerCase()
         const indicatorLowerSingular = indicatorLower.substr(0, indicatorLower.length - 1)
-        svg.append("text")
-            .attr("x", margin.left)
-            .attr("y", 24)
-            .text(`UK COVID-19 cumulative ${indicatorLower}, by number of days since ${cutoff}th ${indicatorLowerSingular}`)
-            .attr("font-family", "sans-serif")
-            .attr("font-size", "16px");
+        if (daily) {
+            svg.append("text")
+                .attr("x", margin.left)
+                .attr("y", 24)
+                .text(`UK COVID-19 daily ${indicatorLower} (7 day rolling average), by number of days since ${cutoff}th ${indicatorLowerSingular}`)
+                .attr("font-family", "sans-serif")
+                .attr("font-size", "16px");
+        } else {
+            svg.append("text")
+                .attr("x", margin.left)
+                .attr("y", 24)
+                .text(`UK COVID-19 cumulative ${indicatorLower}, by number of days since ${cutoff}th ${indicatorLowerSingular}`)
+                .attr("font-family", "sans-serif")
+                .attr("font-size", "16px");
+        }
         
     });
 
@@ -185,7 +260,25 @@ function getTickValuesLog(domain) {
     return tickValues
 }
 
+function movingAverage(arr, windowSize) {
+    const result = []
+    for (let i = 1; i <= arr.length; i++) {
+        const sub = arr.slice(Math.max(0, i - windowSize), i)
+        result.push(d3.mean(sub, d => d.value))
+    }
+    return result;
+}
+
 function dailyValues(arr) {
     arr.forEach((elt, i, a) => elt.dailyValue = i == 0 ? null : elt.value - a[i - 1].value);
     return arr;
+}
+
+function doubling(cutoff, dayNumber, numberOfDaysToDouble) {
+    return cutoff * Math.pow(2, dayNumber / numberOfDaysToDouble)
+}
+
+function inverseDoubling(cutoff, value, numberOfDaysToDouble) {
+    const dayNumber = numberOfDaysToDouble * Math.log2(value / cutoff);
+    return dayNumber
 }

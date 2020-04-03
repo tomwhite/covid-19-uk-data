@@ -222,7 +222,6 @@
             .enter()
             .append("path")
             .attr("d", (d, i) => {
-                console.log(d[1])
                 return d3.line()
                     .defined(d => !isNaN(d.dailyCases))
                     .x(d => xScale(d.date) + getCellOffset(d, i).x)

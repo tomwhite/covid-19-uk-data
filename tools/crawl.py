@@ -98,7 +98,7 @@ def crawl_pdf(date, country):
         dt = dateparser.parse(date, date_formats=['%Y-%m-%d'], locales=["en-GB"])
         ym = dt.strftime('%Y-%m')
         dmy = dt.strftime('%d.%m.%y')
-        pdf_url = "https://www.publichealth.hscni.net/sites/default/files/{}/COVID-19 Survellance Bulletin {}.pdf".format(ym, dmy)
+        pdf_url = "https://www.publichealth.hscni.net/sites/default/files/{}/COVID-19 Surveillance Bulletin {}.pdf".format(ym, dmy)
         local_pdf_file = "data/raw/Daily_bulletin_DoH_{}.pdf".format(date)
 
         if not os.path.exists(local_pdf_file):

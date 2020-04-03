@@ -1,0 +1,5 @@
+{
+    "title": "Coronavirus (COVID-19) UK Historical Data",
+    "description_html": "<div style='border: 2px solid red; padding: 1em'>Consult <a href='https://github.com/tomwhite/covid-19-uk-data/blob/master/README.md'>the README</a> for details about how this data was compiled. Also review <a href='https://link.medium.com/fOScH1HUN4'>Ten Considerations Before You Create Another Chart About COVID-19</a>.</div>",
+    "about_url": "https://github.com/tomwhite/covid-19-uk-data"
+}

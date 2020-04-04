@@ -27,19 +27,19 @@ from parsers import (
 from util import format_country, normalize_int, normalize_whitespace
 
 
-def crawl(date, dataset):
+def crawl(date, dataset, check_only=False):
     if dataset.lower() == "wales":
-        crawl_html(date, "Wales")
+        return crawl_html(date, "Wales", check_only)
     elif dataset.lower() == "scotland":
-        crawl_html(date, "Scotland")
+        return crawl_html(date, "Scotland", check_only)
     elif dataset.lower() in ("ni", "northern ireland"):
-        crawl_pdf(date, "Northern Ireland")
+        return crawl_pdf(date, "Northern Ireland", check_only)
     elif dataset.lower() == "uk":
-        crawl_html(date, "UK")
+        return crawl_html(date, "UK", check_only)
     elif dataset.lower() == "england":
-        crawl_arcgis(date, "England")
+        return crawl_arcgis(date, "England", check_only)
     elif dataset.lower() == "uk-daily-indicators":
-        crawl_arcgis(date, "UK")
+        return crawl_arcgis(date, "UK", check_only)
 
 
 def get_html_url(date, country):
@@ -54,7 +54,7 @@ def get_html_url(date, country):
         count = (dateparser.parse(date) - dateparser.parse("2020-03-08")).days
         return "https://www.health-ni.gov.uk/news/latest-update-coronavirus-covid-19-{}".format(count)
 
-def crawl_html(date, country):
+def crawl_html(date, country, check_only):
     html_url = get_html_url(date, country)
     local_html_file = "data/raw/coronavirus-covid-19-number-of-cases-in-{}-{}.html".format(
         format_country(country), date
@@ -64,6 +64,8 @@ def crawl_html(date, country):
     try:
         with open(local_html_file) as f:
             html = f.read()
+        if check_only:
+            return False
     except FileNotFoundError:
         r = requests.get(html_url)
         html = r.text
@@ -72,11 +74,18 @@ def crawl_html(date, country):
     results = parse_totals(country, html)
 
     if results is None:
+        if check_only:
+            return True
         sys.stderr.write("Can't find numbers. Perhaps the page format has changed?\n")
         sys.exit(1)
     elif results["Date"] != date:
+        if check_only:
+            return False
         sys.stderr.write("Page is dated {}, but want {}\n".format(results["Date"], date))
         sys.exit(1)
+
+    if check_only:
+        return True
 
     daily_areas = parse_daily_areas(date, country, html)
 
@@ -93,18 +102,35 @@ def crawl_html(date, country):
             f.write(html)
 
 
-def crawl_pdf(date, country):
+def crawl_pdf(date, country, check_only):
     if country == "Northern Ireland":
+
         dt = dateparser.parse(date, date_formats=['%Y-%m-%d'], locales=["en-GB"])
         ym = dt.strftime('%Y-%m')
         dmy = dt.strftime('%d.%m.%y')
+        # the top-level page containing links to PDFs
+        html_url = "https://www.publichealth.hscni.net/publications/covid-19-surveillance-reports"
+        # the PDF itself
         pdf_url = "https://www.publichealth.hscni.net/sites/default/files/{}/COVID-19 Surveillance Bulletin {}.pdf".format(ym, dmy)
         local_pdf_file = "data/raw/Daily_bulletin_DoH_{}.pdf".format(date)
 
         if not os.path.exists(local_pdf_file):
+            r = requests.get(html_url)
+            if "{}.pdf".format(dmy) not in r.text:
+                if check_only:
+                    return False
+                sys.stderr.write("Page is dated ?, but want {}\n".format(date))
+                sys.exit(1)
+
+            if check_only:
+                return True
+
             r = requests.get(pdf_url)
             with open(local_pdf_file, "wb") as f:
                 f.write(r.content)
+
+        if check_only:
+            return False
 
         text = get_text_from_pdf(local_pdf_file)
         results = parse_totals_pdf_text(country, text)
@@ -126,9 +152,7 @@ def crawl_pdf(date, country):
             save_daily_areas_to_sqlite(date, country, daily_areas)
 
 
-
-
-def download_arcgis_item(date, item_id, local_data_file):
+def download_arcgis_item(date, item_id, local_data_file, check_only):
     json_url = "https://www.arcgis.com/sharing/rest/content/items/{}?f=json".format(item_id)
     data_url = "https://www.arcgis.com/sharing/rest/content/items/{}/data".format(item_id)
     if not os.path.exists(local_data_file):
@@ -139,19 +163,28 @@ def download_arcgis_item(date, item_id, local_data_file):
         updated_date = datetime.datetime.fromtimestamp(unixtimestamp).strftime('%Y-%m-%d')
 
         if updated_date != date:
+            if check_only:
+                return False
             sys.stderr.write("Page is dated {}, but want {}\n".format(updated_date, date))
             sys.exit(1)
+
+        if check_only:
+            return True
 
         r = requests.get(data_url)
 
         with open(local_data_file, "wb") as f:
             f.write(r.content)
+    if check_only:
+        return False
 
-def crawl_arcgis(date, country):
+def crawl_arcgis(date, country, check_only):
     if country == "UK":
         item_id = "bc8ee90225644ef7a6f4dd1b13ea1d67"
         local_data_file = "data/raw/DailyIndicators-{}.xslx".format(date)
-        download_arcgis_item(date, item_id, local_data_file)
+        ret = download_arcgis_item(date, item_id, local_data_file, check_only)
+        if check_only:
+            return ret
 
         df = pd.read_excel(local_data_file)
         print(df)
@@ -175,7 +208,9 @@ def crawl_arcgis(date, country):
     elif country == "England":
         item_id = "b684319181f94875a6879bbc833ca3a6"
         local_data_file = "data/raw/CountyUAs_cases_table-{}.csv".format(date)
-        download_arcgis_item(date, item_id, local_data_file)
+        ret = download_arcgis_item(date, item_id, local_data_file, check_only)
+        if check_only:
+            return ret
 
         df = pd.read_csv(local_data_file)
         df["Date"] = date
@@ -191,6 +226,23 @@ def crawl_arcgis(date, country):
 
 if __name__ == "__main__":
     # TODO: default to today if no date passed in
-    date = sys.argv[1]
-    dataset = sys.argv[2]
-    crawl(date, dataset)
+    if len(sys.argv) == 1: # check for updates
+        now = datetime.datetime.now()
+        if now.hour < 14:
+            print("There are no updates before 14:00")
+            sys.exit(0)
+        date = now.strftime('%Y-%m-%d')
+        datasets = ["Wales", "Scotland", "NI", "UK", "UK-daily-indicators", "England"]
+        any_updated = False
+        for dataset in datasets:
+            updated = crawl(date, dataset, check_only=True)
+            any_updated = any_updated or updated
+            if updated:
+                print("Update available for {} {}!".format(date, dataset))
+            else:
+                print("No update available for {} {}".format(date, dataset))
+        sys.exit(1 if any_updated else 0) # non zero if any update for watch(1)
+    else:
+        date = sys.argv[1]
+        dataset = sys.argv[2]
+        crawl(date, dataset)

@@ -257,6 +257,7 @@ def parse_daily_areas_pdf(date, country, local_pdf_file):
                         if table_row[0].lower() == "total":
                             continue
                         area = normalize_whitespace(titlecase(table_row[0]))
+                        area = area.replace("Ards and North Down", "North Down and Ards")
                         area_code = lookup_local_government_district_code(area)
                         cases = normalize_int(table_row[1])
                         output_row = [date, country, area_code, area, cases]

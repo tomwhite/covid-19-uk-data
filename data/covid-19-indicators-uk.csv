@@ -680,6 +680,9 @@ Date,Country,Indicator,Value
 2020-04-05,Northern Ireland,ConfirmedCases,1089
 2020-04-05,Northern Ireland,Deaths,63
 2020-04-05,Northern Ireland,Tests,8486
+2020-04-05,Scotland,ConfirmedCases,3706
+2020-04-05,Scotland,Deaths,220
+2020-04-05,Scotland,Tests,23143
 2020-04-05,UK,ConfirmedCases,47806
 2020-04-05,UK,Deaths,4932
 2020-04-05,UK,Tests,195524

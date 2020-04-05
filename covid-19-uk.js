@@ -199,14 +199,14 @@ function drawChart(indicator, cutoff, daily) {
             svg.append("text")
                 .attr("x", margin.left)
                 .attr("y", 24)
-                .text(`UK COVID-19 daily ${indicatorLower} (7 day rolling average), by number of days since ${cutoff}th ${indicatorLowerSingular}`)
+                .text(`UK COVID-19 daily ${indicatorLower} (7 day rolling average), by number of days since ${ordinalSuffix(cutoff)} ${indicatorLowerSingular}`)
                 .attr("font-family", "sans-serif")
                 .attr("font-size", "16px");
         } else {
             svg.append("text")
                 .attr("x", margin.left)
                 .attr("y", 24)
-                .text(`UK COVID-19 cumulative ${indicatorLower}, by number of days since ${cutoff}th ${indicatorLowerSingular}`)
+                .text(`UK COVID-19 cumulative ${indicatorLower}, by number of days since ${ordinalSuffix(cutoff)} ${indicatorLowerSingular}`)
                 .attr("font-family", "sans-serif")
                 .attr("font-size", "16px");
         }
@@ -281,4 +281,19 @@ function doubling(cutoff, dayNumber, numberOfDaysToDouble) {
 function inverseDoubling(cutoff, value, numberOfDaysToDouble) {
     const dayNumber = numberOfDaysToDouble * Math.log2(value / cutoff);
     return dayNumber
+}
+
+function ordinalSuffix(i) {
+    var j = i % 10,
+        k = i % 100;
+    if (j == 1 && k != 11) {
+        return i + "st";
+    }
+    if (j == 2 && k != 12) {
+        return i + "nd";
+    }
+    if (j == 3 && k != 13) {
+        return i + "rd";
+    }
+    return i + "th";
 }

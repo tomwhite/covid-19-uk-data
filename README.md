@@ -171,6 +171,11 @@ DATE=$(date +'%Y-%m-%d')
 git add data/; git commit -am "Update for $DATE for Wales"
 ```
 
+Updates are not always made at a consistent time of day, so the following command can be used to check for updates every 10 minutes (after 14:00, which is the earliest any updates are made). The `-b` option makes it beep if there is a new update.
+```bash
+watch -n 600 -b ./tools/crawl.py
+```
+
 Check data consistency
 ```bash
 ./tools/check_indicators.py

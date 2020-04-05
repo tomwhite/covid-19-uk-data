@@ -3,6 +3,7 @@
 from bs4 import BeautifulSoup
 import dateparser
 import datetime
+from enum import Enum
 import json
 import math
 import os
@@ -26,6 +27,10 @@ from parsers import (
 )
 from util import format_country, normalize_int, normalize_whitespace
 
+class DatasetUpdate(Enum):
+    ALREADY_UPDATED = 1
+    UPDATE_AVAILABLE = 2
+    UPDATE_NOT_AVAILABLE = 3
 
 def crawl(date, dataset, check_only=False):
     if dataset.lower() == "wales":
@@ -65,7 +70,7 @@ def crawl_html(date, country, check_only):
         with open(local_html_file) as f:
             html = f.read()
         if check_only:
-            return False
+            return DatasetUpdate.ALREADY_UPDATED
     except FileNotFoundError:
         r = requests.get(html_url)
         html = r.text
@@ -75,17 +80,17 @@ def crawl_html(date, country, check_only):
 
     if results is None:
         if check_only:
-            return True
+            return DatasetUpdate.UPDATE_AVAILABLE
         sys.stderr.write("Can't find numbers. Perhaps the page format has changed?\n")
         sys.exit(1)
     elif results["Date"] != date:
         if check_only:
-            return False
+            return DatasetUpdate.UPDATE_NOT_AVAILABLE
         sys.stderr.write("Page is dated {}, but want {}\n".format(results["Date"], date))
         sys.exit(1)
 
     if check_only:
-        return True
+        return DatasetUpdate.UPDATE_AVAILABLE
 
     daily_areas = parse_daily_areas(date, country, html)
 
@@ -118,19 +123,19 @@ def crawl_pdf(date, country, check_only):
             r = requests.get(html_url)
             if "{}.pdf".format(dmy) not in r.text:
                 if check_only:
-                    return False
+                    return DatasetUpdate.UPDATE_NOT_AVAILABLE
                 sys.stderr.write("Page is dated ?, but want {}\n".format(date))
                 sys.exit(1)
 
             if check_only:
-                return True
+                return DatasetUpdate.UPDATE_AVAILABLE
 
             r = requests.get(pdf_url)
             with open(local_pdf_file, "wb") as f:
                 f.write(r.content)
 
         if check_only:
-            return False
+            return DatasetUpdate.ALREADY_UPDATED
 
         text = get_text_from_pdf(local_pdf_file)
         results = parse_totals_pdf_text(country, text)
@@ -164,19 +169,19 @@ def download_arcgis_item(date, item_id, local_data_file, check_only):
 
         if updated_date != date:
             if check_only:
-                return False
+                return DatasetUpdate.UPDATE_NOT_AVAILABLE
             sys.stderr.write("Page is dated {}, but want {}\n".format(updated_date, date))
             sys.exit(1)
 
         if check_only:
-            return True
+            return DatasetUpdate.UPDATE_AVAILABLE
 
         r = requests.get(data_url)
 
         with open(local_data_file, "wb") as f:
             f.write(r.content)
     if check_only:
-        return False
+        return DatasetUpdate.ALREADY_UPDATED
 
 def crawl_arcgis(date, country, check_only):
     if country == "UK":
@@ -233,15 +238,17 @@ if __name__ == "__main__":
             sys.exit(0)
         date = now.strftime('%Y-%m-%d')
         datasets = ["Wales", "Scotland", "NI", "UK", "UK-daily-indicators", "England"]
-        any_updated = False
+        new_updates_available = False
         for dataset in datasets:
             updated = crawl(date, dataset, check_only=True)
-            any_updated = any_updated or updated
-            if updated:
+            if updated is DatasetUpdate.UPDATE_AVAILABLE:
                 print("Update available for {} {}!".format(date, dataset))
-            else:
+                new_updates_available = True
+            elif updated is DatasetUpdate.UPDATE_NOT_AVAILABLE:
                 print("No update available for {} {}".format(date, dataset))
-        sys.exit(1 if any_updated else 0) # non zero if any update for watch(1)
+            elif updated is DatasetUpdate.ALREADY_UPDATED:
+                print("Already updated for {} {}!".format(date, dataset))
+        sys.exit(1 if new_updates_available else 0) # non zero if any new updates for watch(1)
     else:
         date = sys.argv[1]
         dataset = sys.argv[2]

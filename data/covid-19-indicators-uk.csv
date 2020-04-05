@@ -618,7 +618,7 @@ Date,Country,Indicator,Value
 2020-03-31,Northern Ireland,Deaths,28
 2020-03-31,Northern Ireland,Tests,5885
 2020-03-31,Scotland,ConfirmedCases,1993
-2020-03-31,Scotland,Deaths,60
+2020-03-31,Scotland,Deaths,69
 2020-03-31,Scotland,Tests,15895
 2020-03-31,UK,ConfirmedCases,25150
 2020-03-31,UK,Deaths,1789
@@ -631,7 +631,7 @@ Date,Country,Indicator,Value
 2020-04-01,Northern Ireland,Deaths,30
 2020-04-01,Northern Ireland,Tests,6450
 2020-04-01,Scotland,ConfirmedCases,2310
-2020-04-01,Scotland,Deaths,76
+2020-04-01,Scotland,Deaths,97
 2020-04-01,Scotland,Tests,17007
 2020-04-01,UK,ConfirmedCases,29474
 2020-04-01,UK,Deaths,2352

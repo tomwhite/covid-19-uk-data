@@ -26,6 +26,7 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-data.glitch.
 
 ## News
 
+* 2 April 2020. Scotland [reported a more timely process for counting deaths](https://www.gov.scot/news/new-process-for-reporting-covid-19-deaths/).
 * 29 March 2020. There's a [new spreadsheet](https://fingertips.phe.org.uk/documents/Historic%20COVID-19%20Dashboard%20Data.xlsx) that includes historical data for the dashboard. This includes cases (by country, English UTLA, English NHS region), deaths (by country), and recovered patients (although this isn't being updated at the time of writing).
 * 27 March 2020. UK daily indicators now include number of deaths for UK, England, Scotland, Wales, and Northern Ireland.
 * 26 March 2020. Northern Ireland's Public Health Agency (PHA) started publishing confirmed cases by Local Government District (LGD) on weekdays.
@@ -171,7 +172,7 @@ DATE=$(date +'%Y-%m-%d')
 git add data/; git commit -am "Update for $DATE for Wales"
 ```
 
-Updates are not always made at a consistent time of day, so the following command can be used to check for updates every 10 minutes (after 14:00, which is the earliest any updates are made). The `-b` option makes it beep if there is a new update.
+Updates are not always made at a consistent time of day, so the following command can be run continuously in a terminal to check for updates every 10 minutes. The `-b` option makes it beep if there is a new update.
 ```bash
 watch -n 600 -b ./tools/crawl.py
 ```

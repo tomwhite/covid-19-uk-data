@@ -223,6 +223,8 @@ def crawl_arcgis(date, country, check_only):
         df = df.rename(columns={"GSS_CD": "AreaCode", "GSS_NM": "Area"})
         df = df[["Date", "Country", "AreaCode", "Area", "TotalCases"]]
         daily_areas = df.to_dict("split")["data"]
+        for row in daily_areas:
+            row[4] = normalize_int(normalize_whitespace(row[4]))
         daily_areas = [["Date", "Country", "AreaCode", "Area", "TotalCases"]] + daily_areas
 
         save_daily_areas(date, country, daily_areas)

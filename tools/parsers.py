@@ -234,6 +234,8 @@ def parse_daily_areas(date, country, html):
                 .replace("County Borough Council", "")
                 .replace("County Council", "")
                 .replace("Council", "")
+                .replace("Cardiff & Vale", "Cardiff and Vale")
+                .replace("Cwm Taf Morgannwg", "Cwm Taf")
                 .strip()
             )
             if is_blank(area):

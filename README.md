@@ -206,3 +206,12 @@ rm data/covid-19-uk.db
 csvs-to-sqlite --replace-tables -t indicators -pk Date -pk Country -pk Indicator data/covid-19-indicators-uk.csv data/covid-19-uk.db
 csvs-to-sqlite --replace-tables -t cases -pk Date -pk Country -pk AreaCode -pk Area data/covid-19-cases-uk.csv data/covid-19-uk.db
 ```
+
+### Comparison with PHE data
+
+The following will compare the data in this repository, with the data published by PHE on their [dashboard](https://www.arcgis.com/apps/opsdashboard/index.html#/f94c3c90da5b4e9f9a0b19484dd4bb14):
+
+```bash
+curl -L https://fingertips.phe.org.uk/documents/Historic%20COVID-19%20Dashboard%20Data.xlsx -o "data/raw/Historic COVID-19 Dashboard Data.xlsx"
+tools/compare_phe_historical.py
+```

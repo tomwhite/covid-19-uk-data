@@ -1,6 +1,6 @@
 # COVID-19 UK Historical Data
 
-Data on testing and case numbers for coronavirus (COVID-19) in the UK is published by the government, but it is fragmented and not always provided in consistent or machine-friendly formats. Also, in many cases only the latest numbers are available so it's not possible to look at changes over time.
+Data on numbers of tests, confirmed cases, and deaths for coronavirus (COVID-19) in the UK is published by the government, but it is fragmented and not always provided in consistent or machine-friendly formats. Also, in many cases only the latest numbers are available so it's not possible to look at changes over time.
 
 This site collates the historical data and provides it in an easily consumable format (CSV), in both wide and [tidy data](https://en.wikipedia.org/wiki/Tidy_data) forms.
 
@@ -11,7 +11,7 @@ Ideally the data publishers will start doing this so this site becomes redundant
 The following CSV files are available:
 
 * [data/covid-19-cases-uk.csv](data/covid-19-cases-uk.csv): daily counts of confirmed cases for (upper tier) local authorities in England, health boards in Scotland and Wales, and local government district for Northern Ireland.
-    * Note that prior to 18 March 2020 Wales data was broken down by local authority, not heath board, and prior to 27 March 2020 there were breakdowns by area for Northern Ireland.
+    * Note that prior to 18 March 2020 Wales data was broken down by local authority, not heath board, and prior to 27 March 2020 there were no breakdowns by area for Northern Ireland.
 * [data/covid-19-totals-uk.csv](data/covid-19-totals-uk.csv): daily counts of tests, confirmed cases, deaths for the whole of the UK
 * [data/covid-19-totals-england.csv](data/covid-19-totals-england.csv): daily counts of tests, confirmed cases, deaths for England
 * [data/covid-19-totals-northern-ireland.csv](data/covid-19-totals-northern-ireland.csv): daily counts of tests, confirmed cases, deaths for Northern Ireland
@@ -20,12 +20,18 @@ The following CSV files are available:
 * [data/covid-19-indicators-uk.csv](data/covid-19-indicators-uk.csv): daily counts of tests, confirmed cases, deaths for the whole of the UK and individual countries in the UK (England, Scotland, Wales, Northern Ireland). This is a tidy-data version of _covid-19-totals-*.csv_ combined into one file.
 * _data/daily/*.csv_: daily counts, with a separate file for each date and country.
 
+Interpreting the numbers (more information on this [DHSC/PHE page](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases-and-deaths), and the [PHE dashboard notes](https://fingertips.phe.org.uk/documents/PHE%20COVID-19%20Dashboard%20Metadata.pdf))
+* "Tests" are the number of people tested, not the number of samples tested.
+* "Confirmed cases" are the number of people with a positive test.
+* "Deaths" are hospital deaths, so they don't include deaths of people with COVID-19 who died at home for example.
+
 You can use these files without reading the rest of this document.
 
-There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65tzkjlxkq-ew.a.run.app/) hosting the data. This is useful for running simple SQL on the data, or exporting in JSON format. Note that there may be a lag in publishing the data to Datasette.
+There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65tzkjlxkq-ew.a.run.app/) hosting the data. This is useful for running simple SQL on the data, or exporting in JSON format.
 
 ## News
 
+* 6 April 2020. Wales published a new interactive [dashboard](https://public.tableau.com/profile/public.health.wales.health.protection#!/vizhome/RapidCOVID-19virology-Public/Headlinesummary), which gives data for confirmed cases, and testing episodes, broken down by local authority and health board. There is historical data too. Unfortunately there is currently no way of exporting the raw data from the dashboard.
 * 2 April 2020. Scotland [reported a more timely process for counting deaths](https://www.gov.scot/news/new-process-for-reporting-covid-19-deaths/).
 * 29 March 2020. There's a [new spreadsheet](https://fingertips.phe.org.uk/documents/Historic%20COVID-19%20Dashboard%20Data.xlsx) that includes historical data for the dashboard. This includes cases (by country, English UTLA, English NHS region), deaths (by country), and recovered patients (although this isn't being updated at the time of writing).
 * 27 March 2020. UK daily indicators now include number of deaths for UK, England, Scotland, Wales, and Northern Ireland.
@@ -48,10 +54,10 @@ Department of Health and Social Care, and Public Health England
 3. Publish deaths by hospital every day.
 
 Public Health Wales
-1. Publish the number of tests being performed every day.
+1. ~~Publish the number of tests being performed every day.~~ _The new [dashboard](https://public.tableau.com/profile/public.health.wales.health.protection#!/vizhome/RapidCOVID-19virology-Public/Headlinesummary) includes number of new testing episodes every day._
 2. Publish daily totals (tests, confirmed cases, deaths) in machine readable form (CSV).
 3. Publish confirmed cases by local authority/health board in machine readable form (CSV).
-4. Publish historical data, not just the current day's data.
+4. ~~Publish historical data, not just the current day's data.~~ _The new [dashboard](https://public.tableau.com/profile/public.health.wales.health.protection#!/vizhome/RapidCOVID-19virology-Public/Headlinesummary) includes historical data._
 5. Publish deaths by hospital every day.
 
 Public Health Scotland

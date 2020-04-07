@@ -22,7 +22,7 @@ The following CSV files are available:
 
 You can use these files without reading the rest of this document.
 
-There is an *experimental* [Datasette instance](https://covid-19-uk-data.glitch.me/) hosting the data. This is useful for running simple SQL on the data, or exporting in JSON format. Note that there may be a lag in publishing the data to Datasette.
+There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65tzkjlxkq-ew.a.run.app/) hosting the data. This is useful for running simple SQL on the data, or exporting in JSON format. Note that there may be a lag in publishing the data to Datasette.
 
 ## News
 

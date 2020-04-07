@@ -126,8 +126,9 @@ Note that the arcgis.com links are direct links to the data.
 * Welsh Health Boards: [Local Health Boards (April 2019) Names and Codes in Wales](https://geoportal.statistics.gov.uk/datasets/local-health-boards-april-2019-names-and-codes-in-wales)
 * Northern Irish Local Government Districts: [Local Government Districts (December 2016) Names and Codes in Northern Ireland](https://data.gov.uk/dataset/923eca81-ca9c-44a9-921e-031d28fafd1e/local-government-districts-december-2016-names-and-codes-in-northern-ireland)
 
-## Related projects
+## Related projects/datasets
 
+* NHS England [daily deaths by trust and region](https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-daily-deaths/)
 * Ian Watt's [COVID-19 Scotland dataset](https://github.com/watty62/Scot_covid19)
 * Emma Doughty's [UK COVID-19 data](https://github.com/emmadoughty/Daily_COVID-19)
 

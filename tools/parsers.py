@@ -219,6 +219,9 @@ def parse_daily_areas(date, country, html):
             output_rows.append(output_row)
         return output_rows
     elif country == "Wales":
+        if date >= "2020-04-08":
+            # daily areas no longer published on the HTML page (now published on the dashboard)
+            return None
         table = soup.find_all("table")[0]
         for table_row in table.findAll("tr"):
             columns = [

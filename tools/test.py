@@ -121,6 +121,9 @@ def test_parse_daily_areas_wales():
         if date <= "2020-03-18":
             # older pages cannot be parsed with current parser
             continue
+        if date >= "2020-04-08":
+            # daily areas no longer published on the HTML page
+            continue
         with open(file) as f:
             html = f.read()
             result = parse_daily_areas(date, "Wales", html)

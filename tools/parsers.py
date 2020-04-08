@@ -73,7 +73,7 @@ def parse_totals(country, html):
         return result
     elif country == "Scotland":
         pattern_dict = {
-            "Date": (r"Scottish test numbers: (?P<Date>\d+\s\w+\s\d{4})", date_value_parser_fn),
+            "Date": (r"Scottish (COVID-19 )?test numbers: (?P<Date>\d+\s\w+\s\d{4})", date_value_parser_fn),
             "Tests": (r"total of (?P<Tests>.+?) (Scottish tests have concluded|people in Scotland have been tested)", int_value_parser_fn),
             "ConfirmedCases": (r"(?P<ConfirmedCases>[\d,]+?) tests were (confirmed)?positive", int_value_parser_fn),
             "Deaths": (r"(?P<Deaths>\w+) patients?.+?have died", int_value_parser_fn),
@@ -198,7 +198,7 @@ def parse_daily_areas(date, country, html):
     soup = BeautifulSoup(html, features="html.parser")
     output_rows = [["Date", "Country", "AreaCode", "Area", "TotalCases"]]
     if country == "Scotland":
-        table = soup.find_all("table")[-1]
+        table = soup.find_all("table")[0]
         for table_row in table.findAll("tr"):
             columns = [
                 normalize_whitespace(col.text) for col in table_row.findAll("td")
@@ -210,7 +210,11 @@ def parse_daily_areas(date, country, html):
             area = columns[0].replace("Ayrshire & Arran", "Ayrshire and Arran")
             area = columns[0].replace("Eileanan Siar (Western Isles)", "Western Isles")
             area_code = lookup_health_board_code(area)
-            cases = columns[1].replace("*", "")
+            cases = columns[1]
+            if cases == "*": # means 5 or fewer cases
+                cases = "NaN"
+            else:
+                cases = cases.replace("*", "")
             output_row = [date, country, area_code, area, cases]
             output_rows.append(output_row)
         return output_rows
@@ -284,5 +288,5 @@ def save_daily_areas_to_sqlite(date, country, rows):
         c = conn.cursor()
         for row in rows[1:]:
             print(row)
-            c.execute(f"INSERT OR REPLACE INTO cases VALUES ('{row[0]}', '{row[1]}', '{row[2]}', '{row[3]}', {row[4]})")
+            c.execute(f"INSERT OR REPLACE INTO cases VALUES ('{row[0]}', '{row[1]}', '{row[2]}', '{row[3]}', '{row[4]}')")
 

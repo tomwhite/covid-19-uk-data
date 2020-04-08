@@ -31,6 +31,7 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 
 ## News
 
+* 8 April 2020. Scotland started publishing numbers for people in hospital and intensive care, by health board. They also started reporting numbers that were less 5 as "*".
 * 6 April 2020. Wales published a new interactive [dashboard](https://public.tableau.com/profile/public.health.wales.health.protection#!/vizhome/RapidCOVID-19virology-Public/Headlinesummary), which gives data for confirmed cases, and testing episodes, broken down by local authority and health board. There is historical data too. Unfortunately there is currently no way of exporting the raw data from the dashboard.
 * 2 April 2020. Scotland [reported a more timely process for counting deaths](https://www.gov.scot/news/new-process-for-reporting-covid-19-deaths/).
 * 29 March 2020. There's a [new spreadsheet](https://fingertips.phe.org.uk/documents/Historic%20COVID-19%20Dashboard%20Data.xlsx) that includes historical data for the dashboard. This includes cases (by country, English UTLA, English NHS region), deaths (by country), and recovered patients (although this isn't being updated at the time of writing).

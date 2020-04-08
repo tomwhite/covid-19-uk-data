@@ -51,7 +51,7 @@ def get_html_url(date, country):
     if country == "UK":
         return "https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public"
     elif country == "Scotland":
-        return "https://www.gov.scot/coronavirus-covid-19/"
+        return "https://www.gov.scot/publications/coronavirus-covid-19-tests-and-cases-in-scotland/"
     elif country == "Wales":
         return "https://covid19-phwstatement.nhs.wales/"
     elif country == "Northern Ireland":

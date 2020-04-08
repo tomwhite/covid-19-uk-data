@@ -2,7 +2,7 @@ beautifulsoup4
 csvs-to-sqlite
 dateparser
 pandas
-pdfplumber
+pdfplumber==0.5.16
 pytest
 requests
 titlecase

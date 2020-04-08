@@ -13,6 +13,7 @@ from util import (
     normalize_int,
     normalize_whitespace,
     lookup_health_board_code,
+    lookup_local_authority_code,
     lookup_local_government_district_code,
 )
 
@@ -274,7 +275,95 @@ def parse_daily_areas_pdf(date, country, local_pdf_file):
                     return output_rows
             except IndexError:
                 pass # no table on page
+    elif country == "Wales":
+        pdf = pdfplumber.open(local_pdf_file)
+        for page in pdf.pages:
+            try:
+                table = page.extract_table(table_settings = {
+                    # use text alignment since the table doesn't have lines
+                    "vertical_strategy": "text", 
+                    "horizontal_strategy": "text"
+                })
+                found_start = False
+                output_rows = [["Date", "Country", "AreaCode", "Area", "TotalCases"]]
+                for table_row in table:
+                    if table_row[0].startswith("Aneurin"):
+                        found_start = True
+                    if found_start:
+                        area = (normalize_whitespace(table_row[2])
+                            .replace("Anglesey", "Isle of Anglesey")
+                            .replace("ﬀ", "ff") # fix ligatures
+                            .replace("ﬁ", "fi")
+                        )
+                        if area.startswith("Wales total"):
+                            continue
+                        area_code = lookup_local_authority_code(area)
+                        cases = normalize_int(table_row[4])
+                        output_row = [date, country, area_code, area, cases]
+                        output_rows.append(output_row)
+                    if table_row[2] is not None and normalize_whitespace(table_row[2]) == 'Resident outside Wales':
+                        break
+                return convert_wales_la_to_hb(date, country, output_rows)
+            except IndexError:
+                pass # no table on page
     return None
+
+
+def convert_wales_la_to_hb(date, country, rows):
+    output_rows = [["Date", "Country", "AreaCode", "Area", "TotalCases"]]
+    def cases_for_one_la(la):
+        return [row[4] for row in rows if row[3] == la][0]
+    def cases_for(las):
+        return sum([cases_for_one_la(la) for la in las])
+
+    hb_to_las = {
+        "Aneurin Bevan": [
+            "Blaenau Gwent",
+            "Caerphilly",
+            "Monmouthshire",
+            "Newport",
+            "Torfaen"
+        ],
+        "Betsi Cadwaladr": [
+            "Conwy",
+            "Denbighshire",
+            "Flintshire",
+            "Gwynedd",
+            "Isle of Anglesey",
+            "Wrexham"
+        ],
+        "Cardiff and Vale": [
+            "Cardiff",
+            "Vale of Glamorgan"
+        ],
+        "Cwm Taf": [
+            "Bridgend",
+            "Merthyr Tydfil",
+            "Rhondda Cynon Taf"
+        ],
+        "Hywel Dda": [
+            "Carmarthenshire",
+            "Ceredigion",
+            "Pembrokeshire"
+        ],
+        "Powys": [
+            "Powys"
+        ],
+        "Swansea Bay": [
+            "Neath Port Talbot",
+            "Swansea"
+        ]
+    }
+
+    for (hb, las) in hb_to_las.items():
+        output_rows.append([date, country, lookup_health_board_code(hb), hb, cases_for(las)])
+
+    # append unknown/outside Wales etc
+    for row in rows:
+        if row[2] == "":
+            output_rows.append(row)
+
+    return output_rows
 
 
 def save_daily_areas(date, country, rows):

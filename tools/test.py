@@ -136,6 +136,20 @@ def test_parse_daily_areas_wales():
                 assert len(row[3]) > 0
                 assert int(row[4]) >= 0
 
+def test_parse_daily_areas_wales_pdf():
+    for file in sorted(glob.glob("data/raw/phw/LAs-*.pdf")):
+        m = re.match(r".+(\d{4}-\d{2}-\d{2})\.pdf", file)
+        date = m.group(1)
+        result = parse_daily_areas_pdf(date, "Wales", file)
+        assert len(result) > 1
+        assert result[0] == ['Date', 'Country', 'AreaCode', 'Area', 'TotalCases']
+        for row in result[1:]:
+            assert row[0] == date
+            assert row[1] == "Wales"
+            assert row[2] is not None # Area code can be blank (e.g. 'To be confirmed')
+            assert len(row[3]) > 0
+            assert int(row[4]) >= 0
+
 def test_parse_daily_areas_ni():
     for file in sorted(glob.glob("data/raw/Daily_bulletin_DoH_*.pdf")):
         m = re.match(r".+(\d{4}-\d{2}-\d{2})\.pdf", file)

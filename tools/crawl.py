@@ -35,6 +35,8 @@ class DatasetUpdate(Enum):
 def crawl(date, dataset, check_only=False):
     if dataset.lower() == "wales":
         return crawl_html(date, "Wales", check_only)
+    elif dataset.lower() == "wales-daily-cases":
+        return crawl_pdf(date, "Wales", check_only)
     elif dataset.lower() == "scotland":
         return crawl_html(date, "Scotland", check_only)
     elif dataset.lower() in ("ni", "northern ireland"):
@@ -150,6 +152,22 @@ def crawl_pdf(date, country, check_only):
         print_totals(results)
         #save_indicators(results)
         save_indicators_to_sqlite(results)
+
+        daily_areas = parse_daily_areas_pdf(date, country, local_pdf_file)
+        if daily_areas is not None:
+            save_daily_areas(date, country, daily_areas)
+            save_daily_areas_to_sqlite(date, country, daily_areas)
+
+    elif country == "Wales":
+        local_pdf_file = "data/raw/phw/LAs-{}.pdf".format(date)
+        if not os.path.exists(local_pdf_file):
+            if check_only:
+                return DatasetUpdate.UPDATE_NOT_AVAILABLE
+            sys.stderr.write("Page is dated ?, but want {}\n".format(date))
+            sys.exit(1)
+
+        if check_only:
+            return DatasetUpdate.ALREADY_UPDATED
 
         daily_areas = parse_daily_areas_pdf(date, country, local_pdf_file)
         if daily_areas is not None:

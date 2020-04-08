@@ -5,4 +5,3 @@ venv
 .vscode/
 # UK totals temp HTML files
 data/raw/uk-totals-temp-*.html
-data/raw/phw

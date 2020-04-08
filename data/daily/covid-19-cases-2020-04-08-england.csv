@@ -1,0 +1,150 @@
+Date,Country,AreaCode,Area,TotalCases
+2020-04-08,England,E06000001,Hartlepool,49
+2020-04-08,England,E06000002,Middlesbrough,196
+2020-04-08,England,E06000003,Redcar and Cleveland,119
+2020-04-08,England,E06000004,Stockton-on-Tees,143
+2020-04-08,England,E06000005,Darlington,77
+2020-04-08,England,E06000006,Halton,127
+2020-04-08,England,E06000007,Warrington,182
+2020-04-08,England,E06000008,Blackburn with Darwen,92
+2020-04-08,England,E06000009,Blackpool,94
+2020-04-08,England,E06000010,"Kingston upon Hull, City of",58
+2020-04-08,England,E06000011,East Riding of Yorkshire,123
+2020-04-08,England,E06000012,North East Lincolnshire,50
+2020-04-08,England,E06000013,North Lincolnshire,66
+2020-04-08,England,E06000014,York,87
+2020-04-08,England,E06000015,Derby,300
+2020-04-08,England,E06000016,Leicester,250
+2020-04-08,England,E06000017,Rutland,8
+2020-04-08,England,E06000018,Nottingham,232
+2020-04-08,England,E06000019,"Herefordshire, County of",81
+2020-04-08,England,E06000020,Telford and Wrekin,96
+2020-04-08,England,E06000021,Stoke-on-Trent,130
+2020-04-08,England,E06000022,Bath and North East Somerset,77
+2020-04-08,England,E06000023,"Bristol, City of",234
+2020-04-08,England,E06000024,North Somerset,91
+2020-04-08,England,E06000025,South Gloucestershire,155
+2020-04-08,England,E06000026,Plymouth,110
+2020-04-08,England,E06000027,Torbay,64
+2020-04-08,England,E06000030,Swindon,88
+2020-04-08,England,E06000031,Peterborough,80
+2020-04-08,England,E06000032,Luton,205
+2020-04-08,England,E06000033,Southend-on-Sea,156
+2020-04-08,England,E06000034,Thurrock,134
+2020-04-08,England,E06000035,Medway,232
+2020-04-08,England,E06000036,Bracknell Forest,79
+2020-04-08,England,E06000037,West Berkshire,121
+2020-04-08,England,E06000038,Reading,129
+2020-04-08,England,E06000039,Slough,169
+2020-04-08,England,E06000040,Windsor and Maidenhead,117
+2020-04-08,England,E06000041,Wokingham,129
+2020-04-08,England,E06000042,Milton Keynes,195
+2020-04-08,England,E06000043,Brighton and Hove,153
+2020-04-08,England,E06000044,Portsmouth,130
+2020-04-08,England,E06000045,Southampton,191
+2020-04-08,England,E06000046,Isle of Wight,38
+2020-04-08,England,E06000047,County Durham,410
+2020-04-08,England,E06000049,Cheshire East,226
+2020-04-08,England,E06000050,Cheshire West and Chester,261
+2020-04-08,England,E06000051,Shropshire,174
+2020-04-08,England,E06000052,Cornwall and Isles of Scilly,224
+2020-04-08,England,E06000054,Wiltshire,180
+2020-04-08,England,E06000055,Bedford,135
+2020-04-08,England,E06000056,Central Bedfordshire,173
+2020-04-08,England,E06000057,Northumberland,272
+2020-04-08,England,E06000058,"Bournemouth, Christchurch and Poole",127
+2020-04-08,England,E06000059,Dorset,136
+2020-04-08,England,E08000001,Bolton,204
+2020-04-08,England,E08000002,Bury,166
+2020-04-08,England,E08000003,Manchester,395
+2020-04-08,England,E08000004,Oldham,248
+2020-04-08,England,E08000005,Rochdale,195
+2020-04-08,England,E08000006,Salford,273
+2020-04-08,England,E08000007,Stockport,298
+2020-04-08,England,E08000008,Tameside,191
+2020-04-08,England,E08000009,Trafford,257
+2020-04-08,England,E08000010,Wigan,209
+2020-04-08,England,E08000011,Knowsley,198
+2020-04-08,England,E08000012,Liverpool,587
+2020-04-08,England,E08000013,St. Helens,269
+2020-04-08,England,E08000014,Sefton,306
+2020-04-08,England,E08000015,Wirral,288
+2020-04-08,England,E08000016,Barnsley,238
+2020-04-08,England,E08000017,Doncaster,168
+2020-04-08,England,E08000018,Rotherham,240
+2020-04-08,England,E08000019,Sheffield,940
+2020-04-08,England,E08000021,Newcastle upon Tyne,432
+2020-04-08,England,E08000022,North Tyneside,242
+2020-04-08,England,E08000023,South Tyneside,118
+2020-04-08,England,E08000024,Sunderland,343
+2020-04-08,England,E08000025,Birmingham,1462
+2020-04-08,England,E08000026,Coventry,295
+2020-04-08,England,E08000027,Dudley,341
+2020-04-08,England,E08000028,Sandwell,399
+2020-04-08,England,E08000029,Solihull,259
+2020-04-08,England,E08000030,Walsall,421
+2020-04-08,England,E08000031,Wolverhampton,354
+2020-04-08,England,E08000032,Bradford,258
+2020-04-08,England,E08000033,Calderdale,110
+2020-04-08,England,E08000034,Kirklees,235
+2020-04-08,England,E08000035,Leeds,389
+2020-04-08,England,E08000036,Wakefield,200
+2020-04-08,England,E08000037,Gateshead,230
+2020-04-08,England,E09000002,Barking and Dagenham,249
+2020-04-08,England,E09000003,Barnet,752
+2020-04-08,England,E09000004,Bexley,303
+2020-04-08,England,E09000005,Brent,853
+2020-04-08,England,E09000006,Bromley,583
+2020-04-08,England,E09000007,Camden,343
+2020-04-08,England,E09000008,Croydon,763
+2020-04-08,England,E09000009,Ealing,553
+2020-04-08,England,E09000010,Enfield,392
+2020-04-08,England,E09000011,Greenwich,378
+2020-04-08,England,E09000012,Hackney and City of London,412
+2020-04-08,England,E09000013,Hammersmith and Fulham,295
+2020-04-08,England,E09000014,Haringey,324
+2020-04-08,England,E09000015,Harrow,530
+2020-04-08,England,E09000016,Havering,299
+2020-04-08,England,E09000017,Hillingdon,389
+2020-04-08,England,E09000018,Hounslow,380
+2020-04-08,England,E09000019,Islington,276
+2020-04-08,England,E09000020,Kensington and Chelsea,286
+2020-04-08,England,E09000021,Kingston upon Thames,212
+2020-04-08,England,E09000022,Lambeth,731
+2020-04-08,England,E09000023,Lewisham,554
+2020-04-08,England,E09000024,Merton,386
+2020-04-08,England,E09000025,Newham,608
+2020-04-08,England,E09000026,Redbridge,366
+2020-04-08,England,E09000027,Richmond upon Thames,223
+2020-04-08,England,E09000028,Southwark,755
+2020-04-08,England,E09000029,Sutton,299
+2020-04-08,England,E09000030,Tower Hamlets,406
+2020-04-08,England,E09000031,Waltham Forest,443
+2020-04-08,England,E09000032,Wandsworth,592
+2020-04-08,England,E09000033,Westminster,420
+2020-04-08,England,E10000002,Buckinghamshire,342
+2020-04-08,England,E10000003,Cambridgeshire,278
+2020-04-08,England,E10000006,Cumbria,864
+2020-04-08,England,E10000007,Derbyshire,555
+2020-04-08,England,E10000008,Devon,250
+2020-04-08,England,E10000011,East Sussex,229
+2020-04-08,England,E10000012,Essex,1081
+2020-04-08,England,E10000013,Gloucestershire,402
+2020-04-08,England,E10000014,Hampshire,1241
+2020-04-08,England,E10000015,Hertfordshire,1032
+2020-04-08,England,E10000016,Kent,1033
+2020-04-08,England,E10000017,Lancashire,1026
+2020-04-08,England,E10000018,Leicestershire,386
+2020-04-08,England,E10000019,Lincolnshire,319
+2020-04-08,England,E10000020,Norfolk,386
+2020-04-08,England,E10000021,Northamptonshire,536
+2020-04-08,England,E10000023,North Yorkshire,328
+2020-04-08,England,E10000024,Nottinghamshire,509
+2020-04-08,England,E10000025,Oxfordshire,533
+2020-04-08,England,E10000027,Somerset,135
+2020-04-08,England,E10000028,Staffordshire,673
+2020-04-08,England,E10000029,Suffolk,302
+2020-04-08,England,E10000030,Surrey,1059
+2020-04-08,England,E10000031,Warwickshire,439
+2020-04-08,England,E10000032,West Sussex,320
+2020-04-08,England,E10000034,Worcestershire,439

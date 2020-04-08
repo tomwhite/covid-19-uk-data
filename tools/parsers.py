@@ -287,7 +287,7 @@ def parse_daily_areas_pdf(date, country, local_pdf_file):
                 found_start = False
                 output_rows = [["Date", "Country", "AreaCode", "Area", "TotalCases"]]
                 for table_row in table:
-                    if table_row[0].startswith("Aneurin"):
+                    if table_row[0] is not None and table_row[0].startswith("Aneurin"):
                         found_start = True
                     if found_start:
                         area = (normalize_whitespace(table_row[2])

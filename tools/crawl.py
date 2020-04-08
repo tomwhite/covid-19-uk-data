@@ -257,7 +257,7 @@ if __name__ == "__main__":
             print("There are no updates before 14:00")
             sys.exit(0)
         date = now.strftime('%Y-%m-%d')
-        datasets = ["Wales", "Scotland", "NI", "UK", "UK-daily-indicators", "England"]
+        datasets = ["Wales", "Wales-daily-cases", "Scotland", "NI", "UK", "UK-daily-indicators", "England"]
         new_updates_available = False
         for dataset in datasets:
             updated = crawl(date, dataset, check_only=True)
@@ -267,7 +267,7 @@ if __name__ == "__main__":
             elif updated is DatasetUpdate.UPDATE_NOT_AVAILABLE:
                 print("No update available for {} {}".format(date, dataset))
             elif updated is DatasetUpdate.ALREADY_UPDATED:
-                print("Already updated for {} {}!".format(date, dataset))
+                print("Already updated for {} {}".format(date, dataset))
         sys.exit(1 if new_updates_available else 0) # non zero if any new updates for watch(1)
     else:
         date = sys.argv[1]

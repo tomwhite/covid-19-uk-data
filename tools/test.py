@@ -112,7 +112,7 @@ def test_parse_daily_areas_scotland():
                 assert row[1] == "Scotland"
                 assert len(row[2]) > 0
                 assert len(row[3]) > 0
-                assert int(row[4]) >= 0
+                assert row[4] == "NaN" or int(row[4]) >= 0
 
 def test_parse_daily_areas_wales():
     for file in sorted(glob.glob("data/raw/coronavirus-covid-19-number-of-cases-in-wales-*.html")):

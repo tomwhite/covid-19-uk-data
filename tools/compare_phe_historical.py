@@ -82,6 +82,7 @@ def compare_utla_case_numbers():
     # Data from this repo
     cases_uk = pd.read_csv("data/covid-19-cases-uk.csv")
     cases_uk = cases_uk[cases_uk["Date"] >= "2020-03-06"] # filter out rows with "1 to 4" etc
+    cases_uk = cases_uk[cases_uk["TotalCases"].notnull()] # filter out rows with NaN (meaning <5 for Scotland)
     cases_uk = cases_uk.astype({"TotalCases": "int64"})
     #print(cases_uk)
 

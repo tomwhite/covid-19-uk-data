@@ -166,6 +166,7 @@ The **updates** tool runs **crawl** then **convert_sqlite_to_csvs**, and issues 
 
 ```bash
 ./tools/update.sh Wales
+./tools/update.sh Wales-daily-cases
 ./tools/update.sh Scotland
 ./tools/update.sh NI
 ./tools/update.sh UK
@@ -194,11 +195,11 @@ Check data consistency
 ./tools/check_totals.py
 ```
 
-Update Dataset instance: https://glitch.com/edit/#!/covid-19-uk-data, then click on Tools > Terminal
+Compare with historical PHE data
 ```bash
-curl https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-uk.db -o data/covid-19-uk.db
+curl -L https://fingertips.phe.org.uk/documents/Historic%20COVID-19%20Dashboard%20Data.xlsx -o "data/raw/Historic COVID-19 Dashboard Data.xlsx"
+./tools/compare_phe_historical.py
 ```
-Check: https://covid-19-uk-data.glitch.me/
 
 ### Manual overrides
 

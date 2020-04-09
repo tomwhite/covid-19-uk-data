@@ -110,7 +110,7 @@ def test_parse_daily_areas_scotland():
             for row in result[1:]:
                 assert row[0] == date
                 assert row[1] == "Scotland"
-                assert len(row[2]) > 0
+                assert row[3] == "Golden Jubilee National Hospital" or len(row[2]) > 0
                 assert len(row[3]) > 0
                 assert row[4] == "NaN" or int(row[4]) >= 0
 

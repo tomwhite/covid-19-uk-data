@@ -136,6 +136,8 @@ Note that the arcgis.com links are direct links to the data.
 ## Related projects/datasets
 
 * NHS England [daily deaths by trust and region](https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-daily-deaths/)
+* National Records of Scotland: [Deaths involving coronavirus (COVID-19) in Scotland](https://www.nrscotland.gov.uk/covid19stats)
+* ONS: [Deaths registered weekly in England and Wales, provisional](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/weeklyprovisionalfiguresondeathsregisteredinenglandandwales)
 * Ian Watt's [COVID-19 Scotland dataset](https://github.com/watty62/Scot_covid19)
 * Emma Doughty's [UK COVID-19 data](https://github.com/emmadoughty/Daily_COVID-19)
 

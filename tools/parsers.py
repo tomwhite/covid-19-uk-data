@@ -215,7 +215,7 @@ def parse_daily_areas(date, country, html):
             if cases == "*": # means 5 or fewer cases
                 cases = "NaN"
             else:
-                cases = cases.replace("*", "")
+                cases = cases.replace("*", "").replace(",", "")
             output_row = [date, country, area_code, area, cases]
             output_rows.append(output_row)
         return output_rows
@@ -248,7 +248,7 @@ def parse_daily_areas(date, country, html):
             )
             if is_blank(area):
                 area = columns[0]
-            cases = columns[-1].replace("*","")
+            cases = columns[-1].replace("*","").replace(",", "")
             output_row = [date, country, lookup_health_board_code(area), area, cases]
             output_rows.append(output_row)
         return output_rows

@@ -7,8 +7,17 @@ from word2number import w2n
 def normalize_int(num):
     """Convert a string of digits or English words to a numeric int"""
     if isinstance(num, str):
-        return w2n.word_to_num(num.replace(",", ""))
+        return w2n.word_to_num(remove_whitespace(num).replace(",", ""))
     return num
+
+
+def remove_whitespace(text):
+    """
+    Replace non-breaking spaces with regular spaces,
+    then remove whitespace.
+    """
+    s = text.replace(u"\xa0", u" ").replace(u"&nbsp;", " ").replace(r"\S+", " ")
+    return re.sub(r"\s+", "", s)
 
 
 def normalize_whitespace(text):

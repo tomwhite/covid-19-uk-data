@@ -1,0 +1,150 @@
+GSS_CD,GSS_NM,TotalCases
+E06000001,Hartlepool,   69
+E06000002,Middlesbrough,  274
+E06000003,Redcar and Cleveland,  157
+E06000004,Stockton-on-Tees,  192
+E06000005,Darlington,  130
+E06000006,Halton,  194
+E06000007,Warrington,  326
+E06000008,Blackburn with Darwen,  152
+E06000009,Blackpool,  149
+E06000010,"Kingston upon Hull, City of",  135
+E06000011,East Riding of Yorkshire,  220
+E06000012,North East Lincolnshire,   75
+E06000013,North Lincolnshire,  125
+E06000014,York,  127
+E06000015,Derby,  354
+E06000016,Leicester,  384
+E06000017,Rutland,    9
+E06000018,Nottingham,  313
+E06000019,"Herefordshire, County of",  104
+E06000020,Telford and Wrekin,  129
+E06000021,Stoke-on-Trent,  200
+E06000022,Bath and North East Somerset,  130
+E06000023,"Bristol, City of",  333
+E06000024,North Somerset,  115
+E06000025,South Gloucestershire,  220
+E06000026,Plymouth,  142
+E06000027,Torbay,   98
+E06000030,Swindon,  177
+E06000031,Peterborough,  102
+E06000032,Luton,  334
+E06000033,Southend-on-Sea,  214
+E06000034,Thurrock,  189
+E06000035,Medway,  352
+E06000036,Bracknell Forest,  104
+E06000037,West Berkshire,  146
+E06000038,Reading,  161
+E06000039,Slough,  207
+E06000040,Windsor and Maidenhead,  138
+E06000041,Wokingham,  157
+E06000042,Milton Keynes,  286
+E06000043,Brighton and Hove,  213
+E06000044,Portsmouth,  182
+E06000045,Southampton,  230
+E06000046,Isle of Wight,   56
+E06000047,County Durham,  573
+E06000049,Cheshire East,  386
+E06000050,Cheshire West and Chester,  410
+E06000051,Shropshire,  240
+E06000052,Cornwall and Isles of Scilly,  301
+E06000054,Wiltshire,  234
+E06000055,Bedford,  208
+E06000056,Central Bedfordshire,  256
+E06000057,Northumberland,  366
+E06000058,"Bournemouth, Christchurch and Poole",  216
+E06000059,Dorset,  198
+E08000001,Bolton,  364
+E08000002,Bury,  233
+E08000003,Manchester,  643
+E08000004,Oldham,  332
+E08000005,Rochdale,  267
+E08000006,Salford,  345
+E08000007,Stockport,  464
+E08000008,Tameside,  276
+E08000009,Trafford,  365
+E08000010,Wigan,  296
+E08000011,Knowsley,  293
+E08000012,Liverpool,  882
+E08000013,St. Helens,  369
+E08000014,Sefton,  469
+E08000015,Wirral,  526
+E08000016,Barnsley,  335
+E08000017,Doncaster,  202
+E08000018,Rotherham,  351
+E08000019,Sheffield,"1,237"
+E08000021,Newcastle upon Tyne,  545
+E08000022,North Tyneside,  297
+E08000023,South Tyneside,  126
+E08000024,Sunderland,  365
+E08000025,Birmingham,"1,853"
+E08000026,Coventry,  393
+E08000027,Dudley,  418
+E08000028,Sandwell,  535
+E08000029,Solihull,  344
+E08000030,Walsall,  486
+E08000031,Wolverhampton,  447
+E08000032,Bradford,  408
+E08000033,Calderdale,  150
+E08000034,Kirklees,  327
+E08000035,Leeds,  677
+E08000036,Wakefield,  319
+E08000037,Gateshead,  265
+E09000002,Barking and Dagenham,  316
+E09000003,Barnet,  937
+E09000004,Bexley,  415
+E09000005,Brent,"1,018"
+E09000006,Bromley,  740
+E09000007,Camden,  421
+E09000008,Croydon,  961
+E09000009,Ealing,  730
+E09000010,Enfield,  521
+E09000011,Greenwich,  470
+E09000012,Hackney and City of London,  509
+E09000013,Hammersmith and Fulham,  376
+E09000014,Haringey,  393
+E09000015,Harrow,  658
+E09000016,Havering,  442
+E09000017,Hillingdon,  504
+E09000018,Hounslow,  477
+E09000019,Islington,  320
+E09000020,Kensington and Chelsea,  358
+E09000021,Kingston upon Thames,  289
+E09000022,Lambeth,  877
+E09000023,Lewisham,  689
+E09000024,Merton,  479
+E09000025,Newham,  762
+E09000026,Redbridge,  498
+E09000027,Richmond upon Thames,  273
+E09000028,Southwark,  934
+E09000029,Sutton,  417
+E09000030,Tower Hamlets,  483
+E09000031,Waltham Forest,  536
+E09000032,Wandsworth,  714
+E09000033,Westminster,  483
+E10000002,Buckinghamshire,  478
+E10000003,Cambridgeshire,  373
+E10000006,Cumbria,"1,218"
+E10000007,Derbyshire,  722
+E10000008,Devon,  374
+E10000011,East Sussex,  351
+E10000012,Essex,"1,484"
+E10000013,Gloucestershire,  644
+E10000014,Hampshire,"1,600"
+E10000015,Hertfordshire,"1,441"
+E10000016,Kent,"1,552"
+E10000017,Lancashire,"1,532"
+E10000018,Leicestershire,  540
+E10000019,Lincolnshire,  464
+E10000020,Norfolk,  647
+E10000021,Northamptonshire,  715
+E10000023,North Yorkshire,  456
+E10000024,Nottinghamshire,  659
+E10000025,Oxfordshire,  857
+E10000027,Somerset,  206
+E10000028,Staffordshire,  925
+E10000029,Suffolk,  458
+E10000030,Surrey,"1,344"
+E10000031,Warwickshire,  626
+E10000032,West Sussex,  398
+E10000034,Worcestershire,  605

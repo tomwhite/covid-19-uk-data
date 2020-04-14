@@ -257,7 +257,7 @@ if __name__ == "__main__":
             print("There are no updates before 14:00")
             sys.exit(0)
         date = now.strftime('%Y-%m-%d')
-        datasets = ["Wales", "Wales-daily-cases", "Scotland", "NI", "UK", "UK-daily-indicators", "England"]
+        datasets = ["Wales", "Wales-daily-cases", "Scotland", "NI", "UK"]
         new_updates_available = False
         for dataset in datasets:
             updated = crawl(date, dataset, check_only=True)

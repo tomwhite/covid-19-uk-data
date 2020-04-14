@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="icon" href="/favicon.ico">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<meta name="theme-color" content="#000000">
+		<meta name="description" content="GOV.UK Coronavirus dashboard">
+		<link rel="apple-touch-icon" href="/favicon.png">
+		<link rel="manifest" href="/manifest.json">
+		<title>Coronavirus (COVID-19) cases in the UK</title>
+		<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+		<script>
+			!function(e,a,t,n,c,g,o){e.GoogleAnalyticsObject=c,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,g=a.createElement(t),o=a.getElementsByTagName(t)[0],g.async=1,g.src="https://www.google-analytics.com/analytics.js",o.parentNode.insertBefore(g,o)}(window,document,"script",0,"ga")
+		</script>
+		<link href="/static/css/2.7f75bbe2.chunk.css" rel="stylesheet">
+		<link href="/static/css/main.e06ff849.chunk.css" rel="stylesheet">
+		<style data-styled="active" data-styled-version="5.0.1"></style>
+		<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
+		<style type="text/css">
+			/* Chart.js */
+			/*
+			 * DOM element rendering detection
+			 * https://davidwalsh.name/detect-node-insertion
+			 */
+			@keyframes chartjs-render-animation {
+				from { opacity: 0.99; }
+				to { opacity: 1; }
+			}
+			
+			.chartjs-render-monitor {
+				animation: chartjs-render-animation 0.001s;
+			}
+			
+			/*
+			 * DOM element resizing detection
+			 * https://github.com/marcj/css-element-queries
+			 */
+			.chartjs-size-monitor,
+			.chartjs-size-monitor-expand,
+			.chartjs-size-monitor-shrink {
+				position: absolute;
+				direction: ltr;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				overflow: hidden;
+				pointer-events: none;
+				visibility: hidden;
+				z-index: -1;
+			}
+			
+			.chartjs-size-monitor-expand > div {
+				position: absolute;
+				width: 1000000px;
+				height: 1000000px;
+				left: 0;
+				top: 0;
+			}
+			
+			.chartjs-size-monitor-shrink > div {
+				position: absolute;
+				width: 200%;
+				height: 200%;
+				left: 0;
+				top: 0;
+			}
+		</style>
+	</head>
+
+	<body class="govuk-template__body js-enabled"><noscript>You need to enable JavaScript to run this app.</noscript><div id="root">
+			<header class="govuk-header " role="banner" data-module="govuk-header">
+				<div class="govuk-header__container govuk-width-container">
+					<div class="govuk-header__logo"><a href="https://gov.uk" class="govuk-header__link govuk-header__link--homepage"><span class="govuk-header__logotype"><svg aria-hidden="true" focusable="false" class="govuk-header__logotype-crown" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 132 97" height="30" width="36"><path fill="currentColor" fill-rule="evenodd" d="M25 30.2c3.5 1.5 7.7-.2 9.1-3.7 1.5-3.6-.2-7.8-3.9-9.2-3.6-1.4-7.6.3-9.1 3.9-1.4 3.5.3 7.5 3.9 9zM9 39.5c3.6 1.5 7.8-.2 9.2-3.7 1.5-3.6-.2-7.8-3.9-9.1-3.6-1.5-7.6.2-9.1 3.8-1.4 3.5.3 7.5 3.8 9zM4.4 57.2c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.5-1.5-7.6.3-9.1 3.8-1.4 3.5.3 7.6 3.9 9.1zm38.3-21.4c3.5 1.5 7.7-.2 9.1-3.8 1.5-3.6-.2-7.7-3.9-9.1-3.6-1.5-7.6.3-9.1 3.8-1.3 3.6.4 7.7 3.9 9.1zm64.4-5.6c-3.6 1.5-7.8-.2-9.1-3.7-1.5-3.6.2-7.8 3.8-9.2 3.6-1.4 7.7.3 9.2 3.9 1.3 3.5-.4 7.5-3.9 9zm15.9 9.3c-3.6 1.5-7.7-.2-9.1-3.7-1.5-3.6.2-7.8 3.7-9.1 3.6-1.5 7.7.2 9.2 3.8 1.5 3.5-.3 7.5-3.8 9zm4.7 17.7c-3.6 1.5-7.8-.2-9.2-3.8-1.5-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.3 3.5-.4 7.6-3.9 9.1zM89.3 35.8c-3.6 1.5-7.8-.2-9.2-3.8-1.4-3.6.2-7.7 3.9-9.1 3.6-1.5 7.7.3 9.2 3.8 1.4 3.6-.3 7.7-3.9 9.1zM69.7 17.7l8.9 4.7V9.3l-8.9 2.8c-.2-.3-.5-.6-.9-.9L72.4 0H59.6l3.5 11.2c-.3.3-.6.5-.9.9l-8.8-2.8v13.1l8.8-4.7c.3.3.6.7.9.9l-5 15.4v.1c-.2.8-.4 1.6-.4 2.4 0 4.1 3.1 7.5 7 8.1h.2c.3 0 .7.1 1 .1.4 0 .7 0 1-.1h.2c4-.6 7.1-4.1 7.1-8.1 0-.8-.1-1.7-.4-2.4V34l-5.1-15.4c.4-.2.7-.6 1-.9zM66 92.8c16.9 0 32.8 1.1 47.1 3.2 4-16.9 8.9-26.7 14-33.5l-9.6-3.4c1 4.9 1.1 7.2 0 10.2-1.5-1.4-3-4.3-4.2-8.7L108.6 76c2.8-2 5-3.2 7.5-3.3-4.4 9.4-10 11.9-13.6 11.2-4.3-.8-6.3-4.6-5.6-7.9 1-4.7 5.7-5.9 8-.5 4.3-8.7-3-11.4-7.6-8.8 7.1-7.2 7.9-13.5 2.1-21.1-8 6.1-8.1 12.3-4.5 20.8-4.7-5.4-12.1-2.5-9.5 6.2 3.4-5.2 7.9-2 7.2 3.1-.6 4.3-6.4 7.8-13.5 7.2-10.3-.9-10.9-8-11.2-13.8 2.5-.5 7.1 1.8 11 7.3L80.2 60c-4.1 4.4-8 5.3-12.3 5.4 1.4-4.4 8-11.6 8-11.6H55.5s6.4 7.2 7.9 11.6c-4.2-.1-8-1-12.3-5.4l1.4 16.4c3.9-5.5 8.5-7.7 10.9-7.3-.3 5.8-.9 12.8-11.1 13.8-7.2.6-12.9-2.9-13.5-7.2-.7-5 3.8-8.3 7.1-3.1 2.7-8.7-4.6-11.6-9.4-6.2 3.7-8.5 3.6-14.7-4.6-20.8-5.8 7.6-5 13.9 2.2 21.1-4.7-2.6-11.9.1-7.7 8.8 2.3-5.5 7.1-4.2 8.1.5.7 3.3-1.3 7.1-5.7 7.9-3.5.7-9-1.8-13.5-11.2 2.5.1 4.7 1.3 7.5 3.3l-4.7-15.4c-1.2 4.4-2.7 7.2-4.3 8.7-1.1-3-.9-5.3 0-10.2l-9.5 3.4c5 6.9 9.9 16.7 14 33.5 14.8-2.1 30.8-3.2 47.7-3.2z"></path>
+									<image src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAgCAYAAAB6kdqOAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AgXEBkknAt7fAAAA0VJREFUWMPtl02IjlEUx/93Rs0YFiJSmlkgSU2+ZmGFNGI2PhdvjLJkMdRYiclHyl7U2CiThZKFpiRSksUsKM0GTVhggRnCTJhe08/m/4471/M+3jHjIzl1e57nfPzPueeee+5zpX+JgIp446EwCUEdkrTEnw9CCCcnglc1CYn6LKnVY/BPLtdUP2fzjWbEst+doQLwUdIBScMeHeYVfkmxAtOBqjI6uyhPu8rYVAHT84o/01kIQcA518QI0JwTf7ukokd7ziSbJY1IGgTOhRDGlaHaZMZ3zN8OXATagPnAVGBBpLfAvPnWuQhst+2dBLP2R0FsMkC7v2PqApYnvA3WOxHxTpi3IdFdboxRsl67fW5Kg5mXALQCjUA30FmmZg6a/yrivTLvYFZNAZ3GbLSPmObFAW1OhEfjogMEVAP9lg8DdclyxctWZx1sU52BdzSx25xm6aUFI8CsnJ03x88ArMgIaAUQEt2sEpllXwAvM88eYGbJ2Tg2wPMomKfjsAuxz9FYgBrgoQEvpFkBpgFNP+hXBaCQ11+AJmOl/Av2/RCoEdCRpjwxOGv+op85yT2pRcY4m8jSJT82RdKXBONj8r3Hz0shhGUJYIukmdFfA5LehhCuJU32UoS1N8fXpxJwt3fDkYwZjukdyVI1ZhR1Y0ZtfocRyY7Yd3cKvtTNayPQEBlcN9ZAArTOz7bIX1upMSa6A5Zfj3gN9tUFLB0zCfeNEi0EeiPDeqAI3APOAzvN/wBcAVYDbzxWm/fBOjvssMcY9RFur32VqC5N3W4Lbvo5LTkW0rbfE7E+eZSoJ+P4GT1ejB372l1uRzzxTPBWvg/cjRpYE3Daupc9y2rgKnDD773AZeuctk2p4d71KJhXBJ7kbc9tVqwH9gHro9ST6B+I3vuBd1myKFM7/L4W2G8f2Gdu3ygCfXFHBbbY+HiG/uFoOToy5Mct2xKfAEAfUKykkZ0ywGOgBdgKDEVOXwBnPPoyaqQvkr+I+EPGajE2wKlKAlrF76OVFd3LmOhtr9JLYcZ/7JQyurckrZH0WNIzSa8lPZL0XtJb38We51w0kVQvqUbSXEl1khZLmiOpQdJCSbd/+no80Svyr8D8T38NfQWcfES5EXNkCgAAAABJRU5ErkJggg==" class="govuk-header__logotype-crown-fallback-image" xlink:href="" height="32" width="36"></image></svg> <span class="govuk-header__logotype-text">GOV.UK</span></span></a></div>
+					<div class="govuk-header__content"><a class="govuk-header__link govuk-header__link--service-name" href="/">Coronavirus (COVID-19) cases in the UK</a></div>
+				</div>
+			</header>
+			<div class="sc-fznxsB cUWXFh govuk-width-container">
+				<div class="sc-AxheI eXzlnr">
+					<h1 class="sc-AxmLO gmtmqV govuk-heading-xl">Coronavirus (COVID-19) in the UK</h1><span class="sc-fzozJi dteCCc">Last updated 14 Apr 2020, 3:44 pm GMT</span></div>
+				<div class="sc-AxjAm bcMPWx">
+					<div class="sc-AxirZ bJCmFu govuk-caption-s">Total number of lab-confirmed UK cases</div>
+					<div class="sc-AxiKw eSbheu govuk-heading-l">93,873</div>
+				</div>
+				<div class="sc-AxjAm bcMPWx">
+					<div class="sc-AxirZ bJCmFu govuk-caption-s">Latest daily number of lab-confirmed UK cases</div>
+					<div class="sc-AxiKw eSbheu govuk-heading-l">5,252</div>
+				</div>
+				<div class="sc-AxjAm bcMPWx">
+					<div class="sc-AxirZ bJCmFu govuk-caption-s">Total number of COVID-19 associated UK deaths in hospital</div>
+					<div class="sc-AxiKw eSbheu govuk-heading-l">12,107</div>
+				</div>
+				<div class="sc-AxjAm bcMPWx">
+					<div class="sc-AxirZ bJCmFu govuk-caption-s">Latest daily number of COVID-19 associated UK deaths in hospital</div>
+					<div class="sc-AxiKw eSbheu govuk-heading-l">778</div>
+				</div>
+				<div class="sc-fzoLsD fYZyZu">
+					<div class="govuk-tabs " data-module="govuk-tabs">
+						<h2 class="govuk-tabs__title">Contents</h2>
+						<ul class="govuk-tabs__list" role="tablist">
+							<li class="govuk-tabs__list-item" role="presentation"><a class="govuk-tabs__tab" href="#countries" id="tab_countries" role="tab" aria-controls="countries" aria-selected="false" tabindex="-1">Countries</a></li>
+							<li class="govuk-tabs__list-item" role="presentation"><a class="govuk-tabs__tab" href="#regions" id="tab_regions" role="tab" aria-controls="regions" aria-selected="false" tabindex="-1">Regions</a></li>
+							<li class="govuk-tabs__list-item govuk-tabs__list-item--selected" role="presentation"><a class="govuk-tabs__tab" href="#local-authorities" id="tab_local-authorities" role="tab" aria-controls="local-authorities" aria-selected="true" tabindex="0">Upper tier local authorities</a></li>
+						</ul>
+						<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="countries" role="tabpanel" aria-labelledby="tab_countries">
+							<table class="govuk-table ">
+								<thead class="govuk-table__head">
+									<tr class="govuk-table__row">
+										<th scope="col" class="govuk-table__header  ">Country</th>
+										<th scope="col" class="govuk-table__header govuk-table__header--numeric ">Total cases</th>
+										<th scope="col" class="govuk-table__header govuk-table__header--numeric ">Deaths</th>
+									</tr>
+								</thead>
+								<tbody class="govuk-table__body">
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E92000001" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">England</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">73,183</td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">11,005</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-N92000002" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Northern Ireland</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">1,967</td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">124</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-S92000003" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Scotland</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">6,358</td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">575</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-W92000004" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Wales</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">5,848</td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">403</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="regions" role="tabpanel" aria-labelledby="tab_regions">
+							<table class="govuk-table ">
+								<thead class="govuk-table__head">
+									<tr class="govuk-table__row">
+										<th scope="col" class="govuk-table__header  ">Region</th>
+										<th scope="col" class="govuk-table__header govuk-table__header--numeric ">Total cases</th>
+									</tr>
+								</thead>
+								<tbody class="govuk-table__body">
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E12000004" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">East Midlands</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">4,331</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E12000006" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">East of England</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">6,089</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E12000007" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">London</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">18,472</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E12000001" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">North East</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">4,205</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E12000002" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">North West</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">11,136</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E12000008" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">South East</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">9,334</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E12000009" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">South West</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">3,578</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E12000005" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">West Midlands</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">7,656</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E12000003" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Yorkshire and The Humber</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">5,481</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="govuk-tabs__panel" id="local-authorities" role="tabpanel" aria-labelledby="tab_local-authorities">
+							<table class="govuk-table ">
+								<thead class="govuk-table__head">
+									<tr class="govuk-table__row">
+										<th scope="col" class="govuk-table__header  ">UTLA</th>
+										<th scope="col" class="govuk-table__header govuk-table__header--numeric ">Total cases</th>
+									</tr>
+								</thead>
+								<tbody class="govuk-table__body">
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000002" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Barking and Dagenham</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">328</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000003" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Barnet</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">961</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000016" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Barnsley</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">372</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000022" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Bath and North East Somerset</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">131</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000055" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Bedford</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">239</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000004" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Bexley</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">431</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000025" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Birmingham</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">1,884</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000008" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Blackburn with Darwen</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">164</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000009" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Blackpool</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">162</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000001" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Bolton</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">400</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000058" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Bournemouth, Christchurch and Poole</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">238</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000036" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Bracknell Forest</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">107</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000032" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Bradford</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">467</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000005" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Brent</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">1,037</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000043" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Brighton and Hove</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">218</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000023" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Bristol, City of</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">354</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000006" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Bromley</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">766</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000002" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Buckinghamshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">492</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000002" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Bury</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">253</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000033" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Calderdale</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">155</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000003" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Cambridgeshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">399</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000007" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Camden</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">435</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000056" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Central Bedfordshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">289</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000049" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Cheshire East</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">433</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000050" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Cheshire West and Chester</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">423</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000001" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">City of London</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">13</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000052" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Cornwall and Isles of Scilly</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">321</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000047" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">County Durham</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">690</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000026" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Coventry</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">399</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000008" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Croydon</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">982</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000006" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Cumbria</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">1,236</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000005" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Darlington</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">143</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000015" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Derby</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">367</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000007" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Derbyshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">755</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000008" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Devon</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">396</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000017" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Doncaster</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">208</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000059" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Dorset</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">203</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000027" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Dudley</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">459</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000009" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Ealing</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">750</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000011" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">East Riding of Yorkshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">223</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000011" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">East Sussex</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">359</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000010" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Enfield</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">552</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000012" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Essex</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">1,562</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000037" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Gateshead</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">445</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000013" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Gloucestershire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">701</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000011" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Greenwich</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">480</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000012" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Hackney</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">503</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000006" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Halton</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">207</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000013" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Hammersmith and Fulham</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">387</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000014" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Hampshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">1,678</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000014" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Haringey</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">410</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000015" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Harrow</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">666</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000001" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Hartlepool</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">74</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000016" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Havering</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">465</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000019" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Herefordshire, County of</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">113</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000015" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Hertfordshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">1,523</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000017" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Hillingdon</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">520</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000018" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Hounslow</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">485</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000046" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Isle of Wight</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">53</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000019" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Islington</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">326</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000020" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Kensington and Chelsea</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">363</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000016" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Kent</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">1,689</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000010" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Kingston upon Hull, City of</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">135</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000021" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Kingston upon Thames</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">294</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000034" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Kirklees</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">354</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000011" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Knowsley</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">316</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000022" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Lambeth</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">908</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000017" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Lancashire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">1,632</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000035" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Leeds</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">734</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000016" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Leicester</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">409</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000018" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Leicestershire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">553</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000023" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Lewisham</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">700</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000019" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Lincolnshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">480</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000012" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Liverpool</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">946</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000032" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Luton</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">367</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000003" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Manchester</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">694</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000035" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Medway</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">389</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000024" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Merton</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">488</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000002" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Middlesbrough</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">291</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000042" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Milton Keynes</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">292</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000021" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Newcastle upon Tyne</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">592</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000025" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Newham</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">775</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000020" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Norfolk</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">699</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000012" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">North East Lincolnshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">79</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000013" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">North Lincolnshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">124</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000024" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">North Somerset</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">120</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000022" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">North Tyneside</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">312</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000023" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">North Yorkshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">486</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000021" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Northamptonshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">748</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000057" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Northumberland</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">420</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000018" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Nottingham</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">330</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000024" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Nottinghamshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">678</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000004" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Oldham</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">359</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000025" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Oxfordshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">890</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000031" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Peterborough</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">103</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000026" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Plymouth</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">150</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000044" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Portsmouth</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">189</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000038" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Reading</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">163</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000026" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Redbridge</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">512</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000003" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Redcar and Cleveland</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">173</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000027" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Richmond upon Thames</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">281</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000005" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Rochdale</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">271</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000018" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Rotherham</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">364</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000017" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Rutland</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">11</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000006" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Salford</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">362</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000028" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Sandwell</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">555</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000014" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Sefton</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">508</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000019" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Sheffield</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">1,316</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000051" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Shropshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">252</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000039" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Slough</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">209</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000029" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Solihull</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">358</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000027" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Somerset</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">212</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000025" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">South Gloucestershire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">219</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000023" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">South Tyneside</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">217</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000045" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Southampton</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">261</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000033" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Southend-on-Sea</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">220</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000028" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Southwark</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">957</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000013" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">St. Helens</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">389</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000028" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Staffordshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">970</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000007" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Stockport</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">491</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000004" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Stockton-on-Tees</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">201</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000021" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Stoke-on-Trent</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">210</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000029" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Suffolk</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">493</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000024" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Sunderland</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">647</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000030" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Surrey</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">1,441</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000029" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Sutton</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">427</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000030" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Swindon</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">187</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000008" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Tameside</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">285</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000020" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Telford and Wrekin</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">137</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000034" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Thurrock</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">195</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000027" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Torbay</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">101</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000030" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Tower Hamlets</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">496</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000009" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Trafford</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">382</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000036" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Wakefield</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">335</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000030" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Walsall</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">574</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000031" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Waltham Forest</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">553</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000032" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Wandsworth</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">730</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000007" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Warrington</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">343</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000031" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Warwickshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">649</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000037" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">West Berkshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">148</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000032" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">West Sussex</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">459</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E09000033" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Westminster</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">491</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000010" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Wigan</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">320</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000054" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Wiltshire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">245</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000040" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Windsor and Maidenhead</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">142</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000015" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Wirral</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">560</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000041" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Wokingham</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">155</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E08000031" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Wolverhampton</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">462</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E10000034" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">Worcestershire</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">634</td>
+									</tr>
+									<tr class="govuk-table__row">
+										<td class="govuk-table__cell  "><button id="table-link-E06000014" role="button" tabindex="0" class="sc-fzpans gTqKWl govuk-link">York</button></td>
+										<td class="govuk-table__cell  govuk-table__cell--numeric">129</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+				<div id="map" class="sc-fzplWN hRBsWH leaflet-container leaflet-retina leaflet-fade-anim leaflet-grab leaflet-touch-drag" tabindex="0" style="position: relative;">
+					<div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(0px, 0px, 0px);">
+						<div class="leaflet-pane leaflet-tile-pane">
+							<div class="leaflet-gl-layer mapboxgl-map" style="width: 609.6px; height: 720px; transform: translate3d(-50.8px, -60px, 0px);">
+								<div class="mapboxgl-canary" style="visibility: hidden;"></div>
+								<div class="mapboxgl-canvas-container"><canvas class="mapboxgl-canvas leaflet-image-layer leaflet-zoom-animated" tabindex="0" aria-label="Map" width="1220" height="1440" style="width: 610px; height: 720px;"></canvas></div>
+								<div class="mapboxgl-control-container">
+									<div class="mapboxgl-ctrl-top-left"></div>
+									<div class="mapboxgl-ctrl-top-right"></div>
+									<div class="mapboxgl-ctrl-bottom-left">
+										<div class="mapboxgl-ctrl" style="display: none;"><a class="mapboxgl-ctrl-logo" target="_blank" rel="noopener nofollow" href="https://www.mapbox.com/" aria-label="Mapbox logo"></a></div>
+									</div>
+									<div class="mapboxgl-ctrl-bottom-right"></div>
+								</div>
+							</div>
+						</div>
+						<div class="leaflet-pane leaflet-shadow-pane"></div>
+						<div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="610" height="720" viewBox="-51 -60 610 720" style="transform: translate3d(-51px, -60px, 0px);"><g>
+									<path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" fill="#1D70B8" fill-opacity="0.6" fill-rule="evenodd" d="M278,402a40,40 0 1,0 80,0 a40,40 0 1,0 -80,0 "></path>
+									<path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" fill="#1D70B8" fill-opacity="0.6" fill-rule="evenodd" d="M234,240a15,15 0 1,0 30,0 a15,15 0 1,0 -30,0 "></path>
+									<path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" fill="#1D70B8" fill-opacity="0.6" fill-rule="evenodd" d="M244,410a15,15 0 1,0 30,0 a15,15 0 1,0 -30,0 "></path>
+									<path class="leaflet-interactive" stroke="#3388ff" stroke-opacity="1" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" fill="#1D70B8" fill-opacity="0.6" fill-rule="evenodd" d="M186,309a11,11 0 1,0 22,0 a11,11 0 1,0 -22,0 "></path>
+									<path class="leaflet-interactive" stroke="#0b0c0c" stroke-opacity="0.7" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#1D70B8" fill-opacity="0" fill-rule="evenodd" d="M299 268L292 275L295 281L294 283L286 288L284 293L278 298L276 298L274 302L275 303L270 302L271 305L268 304L267 310L265 311L262 319L267 326L269 332L271 332L272 330L271 329L271 335L273 337L276 331L278 333L280 331L281 334L281 336L279 336L280 341L277 342L275 348L277 350L281 350L279 350L274 356L277 363L280 365L283 364L280 367L276 361L272 363L279 371L277 372L280 375L280 377L283 378L283 380L281 381L277 379L273 383L273 385L275 385L278 388L276 388L274 395L277 394L277 396L276 395L271 399L277 402L276 405L278 405L274 407L275 416L277 418L280 417L283 421L285 421L284 428L285 429L287 426L287 428L284 431L284 434L283 433L279 437L277 437L278 438L277 441L276 440L276 444L250 444L248 446L249 449L251 449L249 449L247 452L242 451L242 458L240 461L234 467L233 466L233 468L230 468L230 472L224 479L216 481L216 486L219 485L219 483L223 484L227 489L227 487L230 486L227 483L228 484L230 480L232 482L232 480L236 479L238 475L242 476L244 474L247 474L250 476L249 473L251 471L249 473L255 476L258 480L260 478L260 480L264 475L263 474L264 475L266 473L264 473L264 471L266 471L266 462L268 466L271 463L279 461L287 465L289 469L290 468L286 464L289 467L289 465L296 465L298 467L301 466L301 464L298 463L298 461L310 462L310 460L313 460L315 458L313 455L311 455L313 455L319 460L320 459L318 457L325 457L326 458L324 459L327 462L328 460L337 458L350 461L363 454L367 455L369 449L372 449L377 445L377 437L365 439L366 440L361 436L361 438L357 438L360 435L361 436L361 434L352 435L349 433L343 433L355 435L355 433L364 432L363 430L365 429L362 428L365 429L367 425L361 425L364 425L364 423L365 424L364 423L368 422L366 422L367 421L369 421L369 423L373 422L374 420L372 420L375 417L370 417L374 417L374 415L371 414L374 415L375 417L377 416L376 415L378 415L379 412L381 412L378 413L381 412L385 397L384 388L375 380L367 378L368 379L358 378L359 379L358 378L356 380L355 384L353 385L354 386L352 384L350 384L350 386L349 382L347 381L348 377L353 373L350 362L338 350L333 352L331 350L329 351L337 349L344 354L348 354L347 356L348 355L348 352L341 343L340 337L341 335L343 335L336 329L336 326L331 320L319 314L318 317L319 315L315 309L314 302L313 300L310 301L313 300L311 295L309 295L311 295L311 293L309 289L310 287L308 285L308 277L306 275L305 276L300 269zM316 460L309 464L315 467L321 463L319 461L316 461zM366 436L361 436L363 438L367 438zM366 430L367 429L365 429L365 431zM321 458L321 459zM367 423L368 422L366 423zM323 458L322 459L324 460L323 458zM271 335L271 333L270 334L272 337L271 336zM305 273L303 273L305 273zM202 490L201 491L202 490zM239 446L239 444L239 446zM364 430L364 431zM203 489L202 489zM201 489L201 489zM374 419L373 420zM361 437L361 437zM201 489L200 489zM201 491L201 491zM361 378L362 378zM300 463L300 463zM363 425L363 425zM361 425L362 425zM365 378L365 379zM360 436L361 436zM333 351L333 352zM366 379L365 379zM360 432L359 432zM373 420L372 420zM358 437L358 437zM359 437L359 437zM364 423L364 424zM373 419L373 419zM374 419L374 420zM366 379L365 379zM320 458L320 458z"></path>
+									<path class="leaflet-interactive" stroke="#0b0c0c" stroke-opacity="0.7" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#1D70B8" fill-opacity="0" fill-rule="evenodd" d="M198 291L192 293L186 292L185 297L180 297L176 300L176 305L173 310L165 313L170 316L168 316L166 319L163 318L161 321L159 321L167 332L170 331L173 335L175 335L176 333L178 335L179 333L179 335L180 331L182 331L181 326L185 323L190 329L190 331L194 333L194 338L198 336L199 337L201 335L204 335L207 338L206 337L207 338L211 335L211 331L213 328L212 329L216 331L218 329L221 324L219 314L210 314L216 309L215 306L211 304L209 298L207 298L208 294L205 291L199 291zM205 288L203 288L204 290zM219 313L219 313z"></path>
+									<path class="leaflet-interactive" stroke="#0b0c0c" stroke-opacity="0.7" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#1D70B8" fill-opacity="0" fill-rule="evenodd" d="M268 147L268 151L265 151L265 149L256 153L254 150L250 152L249 155L247 153L244 155L245 154L242 151L238 155L239 153L236 150L236 152L231 149L228 155L231 160L229 159L227 161L228 164L231 166L223 166L225 172L224 174L221 172L221 174L227 179L227 181L223 179L221 183L218 181L219 180L217 180L217 186L216 183L213 183L213 187L216 188L216 190L213 189L213 192L216 194L216 196L214 196L213 194L211 199L213 204L217 202L217 204L219 204L221 201L219 204L215 206L222 210L219 207L216 209L217 210L215 212L220 215L216 213L213 216L216 217L217 220L212 218L212 222L210 224L216 224L212 227L214 228L213 227L212 230L207 228L203 231L212 232L214 230L213 233L211 233L212 234L208 233L208 235L213 238L214 237L214 239L216 240L226 230L226 228L229 225L226 230L227 231L220 240L222 239L222 241L226 242L221 241L219 245L220 246L218 246L219 251L217 255L220 252L218 255L220 257L219 256L216 259L215 262L218 258L216 262L216 264L218 262L216 268L219 269L221 266L216 273L213 288L214 289L219 286L219 284L217 283L219 283L220 281L220 274L223 269L221 258L222 260L225 256L223 263L227 267L227 260L227 263L229 264L228 260L230 262L230 265L232 266L232 260L234 261L234 256L235 260L237 260L235 258L241 263L236 261L234 262L235 270L233 272L239 277L238 278L240 282L239 281L239 283L235 287L233 294L231 294L231 303L229 299L227 301L228 306L232 310L231 311L234 315L235 314L232 308L235 306L234 305L245 313L245 304L248 307L249 305L251 309L252 307L252 309L254 309L258 307L258 305L263 305L264 300L273 302L283 293L287 287L291 286L296 281L294 280L292 275L295 274L296 270L298 270L298 266L296 264L292 263L289 260L285 260L285 258L281 257L276 262L274 262L273 260L265 260L261 259L259 255L261 258L265 258L268 260L278 251L281 252L285 249L281 245L280 246L281 242L279 241L270 246L276 241L283 241L289 234L288 233L290 229L295 223L300 206L305 199L303 193L299 189L290 191L281 189L274 191L270 188L271 189L266 189L257 194L254 193L255 194L254 193L249 199L245 197L249 198L254 190L248 191L245 194L246 192L254 187L253 189L255 189L259 183L258 182L257 184L251 184L247 183L246 181L253 182L254 179L252 179L254 179L268 165L272 163L275 158L274 157L276 156L274 156L273 154L274 155L276 148L269 148zM203 160L205 158L202 154L202 156L190 164L192 169L189 168L189 172L186 166L184 168L186 168L184 168L183 170L184 174L188 174L183 177L187 179L188 178L190 181L187 180L188 182L184 184L183 183L186 188L187 186L189 186L189 184L190 185L190 183L192 183L190 181L193 180L191 177L193 174L195 174L193 174L192 176L194 180L194 178L196 180L196 178L198 178L198 176L195 176L200 176L198 174L200 174L200 172L194 173L198 172L199 171L197 170L199 171L200 168L202 167L203 169L205 165L203 167L200 167L205 162zM200 189L201 190L199 194L200 197L202 198L201 200L201 198L199 196L199 198L194 193L196 197L194 198L195 201L192 197L190 201L192 201L192 203L195 205L196 201L200 203L199 204L201 206L199 204L197 206L199 209L201 208L201 212L205 210L206 213L208 209L209 212L212 211L208 214L208 218L211 216L213 211L216 210L216 208L215 207L210 209L211 208L205 205L205 194L201 189zM314 59L315 60L313 60L311 63L312 65L313 64L310 64L310 62L308 66L312 65L312 69L316 72L315 71L315 73L314 72L314 74L313 73L311 75L311 73L309 75L307 74L306 77L308 77L308 79L310 79L311 77L312 78L310 80L312 81L312 79L314 79L314 77L312 76L314 79L316 76L314 88L315 95L316 89L318 89L317 83L319 81L319 79L317 80L317 76L318 77L320 75L320 73L318 73L321 70L319 71L321 68L319 71L318 69L316 70L318 68L317 65L316 68L314 69L315 59zM205 234L203 234L204 235L202 235L201 238L205 239L206 241L208 240L204 244L209 244L203 247L200 246L201 249L207 248L211 245L211 247L214 246L215 245L213 245L215 243L216 244L215 240L210 239L206 233zM204 263L201 265L201 267L201 264L200 266L198 266L197 273L201 269L203 269L201 270L203 274L201 275L201 277L208 273L205 263zM269 127L269 134L271 134L273 137L277 134L278 138L279 137L279 139L277 139L279 140L276 141L277 140L277 142L276 141L278 145L280 141L279 138L281 138L283 134L281 135L282 136L280 136L280 133L279 135L278 132L274 133L277 130L275 129L275 127L272 126zM225 272L222 275L224 278L224 282L229 283L228 273L225 271zM215 254L208 260L210 262L212 260L206 264L207 268L210 267L216 255L215 254zM178 202L176 202L177 206L175 209L177 214L180 215L181 214L178 213L180 211L177 208L180 209L181 205L179 205L180 204L178 202zM181 188L181 190L179 191L179 189L173 193L175 195L179 195L178 198L178 196L180 198L179 197L183 195L179 195L183 195L181 193L182 188zM321 54L319 56L320 60L318 60L319 66L322 65L322 62L320 60L322 60L321 55zM271 142L272 139L269 136L267 138L270 143L274 142L271 142zM229 265L228 263L226 264L231 271L230 266zM325 49L323 51L323 57L326 57L325 56L327 53L325 53L327 53L326 52L328 50L327 49L325 51L325 49zM200 216L198 218L201 221L203 220L203 217L200 217zM191 238L187 238L186 241L187 242L190 240L190 238L192 238L191 237zM198 232L196 232L193 236L197 235L196 234L197 235L198 232zM178 199L176 199L179 202L181 200L180 201L179 200L181 200L179 199zM209 199L209 197L208 200L207 199L207 205L209 204L208 201zM174 221L176 221L176 219L177 220L175 216L173 221zM289 119L287 121L287 119L286 120L284 125L286 122L287 123L291 120L290 119zM277 118L278 117L275 118L277 121L280 121L279 123L280 122L279 119L277 119L278 118zM276 124L274 125L278 127L278 125L276 125zM204 255L204 259L205 255zM325 59L323 60L327 62L327 60L325 59zM284 126L284 129L286 129L287 128L285 126zM205 221L205 224L205 221zM280 129L278 131L279 132L281 132L281 129zM320 79L319 82L321 83L320 79zM282 124L282 122L282 126zM210 207L209 205L209 207zM221 237L218 240L220 240L221 237zM324 71L323 70L321 73L323 73L324 70zM188 165L191 168L189 165zM203 240L205 240L203 240zM312 70L312 72L314 71L313 70zM183 191L183 193L183 191zM216 252L214 253L216 252zM215 272L214 271L215 274L215 272zM185 180L184 181L186 180zM298 81L298 83L298 81zM219 243L219 245L220 243zM217 247L217 249L218 247zM217 251L217 249L217 252zM195 216L197 216zM233 269L232 270L234 269L233 268zM290 115L289 117L291 115L290 116zM182 175L183 175zM209 194L209 196L210 195zM203 212L204 212zM199 247L200 246L199 247zM173 221L174 221zM274 140L275 139L274 140zM308 109L307 110L309 109zM279 117L280 116L280 118zM305 73L306 74L306 72zM179 216L179 215zM180 186L181 186zM315 83L314 86L315 83zM192 182L194 182zM149 184L150 185L149 184zM180 198L181 199L180 198zM172 227L171 227zM211 227L213 227L211 227zM181 198L182 198zM278 126L279 127L278 125zM203 260L204 259L202 259L203 260zM202 225L203 225zM181 202L181 202zM173 223L174 223zM201 240L202 240zM274 147L274 147zM217 251L218 251zM176 191L177 190zM316 83L315 83zM311 73L311 72zM276 128L278 127zM217 183L218 184L217 183zM227 160L227 160zM277 129L278 129zM270 135L270 136zM222 176L223 176zM322 60L323 60zM172 225L173 224zM308 79L309 78zM321 81L322 82L321 81zM324 57L325 58L324 57zM273 140L273 139zM315 84L315 86L315 84zM177 217L177 216zM215 251L216 250L216 252zM192 176L192 176zM227 268L228 268zM179 189L179 188zM313 73L313 72zM172 197L172 196zM225 165L226 166L225 165zM171 228L171 227zM215 262L216 262zM232 271L233 271zM210 233L210 232zM200 248L200 248zM212 204L212 205zM211 233L211 232zM213 188L213 188zM177 218L178 218zM226 179L226 179zM197 217L197 216zM176 195L176 195zM170 197L171 196zM183 186L184 186zM219 178L220 178zM198 176L198 176zM221 175L221 174zM283 122L283 122zM211 207L212 207zM229 279L230 280L229 279zM184 187L184 187zM179 191L179 191zM220 181L221 181zM318 88L319 88zM197 205L197 204zM328 69L328 69zM246 153L246 152zM221 176L221 176zM212 127L213 128zM218 289L218 289zM284 127L284 127zM222 236L222 236zM178 218L178 218zM255 183L255 183zM222 238L221 238zM321 71L322 71zM200 181L200 180zM206 241L206 241zM183 173L183 173zM188 165L189 165zM214 250L214 250zM276 144L275 144zM319 67L319 66zM148 184L149 183zM187 166L187 166zM208 198L208 198zM228 290L229 290zM286 126L286 126zM188 167L189 167zM327 54L327 53zM152 182L152 182zM314 87L314 87zM273 138L273 138zM194 197L194 197zM314 82L315 83L314 82zM284 138L284 137zM201 181L201 180zM314 81L314 81zM198 172L199 172zM208 197L208 197zM184 191L185 191zM314 83L314 82zM213 251L213 251zM205 242L205 242zM286 132L287 131zM223 177L224 177zM175 222L176 222zM217 249L217 249zM182 198L182 198zM274 126L274 126zM177 219L177 219zM205 276L205 275zM180 185L180 185zM328 69L328 68zM317 64L317 64zM219 283L219 283zM211 222L211 222zM211 205L211 206zM183 191L184 191zM312 60L312 59zM182 192L182 192zM180 201L181 201zM213 213L213 212zM178 219L178 219zM185 189L185 189zM191 239L191 239zM279 132L279 132zM183 190L183 190zM191 182L192 182zM202 188L202 188zM175 216L176 216zM187 168L187 168zM216 248L216 248zM247 153L247 153zM246 152L246 152zM221 178L221 178zM195 200L195 200z"></path>
+									<path class="leaflet-interactive" stroke="#0b0c0c" stroke-opacity="0.7" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" fill="#1D70B8" fill-opacity="0" fill-rule="evenodd" d="M270 365L268 364L263 367L257 365L258 367L250 369L248 373L246 373L245 378L239 381L237 385L242 385L245 381L247 382L252 380L253 381L251 382L251 384L253 388L251 392L253 395L255 394L252 398L251 403L247 407L245 407L242 410L239 410L235 414L229 414L230 415L224 419L229 422L226 425L227 426L233 426L229 426L228 427L230 427L230 429L233 430L237 428L239 425L243 425L243 423L245 424L246 422L245 424L247 424L247 427L251 428L253 426L253 428L249 428L247 431L251 432L250 431L255 431L254 430L257 429L261 434L263 434L262 435L264 437L268 438L272 437L275 433L285 429L285 421L283 421L280 418L277 418L274 414L274 407L278 405L276 405L278 402L272 399L272 397L276 396L277 394L274 395L277 388L273 385L273 383L277 379L281 381L283 379L280 378L280 374L277 372L278 371L276 368L274 368L275 369L270 365zM244 361L241 362L241 367L244 372L245 370L244 371L246 373L246 371L249 371L249 369L252 368L253 366L249 366L249 364L247 364L248 363L244 361zM238 365L238 367L241 368L241 366L239 365zM224 425L224 424zM223 420L224 419zM238 428L238 428zM236 387L236 387zM225 426L225 426zM274 368L274 367zM274 367L274 367z"></path>
+								</g></svg></div>
+						<div class="leaflet-pane leaflet-marker-pane"></div>
+						<div class="leaflet-pane leaflet-tooltip-pane"></div>
+						<div class="leaflet-pane leaflet-popup-pane"></div>
+						<div class="leaflet-proxy leaflet-zoom-animated"></div>
+					</div>
+					<div class="leaflet-control-container">
+						<div class="leaflet-top leaflet-left"></div>
+						<div class="leaflet-top leaflet-right"></div>
+						<div class="leaflet-bottom leaflet-left"></div>
+						<div class="leaflet-bottom leaflet-right">
+							<div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a></div>
+							<div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> | <a href="http://www.openstreetmap.org/about/" target="_blank">© OpenStreetMap contributors</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="sc-fzqNJr hXQgjp">
+					<div class="govuk-form-group govuk-radios--small">
+						<fieldset class="govuk-fieldset ">
+							<legend class="govuk-fieldset__legend ">View data as:</legend>
+							<div class="govuk-radios  govuk-radios--inline">
+								<div class="govuk-radios__item"><input class="govuk-radios__input" id="view-as" name="view-as" type="radio" value="chart" checked=""><label class="govuk-label govuk-radios__label " for="view-as">Chart</label></div>
+								<div class="govuk-radios__item"><input class="govuk-radios__input" id="view-as-2" name="view-as" type="radio" value="table"><label class="govuk-label govuk-radios__label " for="view-as-2">Table</label></div>
+							</div>
+						</fieldset>
+					</div>
+				</div>
+				<div class="sc-fznKkj fQkkzS"><span class="govuk-heading-s">Total number of lab-confirmed England cases</span><div class="sc-fznZeY gJlwEu">
+						<div class="chartjs-size-monitor">
+							<div class="chartjs-size-monitor-expand">
+								<div class=""></div>
+							</div>
+							<div class="chartjs-size-monitor-shrink">
+								<div class=""></div>
+							</div>
+						</div><canvas height="400" width="1014" style="display: block; height: 200px; width: 507px;" class="chartjs-render-monitor"></canvas></div>
+				</div>
+				<div class="sc-fzokOt hLgJkJ"><span class="govuk-heading-s">Daily number of lab-confirmed England cases</span><div class="sc-fzqBZW eNQuho">
+						<div class="chartjs-size-monitor">
+							<div class="chartjs-size-monitor-expand">
+								<div class=""></div>
+							</div>
+							<div class="chartjs-size-monitor-shrink">
+								<div class=""></div>
+							</div>
+						</div><canvas height="400" width="1014" class="chartjs-render-monitor" style="display: block; height: 200px; width: 507px;"></canvas></div>
+				</div>
+				<div class="sc-fznKkj fQkkzS"><span class="govuk-heading-s">Total number of COVID-19 associated UK deaths in hospital</span><div class="sc-fznZeY gJlwEu">
+						<div class="chartjs-size-monitor">
+							<div class="chartjs-size-monitor-expand">
+								<div class=""></div>
+							</div>
+							<div class="chartjs-size-monitor-shrink">
+								<div class=""></div>
+							</div>
+						</div><canvas height="400" width="1014" class="chartjs-render-monitor" style="display: block; height: 200px; width: 507px;"></canvas></div>
+				</div>
+				<div class="sc-fzokOt hLgJkJ"><span class="govuk-heading-s">Daily number of COVID-19 associated UK deaths in hospital</span><div class="sc-fzqBZW eNQuho">
+						<div class="chartjs-size-monitor">
+							<div class="chartjs-size-monitor-expand">
+								<div class=""></div>
+							</div>
+							<div class="chartjs-size-monitor-shrink">
+								<div class=""></div>
+							</div>
+						</div><canvas height="400" width="1014" class="chartjs-render-monitor" style="display: block; height: 200px; width: 507px;"></canvas></div>
+				</div>
+				<p class="sc-fznyAO CWQMf govuk-body-s">Case counts for England are provided by Public Health England. Death counts and data for Devolved Administrations are provided by the Department of Health and Social Care. Maps include Ordnance Survey data © Crown copyright and database right 2020 and Office for National Statistics data © Crown copyright and database right 2020. England and Scotland case counts are as of 09:00 14/04/2020, Wales case count is as of 07:00 14/04/2020, Northern Ireland case count is as of 09:30 14/04/2020. Death counts are as of 13/04/2020 (see About the data for times). UK total includes cases detected through "Pillar 2" testing (tests carried out by commercial partners) and therefore does not equate to the sum of the four countries' counts, which only include "Pillar 1" (tests carried out by NHS/PHE/devolved administration labs). Time series data will be available to download from 15/04/2020.</p>
+			</div>
+			<footer class="govuk-footer " role="contentinfo" history="[object Object]" location="[object Object]" match="[object Object]">
+				<div class="govuk-width-container ">
+					<div class="govuk-footer__meta">
+						<div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+							<h2 class="govuk-visually-hidden">Items</h2>
+							<ul class="govuk-footer__inline-list">
+								<li class="govuk-footer__inline-list-item"><a href="/about" class="govuk-footer__link ">About the data</a></li>
+								<li class="govuk-footer__inline-list-item"><a href="/accessibility" class="govuk-footer__link ">Accessibility</a></li>
+							</ul>
+							<div class="govuk-footer__meta-custom">For feedback email <a class="govuk-footer__link" href="mailto:coronavirus-tracker@phe.gov.uk?Subject=Coronavirus%20dashboard%20feedback" rel="noopener noreferrer" target="_blank">coronavirus-tracker@phe.gov.uk</a><br><br>Developed by <a class="govuk-footer__link" href="https://www.gov.uk/government/organisations/public-health-england" target="_blank" rel="noopener noreferrer">PHE</a> and <a class="govuk-footer__link" href="https://www.nhsx.nhs.uk/" target="_blank" rel="noopener noreferrer">NHSX</a></div><svg aria-hidden="true" focusable="false" class="govuk-footer__licence-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 483.2 195.7" height="17" width="41"><path fill="currentColor" d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"></path></svg><span class="govuk-footer__licence-description">All content is available under the <a class="govuk-footer__link" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence v3.0</a> , except where otherwise stated</span></div>
+						<div class="govuk-footer__meta-item"><a class="govuk-footer__link govuk-footer__copyright-logo" href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/">© Crown copyright</a></div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script>
+			!function(e){function r(r){for(var n,i,l=r[0],c=r[1],p=r[2],a=0,s=[];a<l.length;a++)i=l[a],Object.prototype.hasOwnProperty.call(o,i)&&o[i]&&s.push(o[i][0]),o[i]=0;for(n in c)Object.prototype.hasOwnProperty.call(c,n)&&(e[n]=c[n]);for(f&&f(r);s.length;)s.shift()();return u.push.apply(u,p||[]),t()}function t(){for(var e,r=0;r<u.length;r++){for(var t=u[r],n=!0,l=1;l<t.length;l++){var c=t[l];0!==o[c]&&(n=!1)}n&&(u.splice(r--,1),e=i(i.s=t[0]))}return e}var n={},o={1:0},u=[];function i(r){if(n[r])return n[r].exports;var t=n[r]={i:r,l:!1,exports:{}};return e[r].call(t.exports,t,t.exports,i),t.l=!0,t.exports}i.m=e,i.c=n,i.d=function(e,r,t){i.o(e,r)||Object.defineProperty(e,r,{enumerable:!0,get:t})},i.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,r){if(1&r&&(e=i(e)),8&r)return e;if(4&r&&"object"==typeof e&&e&&e.__esModule)return e;var t=Object.create(null);if(i.r(t),Object.defineProperty(t,"default",{enumerable:!0,value:e}),2&r&&"string"!=typeof e)for(var n in e)i.d(t,n,function(r){return e[r]}.bind(null,n));return t},i.n=function(e){var r=e&&e.__esModule?function(){return e.default}:function(){return e};return i.d(r,"a",r),r},i.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},i.p="/";var l=this["webpackJsonpcovid-public"]=this["webpackJsonpcovid-public"]||[],c=l.push.bind(l);l.push=r,l=l.slice();for(var p=0;p<l.length;p++)r(l[p]);var f=c;t()}([])
+		</script>
+		<script src="/static/js/2.4b1bc14c.chunk.js"></script>
+		<script src="/static/js/main.9b76f247.chunk.js"></script>
+	</body>
+
+</html>

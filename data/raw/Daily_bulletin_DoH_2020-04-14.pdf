@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
+  <head>
+    <meta charset="utf-8" />
+<script>(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga");ga("create", "UA-1723473-16", {"cookieDomain":"auto"});ga("set", "anonymizeIp", true);ga("set", "page", "/404.html?page=" + document.location.pathname + document.location.search + "&from=" + document.referrer);ga("send", "pageview");</script>
+<meta name="title" content="Page not found | HSC Public Health Agency" />
+<link rel="shortlink" href="https://www.publichealth.hscni.net/" />
+<link rel="canonical" href="https://www.publichealth.hscni.net/" />
+<meta name="Generator" content="Drupal 8 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/themes/custom/corporate/favicon.ico" type="image/vnd.microsoft.icon" />
+<script>window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};</script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Page not found | HSC Public Health Agency</title>
+    <link rel="stylesheet" media="all" href="/sites/default/files/css/css_yi3UEyaHRp1hm38ioJDg1SOA6-i1CiD8Sq_zETGOTE0.css" />
+<link rel="stylesheet" media="all" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_HFTex1QaeOKdDncWwY7nz0GhtDTVVo_oTJswvk-XhN8.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_Bw8NpBBOzDaGDJZBO7nG2jj1Tw0AXr9C1pY7-F3VL64.css" />
+
+    
+<!--[if lte IE 8]>
+<script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+<![endif]-->
+
+  </head>
+  <body class="path-sites sidebar">
+        <a href="#main-content" class="visually-hidden focusable skip-link">
+      Skip to main content
+    </a>
+    
+      <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+    <div class="layout-container" canvas="container">
+  <div canvas="container" class="canvas-container">
+    
+    <header role="nav" class="header">
+        <div class="region region-header container">
+    <div id="block-corporate-branding" class="col-xs-14 col-sm-12 block block-system block-system-branding-block">
+  
+    
+        <a href="/" rel="home" class="site-logo">
+      <img src="/themes/custom/corporate/logo.png" alt="Home" />
+    </a>
+      </div>
+<div id="block-responsivemenumobileicon" class="hidden-md hidden-lg hidden-xl responsive-menu-toggle-wrapper responsive-menu-toggle block block-responsive-menu block-responsive-menu-toggle">
+  
+    
+      <a id="toggle-icon" class="toggle responsive-menu-toggle-icon" title="Menu" href="#off-canvas">
+  <span class="icon"></span><span class="label">Menu</span>
+</a>
+  </div>
+<div class="search-block-form col-xs-24 col-sm-12 pull-right block block-search container-inline" data-drupal-selector="search-block-form" id="block-corporate-search" role="search">
+  
+    
+      <form action="/search/node" method="get" id="search-block-form" accept-charset="UTF-8">
+  <div class="js-form-item form-item js-form-type-search form-type-search js-form-item-keys form-item-keys form-no-label">
+      <label for="edit-keys" class="visually-hidden">Search</label>
+        <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys" type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search" />
+
+        </div>
+<div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-wrapper" id="edit-actions"><input data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit" />
+</div>
+
+</form>
+
+  </div>
+
+  </div>
+
+    </header>
+    <div class="menu">
+        <div class="region region-menu">
+    <nav role="navigation" aria-labelledby="block-corporate-main-menu-menu" id="block-corporate-main-menu" class="hidden-xs hidden-sm block block-menu navigation menu--main">
+            
+  <h2 class="visually-hidden" id="block-corporate-main-menu-menu">Main navigation</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/covid-19-coronavirus" data-drupal-link-system-path="node/5117">COVID-19 (coronavirus)</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-us" data-drupal-link-system-path="node/2180">About us</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/directorates" data-drupal-link-system-path="node/1">Directorates</a>
+              </li>
+                <li class="menu-item">
+        <a href="/news" data-drupal-link-system-path="news">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/publications" data-drupal-link-system-path="publications">Publications</a>
+              </li>
+                <li class="menu-item">
+        <a href="/webcasts" data-drupal-link-system-path="node/4786">Webcasts</a>
+              </li>
+                <li class="menu-item">
+        <a href="/links" data-drupal-link-system-path="node/2202">Links</a>
+              </li>
+                <li class="menu-item">
+        <a href="/node/4802" data-drupal-link-system-path="node/4802">Contact</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+    </div>
+      <div class="region region-highlighted">
+    <div id="block-coronaviruskeymessages" class="black block block-block-content block-block-content2836ddfa-64ba-4e5a-8f0b-4690e55d9a07">
+  
+    
+      <div class="block-content block-content--type-key-messages-container block-content--view-mode-full ds-1col clearfix">
+
+  
+
+        <h1 >
+        
+            <div  class="container">
+                                <span  class="col-xs-16 col-lg-12 no-padding" >
+      Coronavirus (COVID-19): <br />what you need to do
+
+</span>
+      
+      </div>
+  
+    </h1>
+
+
+<div  class="container">
+      <div class="views-element-container"><div class="view view-eva view-key-messages view-id-key_messages view-display-id-entity_view_1 js-view-dom-id-ebeee985a7656a01623cc548793e2a6be2f363efbfe655e43ee6aabfafa0f887">
+  
+    
+
+  
+  
+
+      <div><div class="node node--type-key-message node--view-mode-teaser ds-1col clearfix">
+
+  
+
+  
+  <h2>
+  Everyone in Northern Ireland must do what they can to stop coronavirus spreading. 
+</h2>
+
+      <div  class="col-xs-24 col-md-11 col-lg-9 pull-right field--name-field-image">
+        
+                    <img src="/sites/default/files/2020-04/Stay%20at%20home%20resized.png" width="600" height="338" alt="Stay at home this Easter weekend" typeof="foaf:Image" />
+
+
+      
+  
+    </div>
+
+
+      <div class="field field--name-field-sections field--type-entity-reference-revisions field--label-hidden field__items">
+              <div class="field__item"><div class="paragraph paragraph--type-basic paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  
+  <ul>
+	<li>Only go outside for food, health reasons or work (but only if you cannot work from home), or one form of exercise a day (a run, walk or cycle, alone or with members of your household)</li>
+	<li>If you go out, stay 2 metres (6ft) away from other people at all times</li>
+	<li>Wash your hands as soon as you get home</li>
+	<li>Do not meet others, even friends or family.</li>
+	<li>You can spread the virus even if you don’t have symptoms.</li>
+</ul>
+
+
+
+
+
+</div>
+
+</div>
+              <div class="field__item"><div class="paragraph paragraph--type-basic paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  
+
+</div>
+
+</div>
+              <div class="field__item"><div class="paragraph paragraph--type-downloads paragraph--view-mode-default ds-1col clearfix">
+
+  
+
+  
+
+</div>
+
+</div>
+          </div>
+  
+
+</div>
+
+</div>
+
+  
+  
+
+  
+  
+
+  
+  </div>
+</div>
+<div class="views-element-container"></div>
+
+  </div>
+
+
+</div>
+
+
+  </div>
+<div data-drupal-messages-fallback class="hidden"></div>
+
+  </div>
+
+    <div role="main" class="main container">
+
+      <a id="main-content" tabindex="-1"></a>
+      <div class="layout-content">
+        
+          <div class="region region-content">
+    <div id="block-corporate-breadcrumbs" class="block block-system block-system-breadcrumb-block">
+  
+    
+        <nav class="breadcrumb" role="navigation" aria-labelledby="system-breadcrumb">
+    <h2 id="system-breadcrumb" class="visually-hidden">Breadcrumb</h2>
+    <ol>
+          <li>
+                  <a href="/">Home</a>
+              </li>
+          <li>
+                  Sites
+              </li>
+          <li>
+                  Default
+              </li>
+          <li>
+                  Files
+              </li>
+          <li>
+                  2020 04
+              </li>
+          <li>
+                  COVID 19 Surveillance Bulletin 14.04.20.pdf
+              </li>
+        </ol>
+  </nav>
+
+  </div>
+<div id="block-corporate-content" class="block block-system block-system-main-block">
+  
+    
+      The requested page could not be found.
+  </div>
+
+  </div>
+
+        
+      </div>      
+    </div>
+
+    <footer class="footer" role="contentinfo">
+        <div class="region region-footer container">
+    <div class="container">
+        <nav role="navigation" aria-labelledby="block-mainnavigation-2-menu" id="block-mainnavigation-2" class="col-xs-24 col-sm-12 col-md-6 block block-menu navigation menu--main">
+      
+  <h2 id="block-mainnavigation-2-menu">Site menu</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/covid-19-coronavirus" data-drupal-link-system-path="node/5117">COVID-19 (coronavirus)</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/about-us" data-drupal-link-system-path="node/2180">About us</a>
+              </li>
+                <li class="menu-item menu-item--collapsed">
+        <a href="/directorates" data-drupal-link-system-path="node/1">Directorates</a>
+              </li>
+                <li class="menu-item">
+        <a href="/news" data-drupal-link-system-path="news">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/publications" data-drupal-link-system-path="publications">Publications</a>
+              </li>
+                <li class="menu-item">
+        <a href="/webcasts" data-drupal-link-system-path="node/4786">Webcasts</a>
+              </li>
+                <li class="menu-item">
+        <a href="/links" data-drupal-link-system-path="node/2202">Links</a>
+              </li>
+                <li class="menu-item">
+        <a href="/node/4802" data-drupal-link-system-path="node/4802">Contact</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-legal-menu" id="block-legal" class="col-xs-24 col-sm-12 col-md-6 block block-menu navigation menu--legal">
+      
+  <h2 id="block-legal-menu">Legal</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/foi" data-drupal-link-system-path="node/2193">Freedom of Information</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.publichealth.hscni.net/privacy-notice">Privacy notice</a>
+              </li>
+                <li class="menu-item">
+        <a href="/privacy" data-drupal-link-system-path="node/2182">Privacy policy (Website)</a>
+              </li>
+                <li class="menu-item">
+        <a href="/cookies" data-drupal-link-system-path="node/2181">Cookies</a>
+              </li>
+                <li class="menu-item">
+        <a href="/disclaimer" data-drupal-link-system-path="node/2183">Terms of use and disclaimer</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<nav role="navigation" aria-labelledby="block-ourwebsites-menu" id="block-ourwebsites" class="col-xs-24 col-sm-12 col-md-6 block block-menu navigation menu--our-websites">
+      
+  <h2 id="block-ourwebsites-menu">Our Websites</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="http://10000morevoices.hscni.net/">http://10000morevoices.hscni.net</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://engage.hscni.net/">http://engage.hscni.net/</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.becancerawareni.info">www.becancerawareni.info</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.breastfedbabies.org">www.breastfedbabies.org</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.cancerscreening.hscni.net">www.cancerscreening.hscni.net</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.choosetolivebetter.com">www.choosetolivebetter.com</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.lifelinehelpline.info/">www.lifelinehelpline.info/</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.mindingyourhead.info/">www.mindingyourhead.info/</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.organdonationni.info/">www.organdonationni.info/</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.research.hscni.net/">www.research.hscni.net/</a>
+              </li>
+                <li class="menu-item">
+        <a href="http://www.sexualhealthni.info/">www.sexualhealthni.info/</a>
+              </li>
+                <li class="menu-item">
+        <a href="https://www.stopsmokingni.info/">www.stopsmokingni.info</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+<div id="block-contact" class="col-xs-24 col-sm-12 col-md-6 block block-block-content block-block-content0d6f888a-4c12-40cb-9650-bf5ec8ce3834">
+  
+      <h2>Contact</h2>
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>Public Health Agency<br />
+Linenhall Street Unit<br />
+12-22 Linenhall Street<br />
+Belfast<br />
+BT2 8BS</p>
+
+<p>Tel: 0300 555 0114</p>
+
+
+</div>
+      
+  </div>
+
+    </div>
+  </div>
+
+    </footer>
+    <footer class="footer_bottom" role="contentinfo">
+        <div class="region region-footer-bottom">
+    <div id="block-copyright" class="col-xs-24 block block-block-content block-block-contentfcc38b63-d9fd-4576-97f9-bd3604848ef7">
+  
+    
+      
+            <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>©2020 Public Health Agency<br />
+Designed and produced by the Public Health Agency</p>
+
+
+</div>
+      
+  </div>
+<div id="block-socialmedialinks" class="block-social-media-links block block-social-media-links-block">
+  
+    
+      
+
+<ul class="social-media-links--platforms platforms inline horizontal">
+      <li>
+      <a href="https://www.facebook.com/publichealthagency"  >
+        <span class='fa fa-facebook fa-2x'></span>
+      </a>
+
+          </li>
+      <li>
+      <a href="https://www.twitter.com/publichealthni"  >
+        <span class='fa fa-twitter fa-2x'></span>
+      </a>
+
+          </li>
+      <li>
+      <a href="https://www.instagram.com/publichealthni"  >
+        <span class='fa fa-instagram fa-2x'></span>
+      </a>
+
+          </li>
+      <li>
+      <a href="https://www.youtube.com/user/PublicHealthAgency/feed"  >
+        <span class='fa fa-youtube fa-2x'></span>
+      </a>
+
+          </li>
+  </ul>
+
+  </div>
+<nav role="navigation" aria-labelledby="block-useraccountmenu-menu" id="block-useraccountmenu" class="col-xs-24 block block-menu navigation menu--account">
+            
+  <h2 class="visually-hidden" id="block-useraccountmenu-menu">User account menu</h2>
+  
+
+        
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/user/login" data-drupal-link-system-path="user/login">Log in</a>
+              </li>
+        </ul>
+  
+
+
+  </nav>
+
+  </div>
+
+    </footer>
+  </div>
+</div><script type="text/javascript" src="//www.browsealoud.com/plus/scripts/ba.js"></script>
+
+  </div>
+
+    <div id="gdpr-popup" class="bottom" style="background:rgba(31, 61, 94, 0.9);">
+  <div class="gdpr-popup-content">
+    <div class="gdpr-popup-text white">
+      <p class="gdpr-popup-cookies">We use cookies on our website to support technical features that enhance your user experience.</p>
+      <p class="gdpr-popup-analytics">We also use analytics & advertising services. To opt-out click for more information.</p>
+    </div>
+    <div class="gdpr-popup-buttons white">
+      <button type="button" id="gdpr-agree" style=background:#009aab;>
+        I've read it
+      </button>
+      <button type="button" id="gdpr-find-more" data-morelink="/gdpr-compliance/policy" style=background:#009aab;>
+        More information
+      </button>
+    </div>
+  </div>
+</div>
+<div class="off-canvas-wrapper"><div id="off-canvas">
+              <ul class="menu">
+                    <li class="menu-item">
+        <a href="/" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/covid-19-coronavirus" data-drupal-link-system-path="node/5117">COVID-19 (coronavirus)</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/covid-19-coronavirus/advice-public" data-drupal-link-system-path="node/5125">Advice for the public</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/covid-19-coronavirus/advice-public/guidance-schools-healthcare-professionals-businesses-and-other" data-drupal-link-system-path="node/5126">Guidance for schools, businesses and other organisations</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/covid-19-coronavirus/guidance-hsc-staff" data-drupal-link-system-path="node/5118">COVID-19 Guidance for HSC Staff</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/covid-19-coronavirus/covid-19-guidance-hsc-staff/guidance-hsc-staff-using-ppe" data-drupal-link-system-path="node/5127">Guidance for HSC staff on using PPE</a>
+              </li>
+                <li class="menu-item">
+        <a href="/covid-19-coronavirus/covid-19-guidance-hsc-staff/questions-and-answers-hsc-staff" data-drupal-link-system-path="node/5113">Questions and answers for HSC staff</a>
+              </li>
+                <li class="menu-item">
+        <a href="/covid-19-coronavirus/covid-19-guidance-hsc-staff/staff-health-and-wellbeing" data-drupal-link-system-path="node/5119">Staff health and wellbeing</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/about-us" data-drupal-link-system-path="node/2180">About us</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/pha-structure" data-drupal-link-system-path="node/2185">PHA structure</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/pha-board" data-drupal-link-system-path="node/2184">PHA board</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/schedule-meetings" data-drupal-link-system-path="node/2187">Schedule of board meetings</a>
+              </li>
+                <li class="menu-item">
+        <a href="/agenda" data-drupal-link-system-path="node/2188">Board agenda</a>
+              </li>
+                <li class="menu-item">
+        <a href="/minutes" data-drupal-link-system-path="node/2201">Board minutes</a>
+              </li>
+                <li class="menu-item">
+        <a href="/board-papers" data-drupal-link-system-path="node/2245">Board papers</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-us/pha-board/governance-and-audit-committee-agenda" data-drupal-link-system-path="node/5001">Governance and Audit Committee agenda</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-us/pha-board/governance-and-audit-committee-minutes" data-drupal-link-system-path="node/5002">Governance and Audit Committee minutes</a>
+              </li>
+                <li class="menu-item">
+        <a href="/board-documents" data-drupal-link-system-path="node/2204">Board documents</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/how-make-complaint" data-drupal-link-system-path="node/2258">How to make a complaint</a>
+              </li>
+                <li class="menu-item">
+        <a href="/offices" data-drupal-link-system-path="offices">Offices</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/foi" data-drupal-link-system-path="node/2193">Freedom of Information</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/who-we-are-and-what-we-do" data-drupal-link-system-path="node/2194">Who we are and what we do</a>
+              </li>
+                <li class="menu-item">
+        <a href="/what-and-how-we-spend" data-drupal-link-system-path="node/2195">What and how we spend</a>
+              </li>
+                <li class="menu-item">
+        <a href="/what-are-our-priorities-and-how-we-are-doing" data-drupal-link-system-path="node/2196">What are our priorities and how we are doing</a>
+              </li>
+                <li class="menu-item">
+        <a href="/how-we-make-decisions" data-drupal-link-system-path="node/2197">How we make decisions</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-us/freedom-information/policies-and-procedures" data-drupal-link-system-path="node/2198">Policies and procedures</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-us/freedom-information/lists-and-registers" data-drupal-link-system-path="node/2199">Lists and registers</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-us/freedom-information/services-we-offer" data-drupal-link-system-path="node/2200">Services we offer</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/funding-opportunities" data-drupal-link-system-path="node/2246">Contracts</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/contracts/news/changes-pha-advertising-funding-opportunities" data-drupal-link-system-path="node/4472">Changes in PHA advertising of Funding Opportunities</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contracts/awarded" data-drupal-link-system-path="node/4772">Contracts Awarded</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contracts/grants" data-drupal-link-system-path="node/4771">Grants</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contracts/tenders" data-drupal-link-system-path="node/4773">Tenders</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contracts/news/pha-procurement-priorities-1718-and-1819" data-drupal-link-system-path="node/4467">PHA Procurement Priorities</a>
+              </li>
+                <li class="menu-item">
+        <a href="/contracts/news/hsc-ni-procurement-awareness-events-march-may-2017" data-drupal-link-system-path="node/4460">HSC NI Procurement Awareness Events (March-May 2017)</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/about-us/making-life-better" data-drupal-link-system-path="node/2250">Making Life Better</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/about-us/making-life-better/making-life-better-regional-network" data-drupal-link-system-path="node/4997">Making Life Better Regional Network</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-us/making-life-better/making-life-better-conference-2019" title="Making Life Better Conference 2019" data-drupal-link-system-path="node/4996">Making Life Better Conference 2019</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-us/making-life-better/making-life-better-conference-2020" data-drupal-link-system-path="node/5093">Making Life Better Conference 2020</a>
+              </li>
+                <li class="menu-item">
+        <a href="/about-us/making-life-better/mlb-seminars" data-drupal-link-system-path="node/5060">MLB Seminars</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/consultations" data-drupal-link-system-path="node/2206">Consultations</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/consultations/current-consultations" data-drupal-link-system-path="node/2205">Current consultations</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/consultations/current-consultations/draft-training-framework" title="Draft Training Framework" data-drupal-link-system-path="node/5010">Draft Training Framework</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/consultations/previous-consultations" data-drupal-link-system-path="node/2207">Previous consultations</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/consultations/previous-consultations/building-community-capacity-address-health-inequalities-across" data-drupal-link-system-path="node/5034">Building Community Capacity to Address Health Inequalities Across Northern Ireland</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/modernising-diabetic-eye-screening-programme" data-drupal-link-system-path="node/4892">Modernising the Diabetic Eye Screening Programme</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/current-consultations/modernising-diabetic-eye-screening-programme" data-drupal-link-system-path="node/2264">Modernising the diabetic eye screening programme</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/pha-draft-corporate-plan-2017-21" data-drupal-link-system-path="node/2257">PHA Draft Corporate Plan 2017–21</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/consultation-future-lifeline-crisis-intervention-service-now" data-drupal-link-system-path="node/2252">Consultation on the future of the Lifeline Crisis Intervention Service - NOW CLOSED</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/consultation-support-model-those-bereaved-suicide" data-drupal-link-system-path="node/2249">Consultation on support model for those bereaved by suicide</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/consultation-infant-mental-health-framework-and-plan-2015-2018" data-drupal-link-system-path="node/2247">Consultation on Infant Mental Health Framework and Plan 2015-2018</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/alcohol-and-drug-commissioning-framework-northern-ireland-2013" data-drupal-link-system-path="node/2231">Alcohol and Drug Commissioning Framework for Northern Ireland 2013-16</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/disability-action-plan-and-equality-action-plan" data-drupal-link-system-path="node/2223">Disability Action Plan and Equality Action Plan</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/cope-confidence-survey-heart-failure-patient-experience" data-drupal-link-system-path="node/2212">Cope with Confidence - survey of heart failure patient experience</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/pha-corporate-strategy" data-drupal-link-system-path="node/2211">PHA Corporate strategy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/personal-and-public-involvement-strategy" data-drupal-link-system-path="node/2210">Personal and Public Involvement strategy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/consultation-ppi-proposed-action-plan-2016-19" data-drupal-link-system-path="node/2256">Consultation for PPI Proposed Action Plan 2016-19</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultation-community-capacity-building-under-mental-emotional-wellbeing-and-suicide-prevention" data-drupal-link-system-path="node/4769">Consultation on Community Capacity Building under Mental &amp; Emotional Wellbeing and Suicide Prevention</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/consultation-lifeline-crisis-response-service" data-drupal-link-system-path="node/2244">Consultation on the Lifeline Crisis Response Service</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/speak-out-change" data-drupal-link-system-path="node/2208">Speak out for change</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/consultation-volunteering-health-and-social-care" data-drupal-link-system-path="node/2243">Consultation on Volunteering in Health and Social Care</a>
+              </li>
+                <li class="menu-item">
+        <a href="/consultations/previous-consultations/community-development-strategy" data-drupal-link-system-path="node/2209">Community Development strategy</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates" data-drupal-link-system-path="node/1">Directorates</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/directorates/public-health" data-drupal-link-system-path="node/2">Public Health</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/directorates/public-health/health-protection" data-drupal-link-system-path="node/4">Health Protection</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/health-protection-news" data-drupal-link-system-path="node/4781">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/health-protection-publications" data-drupal-link-system-path="node/4785">Publications</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/courses-and-conferences" data-drupal-link-system-path="node/4754">Courses and conferences</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/public-health/health-protection/antibiotic-awareness" data-drupal-link-system-path="node/2253">Antibiotic awareness</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/antibiotic-awareness/e-bug" data-drupal-link-system-path="node/2269">e-Bug</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/blood-borne-viruses-stis" data-drupal-link-system-path="node/4743">Blood-borne viruses/ STIs</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/ebola" data-drupal-link-system-path="node/4731">Ebola</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/e-coli-o157" data-drupal-link-system-path="node/4753">E. coli O157</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/health-protection/emergency-preparednessenvironmental-hazards" data-drupal-link-system-path="node/4744">Emergency preparedness/environmental hazards</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/priority-areas" data-drupal-link-system-path="node/4760">Priority areas</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/local-incidents" data-drupal-link-system-path="node/4761">Local incidents</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/international-incidents" data-drupal-link-system-path="node/4758">International incidents</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/key-links" data-drupal-link-system-path="node/4757">Key links</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/gastrointestinal-infections-0" data-drupal-link-system-path="node/4746">Gastrointestinal infections</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/health-protection/healthcare-associated-infections-antimicrobial-resistanc" data-drupal-link-system-path="node/4759">Healthcare associated infections / antimicrobial resistance</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/healthcare-associated-infections-antimicrobial" data-drupal-link-system-path="node/4949">HCAI and AMR Indicator Dashboard</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/reference-documents" data-drupal-link-system-path="node/4732">Reference documents</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/health-protection-improvement-and-inequalities" data-drupal-link-system-path="node/4742">Health protection improvement and inequalities</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/holiday-travel-advice" data-drupal-link-system-path="node/4730">Travel advice</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/immunisationvaccine-preventable-diseases" data-drupal-link-system-path="node/4747">Immunisation/vaccine preventable diseases</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/public-health/health-protection/vaccine-preventable-diseases-and-immunisation" title="Vaccine preventable diseases and Immunisation Programmes" data-drupal-link-system-path="node/5067">Vaccine preventable diseases and Immunisation Programmes</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/directorates/public-health/health-protection/vaccine-preventable-diseases-and-immunisation-0" title="Health professional resources" data-drupal-link-system-path="node/5068">Health professional resources</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/vaccine-preventable-diseases-and-immunisation-1" title="Preschool vaccination programmes" data-drupal-link-system-path="node/5069">Preschool vaccination programmes</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/vaccine-preventable-diseases-and-immunisation-2" title="Public resources" data-drupal-link-system-path="node/5070">Public resources</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/meningitis-know-symptoms" data-drupal-link-system-path="node/2261">Meningitis - know the symptoms</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/mycobacterium-chimaera-gp-guidance" data-drupal-link-system-path="node/4727">Mycobacterium chimaera GP Guidance</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/health-protection/respiratory-diseases" data-drupal-link-system-path="node/4756">Respiratory diseases</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/avian-influenza-0" data-drupal-link-system-path="node/4729">Avian influenza</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/tuberculosis-tb" data-drupal-link-system-path="node/4725">Tuberculosis (TB)</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/respiratory-diseases/whooping-cough" data-drupal-link-system-path="node/2221">Whooping cough</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/legionellosis" data-drupal-link-system-path="node/4734">Legionellosis</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/health-protection/influenza" title="Flu" data-drupal-link-system-path="node/4750">Seasonal influenza (flu)</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/respiratory-diseases/influenza/flu-faqs-healthcare" data-drupal-link-system-path="node/2262">Information for health professionals</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/health-protection/severe-weather" data-drupal-link-system-path="node/4751">Severe weather</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/severe-weather/support-networks" data-drupal-link-system-path="node/2230">Support networks</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/severe-weather/keeping-warm-during-adverse-weather" data-drupal-link-system-path="node/2224">Keeping warm during adverse weather</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/severe-weather/carbon-monoxide-poisoning" data-drupal-link-system-path="node/2225">Carbon monoxide poisoning</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/severe-weather/advice-if-flooding-occurs" data-drupal-link-system-path="node/2226">Advice if flooding occurs</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/severe-weather/using-emergency-water-supplies" data-drupal-link-system-path="node/2227">Using emergency water supplies</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/severe-weather/water-advice-following-restoration" data-drupal-link-system-path="node/2228">Water restoration advice</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/severe-weather/looking-after-vulnerable-and-elderly" data-drupal-link-system-path="node/2229">Looking after vulnerable and elderly neighbours</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/health-protection/surveillance-data" data-drupal-link-system-path="node/4745">Surveillance data</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/public-health/health-protection/surveillance-data/antimicrobial-use-and-resistance" data-drupal-link-system-path="node/2260">Antimicrobial use and resistance</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/health-protection/notifications-infectious-diseases" data-drupal-link-system-path="node/4740">Notifications of Infectious Diseases</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/noids-archive" data-drupal-link-system-path="node/4733">NOIDs archive</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/group-b-streptococcus" data-drupal-link-system-path="node/4752">Group B Streptococcus</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/vaccination-coverage" data-drupal-link-system-path="node/4741">Vaccination coverage</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/avian-influenza" data-drupal-link-system-path="node/4739">Avian influenza</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/brucellosis-human" data-drupal-link-system-path="node/4738">Brucellosis (human)</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/gastrointestinal-infections" data-drupal-link-system-path="node/4735">Gastrointestinal infections</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/hepatitis" data-drupal-link-system-path="node/4768">Hepatitis</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/healthcare-associated-infections" data-drupal-link-system-path="node/4736">Healthcare Associated Infections</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/meningococcal-disease" data-drupal-link-system-path="node/4755">Meningococcal disease</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/respiratory-infections" data-drupal-link-system-path="node/4748">Respiratory infections</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/sexually-transmitted-infections" data-drupal-link-system-path="node/4749">Sexually transmitted infections</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/tuberculosis" data-drupal-link-system-path="node/4737">Tuberculosis</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/seasonal-influenza" data-drupal-link-system-path="node/4724">Seasonal influenza (flu)</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-protection/zoonoses-infections-acquired-animals" data-drupal-link-system-path="node/4726">Zoonoses (Infections acquired from animals)</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/public-health/health-and-social-wellbeing-improvement" data-drupal-link-system-path="node/5">Health and Social Wellbeing Improvement</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/public-health/health-and-social-wellbeing-improvement/health-and-social-wellbeing" data-drupal-link-system-path="node/4787">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/health-and-social-wellbeing-improvement/health-and-social-wellbeing-0" data-drupal-link-system-path="node/4788">Publications</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/give-every-child-best-start-life" data-drupal-link-system-path="node/4714">Give every child the best start in life</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/family-nurse-partnership" data-drupal-link-system-path="node/4719">Family Nurse Partnership</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/roots-empathy" data-drupal-link-system-path="node/4713">Roots of Empathy</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/design-and-planning-outcome-focuse" data-drupal-link-system-path="node/4706">The design and planning of outcome focused children’s services.</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/ensure-decent-standard-living-all" data-drupal-link-system-path="node/4715">Ensure a decent standard of living for all</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/poverty" data-drupal-link-system-path="node/4718">Poverty</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/fuel-poverty" data-drupal-link-system-path="node/4710">Fuel poverty</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/build-sustainable-communities" data-drupal-link-system-path="node/4711">Build sustainable communities</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/neighbourhood-renewal" data-drupal-link-system-path="node/4723">Neighbourhood renewal</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/make-healthier-choices-easier" data-drupal-link-system-path="node/4717">Make healthier choices easier</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/tackling-childhood-obesity" data-drupal-link-system-path="node/4716">Tackling childhood obesity</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/improving-wellbeing-through-peace-" data-drupal-link-system-path="node/4722">Improving wellbeing through peace of mind</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/stopping-smoking" data-drupal-link-system-path="node/4721">Stopping smoking</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/highlighting-dangers-emerging-drug" data-drupal-link-system-path="node/4720">Highlighting the dangers of emerging drugs</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/averting-alcohol-crisis" data-drupal-link-system-path="node/4712">Averting an alcohol crisis</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/one-stop-shops" data-drupal-link-system-path="node/4708">One Stop Shops</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/skin-cancer-prevention" data-drupal-link-system-path="node/4709">Skin cancer prevention</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/health-and-social-wellbeing-improvement/conferencesworkshops" data-drupal-link-system-path="node/4707">Conferences/Workshops</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/public-health/service-development-and-screening" data-drupal-link-system-path="node/6">Service Development and Screening</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/public-health/service-development-and-screening/service-development-and-screening-news" data-drupal-link-system-path="node/4789">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/service-development-and-screening/service-development-and-screening" data-drupal-link-system-path="node/4790">Publications</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/service-development-and-screening/screening" data-drupal-link-system-path="node/4704">Screening</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/service-development-and-screening/abdominal-aortic-aneurysm-aaa-screening" data-drupal-link-system-path="node/4705">Abdominal aortic aneurysm (AAA) screening</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/service-development-and-screening/antenatal-screening" data-drupal-link-system-path="node/4703">Antenatal screening</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/service-development-and-screening/breast-screening" data-drupal-link-system-path="node/4701">Breast screening</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/service-development-and-screening/bowel-cancer-screening" data-drupal-link-system-path="node/4700">Bowel cancer screening</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/public-health/service-development-and-screening/screening/bowel-cancer-screening/about" data-drupal-link-system-path="node/2213">About bowel cancer</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/service-development-and-screening/screening/bowel-cancer-screening/why" data-drupal-link-system-path="node/2214">Why screen for bowel cancer?</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/service-development-and-screening/screening/bowel-cancer-screening/how" data-drupal-link-system-path="node/2215">How do I do the screening test?</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/service-development-and-screening/screening/bowel-cancer-screening" data-drupal-link-system-path="node/2216">Frequently asked questions</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/service-development-and-screening/cervical-cancer-screening" data-drupal-link-system-path="node/4693">Cervical cancer screening</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/service-development-and-screening/diabetic-eye-screening-programme-also-kn" data-drupal-link-system-path="node/4688">Diabetic Eye Screening Programme (also known as Diabetic Retinopathy Screening)</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/service-development-and-screening/information-people-diabetes-their-famili" data-drupal-link-system-path="node/4690">Information for people with diabetes, their families and carers</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/service-development-and-screening/information-health-professionals" data-drupal-link-system-path="node/4691">Information for health professionals</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/service-development-and-screening/newborn-screening" data-drupal-link-system-path="node/4699">Newborn screening</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/service-development-and-screening/screening/farm-families-health-checks" data-drupal-link-system-path="node/2239">Farm Families Health Checks Programme</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/service-development-and-screening/eye-health-and-safety" data-drupal-link-system-path="node/2259">Eye health and safety</a>
+              </li>
+                <li class="menu-item">
+        <a href="/gbs" data-drupal-link-system-path="node/4770">Group B Streptococcus and pregnancy</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-public-health/service-development-and-screening/nimach" data-drupal-link-system-path="node/4694">NIMACH</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/service-development-and-screening/stillbirth-conference-%E2%80%93-causes-preventio" data-drupal-link-system-path="node/4695">Stillbirth Conference – Causes, Prevention and Management</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/service-development-and-screening/nicore" data-drupal-link-system-path="node/4692">NICORE</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/service-development-and-screening/commissioning-teams" data-drupal-link-system-path="node/4698">Commissioning teams</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/service-development-and-screening/northern-ireland-cerebral-palsy-register" data-drupal-link-system-path="node/4696">Northern Ireland Cerebral Palsy Register</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/service-development-and-screening/northern-ireland-cancer-registry" data-drupal-link-system-path="node/4702">Northern Ireland Cancer Registry</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/public-health/hsc-research-and-development-wwwresearchhscninet" data-drupal-link-system-path="node/7">HSC Research and Development</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/hsc-research-and-development/about-us" data-drupal-link-system-path="node/4687">About us</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/hsc-research-and-development/hsc-research-development-news" data-drupal-link-system-path="node/4791">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/public-health/hsc-research-and-development/hsc-research-development-publications" data-drupal-link-system-path="node/4792">Publications</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/hsc-research-and-development/ok-ask-campaign" data-drupal-link-system-path="node/4683">Ok to ask campaign</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/hsc-research-and-development/useful-links" data-drupal-link-system-path="node/4686">Useful links</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/public-health/professional-medical-issues" data-drupal-link-system-path="node/8">Professional Medical Issues</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/professional-medical-issues/medical-workforce-planning" data-drupal-link-system-path="node/4601">Medical workforce planning</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/professional-medical-issues/medical-training-northern-ireland-medical-and-" data-drupal-link-system-path="node/4604">Medical training with the Northern Ireland Medical and Dental Training Agency (NIMDTA)</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/professional-medical-issues/public-health-training" data-drupal-link-system-path="node/4603">Public health training</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/professional-medical-issues/revalidation" data-drupal-link-system-path="node/4602">Revalidation</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/public-health/public-health-annual-research-and-practice-conferences" data-drupal-link-system-path="node/9">Public Health Annual Research and Practice Conferences</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-public-health/public-health-annual-research-and-practice-conference-8-june-2016" data-drupal-link-system-path="node/4767">Public Health Annual Research and Practice Conference, 8 June 2016</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-public-health/public-health-annual-scientific-conference-2015" data-drupal-link-system-path="node/4766">Public Health Annual Scientific Conference 2015</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/directorate-nursing-and-allied-health-professions" data-drupal-link-system-path="node/10">Nursing and Allied Health Professions</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/directorates/nursing-and-allied-health-professions/nursing" data-drupal-link-system-path="node/11">Nursing</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/nursing-and-allied-health-professions/nursing/nursing-news" data-drupal-link-system-path="node/4793">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/nursing-and-allied-health-professions/nursing/nursing-publications" data-drupal-link-system-path="node/4794">Publications</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/nursing/service-development-and-improvement" data-drupal-link-system-path="node/4656">Service development and improvement</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-nursing-and-allied-health-professions/nursing/safeguarding-children-and-young-people" data-drupal-link-system-path="node/4652">Safeguarding Children and Young People</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/nursing-and-allied-health-professions/nursing/safeguarding-children-and-young-people" title="Safer sleeping" data-drupal-link-system-path="node/4873">Safer sleeping</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/nursing/childrens-nursing-ccn-service" data-drupal-link-system-path="node/4650">Children&#039;s nursing (CCN) service</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/nursing/primary-care-nursing" data-drupal-link-system-path="node/4653">Primary care nursing</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/nursing/community-care-nursing" data-drupal-link-system-path="node/4655">Community care nursing</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/nursing-and-allied-health-professions/nursing/delivering-care" data-drupal-link-system-path="node/2265">Delivering Care</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/nursing/nurse-prescribing" data-drupal-link-system-path="node/4647">Nurse prescribing</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/nursing/mental-health-and-learning-disability-serv" data-drupal-link-system-path="node/4661">Mental health and learning disability services</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-nursing-and-allied-health-professions/nursing/palliative-and-end-life-care-programme" data-drupal-link-system-path="node/4659">Palliative and End of Life Care Programme</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/nursing/palliative-care-week-6-11-october" data-drupal-link-system-path="node/4660">Palliative Care Week  6-11 October</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/nursing-and-allied-health-professions/allied-health-professions-and-personal-and" data-drupal-link-system-path="node/12">Allied Health Professions and Personal and Public Involvement</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/nursing-and-allied-health-professions/allied-health-professions-and-personal-and-1" data-drupal-link-system-path="node/4795">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/allied-health-professions-and-personal-and-publi-9" data-drupal-link-system-path="node/4671">Events</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/nursing-and-allied-health-professions/allied-health-professions-and-personal-and-2" data-drupal-link-system-path="node/4796">Publications</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-nursing-and-allied-health-professions/allied-health-professions-and-personal-and-publi-6" data-drupal-link-system-path="node/4664">Allied Health Professions</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/nursing-and-allied-health-professions/allied-health-professions-and-personal-and-0" data-drupal-link-system-path="node/2251">AHP Strategy 2012 -2017</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/nursing-and-allied-health-professions/allied-health-professions-and-personal-and-3" title="Dysphagia" data-drupal-link-system-path="node/5014">Dysphagia</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/allied-health-professions-and-personal-and-publi-7" data-drupal-link-system-path="node/4670">Dietitians</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/allied-health-professions-and-personal-and-public-" data-drupal-link-system-path="node/4669">Occupational therapists</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/allied-health-professions-and-personal-and-publi-0" data-drupal-link-system-path="node/4667">Orthoptists</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/allied-health-professions-and-personal-and-publi-1" data-drupal-link-system-path="node/4666">Physiotherapists</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/allied-health-professions-and-personal-and-publi-2" data-drupal-link-system-path="node/4665">Podiatrists</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/allied-health-professions-and-personal-and-publi-4" data-drupal-link-system-path="node/4672">Radiographers</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/allied-health-professions-and-personal-and-publi-3" data-drupal-link-system-path="node/4668">Speech and language therapists</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/allied-health-professions-and-personal-and-publi-5" data-drupal-link-system-path="node/4662">Personal and Public Involvement (PPI)</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/nursing-and-allied-health-professions/centre-connected-health-and-social-care" data-drupal-link-system-path="node/13">Centre for Connected Health and Social Care</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/nursing-and-allied-health-professions/centre-connected-health-and-social-care/centre" data-drupal-link-system-path="node/4797">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/european-centre-connected-health/publications" data-drupal-link-system-path="node/4622">Publications</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/european-centre-connected-health/remote-telemonito" data-drupal-link-system-path="node/4623">Remote telemonitoring</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/nursing-and-allied-health-professions/hsc-safety-forum" data-drupal-link-system-path="node/14">HSC Safety Forum</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/latest-news" data-drupal-link-system-path="node/4615">Latest news</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/events" data-drupal-link-system-path="node/4611">Events</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/qi-collaboratives" data-drupal-link-system-path="node/4607">QI Collaboratives</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/directorates/nursing-and-allied-health-professions/hsc-safety-forum/qi-collaboratives/nursing-homes" data-drupal-link-system-path="node/2219">Nursing Homes</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/newsletters" data-drupal-link-system-path="node/4605">Newsletters</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/maternity" data-drupal-link-system-path="node/4621">Maternity</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/pressure-ulcer-prevention-group" data-drupal-link-system-path="node/4609">Pressure Ulcer Prevention Group</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/paediatrics" data-drupal-link-system-path="node/4620">Paediatrics</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/building-capacity-and-awareness" data-drupal-link-system-path="node/4619">Building capacity and awareness</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/q-community" data-drupal-link-system-path="node/4617">Q Community</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/q-member-blogs" data-drupal-link-system-path="node/4616">Q Member Blogs</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/safety-forum-awards" data-drupal-link-system-path="node/4608">Safety Forum Awards</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/publications" data-drupal-link-system-path="node/4610">Publications</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/hsc-safety-forum/useful-links" data-drupal-link-system-path="node/4618">Useful links</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/nursing-and-allied-health-professions/safety-and-quality" data-drupal-link-system-path="node/15">Safety and Quality</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/directorate-nursing-and-allied-health-professions/nursing/central-repository-hsc-resources-relating-" data-drupal-link-system-path="node/4649">Hyponatraemia</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/nursing-and-allied-health-professions/safety-and-quality/hyponatraemia/other-useful" data-drupal-link-system-path="node/4829">Other useful guidance</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/nursing-and-allied-health-professions/safety-and-quality/falls-prevention" data-drupal-link-system-path="node/2241">Falls prevention</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/nursing/pews-event" data-drupal-link-system-path="node/4654">PEWS Event</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-nursing-and-allied-health-professions/nursing/quality-2020" data-drupal-link-system-path="node/4658">Quality 2020</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/directorate-operations" data-drupal-link-system-path="node/16">Operations</a>
+                                <ul class="menu">
+                    <li class="menu-item menu-item--expanded">
+        <a href="/directorates/operations/planning-and-corporate-services" data-drupal-link-system-path="node/17">Planning and Corporate Services</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/operations/planning-and-corporate-services/planning-and-corporate-services-news" data-drupal-link-system-path="node/4798">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/operations/planning-and-corporate-services/planning-and-corporate-services" data-drupal-link-system-path="node/4799">Publications</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-operations/planning-and-corporate-services/corporate-plans" data-drupal-link-system-path="node/4644">Corporate plans</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-operations/planning-and-corporate-services/corporate-plan-2017-2021" data-drupal-link-system-path="node/4638">Corporate plan 2017-2021</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/planning-and-corporate-services/corporate-strategy-2011-2015" data-drupal-link-system-path="node/4640">Corporate strategy 2011-2015</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/planning-and-corporate-services/business-plan" data-drupal-link-system-path="node/4643">Business plan</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/planning-and-corporate-services/equality" data-drupal-link-system-path="node/4641">Equality</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/planning-and-corporate-services/governance" data-drupal-link-system-path="node/4645">Governance</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/planning-and-corporate-services/performance-management" data-drupal-link-system-path="node/4646">Performance management</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/planning-and-corporate-services/process-awarding-funding" data-drupal-link-system-path="node/4639">Process for awarding funding</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/planning-and-corporate-services/process-authorising-payments" data-drupal-link-system-path="node/4642">Process for authorising payments</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorates/operations/communications-and-knowledge-management" data-drupal-link-system-path="node/18">Communications and Knowledge Management</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorates/operations/communications-and-knowledge-management/communications-news" data-drupal-link-system-path="node/4800">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/operations/communications-and-knowledge-management/communications-publications" data-drupal-link-system-path="node/4801">Publications</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-operations/communication-and-knowledge-management/communications" data-drupal-link-system-path="node/4626">Communications</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-operations/communication-and-knowledge-management/design-and-electronic-communications" data-drupal-link-system-path="node/4624">Design and electronic communications</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/communication-and-knowledge-management/public-information-campaigns" data-drupal-link-system-path="node/4630">Public information campaigns</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/communication-and-knowledge-management/publications" data-drupal-link-system-path="node/4632">Publications development</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/communication-and-knowledge-management/corporate-and-public-affairs" data-drupal-link-system-path="node/4627">Corporate and public affairs</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-operations/communication-and-knowledge-management/social-media" data-drupal-link-system-path="node/4631">Social Media</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-operations/communication-and-knowledge-management/facebook" data-drupal-link-system-path="node/4636">Facebook</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/operations/communications-and-knowledge-management/communications/social-media" data-drupal-link-system-path="node/2268">Instagram</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/communication-and-knowledge-management/twitter" data-drupal-link-system-path="node/4637">Twitter</a>
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/media-reporting-suicide" data-drupal-link-system-path="node/4762">Media reporting on suicide</a>
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-operations/communication-and-knowledge-management/health-matters-information" data-drupal-link-system-path="node/4635">Health Matters information</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-operations/communication-and-knowledge-management/health-matters-issue-1" data-drupal-link-system-path="node/4634">Health Matters Issue 1</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/health-matters-issue-2" data-drupal-link-system-path="node/4763">Health Matters Issue 2</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item menu-item--expanded">
+        <a href="/directorate-operations/communication-and-knowledge-management/health-intelligence" data-drupal-link-system-path="node/4625">Health Intelligence</a>
+                                <ul class="menu">
+                    <li class="menu-item">
+        <a href="/directorate-operations/communication-and-knowledge-management/determining-what-works" data-drupal-link-system-path="node/4628">Determining what works</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/communication-and-knowledge-management/getting-information-where-it-needed" data-drupal-link-system-path="node/4633">Getting information where it is needed</a>
+              </li>
+                <li class="menu-item">
+        <a href="/directorate-operations/communication-and-knowledge-management/specific-research-projects-and-campaig" data-drupal-link-system-path="node/4629">Specific research projects and campaign support</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/directorates/operations/statistics" data-drupal-link-system-path="node/2254">Statistics</a>
+              </li>
+        </ul>
+  
+              </li>
+        </ul>
+  
+              </li>
+                <li class="menu-item">
+        <a href="/news" data-drupal-link-system-path="news">News</a>
+              </li>
+                <li class="menu-item">
+        <a href="/publications" data-drupal-link-system-path="publications">Publications</a>
+              </li>
+                <li class="menu-item">
+        <a href="/webcasts" data-drupal-link-system-path="node/4786">Webcasts</a>
+              </li>
+                <li class="menu-item">
+        <a href="/links" data-drupal-link-system-path="node/2202">Links</a>
+              </li>
+                <li class="menu-item">
+        <a href="/node/4802" data-drupal-link-system-path="node/4802">Contact</a>
+              </li>
+        </ul>
+  
+
+</div></div>
+    <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"responsive_menu":{"position":"right","theme":"theme-dark","pagedim":"pagedim","breakpoint":"(min-width: 960px)","extension_keyboard":true,"superfish":{"active":false,"delay":300,"speed":100,"speedOut":100}},"fitvids":{"selectors":".node","custom_vendors":"","ignore_selectors":""},"google_analytics":{"trackOutbound":true,"trackMailto":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"field_group":{"html_element":{"mode":"default","context":"view","settings":{"id":"","classes":"container","element":"div","show_label":false,"label_element":"h3","label_element_classes":"","attributes":"","effect":"none","speed":"fast"}}},"ajaxTrustedUrl":{"\/search\/node":true},"user":{"uid":0,"permissionsHash":"542bf1c324e2c5540a1cc4d1fee495aa0485f53d450d4c4fd8b4e54656146452"}}</script>
+<script src="/core/assets/vendor/jquery/jquery.min.js?v=3.4.1"></script>
+<script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.0"></script>
+<script src="/core/misc/drupalSettingsLoader.js?v=8.8.5"></script>
+<script src="/core/misc/drupal.js?v=8.8.5"></script>
+<script src="/core/misc/drupal.init.js?v=8.8.5"></script>
+<script src="/libraries/mmenu/dist/jquery.mmenu.all.js?v=8.8.5"></script>
+<script src="/modules/contrib/responsive_menu/js/responsive_menu.config.js?v=8.8.5"></script>
+<script src="/core/assets/vendor/jquery.cookie/jquery.cookie.min.js?v=1.4.1"></script>
+<script src="/modules/contrib/gdpr_compliance/assets/js/popup.js?q8krn0"></script>
+<script src="https://static.addtoany.com/menu/page.js" async></script>
+<script src="/modules/contrib/addtoany/js/addtoany.js?v=8.8.5"></script>
+<script src="/libraries/fitvids/jquery.fitvids.js?v=8.8.5"></script>
+<script src="/modules/contrib/fitvids/js/init-fitvids.js?v=8.8.5"></script>
+<script src="/modules/contrib/google_analytics/js/google_analytics.js?v=8.8.5"></script>
+<script src="/themes/custom/corporate/js/script.js?q8krn0"></script>
+
+
+  </body>
+</html>

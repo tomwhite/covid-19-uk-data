@@ -31,6 +31,7 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 
 ## News
 
+* 14 April 2020. No per-area case numbers produced for NI, even though it is a weekday (Tuesday). Yesterday was a bank holiday, and no case numbers were produced either.
 * 9 April 2020. The reporting period for case numbers in Wales changed. "For operational reasons, we are moving the point at which we count new cases of Novel Coronavirus (Covid-19) back from 7pm to 1pm.  Case numbers on Thursday [9 April] will therefore be lower than usual, and will return to normal on Friday [10 April]."
 * 8 April 2020. Scotland started publishing numbers for people in hospital and intensive care, by health board. They also started reporting numbers that were less 5 as "*".
 * 6 April 2020. Wales published a new interactive [dashboard](https://public.tableau.com/profile/public.health.wales.health.protection#!/vizhome/RapidCOVID-19virology-Public/Headlinesummary), which gives data for confirmed cases, and testing episodes, broken down by local authority and health board. There is historical data too. Unfortunately there is currently no way of exporting the raw data from the dashboard.

@@ -157,11 +157,10 @@ def test_parse_daily_areas_ni():
         if date <= "2020-03-25":
             # older pages don't have case numbers
             continue
-        weekday = dateparser.parse(date).weekday()
-        if weekday >= 5:
-            # weekends don't have case numbers
-            continue
         result = parse_daily_areas_pdf(date, "Northern Ireland", file)
+        if result is None:
+            # usually (but not always) because weekends don't have case numbers
+            continue
         assert len(result) > 1
         assert result[0] == ['Date', 'Country', 'AreaCode', 'Area', 'TotalCases']
         for row in result[1:]:

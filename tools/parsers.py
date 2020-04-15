@@ -260,11 +260,14 @@ def parse_daily_areas_pdf(date, country, local_pdf_file):
         pdf = pdfplumber.open(local_pdf_file)
         for page in pdf.pages:
             try:
-                table = page.extract_table()
+                table = page.extract_table(table_settings = {
+                    # use text alignment since the table doesn't have lines
+                    "horizontal_strategy": "text"
+                })
                 if table[0][0] == "Local Government District":
                     output_rows = [["Date", "Country", "AreaCode", "Area", "TotalCases"]]
                     for table_row in table[1:]:
-                        if table_row[0].lower() == "total":
+                        if table_row[0].lower() in ("", "total"):
                             continue
                         area = normalize_whitespace(titlecase(table_row[0]))
                         area = area.replace("Ards and North Down", "North Down and Ards")

@@ -1,0 +1,118 @@
+"Area name","Area code","Area type","Reporting date","Daily hospital deaths","Cumulative hospital deaths"
+"United Kingdom","K02000001","Country - UK","2020-04-15",761,12868
+"England","E92000001","Country","2020-04-15",651,11656
+"Scotland","S92000003","Country","2020-04-15",40,615
+"Northern Ireland","N92000002","Country","2020-04-15",10,134
+"Wales","W92000004","Country","2020-04-15",60,463
+"United Kingdom","K02000001","Country - UK","2020-04-14",778,12107
+"England","E92000001","Country","2020-04-14",744,11005
+"Scotland","S92000003","Country","2020-04-14",9,575
+"Northern Ireland","N92000002","Country","2020-04-14",6,124
+"Wales","W92000004","Country","2020-04-14",19,403
+"United Kingdom","K02000001","Country - UK","2020-04-13",717,11329
+"England","E92000001","Country","2020-04-13",667,10261
+"Scotland","S92000003","Country","2020-04-13",24,566
+"Northern Ireland","N92000002","Country","2020-04-13",11,118
+"Wales","W92000004","Country","2020-04-13",15,384
+"United Kingdom","K02000001","Country - UK","2020-04-12",737,10612
+"England","E92000001","Country","2020-04-12",657,9594
+"Scotland","S92000003","Country","2020-04-12",47,542
+"Northern Ireland","N92000002","Country","2020-04-12",15,107
+"Wales","W92000004","Country","2020-04-12",18,369
+"United Kingdom","K02000001","Country - UK","2020-04-11",917,9875
+"England","E92000001","Country","2020-04-11",823,8937
+"Scotland","S92000003","Country","2020-04-11",48,495
+"Northern Ireland","N92000002","Country","2020-04-11",10,92
+"Wales","W92000004","Country","2020-04-11",36,351
+"United Kingdom","K02000001","Country - UK","2020-04-10",980,8958
+"England","E92000001","Country","2020-04-10",866,8114
+"Scotland","S92000003","Country","2020-04-10",81,447
+"Northern Ireland","N92000002","Country","2020-04-10",4,82
+"Wales","W92000004","Country","2020-04-10",29,315
+"United Kingdom","K02000001","Country - UK","2020-04-09",881,7978
+"England","E92000001","Country","2020-04-09",765,7248
+"Scotland","S92000003","Country","2020-04-09",70,366
+"Northern Ireland","N92000002","Country","2020-04-09",5,78
+"Wales","W92000004","Country","2020-04-09",41,286
+"United Kingdom","K02000001","Country - UK","2020-04-08",938,7097
+"England","E92000001","Country","2020-04-08",828,6483
+"Scotland","S92000003","Country","2020-04-08",74,296
+"Northern Ireland","N92000002","Country","2020-04-08",3,73
+"Wales","W92000004","Country","2020-04-08",33,245
+"United Kingdom","K02000001","Country - UK","2020-04-07",786,6159
+"England","E92000001","Country","2020-04-07",758,5655
+"Scotland","S92000003","Country","2020-04-07",2,222
+"Northern Ireland","N92000002","Country","2020-04-07",7,70
+"Wales","W92000004","Country","2020-04-07",19,212
+"United Kingdom","K02000001","Country - UK","2020-04-06",439,5373
+"England","E92000001","Country","2020-04-06",403,4897
+"Scotland","S92000003","Country","2020-04-06",2,220
+"Northern Ireland","N92000002","Country","2020-04-06",7,63
+"Wales","W92000004","Country","2020-04-06",27,193
+"United Kingdom","K02000001","Country - UK","2020-04-05",621,4934
+"England","E92000001","Country","2020-04-05",555,4494
+"Scotland","S92000003","Country","2020-04-05",46,218
+"Northern Ireland","N92000002","Country","2020-04-05",8,56
+"Wales","W92000004","Country","2020-04-05",12,166
+"United Kingdom","K02000001","Country - UK","2020-04-04",708,4313
+"England","E92000001","Country","2020-04-04",637,3939
+"Scotland","S92000003","Country","2020-04-04",46,172
+"Northern Ireland","N92000002","Country","2020-04-04",12,48
+"Wales","W92000004","Country","2020-04-04",13,154
+"United Kingdom","K02000001","Country - UK","2020-04-03",684,3605
+"England","E92000001","Country","2020-04-03",604,3302
+"Scotland","S92000003","Country","2020-04-03",50,126
+"Northern Ireland","N92000002","Country","2020-04-03",6,36
+"Wales","W92000004","Country","2020-04-03",24,141
+"United Kingdom","K02000001","Country - UK","2020-04-02",569,2921
+"England","E92000001","Country","2020-04-02",532,2698
+"Scotland","S92000003","Country","2020-04-02",16,76
+"Northern Ireland","N92000002","Country","2020-04-02",2,30
+"Wales","W92000004","Country","2020-04-02",19,117
+"United Kingdom","K02000001","Country - UK","2020-04-01",563,2352
+"England","E92000001","Country","2020-04-01",515,2166
+"Scotland","S92000003","Country","2020-04-01",13,60
+"Northern Ireland","N92000002","Country","2020-04-01",6,28
+"Wales","W92000004","Country","2020-04-01",29,98
+"United Kingdom","K02000001","Country - UK","2020-03-31",381,1789
+"England","E92000001","Country","2020-03-31",367,1651
+"Scotland","S92000003","Country","2020-03-31",6,47
+"Northern Ireland","N92000002","Country","2020-03-31",1,22
+"Wales","W92000004","Country","2020-03-31",7,69
+"United Kingdom","K02000001","Country - UK","2020-03-30",180,1408
+"England","E92000001","Country","2020-03-30",159,1284
+"Scotland","S92000003","Country","2020-03-30",1,41
+"Northern Ireland","N92000002","Country","2020-03-30",6,21
+"Wales","W92000004","Country","2020-03-30",14,62
+"United Kingdom","K02000001","Country - UK","2020-03-29",209,1228
+"England","E92000001","Country","2020-03-29",199,1125
+"Scotland","S92000003","Country","2020-03-29",0,40
+"Northern Ireland","N92000002","Country","2020-03-29",0,15
+"Wales","W92000004","Country","2020-03-29",10,48
+"United Kingdom","K02000001","Country - UK","2020-03-28",260,1019
+"England","E92000001","Country","2020-03-28",247,926
+"Scotland","S92000003","Country","2020-03-28",7,40
+"Northern Ireland","N92000002","Country","2020-03-28",2,15
+"Wales","W92000004","Country","2020-03-28",4,38
+"United Kingdom","K02000001","Country - UK","2020-03-27",181,759
+"England","E92000001","Country","2020-03-27",,679
+"Scotland","S92000003","Country","2020-03-27",,33
+"Northern Ireland","N92000002","Country","2020-03-27",,13
+"Wales","W92000004","Country","2020-03-27",,34
+"United Kingdom","K02000001","Country - UK","2020-03-26",115,578
+"United Kingdom","K02000001","Country - UK","2020-03-25",41,463
+"United Kingdom","K02000001","Country - UK","2020-03-24",87,422
+"United Kingdom","K02000001","Country - UK","2020-03-23",54,335
+"United Kingdom","K02000001","Country - UK","2020-03-22",48,281
+"United Kingdom","K02000001","Country - UK","2020-03-21",56,233
+"United Kingdom","K02000001","Country - UK","2020-03-20",33,177
+"United Kingdom","K02000001","Country - UK","2020-03-19",41,144
+"United Kingdom","K02000001","Country - UK","2020-03-18",32,103
+"United Kingdom","K02000001","Country - UK","2020-03-17",16,71
+"United Kingdom","K02000001","Country - UK","2020-03-16",20,55
+"United Kingdom","K02000001","Country - UK","2020-03-15",14,35
+"United Kingdom","K02000001","Country - UK","2020-03-14",,21
+"United Kingdom","K02000001","Country - UK","2020-03-13",,8
+"United Kingdom","K02000001","Country - UK","2020-03-12",,8
+"United Kingdom","K02000001","Country - UK","2020-03-11",,6
+"United Kingdom","K02000001","Country - UK","2020-03-10",,6

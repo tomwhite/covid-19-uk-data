@@ -31,10 +31,11 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 
 ## News
 
+* 15 April 2020. A new [dashboard][PHE-dashboard] for UK and England was launched, replacing the ArcGIS one. As a part of this change the XLSX/CSV files for daily indicators, and case counts by region and UTLA (in England) are no longer being produced. They have been replaced by CSV files, or - for programmatic access - a JSON feed.
 * 14 April 2020. No per-area case numbers produced for NI, even though it is a weekday (Tuesday). Yesterday was a bank holiday, and no case numbers were produced either.
 * 9 April 2020. The reporting period for case numbers in Wales changed. "For operational reasons, we are moving the point at which we count new cases of Novel Coronavirus (Covid-19) back from 7pm to 1pm.  Case numbers on Thursday [9 April] will therefore be lower than usual, and will return to normal on Friday [10 April]."
 * 8 April 2020. Scotland started publishing numbers for people in hospital and intensive care, by health board. They also started reporting numbers that were less 5 as "*".
-* 6 April 2020. Wales published a new interactive [dashboard](https://public.tableau.com/profile/public.health.wales.health.protection#!/vizhome/RapidCOVID-19virology-Public/Headlinesummary), which gives data for confirmed cases, and testing episodes, broken down by local authority and health board. There is historical data too. Unfortunately there is currently no way of exporting the raw data from the dashboard.
+* 6 April 2020. Wales published a new interactive [dashboard][PHW-dashboard], which gives data for confirmed cases, and testing episodes, broken down by local authority and health board. There is historical data too. Unfortunately there is currently no way of exporting the raw data from the dashboard.
 * 2 April 2020. Scotland [reported a more timely process for counting deaths](https://www.gov.scot/news/new-process-for-reporting-covid-19-deaths/).
 * 29 March 2020. There's a [new spreadsheet](https://fingertips.phe.org.uk/documents/Historic%20COVID-19%20Dashboard%20Data.xlsx) that includes historical data for the dashboard. This includes cases (by country, English UTLA, English NHS region), deaths (by country), and recovered patients (although this isn't being updated at the time of writing).
 * 27 March 2020. UK daily indicators now include number of deaths for UK, England, Scotland, Wales, and Northern Ireland.
@@ -57,10 +58,10 @@ Department of Health and Social Care, and Public Health England
 3. Publish deaths by hospital every day.
 
 Public Health Wales
-1. ~~Publish the number of tests being performed every day.~~ _The new [dashboard](https://public.tableau.com/profile/public.health.wales.health.protection#!/vizhome/RapidCOVID-19virology-Public/Headlinesummary) includes number of new testing episodes every day._
+1. ~~Publish the number of tests being performed every day.~~ _The new [dashboard][PHW-dashboard] includes number of new testing episodes every day._
 2. Publish daily totals (tests, confirmed cases, deaths) in machine readable form (CSV).
 3. Publish confirmed cases by local authority/health board in machine readable form (CSV).
-4. ~~Publish historical data, not just the current day's data.~~ _The new [dashboard](https://public.tableau.com/profile/public.health.wales.health.protection#!/vizhome/RapidCOVID-19virology-Public/Headlinesummary) includes historical data._
+4. ~~Publish historical data, not just the current day's data.~~ _The new [dashboard][PHW-dashboard] includes historical data._
 5. Publish deaths by hospital every day.
 
 Public Health Scotland
@@ -143,6 +144,7 @@ Note that the arcgis.com links are direct links to the data.
 * Another PHE dashboard: [Coronavirus (COVID-19) in the UK](https://covid19static.azurewebsites.net/), this one is [open source](https://github.com/PublicHealthEngland/coronavirus-dashboard), and provides a download of data in CSV format.
 * Ian Watt's [COVID-19 Scotland dataset](https://github.com/watty62/Scot_covid19)
 * Emma Doughty's [UK COVID-19 data](https://github.com/emmadoughty/Daily_COVID-19)
+* ODI Leeds mirror of PHE dashboard data: https://github.com/odileeds/coronavirus-data
 
 ## Tools
 
@@ -172,10 +174,7 @@ The **updates** tool runs **crawl** then **convert_sqlite_to_csvs**, and issues 
 ./tools/update.sh Scotland
 ./tools/update.sh NI
 ./tools/update.sh UK
-./tools/update.sh UK-daily-indicators
-./tools/update.sh England
-DATE=$(date +'%Y-%m-%d')
-curl -L https://www.arcgis.com/sharing/rest/content/items/ca796627a2294c51926865748c4a56e8/data -o data/raw/NHSR_Cases_table-$DATE.csv
+./tools/update.sh UK-cases-and-deaths
 ```
 
 The equivalent done manually (just for Wales):
@@ -222,3 +221,6 @@ The following will compare the data in this repository, with the data published 
 curl -L https://fingertips.phe.org.uk/documents/Historic%20COVID-19%20Dashboard%20Data.xlsx -o "data/raw/Historic COVID-19 Dashboard Data.xlsx"
 tools/compare_phe_historical.py
 ```
+
+[PHE-dashboard]: https://coronavirus.data.gov.uk/
+[PHW-dashboard]: https://public.tableau.com/profile/public.health.wales.health.protection#!/vizhome/RapidCOVID-19virology-Public/Headlinesummary

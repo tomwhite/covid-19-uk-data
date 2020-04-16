@@ -255,6 +255,22 @@ def parse_daily_areas(date, country, html):
     return None
 
 
+def parse_daily_areas_json(date, country, json_data):
+    if country == "England":
+        output_rows = [["Date", "Country", "AreaCode", "Area", "TotalCases"]]
+        for area_code, o in json_data["utlas"].items():
+            area = o["name"]["value"]
+            cases = normalize_int(o["totalCases"]["value"])
+            if area_code != lookup_local_authority_code(area):
+                print("Area code mismatch for {}, JSON file gave {}, but lookup was {}".format(area, area_code, lookup_local_authority_code(area)))
+                return None
+            output_row = [date, country, area_code, area, cases]
+            output_rows.append(output_row)
+        return output_rows
+
+    return None
+
+
 def parse_daily_areas_pdf(date, country, local_pdf_file):
     if country == "Northern Ireland":
         pdf = pdfplumber.open(local_pdf_file)

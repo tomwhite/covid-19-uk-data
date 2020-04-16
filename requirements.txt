@@ -8,3 +8,4 @@ requests
 titlecase
 word2number
 xlrd
+xmltodict

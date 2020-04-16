@@ -12,10 +12,12 @@ import re
 import requests
 import sqlite3
 import sys
+import xmltodict
 
 from parsers import (
     get_text_from_pdf,
     parse_daily_areas,
+    parse_daily_areas_json,
     parse_daily_areas_pdf,
     parse_totals,
     parse_totals_pdf_text,
@@ -47,6 +49,8 @@ def crawl(date, dataset, check_only=False):
         return crawl_arcgis(date, "England", check_only)
     elif dataset.lower() == "uk-daily-indicators":
         return crawl_arcgis(date, "UK", check_only)
+    elif dataset.lower() == "uk-cases-and-deaths":
+        return crawl_json(date, "UK", check_only)
 
 
 def get_html_url(date, country):
@@ -108,6 +112,61 @@ def crawl_html(date, country, check_only):
         with open(local_html_file, "w") as f:
             f.write(html)
 
+
+def crawl_json(date, country, check_only):
+    if country == "UK":
+        # See https://github.com/PublicHealthEngland/coronavirus-dashboard
+        blobs_url = "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list"
+        local_data_file = "data/raw/phe/coronavirus-covid-19-number-of-cases-in-{}-{}.json".format(
+            format_country(country), date
+        )
+        
+        if not os.path.exists(local_data_file):
+            r = requests.get(blobs_url)
+            blobs_xml = r.text
+            blobs_dict = xmltodict.parse(blobs_xml)
+            blob_names = sorted([o["Name"] for o in blobs_dict["EnumerationResults"]["Blobs"]["Blob"] if o["Name"]])
+            dt = dateparser.parse(date, date_formats=['%Y-%m-%d'], locales=["en-GB"])
+            blob_names_for_date = [name for name in blob_names if name.startswith("data_{}".format(dt.strftime('%Y%m%d')))]
+
+            if len(blob_names_for_date) == 0:
+                if check_only:
+                    return DatasetUpdate.UPDATE_NOT_AVAILABLE
+                sys.stderr.write("No data available for {}\n".format(date))
+                sys.exit(1)         
+
+            if check_only:
+                return DatasetUpdate.UPDATE_AVAILABLE       
+
+            # Use most recent date
+            data_url = "https://c19pub.azureedge.net/{}".format(blob_names_for_date[-1])
+            r = requests.get(data_url)
+            with open(local_data_file, "w") as f:
+                f.write(r.text)
+
+        if check_only:
+            return DatasetUpdate.ALREADY_UPDATED
+
+        with open(local_data_file) as f:
+            json_data = json.load(f)
+
+            totalUKCases = json_data["overview"]["K02000001"]["totalCases"]["value"]
+            totalUKDeaths = json_data["overview"]["K02000001"]["deaths"]["value"]
+            englandCases = json_data["countries"]["E92000001"]["totalCases"]["value"]
+            englandDeaths = json_data["countries"]["E92000001"]["deaths"]["value"]
+
+            with sqlite3.connect('data/covid-19-uk.db') as conn:
+                c = conn.cursor()
+                c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'UK', 'ConfirmedCases', {totalUKCases})")
+                c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'UK', 'Deaths', {totalUKDeaths})")
+                c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'England', 'ConfirmedCases', {englandCases})")
+                c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', 'England', 'Deaths', {englandDeaths})")
+
+            # get area data for England
+            daily_areas = parse_daily_areas_json(date, "England", json_data)
+            if daily_areas is not None:
+                save_daily_areas(date, "England", daily_areas)
+                save_daily_areas_to_sqlite(date, "England", daily_areas)
 
 def crawl_pdf(date, country, check_only):
     if country == "Northern Ireland":
@@ -257,7 +316,7 @@ if __name__ == "__main__":
             print("There are no updates before 14:00")
             sys.exit(0)
         date = now.strftime('%Y-%m-%d')
-        datasets = ["Wales", "Wales-daily-cases", "Scotland", "NI", "UK"]
+        datasets = ["Wales", "Wales-daily-cases", "Scotland", "NI", "UK", "UK-cases-and-deaths"]
         new_updates_available = False
         for dataset in datasets:
             updated = crawl(date, dataset, check_only=True)

@@ -110,8 +110,9 @@ def get_text_from_pdf(local_pdf_file):
     return text
 
 
-def parse_totals_pdf_text(country, text):
+def parse_totals_pdf(date, country, local_pdf_file):
     if country == "Northern Ireland":
+        text = get_text_from_pdf(local_pdf_file)
         pattern_dict = {
             "Date": (r"Date generated: (?P<Date>[\d,]+/[\d,]+/[\d,]+)", date_value_parser_fn),
             "Tests": (r"Number of Individuals tested( for COVID-19| for SARS-COV2 Virus)?:? (?P<Tests>[\d,]+)", int_value_parser_fn),
@@ -120,6 +121,33 @@ def parse_totals_pdf_text(country, text):
         }
         result = parse_totals_general(pattern_dict, country, text)
         return result
+    elif country == "Wales":
+        pdf = pdfplumber.open(local_pdf_file)
+        for page in pdf.pages:
+            try:
+                table = page.extract_table(table_settings = {
+                    # use text alignment since the table doesn't have lines
+                    "horizontal_strategy": "text"
+                })
+                result = {
+                    "Date": date,
+                    "Country": country
+                }
+                for table_row in table:
+                    if table_row[0] == "":
+                        continue
+                    label = table_row[0].replace("\t", " ")
+                    value = normalize_int(table_row[1])
+                    if label == "Cumulative individuals tested":
+                        result["Tests"] = value
+                    elif label == "Cumulative confirmed COVID-19 case total":
+                        result["ConfirmedCases"] = value
+                    elif label == "Cumulative number of suspected COVID-19 deaths* reported to PHW":
+                        result["Deaths"] = value
+                return result
+            except IndexError:
+                pass # no table on page
+    return None
 
 def print_totals(results):
     date = results["Date"]

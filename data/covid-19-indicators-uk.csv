@@ -840,3 +840,6 @@ Date,Country,Indicator,Value
 2020-04-17,Scotland,ConfirmedCases,7409
 2020-04-17,Scotland,Deaths,837
 2020-04-17,Scotland,Tests,36637
+2020-04-17,Wales,ConfirmedCases,6645
+2020-04-17,Wales,Deaths,506
+2020-04-17,Wales,Tests,20066

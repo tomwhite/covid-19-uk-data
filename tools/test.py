@@ -1,7 +1,7 @@
 import dateparser
 import glob
 import math
-from parsers import get_text_from_html, get_text_from_pdf, parse_daily_areas, parse_daily_areas_pdf, parse_totals, parse_totals_pdf_text
+from parsers import get_text_from_html, parse_daily_areas, parse_daily_areas_pdf, parse_totals, parse_totals_pdf
 import pdfplumber
 import re
 from util import lookup_local_authority_code, lookup_health_board_code, lookup_local_government_district_code, normalize_int, normalize_whitespace
@@ -80,16 +80,26 @@ def test_parse_totals_uk():
             assert result["ConfirmedCases"] >= 0
             assert result["Deaths"] >= 0
 
-def test_parse_totals_pdf_text_ni():
+def test_parse_totals_pdf_ni():
     for file in sorted(glob.glob("data/raw/Daily_bulletin_DoH_*.pdf")):
         m = re.match(r".+(\d{4}-\d{2}-\d{2})\.pdf", file)
         date = m.group(1)
         if date <= "2020-03-24":
             # older pages cannot be parsed with current parser
             continue
-        text = get_text_from_pdf(file)
-        result = parse_totals_pdf_text("Northern Ireland", text)
+        result = parse_totals_pdf(date, "Northern Ireland", file)
         assert result["Country"] == "Northern Ireland"
+        assert result["Date"] == date
+        assert result["Tests"] >= 0
+        assert result["ConfirmedCases"] >= 0
+        assert result["Deaths"] >= 0
+
+def test_parse_totals_pdf_wales():
+    for file in sorted(glob.glob("data/raw/phw/HeadlineSummary-*.pdf")):
+        m = re.match(r".+(\d{4}-\d{2}-\d{2})\.pdf", file)
+        date = m.group(1)
+        result = parse_totals_pdf(date, "Wales", file)
+        assert result["Country"] == "Wales"
         assert result["Date"] == date
         assert result["Tests"] >= 0
         assert result["ConfirmedCases"] >= 0

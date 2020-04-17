@@ -15,12 +15,11 @@ import sys
 import xmltodict
 
 from parsers import (
-    get_text_from_pdf,
     parse_daily_areas,
     parse_daily_areas_json,
     parse_daily_areas_pdf,
     parse_totals,
-    parse_totals_pdf_text,
+    parse_totals_pdf,
     print_totals,
     save_indicators,
     save_indicators_to_sqlite,
@@ -36,8 +35,6 @@ class DatasetUpdate(Enum):
 
 def crawl(date, dataset, check_only=False):
     if dataset.lower() == "wales":
-        return crawl_html(date, "Wales", check_only)
-    elif dataset.lower() == "wales-daily-cases":
         return crawl_pdf(date, "Wales", check_only)
     elif dataset.lower() == "scotland":
         return crawl_html(date, "Scotland", check_only)
@@ -59,6 +56,7 @@ def get_html_url(date, country):
     elif country == "Scotland":
         return "https://www.gov.scot/publications/coronavirus-covid-19-tests-and-cases-in-scotland/"
     elif country == "Wales":
+        # no longer used
         return "https://covid19-phwstatement.nhs.wales/"
     elif country == "Northern Ireland":
         # prior to 2020-03-24
@@ -198,8 +196,7 @@ def crawl_pdf(date, country, check_only):
         if check_only:
             return DatasetUpdate.ALREADY_UPDATED
 
-        text = get_text_from_pdf(local_pdf_file)
-        results = parse_totals_pdf_text(country, text)
+        results = parse_totals_pdf(date, country, local_pdf_file)
 
         if results is None:
             sys.stderr.write("Can't find numbers. Perhaps the page format has changed?\n")
@@ -232,6 +229,27 @@ def crawl_pdf(date, country, check_only):
         if daily_areas is not None:
             save_daily_areas(date, country, daily_areas)
             save_daily_areas_to_sqlite(date, country, daily_areas)
+
+        local_pdf_file = "data/raw/phw/HeadlineSummary-{}.pdf".format(date)
+
+        if not os.path.exists(local_pdf_file):
+            if check_only:
+                return DatasetUpdate.UPDATE_NOT_AVAILABLE
+            sys.stderr.write("Page is dated ?, but want {}\n".format(date))
+            sys.exit(1)
+
+        results = parse_totals_pdf(date, country, local_pdf_file)
+
+        if results is None:
+            sys.stderr.write("Can't find numbers. Perhaps the page format has changed?\n")
+            sys.exit(1)
+        elif results["Date"] != date:
+            sys.stderr.write("Page is dated {}, but want {}\n".format(results["Date"], date))
+            sys.exit(1)
+
+        print_totals(results)
+        #save_indicators(results)
+        save_indicators_to_sqlite(results)
 
 
 def download_arcgis_item(date, item_id, local_data_file, check_only):
@@ -316,7 +334,7 @@ if __name__ == "__main__":
             print("There are no updates before 14:00")
             sys.exit(0)
         date = now.strftime('%Y-%m-%d')
-        datasets = ["Wales-daily-cases", "Scotland", "NI", "UK", "UK-cases-and-deaths"]
+        datasets = ["Wales", "Scotland", "NI", "UK", "UK-cases-and-deaths"]
         new_updates_available = False
         for dataset in datasets:
             updated = crawl(date, dataset, check_only=True)

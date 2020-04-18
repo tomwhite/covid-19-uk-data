@@ -848,6 +848,8 @@ Date,Country,Indicator,Value
 2020-04-17,Wales,ConfirmedCases,6645
 2020-04-17,Wales,Deaths,506
 2020-04-17,Wales,Tests,20066
+2020-04-18,England,ConfirmedCases,87022
+2020-04-18,England,Deaths,13917
 2020-04-18,Northern Ireland,ConfirmedCases,2486
 2020-04-18,Northern Ireland,Deaths,193
 2020-04-18,Northern Ireland,Tests,15749

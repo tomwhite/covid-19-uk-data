@@ -68,7 +68,7 @@ def parse_totals(country, html):
             "Date": (r"As of (?P<Time>\d+(am|pm)?) (on )?(?P<Date>.+?),", date_value_parser_fn),
             "Tests": (r"(a total of )?(?P<Tests>[\d,]+?) people have been tested", int_value_parser_fn),
             "ConfirmedCases": (r"(and|of which|of whom) (?P<ConfirmedCases>[\d,]+?) (were confirmed (as )?|tested )positive", int_value_parser_fn),
-            "Deaths": (r"(?P<Deaths>[\d,]+) (patients?.+?)?have died", int_value_parser_fn),
+            "Deaths": (r"(?P<Deaths>[\d,]+) (patients?.+?)?have (sadly )?died", int_value_parser_fn),
         }
         result = parse_totals_general(pattern_dict, country, text)
         return result

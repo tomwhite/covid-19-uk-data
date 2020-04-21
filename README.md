@@ -31,6 +31,10 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 
 ## News
 
+* 21 April 2020. The PHA NI dashboard was [suspended](https://twitter.com/healthdpt/status/1252624119335706625) since it was reporting incorrect data. 
+* 21 April 2020. The [PHW dashboard][PHW-dashboard] now has a link to download the data in XLSX format. The URL is dynamically generated however, so it's still not easy to automate the download.
+* 20 April 2020. The [PHE dashboard][PHE-dashboard] now has stable URLs for its CSV downloads.
+* 18 April 2020. PHA NI launched a [dashboard](http://www.pha.site/cvdashboard) to replace the daily surveillance reports. 
 * 15 April 2020. A new [dashboard][PHE-dashboard] for UK and England was launched, replacing the ArcGIS one. As a part of this change the XLSX/CSV files for daily indicators, and case counts by region and UTLA (in England) are no longer being produced. They have been replaced by CSV files, or - for programmatic access - a JSON feed.
 * 14 April 2020. No per-area case numbers produced for NI, even though it is a weekday (Tuesday). Yesterday was a bank holiday, and no case numbers were produced either.
 * 9 April 2020. The reporting period for case numbers in Wales changed. "For operational reasons, we are moving the point at which we count new cases of Novel Coronavirus (Covid-19) back from 7pm to 1pm.  Case numbers on Thursday [9 April] will therefore be lower than usual, and will return to normal on Friday [10 April]."
@@ -52,9 +56,9 @@ Here are my suggestions for how to improve the data being published by public bo
 
 The short version: **publish everything in CSV format, and include historical data!**
 
-* _Public Health England:_ Make the CSV downloads on the [dashboard][PHE-dashboard] available at stable URLs.
+* _Public Health England:_ Add testing numbers (including historical) to the [dashboard][PHE-dashboard] and CSV downloads.
 
-* _Public Health Wales:_ Enable data downloads for the [dashboard][PHW-dashboard].
+* _Public Health Wales:_ Provide the data download for the [dashboard][PHW-dashboard] at a stable URL.
 
 * _Public Health Scotland_: Add numbers of deaths to the [Trends in daily COVID-19 data][Scotland-trends] file.
 

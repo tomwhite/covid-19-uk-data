@@ -90,8 +90,7 @@ Raw data (including HTML pages, PDFs, CSV and XLSX files), is archived under _da
 
 ### Wales
 
-* Number of **tests** are not published
-* Number of **tests, confirmed cases and deaths**, and **confirmed cases by local authority and health board**, are published on the [PHW dashboard][PHW-dashboard] at 2pm. There is no data download facility so the data is extracted from PDFs that are downloaded from the dashboard.
+* Number of **tests, confirmed cases and deaths**, and **confirmed cases by local authority and health board**, are published on the [PHW dashboard][PHW-dashboard] at 2pm.
 * Twitter updates: [@PublicHealthW](https://twitter.com/publichealthw)
 
 ### Northern Ireland

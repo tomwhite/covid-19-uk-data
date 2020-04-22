@@ -42,6 +42,7 @@ def test_parse_totals_scotland():
         with open(file) as f:
             html = f.read()
             result = parse_totals("Scotland", html)
+            print(date)
             assert result["Country"] == "Scotland"
             assert result["Date"] == date
             assert result["Tests"] >= 0

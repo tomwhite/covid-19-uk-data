@@ -77,7 +77,7 @@ def parse_totals(country, html):
             "Date": (r"Scottish (COVID-19 )?test numbers: (?P<Date>\d+\s\w+\s\d{4})", date_value_parser_fn),
             "Tests": (r"total of (?P<Tests>.+?) (Scottish tests have concluded|people in Scotland have been tested)", int_value_parser_fn),
             "ConfirmedCases": (r"(?P<ConfirmedCases>[\d,]+?) (tests )?were (confirmed)?positive", int_value_parser_fn),
-            "Deaths": (r"(?P<Deaths>\w+) patients?.+?have died", int_value_parser_fn),
+            "Deaths": (r"(?P<Deaths>(\d+|\d+[\d,]+|\d+)) patients?.+?have died", int_value_parser_fn),
         }
         result = parse_totals_general(pattern_dict, country, text)
         return result

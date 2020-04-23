@@ -21,7 +21,7 @@ The following CSV files are available:
 * _data/daily/*.csv_: daily counts, with a separate file for each date and country.
     * No longer being published since 23 April 2020. Use [data/covid-19-cases-uk.csv](data/covid-19-cases-uk.csv)
 
-Interpreting the numbers (more information on this [DHSC/PHE page](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases-and-deaths), and the [PHE dashboard notes](https://fingertips.phe.org.uk/documents/PHE%20COVID-19%20Dashboard%20Metadata.pdf))
+Interpreting the numbers (more information on this [DHSC/PHE page](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases-and-deaths), and the [PHE dashboard about page](https://coronavirus.data.gov.uk/about))
 * "Tests" are the number of people tested, not the number of samples tested.
 * "Confirmed cases" are the number of people with a positive test.
 * "Deaths" are hospital deaths, so they don't include deaths of people with COVID-19 who died at home for example.
@@ -32,7 +32,7 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 
 ## News
 
-* 21 April 2020. The PHA NI dashboard was [suspended](https://twitter.com/healthdpt/status/1252624119335706625) since it was reporting incorrect data. 
+* 21 April 2020. The PHA NI dashboard was [suspended](https://twitter.com/healthdpt/status/1252624119335706625) since it was reporting incorrect data. Test and total confirmed case numbers are being announced on Twitter by [@healthdpt](https://twitter.com/healthdpt). Area breakdowns are no longer being provided.
 * 21 April 2020. The [PHW dashboard][PHW-dashboard] now has a link to download the data in XLSX format. The URL is dynamically generated however, so it's still not easy to automate the download.
 * 20 April 2020. The [PHE dashboard][PHE-dashboard] now has stable URLs for its CSV downloads.
 * 18 April 2020. PHA NI launched a [dashboard](http://www.pha.site/cvdashboard) to replace the daily surveillance reports. 
@@ -74,7 +74,7 @@ Raw data (including HTML pages, PDFs, CSV and XLSX files), is archived under _da
 ### UK
 
 * Number of **tests, confirmed cases and deaths** are published at [https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases) at 2pm in HTML format
-* Number of historical **confirmed cases and deaths** are published on the [PHE dashboard][PHE-dashboard] in the afternoon in CSV format (however, since the CSV are dynamic, this repo gets the same data from a backend JSON feed)
+* Number of historical **confirmed cases and deaths** are published on the [PHE dashboard][PHE-dashboard] in the afternoon in CSV format (powered by a backend JSON feed)
 * Twitter updates: [@DHSCgovuk](https://twitter.com/DHSCgovuk)
 
 ### England
@@ -86,20 +86,18 @@ Raw data (including HTML pages, PDFs, CSV and XLSX files), is archived under _da
 
 ### Scotland
 
-* Number of **tests, confirmed cases and deaths**, and **confirmed cases by local authority**, are published at [https://www.gov.scot/coronavirus-covid-19/](https://www.gov.scot/coronavirus-covid-19/) at 2pm in HTML format
+* Number of **tests, confirmed cases and deaths**, and **confirmed cases by local authority**, are published at [https://www.gov.scot/publications/trends-in-number-of-people-in-hospital-with-confirmed-or-suspected-covid-19/](https://www.gov.scot/publications/trends-in-number-of-people-in-hospital-with-confirmed-or-suspected-covid-19/) at 2pm in XLSX format
 * Twitter updates: [@scotgov](https://twitter.com/scotgov)
 
 ### Wales
 
-* Number of **tests, confirmed cases and deaths**, and **confirmed cases by local authority and health board**, are published on the [PHW dashboard][PHW-dashboard] at 2pm.
+* Number of **tests, confirmed cases and deaths**, and **confirmed cases by local authority and health board**, are published on the [PHW dashboard][PHW-dashboard] at 2pm, with an accompanying XLSX download.
 * Twitter updates: [@PublicHealthW](https://twitter.com/publichealthw)
 
 ### Northern Ireland
 
-* Number of **tests, confirmed cases and deaths**, and **confirmed cases by local authority** are published in the [surveillance bulletin][NI-surveillance-bulletins] at 2pm in PDF format (old bulletins are archived)
-* Twitter updates: [@publichealthni](https://twitter.com/publichealthni)
-
-Note that [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225644ef7a6f4dd1b13ea1d67) includes **confirmed cases and deaths** for UK, and England, Scotland, Wales, and Northern Ireland.
+* ~~Number of **tests, confirmed cases and deaths**, and **confirmed cases by local authority** are published in the [surveillance bulletin][NI-surveillance-bulletins] at 2pm in PDF format (old bulletins are archived)~~ Not currently being updated.
+* Twitter updates: [@healthdpt](https://twitter.com/healthdpt)
 
 ### Local Authority and Health Board metadata
 
@@ -110,10 +108,10 @@ Note that [daily indicators](https://www.arcgis.com/home/item.html?id=bc8ee90225
 
 ## Related projects/datasets
 
-* Scotland [Trends in daily COVID-19 data][Scotland-trends]
 * NHS England [daily deaths by trust and region](https://www.england.nhs.uk/statistics/statistical-work-areas/covid-19-daily-deaths/)
 * National Records of Scotland: [Deaths involving coronavirus (COVID-19) in Scotland](https://www.nrscotland.gov.uk/covid19stats)
 * ONS: [Deaths registered weekly in England and Wales, provisional](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/weeklyprovisionalfiguresondeathsregisteredinenglandandwales)
+* NISRA: [Weekly Deaths](https://www.nisra.gov.uk/publications/weekly-deaths)
 * The [PHE dashboard][PHW-dashboard] is [open source](https://github.com/PublicHealthEngland/coronavirus-dashboard).
 * Ian Watt's [COVID-19 Scotland dataset](https://github.com/watty62/Scot_covid19)
 * Emma Doughty's [UK COVID-19 data](https://github.com/emmadoughty/Daily_COVID-19)
@@ -188,15 +186,6 @@ Repopulate the sqlite database from the CSV files:
 rm data/covid-19-uk.db
 csvs-to-sqlite --replace-tables -t indicators -pk Date -pk Country -pk Indicator data/covid-19-indicators-uk.csv data/covid-19-uk.db
 csvs-to-sqlite --replace-tables -t cases -pk Date -pk Country -pk AreaCode -pk Area data/covid-19-cases-uk.csv data/covid-19-uk.db
-```
-
-### Comparison with PHE data
-
-The following will compare the data in this repository, with the data published by PHE on their [dashboard](https://www.arcgis.com/apps/opsdashboard/index.html#/f94c3c90da5b4e9f9a0b19484dd4bb14):
-
-```bash
-curl -L https://fingertips.phe.org.uk/documents/Historic%20COVID-19%20Dashboard%20Data.xlsx -o "data/raw/Historic COVID-19 Dashboard Data.xlsx"
-tools/compare_phe_historical.py
 ```
 
 [NI-surveillance-bulletins]: https://www.publichealth.hscni.net/publications/covid-19-surveillance-reports

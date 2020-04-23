@@ -103,7 +103,7 @@ def crawl_html(date, country, check_only):
     save_indicators_to_sqlite(results)
 
     if daily_areas is not None:
-        save_daily_areas(date, country, daily_areas)
+        #save_daily_areas(date, country, daily_areas)
         save_daily_areas_to_sqlite(date, country, daily_areas)
 
     if save_html_file:
@@ -163,7 +163,7 @@ def crawl_json(date, country, check_only):
             # get area data for England
             daily_areas = parse_daily_areas_json(date, "England", json_data)
             if daily_areas is not None:
-                save_daily_areas(date, "England", daily_areas)
+                #save_daily_areas(date, "England", daily_areas)
                 save_daily_areas_to_sqlite(date, "England", daily_areas)
 
 def crawl_pdf(date, country, check_only):
@@ -211,7 +211,7 @@ def crawl_pdf(date, country, check_only):
 
         daily_areas = parse_daily_areas_pdf(date, country, local_pdf_file)
         if daily_areas is not None:
-            save_daily_areas(date, country, daily_areas)
+            #save_daily_areas(date, country, daily_areas)
             save_daily_areas_to_sqlite(date, country, daily_areas)
 
     elif country == "Wales":
@@ -227,7 +227,7 @@ def crawl_pdf(date, country, check_only):
 
         daily_areas = parse_daily_areas_pdf(date, country, local_pdf_file)
         if daily_areas is not None:
-            save_daily_areas(date, country, daily_areas)
+            #save_daily_areas(date, country, daily_areas)
             save_daily_areas_to_sqlite(date, country, daily_areas)
 
         local_pdf_file = "data/raw/phw/HeadlineSummary-{}.pdf".format(date)
@@ -322,7 +322,7 @@ def crawl_arcgis(date, country, check_only):
             row[4] = normalize_int(normalize_whitespace(row[4]))
         daily_areas = [["Date", "Country", "AreaCode", "Area", "TotalCases"]] + daily_areas
 
-        save_daily_areas(date, country, daily_areas)
+        #save_daily_areas(date, country, daily_areas)
         save_daily_areas_to_sqlite(date, country, daily_areas)
 
 

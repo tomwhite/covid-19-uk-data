@@ -19,6 +19,7 @@ The following CSV files are available:
 * [data/covid-19-totals-wales.csv](data/covid-19-totals-wales.csv): daily counts of tests, confirmed cases, deaths for Wales
 * [data/covid-19-indicators-uk.csv](data/covid-19-indicators-uk.csv): daily counts of tests, confirmed cases, deaths for the whole of the UK and individual countries in the UK (England, Scotland, Wales, Northern Ireland). This is a tidy-data version of _covid-19-totals-*.csv_ combined into one file.
 * _data/daily/*.csv_: daily counts, with a separate file for each date and country.
+    * No longer being published since 23 April 2020. Use [data/covid-19-cases-uk.csv](data/covid-19-cases-uk.csv)
 
 Interpreting the numbers (more information on this [DHSC/PHE page](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases-and-deaths), and the [PHE dashboard notes](https://fingertips.phe.org.uk/documents/PHE%20COVID-19%20Dashboard%20Metadata.pdf))
 * "Tests" are the number of people tested, not the number of samples tested.

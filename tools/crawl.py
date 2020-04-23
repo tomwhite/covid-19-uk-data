@@ -111,23 +111,31 @@ def crawl_html(date, country, check_only):
             f.write(html)
 
 
+def get_json_url(date):
+    # See https://github.com/PublicHealthEngland/coronavirus-dashboard
+    blobs_url = "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list"
+    r = requests.get(blobs_url)
+    blobs_xml = r.text
+    blobs_dict = xmltodict.parse(blobs_xml)
+    blob_names = sorted([o["Name"] for o in blobs_dict["EnumerationResults"]["Blobs"]["Blob"] if o["Name"]])
+    dt = dateparser.parse(date, date_formats=['%Y-%m-%d'], locales=["en-GB"])
+    blob_names_for_date = [name for name in blob_names if name.startswith("data_{}".format(dt.strftime('%Y%m%d')))]
+    if len(blob_names_for_date) == 0:
+        return None
+    # Use most recent one
+    return "https://c19pub.azureedge.net/{}".format(blob_names_for_date[-1])
+
+
 def crawl_json(date, country, check_only):
     if country == "UK":
-        # See https://github.com/PublicHealthEngland/coronavirus-dashboard
-        blobs_url = "https://publicdashacc.blob.core.windows.net/publicdata?restype=container&comp=list"
         local_data_file = "data/raw/phe/coronavirus-covid-19-number-of-cases-in-{}-{}.json".format(
             format_country(country), date
         )
         
         if not os.path.exists(local_data_file):
-            r = requests.get(blobs_url)
-            blobs_xml = r.text
-            blobs_dict = xmltodict.parse(blobs_xml)
-            blob_names = sorted([o["Name"] for o in blobs_dict["EnumerationResults"]["Blobs"]["Blob"] if o["Name"]])
-            dt = dateparser.parse(date, date_formats=['%Y-%m-%d'], locales=["en-GB"])
-            blob_names_for_date = [name for name in blob_names if name.startswith("data_{}".format(dt.strftime('%Y%m%d')))]
+            data_url = get_json_url(date)
 
-            if len(blob_names_for_date) == 0:
+            if data_url is None:
                 if check_only:
                     return DatasetUpdate.UPDATE_NOT_AVAILABLE
                 sys.stderr.write("No data available for {}\n".format(date))
@@ -136,8 +144,6 @@ def crawl_json(date, country, check_only):
             if check_only:
                 return DatasetUpdate.UPDATE_AVAILABLE       
 
-            # Use most recent date
-            data_url = "https://c19pub.azureedge.net/{}".format(blob_names_for_date[-1])
             r = requests.get(data_url)
             with open(local_data_file, "w") as f:
                 f.write(r.text)

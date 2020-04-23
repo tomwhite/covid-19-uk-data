@@ -3,7 +3,7 @@
 import json
 import pandas as pd
 
-phe_json_file = "data/raw/phe/coronavirus-covid-19-number-of-cases-in-uk-2020-04-16.json"
+phe_json_file = "data/raw/phe/coronavirus-covid-19-number-of-cases-in-uk-2020-04-22.json"
 
 def load_json():
     with open(phe_json_file) as f:

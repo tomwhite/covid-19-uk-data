@@ -1,6 +1,8 @@
+import json
 import math
 import pandas as pd
 import re
+import requests
 from word2number import w2n
 
 
@@ -47,6 +49,16 @@ def format_int(val):
     if math.isnan(val):
         return ""
     return int(val)
+
+
+def read_json(file):
+    """Read JSON from a local file or a URL"""
+    if file.startswith("http"):
+        r = requests.get(file)
+        return json.loads(r.text)
+    else:
+        with open(file) as f:
+            return json.load(f) 
 
 
 la_name_to_code = None
@@ -123,3 +135,52 @@ def lookup_local_government_district_code(name):
         
     name = name.replace("`", "")
     return lgd_name_to_code.get(name, "")
+
+hb_to_las = {
+    "Aneurin Bevan": [
+        "Blaenau Gwent",
+        "Caerphilly",
+        "Monmouthshire",
+        "Newport",
+        "Torfaen"
+    ],
+    "Betsi Cadwaladr": [
+        "Conwy",
+        "Denbighshire",
+        "Flintshire",
+        "Gwynedd",
+        "Isle of Anglesey",
+        "Wrexham"
+    ],
+    "Cardiff and Vale": [
+        "Cardiff",
+        "Vale of Glamorgan"
+    ],
+    "Cwm Taf": [
+        "Bridgend",
+        "Merthyr Tydfil",
+        "Rhondda Cynon Taf"
+    ],
+    "Hywel Dda": [
+        "Carmarthenshire",
+        "Ceredigion",
+        "Pembrokeshire"
+    ],
+    "Powys": [
+        "Powys"
+    ],
+    "Swansea Bay": [
+        "Neath Port Talbot",
+        "Swansea"
+    ]
+}
+
+la_to_hb_map = {}
+for hb in hb_to_las.keys():
+    for la in hb_to_las[hb]:
+        la_to_hb_map[la] = hb
+
+
+def la_to_hb(la):
+    return la_to_hb_map.get(la, None)
+    

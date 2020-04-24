@@ -155,6 +155,15 @@ DATE=$(date +'%Y-%m-%d')
 git add data/; git commit -am "Update for $DATE for Wales"
 ```
 
+NI updates are being done manually since there are currently no machine-readable sources.
+```bash
+# edit covid-19-totals-northern-ireland.csv and add tests/cases/deaths
+./tools/convert_totals_to_indicators.py
+csvs-to-sqlite --replace-tables -t indicators -pk Date -pk Country -pk Indicator data/covid-19-indicators-uk.csv data/covid-19-uk.db
+./tools/convert_sqlite_to_csvs.py
+git commit -a # "Update for xxx for NI from https://twitter.com/healthdpt"
+```
+
 Updates are not always made at a consistent time of day, so the following command can be run continuously in a terminal to check for updates every 10 minutes. The `-b` option makes it beep if there is a new update.
 ```bash
 watch -n 600 -b ./tools/crawl.py

@@ -928,3 +928,6 @@ Date,Country,Indicator,Value
 2020-04-23,Wales,Tests,25028
 2020-04-24,Scotland,ConfirmedCases,9697
 2020-04-24,Scotland,Tests,46089
+2020-04-24,Wales,ConfirmedCases,8601
+2020-04-24,Wales,Deaths,751
+2020-04-24,Wales,Tests,25898

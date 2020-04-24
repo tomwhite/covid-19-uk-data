@@ -928,6 +928,9 @@ Date,Country,Indicator,Value
 2020-04-23,Wales,Tests,25028
 2020-04-24,England,ConfirmedCases,105225
 2020-04-24,England,Deaths,17372
+2020-04-24,Northern Ireland,ConfirmedCases,3122
+2020-04-24,Northern Ireland,Deaths,278
+2020-04-24,Northern Ireland,Tests,17872
 2020-04-24,Scotland,ConfirmedCases,9697
 2020-04-24,Scotland,Tests,46089
 2020-04-24,UK,ConfirmedCases,143464

@@ -101,14 +101,17 @@ def crawl_phe(use_local=False):
     df = total_deaths_df("E92000001", "England")
     save_indicators_df_to_sqlite(df, "England", "Deaths")
 
-    df = total_deaths_df("S92000003", "Scotland")
-    save_indicators_df_to_sqlite(df, "Scotland", "Deaths")
+    # Found from PHS data instead
+    # df = total_deaths_df("S92000003", "Scotland")
+    # save_indicators_df_to_sqlite(df, "Scotland", "Deaths")
 
-    df = total_deaths_df("W92000004", "Wales")
-    save_indicators_df_to_sqlite(df, "Wales", "Deaths")
+    # TBD
+    # df = total_deaths_df("W92000004", "Wales")
+    # save_indicators_df_to_sqlite(df, "Wales", "Deaths")
 
-    df = total_deaths_df("N92000002", "Northern Ireland")
-    save_indicators_df_to_sqlite(df, "Northern Ireland", "Deaths")
+    # TBD
+    # df = total_deaths_df("N92000002", "Northern Ireland")
+    # save_indicators_df_to_sqlite(df, "Northern Ireland", "Deaths")
 
     # Get UK ConfirmedCases, but only latest value since historical data is not available
     last_updated = json_data["lastUpdatedAt"]
@@ -148,6 +151,7 @@ def crawl_phe(use_local=False):
 
 # Scotland historical test numbers
 # Scotland historical confirmed cases
+# Scotland historical deaths
 # Scotland health board historical confirmed cases
 def crawl_phs(use_local=False):
     if not use_local:
@@ -165,6 +169,11 @@ def crawl_phs(use_local=False):
     df.rename(columns={"Total": "Tests", "Positive": "ConfirmedCases"}, inplace=True)
     save_indicators_df_to_sqlite(df, "Scotland", "Tests")
     save_indicators_df_to_sqlite(df, "Scotland", "ConfirmedCases")
+
+    df = pd.read_excel(file, sheet_name="Table 8 - Deaths", skiprows=2)
+    df.rename(columns={"Number of COVID-19 confirmed deaths registered to date": "Deaths"}, inplace=True)
+    df["Date"] = df["Date"].apply(lambda x: x.strftime('%Y-%m-%d')).astype(str)
+    save_indicators_df_to_sqlite(df, "Scotland", "Deaths")
 
     if use_local:
         file = "data/raw/phs/Board-level+figures+-+FOR+ONLINE+PUBLICATION.xlsx"

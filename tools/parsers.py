@@ -102,6 +102,43 @@ def parse_totals(country, html):
     return None
 
 
+def parse_tests(country, html):
+
+    def is_testing_table(table):
+        headers = [th.text for th in table.findAll("th")]
+        return "Tests" in headers
+
+    soup = BeautifulSoup(html, features="html.parser")
+    tables = soup.find_all("table")
+    testing_tables = [table for table in tables if is_testing_table(table)]
+    if len(testing_tables) == 0:
+        print("Testing table not found")
+        return None
+    elif len(testing_tables) > 1:
+        print("More than one testing table found")
+        return None
+    testing_table = testing_tables[0]
+    table_rows = testing_table.findAll("tr")
+    if len(table_rows) != 3:
+        print("Expecting 3 table rows")
+        return None
+    daily_row = [td.text for td in table_rows[1].findAll("td")]
+    total_row = [td.text for td in table_rows[2].findAll("td")]
+
+    text = get_text_from_html(html)
+    pattern_dict = {
+        "Date": (r"As of (?P<Time>\d+(am|pm)?) (on )?(?P<Date>.+?),", date_value_parser_fn)
+    }
+    result = parse_totals_general(pattern_dict, country, text)
+    result["DailyTestsPerformed"] = normalize_int(daily_row[1])
+    result["DailyPeopleTested"] = normalize_int(daily_row[2])
+    result["DailyPositive"] = normalize_int(daily_row[3])
+    result["TotalTestsPerformed"] = normalize_int(total_row[1])
+    result["TotalPeopleTested"] = normalize_int(total_row[2])
+    result["TotalPositive"] = normalize_int(total_row[3])
+    return result
+
+
 def get_text_from_pdf(local_pdf_file):
     pdf = pdfplumber.open(local_pdf_file)
     page = pdf.pages[0] # just extract first page

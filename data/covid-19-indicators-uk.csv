@@ -957,3 +957,6 @@ Date,Country,Indicator,Value
 2020-04-26,Scotland,ConfirmedCases,10324
 2020-04-26,Scotland,Deaths,1249
 2020-04-26,Scotland,Tests,49157
+2020-04-26,Wales,ConfirmedCases,9078
+2020-04-26,Wales,Deaths,788
+2020-04-26,Wales,Tests,27753

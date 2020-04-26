@@ -954,6 +954,9 @@ Date,Country,Indicator,Value
 2020-04-25,Wales,ConfirmedCases,8900
 2020-04-25,Wales,Deaths,774
 2020-04-25,Wales,Tests,26992
+2020-04-26,Northern Ireland,ConfirmedCases,3308
+2020-04-26,Northern Ireland,Deaths,299
+2020-04-26,Northern Ireland,Tests,19352
 2020-04-26,Scotland,ConfirmedCases,10324
 2020-04-26,Scotland,Deaths,1249
 2020-04-26,Scotland,Tests,49157

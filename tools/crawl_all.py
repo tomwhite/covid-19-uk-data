@@ -208,6 +208,7 @@ def get_phs_xlsx_urls():
 
 # Wales historical test numbers
 # Wales historical confirmed cases
+# Wales historical deaths
 # Wales health board historical confirmed cases
 def crawl_phw(use_local=False):
     if use_local:
@@ -238,6 +239,11 @@ def crawl_phw(use_local=False):
     area_cases["Country"] = "Wales"
     area_cases = area_cases[["Date", "Country", "AreaCode", "Area", "TotalCases"]]
     save_cases_df_to_sqlite(area_cases, "Wales")
+
+    df = pd.read_excel(file, sheet_name="Deaths by date")
+    df["Date"] = df["Date of death"].apply(lambda x: x.strftime('%Y-%m-%d')).astype(str)
+    df.rename(columns={"Cumulative deaths": "Deaths"}, inplace=True)
+    save_indicators_df_to_sqlite(df, "Wales", "Deaths")
 
 
 if __name__ == "__main__":

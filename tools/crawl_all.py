@@ -114,10 +114,10 @@ def crawl_phe(use_local=False):
     # save_indicators_df_to_sqlite(df, "Northern Ireland", "Deaths")
 
     # Get UK ConfirmedCases, but only latest value since historical data is not available
-    last_updated = json_data["lastUpdatedAt"]
-    last_updated_date = last_updated.split("T")[0]
-    uk_cases = json_data["overview"]["K02000001"]["totalCases"]["value"]
-    save_indicator_to_sqlite(last_updated_date, "UK", "ConfirmedCases", uk_cases)
+    # last_updated = json_data["lastUpdatedAt"]
+    # last_updated_date = last_updated.split("T")[0]
+    # uk_cases = json_data["overview"]["K02000001"]["totalCases"]["value"]
+    # save_indicator_to_sqlite(last_updated_date, "UK", "ConfirmedCases", uk_cases)
 
     def total_confirmed_cases_country_df(country_code, country):
         cases = json_data["countries"][country_code]["dailyTotalConfirmedCases"]

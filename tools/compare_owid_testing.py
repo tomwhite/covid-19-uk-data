@@ -79,7 +79,7 @@ def compare():
 if __name__ == "__main__":
     pd.set_option('display.max_rows', None)
 
-    #generate_csv()
+    generate_csv()
 
     load_owid()
     compare()

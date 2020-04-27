@@ -16,17 +16,20 @@
         description: "UK daily tests",
         width: 600,
         height: 400,
-        data: { url: "data/covid-19-indicators-uk.csv" },
+        data: { url: "data/covid-19-tests-uk.csv" },
         transform: [
           {
-            filter: "datum.Country == 'UK' && datum.Indicator == 'Tests'"
+            window: [{ op: "lag", field: "TotalPeopleTested", as: "Prev" }],
           },
           {
-            window: [{ op: "lag", field: "Value", as: "Prev" }]
+            calculate:
+              "if(datum.Prev == null, NaN, datum.TotalPeopleTested - datum.Prev)",
+            as: "DailyTestsDifference",
           },
           {
-            calculate: "if(datum.Prev == null, NaN, datum.Value - datum.Prev)",
-            as: "DailyTests"
+            calculate:
+              "if(datum.DailyPeopleTested === '', datum.DailyTestsDifference, datum.DailyPeopleTested)",
+            as: "DailyTests",
           },
           {
             frame: [-4, 3],
@@ -34,38 +37,38 @@
               {
                 field: "DailyTests",
                 op: "mean",
-                as: "RollingDailyTests"
-              }
-            ]
-          }
+                as: "RollingDailyTests",
+              },
+            ],
+          },
         ],
         layer: [
           {
             mark: {
               type: "bar",
-              tooltip: true
+              tooltip: true,
             },
             encoding: {
               x: { field: "Date", type: "temporal" },
               y: {
                 title: "Daily tests",
                 field: "DailyTests",
-                type: "quantitative"
-              }
-            }
+                type: "quantitative",
+              },
+            },
           },
           {
             mark: {
               type: "line",
               stroke: "orange",
-              strokeOpacity: 0.5
+              strokeOpacity: 0.5,
             },
             encoding: {
               x: { field: "Date", type: "temporal" },
-              y: { field: "RollingDailyTests", type: "quantitative" }
-            }
-          }
-        ]
+              y: { field: "RollingDailyTests", type: "quantitative" },
+            },
+          },
+        ],
       };
       vegaEmbed("#p1", p1);
     </script>

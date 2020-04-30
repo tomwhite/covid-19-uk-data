@@ -104,7 +104,8 @@ def test_parse_totals_pdf_wales():
         assert result["Date"] == date
         assert result["Tests"] >= 0
         assert result["ConfirmedCases"] >= 0
-        assert result["Deaths"] >= 0
+        if date < "2020-04-29":
+            assert result["Deaths"] >= 0
 
 def test_parse_daily_areas_scotland():
     for file in sorted(glob.glob("data/raw/coronavirus-covid-19-number-of-cases-in-scotland-*.html")):

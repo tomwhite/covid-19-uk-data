@@ -180,7 +180,9 @@ def parse_totals_pdf(date, country, local_pdf_file):
                     elif label == "Cumulative confirmed COVID-19 case total":
                         result["ConfirmedCases"] = value
                     elif label == "Cumulative number of suspected COVID-19 deaths* reported to PHW":
-                        result["Deaths"] = value
+                        # Get deaths from XLSX after this date
+                        if date < "2020-04-29":
+                            result["Deaths"] = value
                 return result
             except IndexError:
                 pass # no table on page

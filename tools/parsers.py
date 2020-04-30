@@ -193,7 +193,7 @@ def print_totals(results):
     country = results["Country"]
     tests = results["Tests"]
     confirmed_cases = results["ConfirmedCases"]
-    deaths = results["Deaths"]
+    deaths = results.get("Deaths", float("NaN"))
     if not math.isnan(tests):
         print("{},{},{},{}".format(date, country, "Tests", tests))
     if not math.isnan(confirmed_cases):
@@ -215,7 +215,7 @@ def save_indicators(results):
     country = results["Country"]
     tests = results["Tests"]
     confirmed_cases = results["ConfirmedCases"]
-    deaths = results["Deaths"]
+    deaths = results.get("Deaths", float("NaN"))
     if not math.isnan(tests):
         with open(
             "data/daily/indicators/covid-19-{}-{}-tests.csv".format(
@@ -249,7 +249,7 @@ def save_indicators_to_sqlite(results):
     country = results["Country"]
     tests = results["Tests"]
     confirmed_cases = results["ConfirmedCases"]
-    deaths = results["Deaths"]
+    deaths = results.get("Deaths", float("NaN"))
     with sqlite3.connect('data/covid-19-uk.db') as conn:
         c = conn.cursor()
         if not math.isnan(tests):

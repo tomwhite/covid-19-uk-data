@@ -1025,7 +1025,9 @@ Date,Country,Indicator,Value
 2020-04-29,Scotland,ConfirmedCases,11034
 2020-04-29,Scotland,Deaths,1415
 2020-04-29,Scotland,Tests,53082
+2020-04-29,UK,ConfirmedCases,165221
 2020-04-29,UK,Deaths,26097
+2020-04-29,UK,Tests,632794
 2020-04-29,Wales,ConfirmedCases,9629
 2020-04-29,Wales,Deaths,886
 2020-04-29,Wales,Tests,30362

@@ -9062,3 +9062,12 @@ Date,Country,AreaCode,Area,TotalCases
 2020-05-01,Scotland,S08000026,Shetland,54
 2020-05-01,Scotland,S08000030,Tayside,1379
 2020-05-01,Scotland,S08000028,Western Isles,6
+2020-05-01,Wales,W11000028,Aneurin Bevan,2109
+2020-05-01,Wales,W11000023,Betsi Cadwaladr,1278
+2020-05-01,Wales,W11000029,Cardiff and Vale,2218
+2020-05-01,Wales,W11000030,Cwm Taf,1770
+2020-05-01,Wales,W11000025,Hywel Dda,720
+2020-05-01,Wales,W11000024,Powys,171
+2020-05-01,Wales,W11000031,Swansea Bay,1538
+2020-05-01,Wales,,Unknown location,83
+2020-05-01,Wales,,Resident outside Wales,85

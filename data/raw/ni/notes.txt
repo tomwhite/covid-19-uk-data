@@ -1,0 +1,17 @@
+#https://app.powerbi.com/view?r=eyJrIjoiZGYxNjYzNmUtOTlmZS00ODAxLWE1YTEtMjA0NjZhMzlmN2JmIiwidCI6IjljOWEzMGRlLWQ4ZDctNGFhNC05NjAwLTRiZTc2MjVmZjZjNSIsImMiOjh9
+
+URL='https://wabi-north-europe-api.analysis.windows.net/public/reports/querydata?synchronous=true'
+curl -X POST -H "Content-Type: application/json" -H "X-PowerBI-ResourceKey: df16636e-99fe-4801-a5a1-20466a39f7bf" -d @request-payload.json $URL | jq .
+
+# Tests and cases
+
+curl -X POST -H "Content-Type: application/json" -H "X-PowerBI-ResourceKey: df16636e-99fe-4801-a5a1-20466a39f7bf" -d @request-cumulative-tests.json $URL | jq . > response-cumulative-tests.json
+
+
+# Deaths
+
+curl -X POST -H "Content-Type: application/json" -H "X-PowerBI-ResourceKey: df16636e-99fe-4801-a5a1-20466a39f7bf" -d @request-cumulative-deaths.json $URL | jq . > response-cumulative-deaths.json
+
+# LGD cases
+
+curl -X POST -H "Content-Type: application/json" -H "X-PowerBI-ResourceKey: df16636e-99fe-4801-a5a1-20466a39f7bf" -d @request-area-cases.json $URL | jq . > response-area-cases.json

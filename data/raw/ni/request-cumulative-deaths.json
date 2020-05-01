@@ -1,0 +1,51 @@
+{
+  "version": "1.0.0",
+  "queries": [
+    {
+      "Query": {
+        "Commands": [
+          {
+            "SemanticQueryDataShapeCommand": {
+              "Query": {
+                "Version": 2,
+                "From": [{ "Name": "a", "Entity": "AGG_DEATHS_LGD_DATE" }],
+                "Select": [
+                  {
+                    "Column": {
+                      "Expression": { "SourceRef": { "Source": "a" } },
+                      "Property": "Date_Death"
+                    },
+                    "Name": "AGG_DEATHS_LGD_DATE.Date_Death"
+                  },
+                  {
+                    "Measure": {
+                      "Expression": { "SourceRef": { "Source": "a" } },
+                      "Property": "Num_Deaths running total in Date_Death"
+                    },
+                    "Name": "AGG_DEATHS_LGD_DATE.Num_Deaths running total in Date_Death"
+                  }
+                ]
+              },
+              "Binding": {
+                "Primary": { "Groupings": [{ "Projections": [0, 1] }] },
+                "DataReduction": {
+                  "DataVolume": 4,
+                  "Primary": { "BinnedLineSample": {} }
+                },
+                "Version": 1
+              }
+            }
+          }
+        ]
+      },
+      "CacheKey": "{\"Commands\":[{\"SemanticQueryDataShapeCommand\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"a\",\"Entity\":\"AGG_DEATHS_LGD_DATE\"}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Date_Death\"},\"Name\":\"AGG_DEATHS_LGD_DATE.Date_Death\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"a\"}},\"Property\":\"Num_Deaths running total in Date_Death\"},\"Name\":\"AGG_DEATHS_LGD_DATE.Num_Deaths running total in Date_Death\"}]},\"Binding\":{\"Primary\":{\"Groupings\":[{\"Projections\":[0,1]}]},\"DataReduction\":{\"DataVolume\":4,\"Primary\":{\"BinnedLineSample\":{}}},\"Version\":1}}}]}",
+      "QueryId": "",
+      "ApplicationContext": {
+        "DatasetId": "5e6af8d0-e38f-47c0-b312-1267dc0d3f2b",
+        "Sources": [{ "ReportId": "32885812-b5eb-404b-a20f-43fc0d467202" }]
+      }
+    }
+  ],
+  "cancelQueries": [],
+  "modelId": 10989617
+}

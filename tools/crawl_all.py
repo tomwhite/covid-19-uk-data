@@ -20,7 +20,7 @@ from parsers import (
     save_daily_areas,
     save_daily_areas_to_sqlite,
 )
-from util import format_country, la_to_hb, lookup_health_board_code, read_json
+from util import format_country, la_to_hb, lookup_health_board_code, lookup_local_government_district_code, read_json
 
 def save_indicator_to_sqlite(date, country, indicator, value):
     with sqlite3.connect('data/covid-19-uk.db') as conn:
@@ -37,10 +37,11 @@ def save_indicators_df_to_sqlite(df, country, indicator):
             value = row[indicator]
             c.execute(f"INSERT OR REPLACE INTO indicators VALUES ('{date}', '{country}', '{indicator}', {value})")
 
-def save_cases_df_to_sqlite(df, country):
+def save_cases_df_to_sqlite(df, country, delete_old=True):
     with sqlite3.connect('data/covid-19-uk.db') as conn:
         c = conn.cursor()
-        c.execute(f"DELETE FROM cases WHERE Country = '{country}'")
+        if delete_old:
+            c.execute(f"DELETE FROM cases WHERE Country = '{country}'")
         for index, row in df.iterrows():
             date = row["Date"]
             area_code = row["AreaCode"]
@@ -246,6 +247,50 @@ def crawl_phw(use_local=False):
     save_indicators_df_to_sqlite(df, "Wales", "Deaths")
 
 
+def crawl_ni(use_local=False):
+    if use_local:
+        file = "data/raw/ni/response-cumulative-tests.json"
+    else:
+        file = "https://wabi-north-europe-api.analysis.windows.net/public/reports/querydata?synchronous=true"
+
+    json_data = read_json(file)
+    tests = json_data["results"][0]["result"]["data"]["dsr"]["DS"][0]["PH"][0]["DM0"]
+    tests = {datetime.datetime.fromtimestamp(elt["C"][0] / 1000).strftime('%Y-%m-%d'): elt["C"][1:] for elt in tests}
+    df = pd.DataFrame.from_dict(tests, orient='index', columns=["Tests", "ConfirmedCases"])
+    df["Date"] = df.index
+    df = df.fillna(method="ffill") # fill missing values from previous
+    save_indicators_df_to_sqlite(df, "Northern Ireland", "Tests")
+    save_indicators_df_to_sqlite(df, "Northern Ireland", "ConfirmedCases")
+
+    if use_local:
+        file = "data/raw/ni/response-cumulative-deaths.json"
+    else:
+        file = "https://wabi-north-europe-api.analysis.windows.net/public/reports/querydata?synchronous=true"
+
+    json_data = read_json(file)
+    deaths = json_data["results"][0]["result"]["data"]["dsr"]["DS"][0]["PH"][0]["DM0"]
+    deaths = {datetime.datetime.fromtimestamp(elt["C"][0] / 1000).strftime('%Y-%m-%d'): [elt["C"][1]] for elt in deaths}
+    df = pd.DataFrame.from_dict(deaths, orient='index', columns=["Deaths"])
+    df["Date"] = df.index
+    save_indicators_df_to_sqlite(df, "Northern Ireland", "Deaths")
+
+    if use_local:
+        file = "data/raw/ni/response-area-cases.json"
+    else:
+        file = "https://wabi-north-europe-api.analysis.windows.net/public/reports/querydata?synchronous=true"
+
+    json_data = read_json(file)
+    area_cases = json_data["results"][0]["result"]["data"]["dsr"]["DS"][0]["PH"][1]["DM1"]
+    area_cases = {elt["C"][0]: [elt["C"][2]] for elt in area_cases}
+    df = pd.DataFrame.from_dict(area_cases, orient='index', columns=["TotalCases"])
+    df["Area"] = df.index
+    df["AreaCode"] = df["Area"].apply(lambda lgd: lookup_local_government_district_code(lgd))
+    df["Country"] = "Northern Ireland"
+    df["Date"] = json_data["results"][0]["result"]["data"]["timestamp"].split("T")[0]
+    df = df[["Date", "Country", "AreaCode", "Area", "TotalCases"]]
+    save_cases_df_to_sqlite(df, "Northern Ireland", delete_old=False)
+
+
 if __name__ == "__main__":
     #pd.set_option('display.max_rows', None)
 
@@ -261,8 +306,11 @@ if __name__ == "__main__":
             crawl_phs(use_local)
         elif source.lower() == "phw":
             crawl_phw(use_local)
+        elif source.lower() == "ni":
+            crawl_ni(True)
     else:
         crawl_owid(use_local)
         crawl_phe(use_local)
         crawl_phs(use_local)
         crawl_phw(use_local)
+        crawl_ni(use_local)

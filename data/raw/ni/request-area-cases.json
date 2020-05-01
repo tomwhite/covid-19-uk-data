@@ -1,0 +1,96 @@
+{
+  "version": "1.0.0",
+  "queries": [
+    {
+      "Query": {
+        "Commands": [
+          {
+            "SemanticQueryDataShapeCommand": {
+              "Query": {
+                "Version": 2,
+                "From": [{ "Name": "v", "Entity": "Virology (2)" }],
+                "Select": [
+                  {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": { "SourceRef": { "Source": "v" } },
+                          "Property": "Total Tests"
+                        }
+                      },
+                      "Function": 0
+                    },
+                    "Name": "Sum(Virology (2).Total Tests)"
+                  },
+                  {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": { "SourceRef": { "Source": "v" } },
+                          "Property": "Positive_Tests"
+                        }
+                      },
+                      "Function": 0
+                    },
+                    "Name": "Sum(Virology (2).Positive_Tests)"
+                  },
+                  {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": { "SourceRef": { "Source": "v" } },
+                          "Property": "Negative_Tests"
+                        }
+                      },
+                      "Function": 0
+                    },
+                    "Name": "Sum(Virology (2).Negative_Tests)"
+                  },
+                  {
+                    "Aggregation": {
+                      "Expression": {
+                        "Column": {
+                          "Expression": { "SourceRef": { "Source": "v" } },
+                          "Property": "Indeterminate_Tests"
+                        }
+                      },
+                      "Function": 0
+                    },
+                    "Name": "Sum(Virology (2).Indeterminate_Tests)"
+                  },
+                  {
+                    "Column": {
+                      "Expression": { "SourceRef": { "Source": "v" } },
+                      "Property": "Local Government District"
+                    },
+                    "Name": "Virology (2).Local Government District"
+                  }
+                ]
+              },
+              "Binding": {
+                "Primary": {
+                  "Groupings": [
+                    { "Projections": [0, 1, 2, 3, 4], "Subtotal": 1 }
+                  ]
+                },
+                "DataReduction": {
+                  "DataVolume": 3,
+                  "Primary": { "Window": { "Count": 500 } }
+                },
+                "Version": 1
+              }
+            }
+          }
+        ]
+      },
+      "CacheKey": "{\"Commands\":[{\"SemanticQueryDataShapeCommand\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"Virology (2)\"}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Total Tests\"}},\"Function\":0},\"Name\":\"Sum(Virology (2).Total Tests)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Positive_Tests\"}},\"Function\":0},\"Name\":\"Sum(Virology (2).Positive_Tests)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Negative_Tests\"}},\"Function\":0},\"Name\":\"Sum(Virology (2).Negative_Tests)\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Indeterminate_Tests\"}},\"Function\":0},\"Name\":\"Sum(Virology (2).Indeterminate_Tests)\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Local Government District\"},\"Name\":\"Virology (2).Local Government District\"}]},\"Binding\":{\"Primary\":{\"Groupings\":[{\"Projections\":[0,1,2,3,4],\"Subtotal\":1}]},\"DataReduction\":{\"DataVolume\":3,\"Primary\":{\"Window\":{\"Count\":500}}},\"Version\":1}}}]}",
+      "QueryId": "",
+      "ApplicationContext": {
+        "DatasetId": "5e6af8d0-e38f-47c0-b312-1267dc0d3f2b",
+        "Sources": [{ "ReportId": "32885812-b5eb-404b-a20f-43fc0d467202" }]
+      }
+    }
+  ],
+  "cancelQueries": [],
+  "modelId": 10989617
+}

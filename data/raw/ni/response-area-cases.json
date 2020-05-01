@@ -1,0 +1,269 @@
+{
+  "jobIds": [
+    "1472dbbc-9bb2-42f8-9c1f-8cf81eaee019"
+  ],
+  "results": [
+    {
+      "jobId": "1472dbbc-9bb2-42f8-9c1f-8cf81eaee019",
+      "result": {
+        "data": {
+          "timestamp": "2020-05-03T14:51:51.399Z",
+          "rootActivityId": "c8bf7547-d98b-474c-b97c-c074613045e2",
+          "descriptor": {
+            "Select": [
+              {
+                "Kind": 2,
+                "Value": "M0",
+                "Format": "#,0",
+                "Subtotal": [
+                  "A0"
+                ],
+                "Name": "Sum(Virology (2).Total Tests)"
+              },
+              {
+                "Kind": 2,
+                "Value": "M1",
+                "Format": "#,0",
+                "Subtotal": [
+                  "A1"
+                ],
+                "Name": "Sum(Virology (2).Positive_Tests)"
+              },
+              {
+                "Kind": 2,
+                "Value": "M2",
+                "Format": "#,0",
+                "Subtotal": [
+                  "A2"
+                ],
+                "Name": "Sum(Virology (2).Negative_Tests)"
+              },
+              {
+                "Kind": 2,
+                "Value": "M3",
+                "Format": "#,0",
+                "Subtotal": [
+                  "A3"
+                ],
+                "Name": "Sum(Virology (2).Indeterminate_Tests)"
+              },
+              {
+                "Kind": 1,
+                "Depth": 0,
+                "Value": "G0",
+                "GroupKeys": [
+                  {
+                    "Source": {
+                      "Entity": "Virology (2)",
+                      "Property": "Local Government District"
+                    },
+                    "Calc": "G0",
+                    "IsSameAsSelect": true
+                  }
+                ],
+                "Name": "Virology (2).Local Government District"
+              }
+            ],
+            "Expressions": {
+              "Primary": {
+                "Groupings": [
+                  {
+                    "Keys": [
+                      {
+                        "Source": {
+                          "Entity": "Virology (2)",
+                          "Property": "Local Government District"
+                        },
+                        "Select": 4
+                      }
+                    ],
+                    "Member": "DM1",
+                    "SubtotalMember": "DM0"
+                  }
+                ]
+              }
+            },
+            "Version": 2
+          },
+          "fromCache": false,
+          "dsr": {
+            "Version": 2,
+            "MinorVersion": 1,
+            "DS": [
+              {
+                "N": "DS0",
+                "PH": [
+                  {
+                    "DM0": [
+                      {
+                        "S": [
+                          {
+                            "N": "A0",
+                            "T": 4
+                          },
+                          {
+                            "N": "A1",
+                            "T": 4
+                          },
+                          {
+                            "N": "A2",
+                            "T": 4
+                          },
+                          {
+                            "N": "A3",
+                            "T": 4
+                          }
+                        ],
+                        "C": [
+                          25385,
+                          3767,
+                          21604,
+                          14
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "DM1": [
+                      {
+                        "S": [
+                          {
+                            "N": "G0",
+                            "T": 1
+                          },
+                          {
+                            "N": "M0",
+                            "T": 4
+                          },
+                          {
+                            "N": "M1",
+                            "T": 4
+                          },
+                          {
+                            "N": "M2",
+                            "T": 4
+                          },
+                          {
+                            "N": "M3",
+                            "T": 4
+                          }
+                        ],
+                        "C": [
+                          "Antrim and Newtownabbey",
+                          1901,
+                          303,
+                          1597,
+                          1
+                        ]
+                      },
+                      {
+                        "C": [
+                          "Ards and North Down",
+                          2286,
+                          242,
+                          2043
+                        ],
+                        "R": 16
+                      },
+                      {
+                        "C": [
+                          "Armagh City, Banbridge and Craigavon",
+                          2737,
+                          374,
+                          2361,
+                          2
+                        ]
+                      },
+                      {
+                        "C": [
+                          "Belfast",
+                          6042,
+                          1173,
+                          4867
+                        ],
+                        "R": 16
+                      },
+                      {
+                        "C": [
+                          "Causeway Coast and Glens",
+                          1269,
+                          152,
+                          1116,
+                          1
+                        ]
+                      },
+                      {
+                        "C": [
+                          "Derry City and Strabane",
+                          1523,
+                          1371,
+                          0
+                        ],
+                        "R": 4
+                      },
+                      {
+                        "C": [
+                          "Fermanagh and Omagh",
+                          898,
+                          70,
+                          825,
+                          3
+                        ]
+                      },
+                      {
+                        "C": [
+                          "Lisburn and Castlereagh",
+                          2252,
+                          369,
+                          1882,
+                          1
+                        ]
+                      },
+                      {
+                        "C": [
+                          "Mid and East Antrim",
+                          1566,
+                          253,
+                          1313,
+                          0
+                        ]
+                      },
+                      {
+                        "C": [
+                          "Mid Ulster",
+                          1310,
+                          148,
+                          1162
+                        ],
+                        "R": 16
+                      },
+                      {
+                        "C": [
+                          "Newry, Mourne and Down",
+                          2002,
+                          227,
+                          1775
+                        ],
+                        "R": 16
+                      },
+                      {
+                        "C": [
+                          "Not Known",
+                          1599,
+                          304,
+                          1292,
+                          3
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "IC": true
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

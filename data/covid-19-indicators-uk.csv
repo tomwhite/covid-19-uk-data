@@ -1035,6 +1035,7 @@ Date,Country,Indicator,Value
 2020-04-30,England,Deaths,24110
 2020-04-30,Northern Ireland,ConfirmedCases,3536
 2020-04-30,Northern Ireland,Deaths,347
+2020-04-30,Northern Ireland,Tests,22328
 2020-04-30,Scotland,ConfirmedCases,11353
 2020-04-30,Scotland,Deaths,1475
 2020-04-30,Scotland,Tests,54639
@@ -1044,6 +1045,9 @@ Date,Country,Indicator,Value
 2020-04-30,Wales,ConfirmedCases,9812
 2020-04-30,Wales,Deaths,925
 2020-04-30,Wales,Tests,31215
+2020-05-01,Northern Ireland,ConfirmedCases,3623
+2020-05-01,Northern Ireland,Deaths,365
+2020-05-01,Northern Ireland,Tests,23381
 2020-05-01,Scotland,ConfirmedCases,11654
 2020-05-01,Scotland,Deaths,1515
 2020-05-01,Scotland,Tests,56702

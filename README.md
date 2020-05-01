@@ -32,6 +32,7 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 
 ## News
 
+* 1 May 2020. The NI Department of Health dashboard has been re-instated.
 * 28 April 2020. The NI Department of Health is no longer reporting the number of people tested, just the number of tests.
 * 21 April 2020. The PHA NI dashboard was [suspended](https://twitter.com/healthdpt/status/1252624119335706625) since it was reporting incorrect data. Test and total confirmed case numbers are being announced on Twitter by [@healthdpt](https://twitter.com/healthdpt). Area breakdowns are no longer being provided.
 * 21 April 2020. The [PHW dashboard][PHW-dashboard] now has a link to download the data in XLSX format. The URL is dynamically generated however, so it's still not easy to automate the download.

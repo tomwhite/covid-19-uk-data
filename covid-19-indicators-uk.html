@@ -34,7 +34,7 @@
     <script type="text/javascript">
       const p1 = {
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
-        description: "UK daily tests",
+        description: "UK daily people tested",
         width: 300,
         data: { url: "data/covid-19-tests-uk.csv" },
         transform: [
@@ -55,12 +55,16 @@
         mark: "line",
         encoding: {
           x: { field: "Date", type: "temporal" },
-          y: { field: "DailyTests", type: "quantitative" },
+          y: {
+            field: "DailyTests",
+            type: "quantitative",
+            title: "Daily people tested",
+          },
         },
       };
       const p2 = {
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
-        description: "UK cumulative tests",
+        description: "UK cumulative people tested",
         width: 300,
         data: { url: "data/covid-19-indicators-uk.csv" },
         transform: [
@@ -71,12 +75,16 @@
         mark: "line",
         encoding: {
           x: { field: "Date", type: "temporal" },
-          y: { field: "Value", type: "quantitative" },
+          y: {
+            field: "Value",
+            type: "quantitative",
+            title: "Cumulative people tested",
+          },
         },
       };
       const p3 = {
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
-        description: "UK cumulative tests (log scale)",
+        description: "UK cumulative people tested (log scale)",
         width: 300,
         data: { url: "data/covid-19-indicators-uk.csv" },
         transform: [
@@ -87,7 +95,12 @@
         mark: "line",
         encoding: {
           x: { field: "Date", type: "temporal" },
-          y: { field: "Value", type: "quantitative", scale: { type: "log" } },
+          y: {
+            field: "Value",
+            type: "quantitative",
+            scale: { type: "log" },
+            title: "Cumulative people tested",
+          },
         },
       };
       const p4 = {
@@ -111,7 +124,11 @@
         mark: "line",
         encoding: {
           x: { field: "Date", type: "temporal" },
-          y: { field: "DailyCases", type: "quantitative" },
+          y: {
+            field: "DailyCases",
+            type: "quantitative",
+            title: "Daily confirmed cases",
+          },
         },
       };
       const p5 = {
@@ -128,7 +145,11 @@
         mark: "line",
         encoding: {
           x: { field: "Date", type: "temporal" },
-          y: { field: "Value", type: "quantitative" },
+          y: {
+            field: "Value",
+            type: "quantitative",
+            title: "Cumulative confirmed cases",
+          },
         },
       };
       const p6 = {
@@ -153,6 +174,7 @@
             field: "ConfirmedCases",
             type: "quantitative",
             scale: { type: "log" },
+            title: "Cumulative confirmed cases",
           },
         },
       };
@@ -176,7 +198,11 @@
         mark: "line",
         encoding: {
           x: { field: "Date", type: "temporal" },
-          y: { field: "DailyDeaths", type: "quantitative" },
+          y: {
+            field: "DailyDeaths",
+            type: "quantitative",
+            title: "Daily deaths",
+          },
         },
       };
       const p8 = {
@@ -192,7 +218,11 @@
         mark: "line",
         encoding: {
           x: { field: "Date", type: "temporal" },
-          y: { field: "Value", type: "quantitative" },
+          y: {
+            field: "Value",
+            type: "quantitative",
+            title: "Cumulative deaths",
+          },
         },
       };
       const p9 = {
@@ -212,7 +242,12 @@
         mark: "line",
         encoding: {
           x: { field: "Date", type: "temporal" },
-          y: { field: "Deaths", type: "quantitative", scale: { type: "log" } },
+          y: {
+            field: "Deaths",
+            type: "quantitative",
+            scale: { type: "log" },
+            title: "Cumulative deaths",
+          },
         },
       };
       vegaEmbed("#p1", p1);

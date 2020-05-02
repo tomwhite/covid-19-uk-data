@@ -12,8 +12,8 @@
     <script type="text/javascript">
       const p1 = {
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
-        title: "COVID-19 UK daily tests with weekly rolling average",
-        description: "UK daily tests",
+        title: "COVID-19 UK daily people tested with weekly rolling average",
+        description: "UK daily people tested",
         width: 600,
         height: 400,
         data: { url: "data/covid-19-tests-uk.csv" },
@@ -51,7 +51,7 @@
             encoding: {
               x: { field: "Date", type: "temporal" },
               y: {
-                title: "Daily tests",
+                title: "Daily people tested",
                 field: "DailyTests",
                 type: "quantitative",
               },

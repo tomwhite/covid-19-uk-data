@@ -1225,6 +1225,9 @@ Date,Country,Indicator,Value
 2020-05-02,Wales,ConfirmedCases,10329
 2020-05-02,Wales,Deaths,983
 2020-05-02,Wales,Tests,34334
+2020-05-03,Northern Ireland,ConfirmedCases,3767
+2020-05-03,Northern Ireland,Deaths,381
+2020-05-03,Northern Ireland,Tests,25385
 2020-05-03,Scotland,ConfirmedCases,12097
 2020-05-03,Scotland,Deaths,1571
 2020-05-03,Scotland,Tests,60295

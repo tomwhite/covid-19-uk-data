@@ -144,7 +144,7 @@ The **updates** tool runs **crawl** then **convert_sqlite_to_csvs**, and issues 
 There is also a **crawl_all** tool (and corresponding **update_all** tool) that uses machine-readable sources to update all historical data for that source. This is not available for all sources yet.
 
 ```bash
-./tools/update.sh Wales
+./tools/update_all.sh phw
 ./tools/update_all.sh phs
 ./tools/update.sh NI
 ./tools/update.sh UK

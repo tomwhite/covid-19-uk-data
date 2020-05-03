@@ -223,9 +223,8 @@ def crawl_phw(use_local=False):
     tests = df.groupby("Date", as_index=False)[["Tests"]].sum()
     cases = df.groupby("Date", as_index=False)[["ConfirmedCases"]].sum()
 
-    # TBD
-    #save_indicators_df_to_sqlite(tests, "Wales", "Tests")
-    #save_indicators_df_to_sqlite(cases, "Wales", "ConfirmedCases")
+    save_indicators_df_to_sqlite(tests, "Wales", "Tests")
+    save_indicators_df_to_sqlite(cases, "Wales", "ConfirmedCases")
 
     def lookup_hb(la):
         hb = la_to_hb(la)
@@ -239,8 +238,7 @@ def crawl_phw(use_local=False):
     area_cases["AreaCode"] = area_cases["Area"].apply(lambda hb: lookup_health_board_code(hb))
     area_cases["Country"] = "Wales"
     area_cases = area_cases[["Date", "Country", "AreaCode", "Area", "TotalCases"]]
-    # TBD
-    #save_cases_df_to_sqlite(area_cases, "Wales")
+    save_cases_df_to_sqlite(area_cases, "Wales")
 
     df = pd.read_excel(file, sheet_name="Deaths by date")
     df["Date"] = df["Date of death"].apply(lambda x: x.strftime('%Y-%m-%d')).astype(str)

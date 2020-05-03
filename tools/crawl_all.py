@@ -20,7 +20,7 @@ from parsers import (
     save_daily_areas,
     save_daily_areas_to_sqlite,
 )
-from util import format_country, la_to_hb, lookup_health_board_code, lookup_local_government_district_code, read_json
+from util import format_country, la_to_hb, lookup_health_board_code, lookup_local_government_district_code, read_json, read_json_post
 
 def save_indicator_to_sqlite(date, country, indicator, value):
     with sqlite3.connect('data/covid-19-uk.db') as conn:
@@ -248,12 +248,15 @@ def crawl_phw(use_local=False):
 
 
 def crawl_ni(use_local=False):
+    headers = {"X-PowerBI-ResourceKey": "df16636e-99fe-4801-a5a1-20466a39f7bf"}
+
+    request_json = read_json("data/raw/ni/request-cumulative-tests.json")
     if use_local:
         file = "data/raw/ni/response-cumulative-tests.json"
     else:
         file = "https://wabi-north-europe-api.analysis.windows.net/public/reports/querydata?synchronous=true"
 
-    json_data = read_json(file)
+    json_data = read_json_post(file, headers, request_json)
     tests = json_data["results"][0]["result"]["data"]["dsr"]["DS"][0]["PH"][0]["DM0"]
     tests = {datetime.datetime.fromtimestamp(elt["C"][0] / 1000).strftime('%Y-%m-%d'): elt["C"][1:] for elt in tests}
     df = pd.DataFrame.from_dict(tests, orient='index', columns=["Tests", "ConfirmedCases"])
@@ -262,24 +265,26 @@ def crawl_ni(use_local=False):
     save_indicators_df_to_sqlite(df, "Northern Ireland", "Tests")
     save_indicators_df_to_sqlite(df, "Northern Ireland", "ConfirmedCases")
 
+    request_json = read_json("data/raw/ni/request-cumulative-deaths.json")
     if use_local:
         file = "data/raw/ni/response-cumulative-deaths.json"
     else:
         file = "https://wabi-north-europe-api.analysis.windows.net/public/reports/querydata?synchronous=true"
 
-    json_data = read_json(file)
+    json_data = read_json_post(file, headers, request_json)
     deaths = json_data["results"][0]["result"]["data"]["dsr"]["DS"][0]["PH"][0]["DM0"]
     deaths = {datetime.datetime.fromtimestamp(elt["C"][0] / 1000).strftime('%Y-%m-%d'): [elt["C"][1]] for elt in deaths}
     df = pd.DataFrame.from_dict(deaths, orient='index', columns=["Deaths"])
     df["Date"] = df.index
     save_indicators_df_to_sqlite(df, "Northern Ireland", "Deaths")
 
+    request_json = read_json("data/raw/ni/request-area-cases.json")
     if use_local:
         file = "data/raw/ni/response-area-cases.json"
     else:
         file = "https://wabi-north-europe-api.analysis.windows.net/public/reports/querydata?synchronous=true"
 
-    json_data = read_json(file)
+    json_data = read_json_post(file, headers, request_json)
     area_cases = json_data["results"][0]["result"]["data"]["dsr"]["DS"][0]["PH"][1]["DM1"]
     area_cases = {elt["C"][0]: [elt["C"][2]] for elt in area_cases}
     df = pd.DataFrame.from_dict(area_cases, orient='index', columns=["TotalCases"])
@@ -307,7 +312,7 @@ if __name__ == "__main__":
         elif source.lower() == "phw":
             crawl_phw(use_local)
         elif source.lower() == "ni":
-            crawl_ni(True)
+            crawl_ni(use_local)
     else:
         crawl_owid(use_local)
         crawl_phe(use_local)

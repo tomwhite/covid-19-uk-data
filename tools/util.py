@@ -60,6 +60,15 @@ def read_json(file):
         with open(file) as f:
             return json.load(f) 
 
+def read_json_post(file, headers, request_json):
+    """Read JSON from a local file or a URL POST"""
+    if file.startswith("http"):
+        r = requests.post(file, headers=headers, json=request_json)
+        return r.json()
+    else:
+        with open(file) as f:
+            return json.load(f) 
+
 
 la_name_to_code = None
 

@@ -141,12 +141,14 @@ The **convert_sqlite_to_csvs** tool will extract the data from sqlite and update
 
 The **updates** tool runs **crawl** then **convert_sqlite_to_csvs**, and issues interactive prompts for if you want to commit the changes to git.
 
+There is also a **crawl_all** tool (and corresponding **update_all** tool) that uses machine-readable sources to update all historical data for that source. This is not available for all sources yet.
+
 ```bash
 ./tools/update.sh Wales
-./tools/update.sh Scotland
+./tools/update_all.sh phs
 ./tools/update.sh NI
 ./tools/update.sh UK
-./tools/update.sh UK-cases-and-deaths
+./tools/update_all.sh phe
 ```
 
 The equivalent done manually (just for Wales):
@@ -175,17 +177,6 @@ Check data consistency
 ```bash
 ./tools/check_indicators.py
 ./tools/check_totals.py
-```
-
-Compare with historical PHE data
-```bash
-./tools/compare_phe_historical_json.py
-```
-
-Compare with historical PHS data
-```bash
-curl -L https://www.gov.scot/binaries/content/documents/govscot/publications/statistics/2020/04/trends-in-number-of-people-in-hospital-with-confirmed-or-suspected-covid-19/documents/trends-in-number-of-people-in-hospital-with-confirmed-or-suspected-covid-19/trends-in-number-of-people-in-hospital-with-confirmed-or-suspected-covid-19/govscot%3Adocument/HSCA%2B-%2BSG%2BWebsite%2B-%2BIndicator%2BTrends%2Bfor%2Bdaily%2Bdata%2Bpublication.xlsx -o "data/raw/phs/HSCA+-+SG+Website+-+Indicator+Trends+for+daily+data+publication.xlsx"
-./tools/compare_phs_historical.py
 ```
 
 ### Manual overrides

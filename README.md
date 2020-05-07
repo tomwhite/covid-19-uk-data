@@ -61,11 +61,7 @@ The short version: **publish everything in CSV format, and include historical da
 
 * _Public Health England:_ Add testing numbers (including historical) to the [dashboard][PHE-dashboard] and CSV downloads.
 
-* _Public Health Wales:_ Provide the data download for the [dashboard][PHW-dashboard] at a stable URL.
-
-* _Public Health Scotland_: Add numbers of deaths to the [Trends in daily COVID-19 data][Scotland-trends] file.
-
-* _Public Health Agency, Northern Ireland:_ Provide a machine readable version of the historical data in the [surveillance bulletins][NI-surveillance-bulletins].
+* _Public Health Agency, Northern Ireland:_ Provide a machine readable version of the historical data on the dashboard.
 
 ## Data sources and the collation process
 

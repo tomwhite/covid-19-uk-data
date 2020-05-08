@@ -127,7 +127,7 @@ def parse_tests(country, html):
 
     text = get_text_from_html(html)
     pattern_dict = {
-        "Date": (r"As of (?P<Time>\d+(am|pm)?) (on )?(?P<Date>.+?),", date_value_parser_fn)
+        "Date": (r"As of (?P<Time>\d+\s*(am|pm)?) (on )?(?P<Date>.+?),", date_value_parser_fn)
     }
     result = parse_totals_general(pattern_dict, country, text)
     result["DailyTestsPerformed"] = normalize_int(daily_row[1])

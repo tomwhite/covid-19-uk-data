@@ -40,11 +40,12 @@ jobs:
           pip install -r requirements.txt
       - name: Update PHS
         run: |
-          ./tools/update_all.sh PHS
+          ./tools/crawl_all.sh PHS
           ./tools/convert_sqlite_to_csvs.py
       - name: Set variable to check if anything changed
         id: decide_variable
         run: |-
+          echo "$(git diff --quiet HEAD data/*.csv; echo $?)"
           echo "##[set-output name=changed;]$(git diff --quiet HEAD data/*.csv; echo $?)"
       - name: Commit files
         if: steps.decide_variable.outputs.changed != 0

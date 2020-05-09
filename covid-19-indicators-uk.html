@@ -36,7 +36,10 @@
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
         description: "UK daily people tested",
         width: 300,
-        data: { url: "data/covid-19-tests-uk.csv" },
+        data: {
+          url:
+            "https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-tests-uk.csv",
+        },
         transform: [
           {
             window: [{ op: "lag", field: "TotalPeopleTested", as: "Prev" }],
@@ -66,7 +69,10 @@
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
         description: "UK cumulative people tested",
         width: 300,
-        data: { url: "data/covid-19-indicators-uk.csv" },
+        data: {
+          url:
+            "https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-indicators-uk.csv",
+        },
         transform: [
           {
             filter: "datum.Country == 'UK' && datum.Indicator == 'Tests'",
@@ -86,7 +92,10 @@
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
         description: "UK cumulative people tested (log scale)",
         width: 300,
-        data: { url: "data/covid-19-indicators-uk.csv" },
+        data: {
+          url:
+            "https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-indicators-uk.csv",
+        },
         transform: [
           {
             filter: "datum.Country == 'UK' && datum.Indicator == 'Tests'",
@@ -107,7 +116,10 @@
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
         description: "UK daily confirmed cases",
         width: 300,
-        data: { url: "data/covid-19-indicators-uk.csv" },
+        data: {
+          url:
+            "https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-indicators-uk.csv",
+        },
         transform: [
           {
             filter:
@@ -135,7 +147,10 @@
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
         description: "UK cumulative confirmed cases",
         width: 300,
-        data: { url: "data/covid-19-indicators-uk.csv" },
+        data: {
+          url:
+            "https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-indicators-uk.csv",
+        },
         transform: [
           {
             filter:
@@ -156,7 +171,10 @@
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
         description: "UK cumulative confirmed cases (log scale)",
         width: 300,
-        data: { url: "data/covid-19-indicators-uk.csv" },
+        data: {
+          url:
+            "https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-indicators-uk.csv",
+        },
         transform: [
           {
             filter:
@@ -182,7 +200,10 @@
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
         description: "UK daily deaths",
         width: 300,
-        data: { url: "data/covid-19-indicators-uk.csv" },
+        data: {
+          url:
+            "https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-indicators-uk.csv",
+        },
         transform: [
           {
             filter: "datum.Country == 'UK' && datum.Indicator == 'Deaths'",
@@ -209,7 +230,10 @@
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
         description: "UK cumulative deaths",
         width: 300,
-        data: { url: "data/covid-19-indicators-uk.csv" },
+        data: {
+          url:
+            "https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-indicators-uk.csv",
+        },
         transform: [
           {
             filter: "datum.Country == 'UK' && datum.Indicator == 'Deaths'",
@@ -229,7 +253,10 @@
         $schema: "https://vega.github.io/schema/vega-lite/v4.json",
         description: "UK cumulative deaths (log scale)",
         width: 300,
-        data: { url: "data/covid-19-indicators-uk.csv" },
+        data: {
+          url:
+            "https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-indicators-uk.csv",
+        },
         transform: [
           {
             filter: "datum.Country == 'UK' && datum.Indicator == 'Deaths'",

@@ -1,4 +1,4 @@
-name: Update automatically from public health sources
+name: Update automatically from Public Health Scotland
 
 on:
   repository_dispatch:
@@ -35,7 +35,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add data
-          git commit -m "Update for $DATE for $SOURCE"
+          git commit -m "Update for $(date) for PHS"
       - name: Push changes
         if: steps.decide_variable.outputs.changed != 0
         uses: ad-m/github-push-action@master

@@ -45,6 +45,7 @@ jobs:
       - name: Set variable to check if anything changed
         id: decide_variable
         run: |-
+          git diff HEAD data/*.csv
           echo "$(git diff --quiet HEAD data/*.csv; echo $?)"
           echo "##[set-output name=changed;]$(git diff --quiet HEAD data/*.csv; echo $?)"
       - name: Commit files

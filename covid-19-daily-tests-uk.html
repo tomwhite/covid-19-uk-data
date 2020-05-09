@@ -16,7 +16,10 @@
         description: "UK daily people tested",
         width: 600,
         height: 400,
-        data: { url: "data/covid-19-tests-uk.csv" },
+        data: {
+          url:
+            "https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-tests-uk.csv",
+        },
         transform: [
           {
             window: [{ op: "lag", field: "TotalPeopleTested", as: "Prev" }],

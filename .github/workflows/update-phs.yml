@@ -4,7 +4,7 @@ on:
   repository_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
-    - cron: "20,40 * * * *"
+    - cron: "20,40 14-18 * * *"
 
 jobs:
   update-phs:

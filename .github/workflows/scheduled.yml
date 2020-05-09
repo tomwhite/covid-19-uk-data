@@ -40,7 +40,7 @@ jobs:
           pip install -r requirements.txt
       - name: Update PHS
         run: |
-          ./tools/crawl_all.sh PHS
+          ./tools/crawl_all.py PHS
           ./tools/convert_sqlite_to_csvs.py
       - name: Set variable to check if anything changed
         id: decide_variable

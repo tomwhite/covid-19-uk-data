@@ -26,8 +26,6 @@ jobs:
       - name: Set variable to check if anything changed
         id: decide_variable
         run: |-
-          git diff HEAD data/*.csv
-          echo "$(git diff --quiet HEAD data/*.csv; echo $?)"
           echo "##[set-output name=changed;]$(git diff --quiet HEAD data/*.csv; echo $?)"
       - name: Commit files
         if: steps.decide_variable.outputs.changed != 0
@@ -35,7 +33,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add data
-          git commit -m "Update for $(date) for PHW"
+          git commit -m "Update for $(date +'%Y-%m-%d') for PHW"
       - name: Push changes
         if: steps.decide_variable.outputs.changed != 0
         uses: ad-m/github-push-action@master

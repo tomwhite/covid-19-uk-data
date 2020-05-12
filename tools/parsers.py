@@ -171,6 +171,29 @@ def parse_tests(country, html):
                     val = "" if str_val == "-" else normalize_int(str_val)
                     result[indicator] = val
 
+    def is_pillar2_breakdown_table(table):
+        headers = [th.text for th in table.findAll("th")]
+        return any([header.startswith("In-person") for header in headers])
+
+    pillar2_breakdown_tables = [table for table in tables if is_pillar2_breakdown_table(table)]
+    if len(pillar2_breakdown_tables) == 0:
+        # no pillar 2 breakdown table
+        return result
+    elif len(pillar2_breakdown_tables) > 1:
+        print("More than one pillar 2 breakdown table found")
+        return None
+    pillar2_breakdown_table = pillar2_breakdown_tables[0]
+    table_rows = pillar2_breakdown_table.findAll("tr")
+    if len(table_rows) not in (3, 4):
+        print("Expecting 3 (or 4) table rows in pillar 2 breakdown table")
+        return None
+    daily_row = [td.text for td in table_rows[1].findAll("td")]
+    total_row = [td.text for td in table_rows[2].findAll("td")]
+    result["DailyPillar2InPersonRoutes"] = normalize_int(daily_row[1])
+    result["DailyPillar2DeliveryRoutes"] = normalize_int(daily_row[2])
+    result["TotalPillar2InPersonRoutes"] = normalize_int(total_row[1])
+    result["TotalPillar2DeliveryRoutes"] = normalize_int(total_row[2])
+
     return result
 
 

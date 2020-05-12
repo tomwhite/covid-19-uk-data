@@ -19,7 +19,7 @@ def generate_csv():
         ["TestsPerformed", "PeopleTested", "Positive"],
         ["Daily", "Total"],
     ))
-    indicators = ["{}{}{}".format(t[2], t[0], t[1]) for t in indicator_tuples]
+    indicators = ["{}{}{}".format(t[2], t[0], t[1]) for t in indicator_tuples] + ["DailyPillar2InPersonRoutes", "DailyPillar2DeliveryRoutes", "TotalPillar2InPersonRoutes", "TotalPillar2DeliveryRoutes"]
     columns = ["Date", "Country"] + indicators
     print(",".join(columns))
     for file in sorted(glob.glob("data/raw/coronavirus-covid-19-number-of-cases-in-uk-*.html")):
@@ -31,6 +31,9 @@ def generate_csv():
         if date <= "2020-03-22":
             # older pages cannot be parsed with current parser
             continue
+
+        # if date != "2020-04-28":
+        #     continue
 
         if date <= "2020-04-07":
             totals_result = parse_totals("UK", html)

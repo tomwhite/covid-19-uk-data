@@ -15,6 +15,7 @@ from util import (
     lookup_health_board_code,
     lookup_local_authority_code,
     lookup_local_government_district_code,
+    remove_whitespace,
 )
 
 def get_text_from_html(html):
@@ -136,6 +137,63 @@ def parse_tests(country, html):
     result["TotalTestsPerformed"] = normalize_int(total_row[1])
     result["TotalPeopleTested"] = normalize_int(total_row[2])
     result["TotalPositive"] = normalize_int(total_row[3])
+
+    def is_pillar_table(table):
+        headers = [th.text for th in table.findAll("th")]
+        return "Pillar 1" in headers
+
+    pillar_tables = [table for table in tables if is_pillar_table(table)]
+    
+    if len(pillar_tables) == 0:
+        # no pillar tables
+        return result
+    elif len(pillar_tables) != 2:
+        print("Expecting two pillar tables (daily and cumulative)")
+        return None
+
+    for table_num, pillar_table in enumerate(pillar_tables):
+        daily_or_total = "Daily" if table_num == 0 else "Total"
+        table_rows = pillar_table.findAll("tr")
+        if len(table_rows) != 4:
+            print("Expecting 4 table rows")
+            return None
+        for i, col in enumerate(table_rows[0].findAll(re.compile("th|td"))):
+            if col.text.startswith("Pillar"):
+                pillar = remove_whitespace(col.text)
+                for row in table_rows[1:]:
+                    test_stat = normalize_whitespace(row.findAll("td")[0].text)
+                    if test_stat == "Tests":
+                        test_stat = "TestsPerformed"
+                    elif test_stat == "People tested":
+                        test_stat = "PeopleTested"
+                    indicator = "{}{}{}".format(daily_or_total, pillar, test_stat)
+                    str_val = row.findAll("td")[i].text
+                    val = "" if str_val == "-" else normalize_int(str_val)
+                    result[indicator] = val
+
+    def is_pillar2_breakdown_table(table):
+        headers = [th.text for th in table.findAll("th")]
+        return any([header.startswith("In-person") for header in headers])
+
+    pillar2_breakdown_tables = [table for table in tables if is_pillar2_breakdown_table(table)]
+    if len(pillar2_breakdown_tables) == 0:
+        # no pillar 2 breakdown table
+        return result
+    elif len(pillar2_breakdown_tables) > 1:
+        print("More than one pillar 2 breakdown table found")
+        return None
+    pillar2_breakdown_table = pillar2_breakdown_tables[0]
+    table_rows = pillar2_breakdown_table.findAll("tr")
+    if len(table_rows) not in (3, 4):
+        print("Expecting 3 (or 4) table rows in pillar 2 breakdown table")
+        return None
+    daily_row = [td.text for td in table_rows[1].findAll("td")]
+    total_row = [td.text for td in table_rows[2].findAll("td")]
+    result["DailyPillar2InPersonRoutes"] = normalize_int(daily_row[1])
+    result["DailyPillar2DeliveryRoutes"] = normalize_int(daily_row[2])
+    result["TotalPillar2InPersonRoutes"] = normalize_int(total_row[1])
+    result["TotalPillar2DeliveryRoutes"] = normalize_int(total_row[2])
+
     return result
 
 

@@ -1,7 +1,7 @@
 import dateparser
 import glob
 import math
-from parsers import get_text_from_html, parse_daily_areas, parse_daily_areas_pdf, parse_totals, parse_totals_pdf
+from parsers import get_text_from_html, parse_daily_areas, parse_daily_areas_pdf, parse_tests, parse_totals, parse_totals_pdf
 import pdfplumber
 import re
 from util import lookup_local_authority_code, lookup_health_board_code, lookup_local_government_district_code, normalize_int, normalize_whitespace
@@ -181,3 +181,17 @@ def test_parse_daily_areas_ni():
             assert row[2] is not None # Area code can be blank (e.g. 'Unknown')
             assert len(row[3]) > 0
             assert int(row[4]) >= 0
+
+def test_parse_tests():
+    for file in sorted(glob.glob("data/raw/coronavirus-covid-19-number-of-cases-in-uk-*.html")):
+        m = re.match(r".+(\d{4}-\d{2}-\d{2})\.html", file)
+        date = m.group(1)
+        if date <= "2020-04-07":
+            # older pages cannot be parsed with current parser or don't have all testing data
+            continue
+        if date != "2020-04-30":
+            continue
+        with open(file) as f:
+            html = f.read()
+            result = parse_tests("UK", html)
+            print(result)

@@ -7,7 +7,7 @@ on:
     - cron: "10,30 13-18 * * *"
 
 jobs:
-  update-phs:
+  update-phw:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2

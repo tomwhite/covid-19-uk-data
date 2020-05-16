@@ -1,0 +1,41 @@
+name: Update automatically from Northern Ireland
+
+on:
+  repository_dispatch:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron: "35 13-18 * * *"
+
+jobs:
+  update-ni:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Update NI
+        run: |
+          ./tools/crawl_all.py NI
+          ./tools/convert_sqlite_to_csvs.py
+      - name: Set variable to check if anything changed
+        id: decide_variable
+        run: |-
+          echo "##[set-output name=changed;]$(git diff --quiet HEAD data/*.csv; echo $?)"
+      - name: Commit files
+        if: steps.decide_variable.outputs.changed != 0
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data
+          git commit -m "Update for $(date +'%Y-%m-%d') for NI"
+      - name: Push changes
+        if: steps.decide_variable.outputs.changed != 0
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}

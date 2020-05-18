@@ -1480,3 +1480,6 @@ Date,Country,Indicator,Value
 2020-05-17,UK,Tests,1818712
 2020-05-17,Wales,ConfirmedCases,12404
 2020-05-17,Wales,Tests,50773
+2020-05-18,Scotland,ConfirmedCases,14594
+2020-05-18,Scotland,Deaths,2105
+2020-05-18,Scotland,Tests,88940

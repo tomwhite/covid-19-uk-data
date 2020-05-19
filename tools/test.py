@@ -72,6 +72,9 @@ def test_parse_totals_uk():
         if date <= "2020-03-22":
             # older pages cannot be parsed with current parser
             continue
+        if date == "2020-05-19":
+            # people tested unavailable
+            continue
         with open(file) as f:
             html = f.read()
             result = parse_totals("UK", html)

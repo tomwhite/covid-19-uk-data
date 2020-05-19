@@ -103,6 +103,12 @@ def parse_totals(country, html):
     return None
 
 
+def normalize_int_with_unavailable(num):
+    if num.lower() == "unavailable":
+        return ""
+    return normalize_int(num)
+
+
 def parse_tests(country, html):
 
     def is_testing_table(table):
@@ -132,10 +138,10 @@ def parse_tests(country, html):
     }
     result = parse_totals_general(pattern_dict, country, text)
     result["DailyTestsPerformed"] = normalize_int(daily_row[1])
-    result["DailyPeopleTested"] = normalize_int(daily_row[2])
+    result["DailyPeopleTested"] = normalize_int_with_unavailable(daily_row[2])
     result["DailyPositive"] = normalize_int(daily_row[3])
     result["TotalTestsPerformed"] = normalize_int(total_row[1])
-    result["TotalPeopleTested"] = normalize_int(total_row[2])
+    result["TotalPeopleTested"] = normalize_int_with_unavailable(total_row[2])
     result["TotalPositive"] = normalize_int(total_row[3])
 
     def is_pillar_table(table):
@@ -168,7 +174,7 @@ def parse_tests(country, html):
                         test_stat = "PeopleTested"
                     indicator = "{}{}{}".format(daily_or_total, pillar, test_stat)
                     str_val = row.findAll("td")[i].text
-                    val = "" if str_val == "-" else normalize_int(str_val)
+                    val = "" if str_val == "-" else normalize_int_with_unavailable(str_val)
                     result[indicator] = val
 
     def is_pillar2_breakdown_table(table):

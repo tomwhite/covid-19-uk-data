@@ -1514,3 +1514,6 @@ Date,Country,Indicator,Value
 2020-05-20,Scotland,ConfirmedCases,14751
 2020-05-20,Scotland,Deaths,2184
 2020-05-20,Scotland,Tests,92594
+2020-05-20,UK,ConfirmedCases,248293
+2020-05-20,UK,Deaths,35704
+2020-05-20,UK,Tests,1996648

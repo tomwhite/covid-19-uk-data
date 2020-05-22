@@ -1540,3 +1540,6 @@ Date,Country,Indicator,Value
 2020-05-21,Wales,ConfirmedCases,12984
 2020-05-21,Wales,Deaths,1254
 2020-05-21,Wales,Tests,56654
+2020-05-22,Scotland,ConfirmedCases,14969
+2020-05-22,Scotland,Deaths,2245
+2020-05-22,Scotland,Tests,97607

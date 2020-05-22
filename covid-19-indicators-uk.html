@@ -46,7 +46,7 @@
           },
           {
             calculate:
-              "if(datum.Prev == null, NaN, datum.TotalPeopleTested - datum.Prev)",
+              "if(datum.Prev == null, NaN, if(datum.TotalPeopleTested === '', NaN, datum.TotalPeopleTested) - datum.Prev)",
             as: "DailyTestsDifference",
           },
           {

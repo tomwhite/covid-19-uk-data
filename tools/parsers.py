@@ -113,7 +113,7 @@ def parse_tests(country, html):
 
     def is_testing_table(table):
         headers = [th.text for th in table.findAll("th")]
-        return "Tests" in headers
+        return ("Tests" in headers) or ("Number of tests" in headers)
 
     soup = BeautifulSoup(html, features="html.parser")
     tables = soup.find_all("table")

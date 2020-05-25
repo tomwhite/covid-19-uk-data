@@ -72,15 +72,12 @@ def test_parse_totals_uk():
         if date <= "2020-03-22":
             # older pages cannot be parsed with current parser
             continue
-        if date in ("2020-05-19", "2020-05-23", "2020-05-24"):
-            # people tested unavailable
-            continue
         with open(file) as f:
             html = f.read()
             result = parse_totals("UK", html)
             assert result["Country"] == "UK"
             assert result["Date"] == date
-            assert result["Tests"] >= 0
+            assert "Tests" not in result or result["Tests"] >= 0
             assert result["ConfirmedCases"] >= 0
             assert result["Deaths"] >= 0
 

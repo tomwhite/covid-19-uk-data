@@ -72,6 +72,13 @@ def parse_totals(country, html):
             "Deaths": (r"(?P<Deaths>[\d,]+) (patients?.+?)?have (sadly )?died", int_value_parser_fn),
         }
         result = parse_totals_general(pattern_dict, country, text)
+        if result is None: # fall back if #people tested not available
+            pattern_dict = {
+                "Date": (r"As of (?P<Time>\d+\s*(am|pm)?) (on )?(?P<Date>.+?),", date_value_parser_fn),
+                "ConfirmedCases": (r"(?P<ConfirmedCases>[\d,]+?) people have tested positive", int_value_parser_fn),
+                "Deaths": (r"(?P<Deaths>[\d,]+) (patients?.+?)?have (sadly )?died", int_value_parser_fn),
+            }
+            result = parse_totals_general(pattern_dict, country, text)
         return result
     elif country == "Scotland":
         pattern_dict = {
@@ -255,7 +262,7 @@ def parse_totals_pdf(date, country, local_pdf_file):
 def print_totals(results):
     date = results["Date"]
     country = results["Country"]
-    tests = results["Tests"]
+    tests = results.get("Tests", float("NaN"))
     confirmed_cases = results["ConfirmedCases"]
     deaths = results.get("Deaths", float("NaN"))
     if not math.isnan(tests):
@@ -277,7 +284,7 @@ def print_totals(results):
 def save_indicators(results):
     date = results["Date"]
     country = results["Country"]
-    tests = results["Tests"]
+    tests = results.get("Tests", float("NaN"))
     confirmed_cases = results["ConfirmedCases"]
     deaths = results.get("Deaths", float("NaN"))
     if not math.isnan(tests):
@@ -311,7 +318,7 @@ def save_indicators(results):
 def save_indicators_to_sqlite(results):
     date = results["Date"]
     country = results["Country"]
-    tests = results["Tests"]
+    tests = results.get("Tests", float("NaN"))
     confirmed_cases = results["ConfirmedCases"]
     deaths = results.get("Deaths", float("NaN"))
     with sqlite3.connect('data/covid-19-uk.db') as conn:

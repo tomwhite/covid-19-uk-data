@@ -34,6 +34,7 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 
 ## News
 
+* 28 May 2020. DHSC is now providing a timeseries of testing data.
 * 12 May 2020. The [PHW dashboard][PHW-dashboard] data download link is no longer static - it changes every day, and there is no easy way to retrieve it, since it is dynamically generated in Tableau.
 * 1 May 2020. The NI Department of Health dashboard has been re-instated.
 * 28 April 2020. The NI Department of Health is no longer reporting the number of people tested, just the number of tests.

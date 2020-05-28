@@ -160,11 +160,11 @@ def parse_tests(country, html):
     if len(pillar_tables) == 0:
         # no pillar tables
         return result
-    elif len(pillar_tables) != 2:
-        print("Expecting two pillar tables (daily and cumulative)")
+    elif len(pillar_tables) < 2:
+        print("Expecting at least two pillar tables (daily and cumulative)")
         return None
 
-    for table_num, pillar_table in enumerate(pillar_tables):
+    for table_num, pillar_table in enumerate(pillar_tables[:2]):
         daily_or_total = "Daily" if table_num == 0 else "Total"
         table_rows = pillar_table.findAll("tr")
         if len(table_rows) != 4:

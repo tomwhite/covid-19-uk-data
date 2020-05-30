@@ -11,13 +11,6 @@
                 "From": [{ "Name": "v", "Entity": "Virology Individuals" }],
                 "Select": [
                   {
-                    "Column": {
-                      "Expression": { "SourceRef": { "Source": "v" } },
-                      "Property": "Date of Sample"
-                    },
-                    "Name": "Virology.Date of Sample"
-                  },
-                  {
                     "Measure": {
                       "Expression": { "SourceRef": { "Source": "v" } },
                       "Property": "Individuals Tested running total in Date of Sample"
@@ -30,6 +23,13 @@
                       "Property": "Positive_Tests running total in Date of Sample"
                     },
                     "Name": "Virology.Positive_Tests running total in Date of Sample"
+                  },
+                  {
+                    "Column": {
+                      "Expression": { "SourceRef": { "Source": "v" } },
+                      "Property": "Date Of Sample"
+                    },
+                    "Name": "Virology Individuals.Date Of Sample"
                   }
                 ]
               },
@@ -45,7 +45,7 @@
           }
         ]
       },
-      "CacheKey": "{\"Commands\":[{\"SemanticQueryDataShapeCommand\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"Virology Individuals\"}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Date of Sample\"},\"Name\":\"Virology.Date of Sample\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Individuals Tested running total in Date of Sample\"},\"Name\":\"Virology.Individuals Tested running total in Date of Sample\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Positive_Tests running total in Date of Sample\"},\"Name\":\"Virology.Positive_Tests running total in Date of Sample\"}]},\"Binding\":{\"Primary\":{\"Groupings\":[{\"Projections\":[0,1,2]}]},\"DataReduction\":{\"DataVolume\":4,\"Primary\":{\"BinnedLineSample\":{}}},\"Version\":1}}}]}",
+      "CacheKey": "{\"Commands\":[{\"SemanticQueryDataShapeCommand\":{\"Query\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"Virology Individuals\"}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Individuals Tested running total in Date of Sample\"},\"Name\":\"Virology.Individuals Tested running total in Date of Sample\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Positive_Tests running total in Date of Sample\"},\"Name\":\"Virology.Positive_Tests running total in Date of Sample\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"Date Of Sample\"},\"Name\":\"Virology Individuals.Date Of Sample\"}]},\"Binding\":{\"Primary\":{\"Groupings\":[{\"Projections\":[0,1,2]}]},\"DataReduction\":{\"DataVolume\":4,\"Primary\":{\"BinnedLineSample\":{}}},\"Version\":1}}}]}",
       "QueryId": "",
       "ApplicationContext": {
         "DatasetId": "5e6af8d0-e38f-47c0-b312-1267dc0d3f2b",

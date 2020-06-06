@@ -34,6 +34,14 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 
 ## News
 
+* 2 June 2020. I received a reply from the NI Department of Health to my enquiry about making machine readable downloads available. For this reason I may stop collating NI data in this repository, since the JSON API the code uses is undocumented and changes from time-to-time. See https://github.com/tomwhite/covid-19-uk-data/issues/63.
+> Mr White
+>
+> Thank you for your query. Currently, the information on which the dashboard statistics are based is being drawn from live systems and the data is continually being revised. This means that we do not at this time feel it would be appropriate to provide data that is still volatile and is subject to both revision and change.
+>
+> Regards
+>
+> Information and Analysis Directorate
 * 28 May 2020. DHSC is now providing a timeseries of testing data, linked to from this [DHSC/PHE page](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases-and-deaths).
 * 23 May 2020. DHSC is no longer reporting the number of people tested (daily or cumulative) in Pillar 2, hence it is not possible to give an overall total.
 * 12 May 2020. The [PHW dashboard][PHW-dashboard] data download link is no longer static - it changes every day, and there is no easy way to retrieve it, since it is dynamically generated in Tableau.

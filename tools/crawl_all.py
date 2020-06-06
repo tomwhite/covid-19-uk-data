@@ -273,8 +273,16 @@ def crawl_ni(use_local=False):
 
     json_data = read_json_post(file, headers, request_json)
     deaths = json_data["results"][0]["result"]["data"]["dsr"]["DS"][0]["PH"][0]["DM0"]
-    deaths = {datetime.datetime.fromtimestamp(elt["C"][0] / 1000).strftime('%Y-%m-%d'): [elt["C"][1]] for elt in deaths}
-    df = pd.DataFrame.from_dict(deaths, orient='index', columns=["Deaths"])
+    deaths_dict = {}
+    for idx, elt in enumerate(deaths):
+        date = datetime.datetime.fromtimestamp(elt["C"][0] / 1000).strftime('%Y-%m-%d') 
+        if len(elt["C"]) == 1 and elt.get("R", None) == 2: # R means repeat?
+            # use previous
+            value = [deaths[idx - 1]["C"][1]]
+        else:
+            value = [elt["C"][1]]
+        deaths_dict[date] = value
+    df = pd.DataFrame.from_dict(deaths_dict, orient='index', columns=["Deaths"])
     df["Date"] = df.index
     save_indicators_df_to_sqlite(df, "Northern Ireland", "Deaths")
 

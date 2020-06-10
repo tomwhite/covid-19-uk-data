@@ -1791,3 +1791,6 @@ Date,Country,Indicator,Value
 2020-06-09,Wales,Deaths,1419
 2020-06-09,Wales,Tests,99747
 2020-06-10,Northern Ireland,Deaths,537
+2020-06-10,Scotland,ConfirmedCases,15665
+2020-06-10,Scotland,Deaths,2434
+2020-06-10,Scotland,Tests,130104

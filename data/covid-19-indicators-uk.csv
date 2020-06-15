@@ -1860,5 +1860,8 @@ Date,Country,Indicator,Value
 2020-06-15,Northern Ireland,ConfirmedCases,4852
 2020-06-15,Northern Ireland,Deaths,541
 2020-06-15,Northern Ireland,Tests,66053
+2020-06-15,Scotland,ConfirmedCases,18030
+2020-06-15,Scotland,Deaths,2448
+2020-06-15,Scotland,Tests,210959
 2020-06-15,UK,ConfirmedCases,296857
 2020-06-15,UK,Deaths,41736

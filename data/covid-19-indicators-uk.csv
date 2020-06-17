@@ -1874,6 +1874,9 @@ Date,Country,Indicator,Value
 2020-06-16,Northern Ireland,ConfirmedCases,4862
 2020-06-16,Northern Ireland,Deaths,542
 2020-06-16,Northern Ireland,Tests,67713
+2020-06-16,Scotland,ConfirmedCases,18045
+2020-06-16,Scotland,Deaths,2453
+2020-06-16,Scotland,Tests,213527
 2020-06-16,UK,ConfirmedCases,298136
 2020-06-16,UK,Deaths,41969
 2020-06-16,Wales,ConfirmedCases,14922
@@ -1883,5 +1886,8 @@ Date,Country,Indicator,Value
 2020-06-17,Northern Ireland,ConfirmedCases,4862
 2020-06-17,Northern Ireland,Deaths,543
 2020-06-17,Northern Ireland,Tests,67714
+2020-06-17,Scotland,ConfirmedCases,18066
+2020-06-17,Scotland,Deaths,2462
+2020-06-17,Scotland,Tests,216743
 2020-06-17,UK,ConfirmedCases,299251
 2020-06-17,UK,Deaths,42153

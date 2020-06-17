@@ -12,7 +12,7 @@ import pandas as pd
 from util import camel_to_hyphens, format_country, format_int
 
 def format_int_with_nan(val):
-    if val == "NaN" or math.isnan(val):
+    if val == "NaN" or val == "nan" or math.isnan(val):
         return "NaN"
     return int(val)
 

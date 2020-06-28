@@ -1992,6 +1992,9 @@ Date,Country,Indicator,Value
 2020-06-25,Northern Ireland,ConfirmedCases,4876
 2020-06-25,Northern Ireland,Deaths,548
 2020-06-25,Northern Ireland,Tests,75191
+2020-06-25,Scotland,ConfirmedCases,18196
+2020-06-25,Scotland,Deaths,2482
+2020-06-25,Scotland,Tests,242510
 2020-06-25,UK,ConfirmedCases,307980
 2020-06-25,UK,Deaths,43230
 2020-06-25,Wales,ConfirmedCases,15531
@@ -2002,11 +2005,20 @@ Date,Country,Indicator,Value
 2020-06-26,Northern Ireland,ConfirmedCases,4877
 2020-06-26,Northern Ireland,Deaths,549
 2020-06-26,Northern Ireland,Tests,75628
+2020-06-26,Scotland,ConfirmedCases,18213
+2020-06-26,Scotland,Deaths,2482
+2020-06-26,Scotland,Tests,248381
 2020-06-26,UK,ConfirmedCases,309360
 2020-06-26,UK,Deaths,43414
 2020-06-27,England,Deaths,38982
 2020-06-27,Northern Ireland,ConfirmedCases,4877
 2020-06-27,Northern Ireland,Deaths,549
 2020-06-27,Northern Ireland,Tests,75631
+2020-06-27,Scotland,ConfirmedCases,18228
+2020-06-27,Scotland,Deaths,2482
+2020-06-27,Scotland,Tests,251223
 2020-06-27,UK,ConfirmedCases,310250
 2020-06-27,UK,Deaths,43514
+2020-06-28,Scotland,ConfirmedCases,18236
+2020-06-28,Scotland,Deaths,2482
+2020-06-28,Scotland,Tests,255427

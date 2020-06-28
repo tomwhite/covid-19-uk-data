@@ -17283,6 +17283,20 @@ Date,Country,AreaCode,Area,TotalCases
 2020-06-25,Northern Ireland,N09000009,Mid Ulster,257
 2020-06-25,Northern Ireland,N09000010,"Newry, Mourne and Down",293
 2020-06-25,Northern Ireland,,Not Known,347
+2020-06-25,Scotland,S08000015,Ayrshire and Arran,1252
+2020-06-25,Scotland,S08000016,Borders,345
+2020-06-25,Scotland,S08000017,Dumfries and Galloway,285
+2020-06-25,Scotland,S08000029,Fife,930
+2020-06-25,Scotland,S08000019,Forth Valley,1061
+2020-06-25,Scotland,S08000020,Grampian,1414
+2020-06-25,Scotland,S08000031,Greater Glasgow and Clyde,4838
+2020-06-25,Scotland,S08000022,Highland,374
+2020-06-25,Scotland,S08000032,Lanarkshire,2716
+2020-06-25,Scotland,S08000024,Lothian,3146
+2020-06-25,Scotland,S08000025,Orkney,9
+2020-06-25,Scotland,S08000026,Shetland,54
+2020-06-25,Scotland,S08000030,Tayside,1765
+2020-06-25,Scotland,S08000028,Western Isles,7
 2020-06-25,Wales,W11000028,Aneurin Bevan,2621
 2020-06-25,Wales,W11000023,Betsi Cadwaladr,3573
 2020-06-25,Wales,W11000029,Cardiff and Vale,2952
@@ -17454,6 +17468,20 @@ Date,Country,AreaCode,Area,TotalCases
 2020-06-26,Northern Ireland,N09000009,Mid Ulster,257
 2020-06-26,Northern Ireland,N09000010,"Newry, Mourne and Down",293
 2020-06-26,Northern Ireland,,Not Known,347
+2020-06-26,Scotland,S08000015,Ayrshire and Arran,1253
+2020-06-26,Scotland,S08000016,Borders,345
+2020-06-26,Scotland,S08000017,Dumfries and Galloway,285
+2020-06-26,Scotland,S08000029,Fife,929
+2020-06-26,Scotland,S08000019,Forth Valley,1064
+2020-06-26,Scotland,S08000020,Grampian,1417
+2020-06-26,Scotland,S08000031,Greater Glasgow and Clyde,4844
+2020-06-26,Scotland,S08000022,Highland,374
+2020-06-26,Scotland,S08000032,Lanarkshire,2717
+2020-06-26,Scotland,S08000024,Lothian,3148
+2020-06-26,Scotland,S08000025,Orkney,9
+2020-06-26,Scotland,S08000026,Shetland,54
+2020-06-26,Scotland,S08000030,Tayside,1767
+2020-06-26,Scotland,S08000028,Western Isles,7
 2020-06-27,Northern Ireland,N09000001,Antrim and Newtownabbey,414
 2020-06-27,Northern Ireland,N09000011,Ards and North Down,396
 2020-06-27,Northern Ireland,N09000002,"Armagh City, Banbridge and Craigavon",541
@@ -17466,3 +17494,31 @@ Date,Country,AreaCode,Area,TotalCases
 2020-06-27,Northern Ireland,N09000009,Mid Ulster,257
 2020-06-27,Northern Ireland,N09000010,"Newry, Mourne and Down",293
 2020-06-27,Northern Ireland,,Not Known,347
+2020-06-27,Scotland,S08000015,Ayrshire and Arran,1253
+2020-06-27,Scotland,S08000016,Borders,345
+2020-06-27,Scotland,S08000017,Dumfries and Galloway,285
+2020-06-27,Scotland,S08000029,Fife,930
+2020-06-27,Scotland,S08000019,Forth Valley,1066
+2020-06-27,Scotland,S08000020,Grampian,1418
+2020-06-27,Scotland,S08000031,Greater Glasgow and Clyde,4848
+2020-06-27,Scotland,S08000022,Highland,374
+2020-06-27,Scotland,S08000032,Lanarkshire,2720
+2020-06-27,Scotland,S08000024,Lothian,3151
+2020-06-27,Scotland,S08000025,Orkney,9
+2020-06-27,Scotland,S08000026,Shetland,54
+2020-06-27,Scotland,S08000030,Tayside,1768
+2020-06-27,Scotland,S08000028,Western Isles,7
+2020-06-28,Scotland,S08000015,Ayrshire and Arran,1253
+2020-06-28,Scotland,S08000016,Borders,345
+2020-06-28,Scotland,S08000017,Dumfries and Galloway,285
+2020-06-28,Scotland,S08000029,Fife,930
+2020-06-28,Scotland,S08000019,Forth Valley,1068
+2020-06-28,Scotland,S08000020,Grampian,1419
+2020-06-28,Scotland,S08000031,Greater Glasgow and Clyde,4850
+2020-06-28,Scotland,S08000022,Highland,375
+2020-06-28,Scotland,S08000032,Lanarkshire,2722
+2020-06-28,Scotland,S08000024,Lothian,3151
+2020-06-28,Scotland,S08000025,Orkney,9
+2020-06-28,Scotland,S08000026,Shetland,54
+2020-06-28,Scotland,S08000030,Tayside,1768
+2020-06-28,Scotland,S08000028,Western Isles,7

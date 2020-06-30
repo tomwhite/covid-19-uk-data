@@ -1,5 +1,7 @@
 # COVID-19 UK Historical Data
 
+:warning: **Data for numbers and confirmed cases do not include "Pillar 2" tests that are not published by the government. The numbers here are therefore likely to be significantly lower than they actually are. See this [thread by John Burn-Murdoch](https://twitter.com/jburnmurdoch/status/1277961740697796620)**
+
 Data on numbers of tests, confirmed cases, and deaths for coronavirus (COVID-19) in the UK is published by the government, but it is fragmented and not always provided in consistent or machine-friendly formats. Also, in many cases only the latest numbers are available so it's not possible to look at changes over time.
 
 This site collates the historical data and provides it in an easily consumable format (CSV), in both wide and [tidy data](https://en.wikipedia.org/wiki/Tidy_data) forms.

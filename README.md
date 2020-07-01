@@ -36,6 +36,7 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 
 ## News
 
+* 1 July 2020. England UTLA confirmed case data is no longer being included since it doesn't have Pillar 2 tests, which make up the vast majority of tests.
 * 1 July 2020. NI data is no longer being included since the (undocumented) backend API changed again, and the NI Department of Health does not provide a machine-readable alternative. (See 2 June 2020 entry below.)
 * 30 June 2020. With the new Leicester lockdown, media attention around the lack of Pillar 2 data in England has increased. I have added a prominent warning to the top of this README.
 * 2 June 2020. I received a reply from the NI Department of Health to my enquiry about making machine readable downloads available. For this reason I may stop collating NI data in this repository, since the JSON API the code uses is undocumented and changes from time-to-time. See https://github.com/tomwhite/covid-19-uk-data/issues/63.

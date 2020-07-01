@@ -142,12 +142,13 @@ def crawl_phe(use_local=False):
         df = df[["Date", "Country", "AreaCode", "Area", "TotalCases"]]
         return df
 
-    all_cases_dfs = []
-    for utla_code in json_data["utlas"].keys():
-        cases = total_confirmed_cases_utla_df(utla_code, json_data["utlas"][utla_code]["name"]["value"])
-        all_cases_dfs.append(cases)
-    area_cases = pd.concat(all_cases_dfs, ignore_index=True)
-    save_cases_df_to_sqlite(area_cases, "England")
+    # Don't publish England UTLA confirmed case numbers since they don't include Pillar 2 data
+    # all_cases_dfs = []
+    # for utla_code in json_data["utlas"].keys():
+    #     cases = total_confirmed_cases_utla_df(utla_code, json_data["utlas"][utla_code]["name"]["value"])
+    #     all_cases_dfs.append(cases)
+    # area_cases = pd.concat(all_cases_dfs, ignore_index=True)
+    # save_cases_df_to_sqlite(area_cases, "England")
 
 
 # Scotland historical test numbers

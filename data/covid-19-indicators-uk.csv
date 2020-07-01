@@ -2062,3 +2062,6 @@ Date,Country,Indicator,Value
 2020-06-30,Wales,ConfirmedCases,15775
 2020-06-30,Wales,Deaths,1516
 2020-06-30,Wales,Tests,139248
+2020-07-01,Scotland,ConfirmedCases,18259
+2020-07-01,Scotland,Deaths,2486
+2020-07-01,Scotland,Tests,263600

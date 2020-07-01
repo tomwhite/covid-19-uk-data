@@ -36,6 +36,7 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 
 ## News
 
+* 30 June 2020. With the new Leicester lockdown, media attention around the lack of Pillar 2 data in England has increased. I have added a prominent warning to the top of this README.
 * 2 June 2020. I received a reply from the NI Department of Health to my enquiry about making machine readable downloads available. For this reason I may stop collating NI data in this repository, since the JSON API the code uses is undocumented and changes from time-to-time. See https://github.com/tomwhite/covid-19-uk-data/issues/63.
 > Mr White
 >

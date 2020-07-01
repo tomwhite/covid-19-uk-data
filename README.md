@@ -1,6 +1,6 @@
 # COVID-19 UK Historical Data
 
-:warning: **Data for numbers and confirmed cases do not include "Pillar 2" tests that are not published by the government. The numbers here are therefore likely to be significantly lower than they actually are. See this [thread by John Burn-Murdoch](https://twitter.com/jburnmurdoch/status/1277961740697796620)**
+:warning: **Update: 30 June 2020. Data for confirmed cases in England (including English local authorities) do not include "Pillar 2" tests, since that data is not published by the government. The case numbers reported here are therefore likely to be significantly lower than actual figures for England. See this [thread by John Burn-Murdoch](https://twitter.com/jburnmurdoch/status/1277961740697796620)** :warning:
 
 Data on numbers of tests, confirmed cases, and deaths for coronavirus (COVID-19) in the UK is published by the government, but it is fragmented and not always provided in consistent or machine-friendly formats. Also, in many cases only the latest numbers are available so it's not possible to look at changes over time.
 
@@ -74,44 +74,58 @@ Here are my suggestions for how to improve the data being published by public bo
 
 The short version: **publish everything in CSV format, and include historical data!**
 
-* _Public Health England:_ Add testing numbers (including historical) to the [dashboard][PHE-dashboard] and CSV downloads.
-
 * _Public Health Agency, Northern Ireland:_ Provide a machine readable version of the historical data on the dashboard.
 
 The reporting systems have changed a lot since the outbreak began, and overall they have improved, both in the amount of information being published, and the ease of access of machine-readable datasets. (Public Health Scotland provides all their data in XLSX and CSV format, including historical data. Public Health Wales provides a XLSX spreadsheet with historical data.)
 
-## Data sources and the collation process
+## Data sources
 
-A lot of the collation process is manual, however there are a few command line tools to help process the data into its final form. The data sources are changing from day to day, which means the process is constantly changing.
-
-Raw data (including HTML pages, PDFs, CSV and XLSX files), is archived under _data/raw_, it should never be edited.
+The following sources may include more data than described here. This summary includes only **Tests**, **Confirmed cases** and **Deaths**.
 
 ### UK
 
-* Number of **tests, confirmed cases and deaths** are published at [https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#number-of-cases) at 2pm in HTML format
-* Number of historical **confirmed cases and deaths** are published on the [PHE dashboard][PHE-dashboard] in the afternoon in CSV format (powered by a backend JSON feed)
+* **Source**: UK testing time series [(CSV)](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#time-series)
+    * **Tests**: number of people tested (_Pillar 1 only_) by day in UK, England, Scotland, NI; (Pillar 1 and 2) Wales
+    * **Confirmed cases**: number of confirmed cases (_Pillar 1 only_) by day in England, Scotland, NI; (Pillar 1 and 2) UK and Wales
+* **Source**: UK daily deaths time series [(CSV)](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#time-series)
+    * **Deaths**: number of deaths by day in UK
+* **Source**: UK dashboard deaths [(CSV)](https://coronavirus.data.gov.uk/downloads/csv/coronavirus-deaths_latest.csv) [(JSON)](https://coronavirus.data.gov.uk/downloads/json/coronavirus-deaths_latest.json)
+    * **Deaths**: number of deaths by day in UK, England, Scotland, Wales, NI
+* Charts available on the [PHE dashboard][PHE-dashboard]
 * Twitter updates: [@DHSCgovuk](https://twitter.com/DHSCgovuk)
 
 ### England
 
-* Number of **tests** are not published
-* Number of **confirmed cases and deaths** are published on the [PHE dashboard][PHE-dashboard] in the afternoon in CSV format
-* Number of **confirmed cases by local authority** are published on the [PHE dashboard][PHE-dashboard] in the afternoon in CSV format
+* **Source**: UK dashboard cases [(CSV)](https://coronavirus.data.gov.uk/downloads/csv/coronavirus-cases_latest.csv) [(JSON)](https://coronavirus.data.gov.uk/downloads/json/coronavirus-cases_latest.json)
+    * **Confirmed cases**: number of confirmed cases (_Pillar 1 only_) by day in England, regions, UTLAs, LTLAs
+* Charts available on the [PHE dashboard][PHE-dashboard]
 * Twitter updates: [@PHE_uk](https://twitter.com/PHE_uk)
 
 ### Scotland
 
-* Number of **tests, confirmed cases and deaths**, and **confirmed cases by local authority**, are published at [https://www.gov.scot/publications/trends-in-number-of-people-in-hospital-with-confirmed-or-suspected-covid-19/](https://www.gov.scot/publications/trends-in-number-of-people-in-hospital-with-confirmed-or-suspected-covid-19/) at 2pm in XLSX format, and in CSV format at https://github.com/DataScienceScotland/COVID-19-Management-Information
+* **Source**: Trends in daily COVID-19 data [(XLSX)](https://www.gov.scot/publications/coronavirus-covid-19-trends-in-daily-data/) [(CSVs)](https://github.com/DataScienceScotland/COVID-19-Management-Information)
+    * **Tests**: number of people tested (Pillar 1, and Pillar 2 since 15 June) by day in Scotland [(CSV)](https://github.com/DataScienceScotland/COVID-19-Management-Information/blob/master/COVID19%20-%20Daily%20Management%20Information%20-%20Scotland%20-%20Testing.csv)
+    * **Confirmed cases**: number of confirmed cases (Pillar 1, and Pillar 2 since 15 June) by day in Scotland [(CSV)](https://github.com/DataScienceScotland/COVID-19-Management-Information/blob/master/COVID19%20-%20Daily%20Management%20Information%20-%20Scotland%20-%20Testing.csv)
+    * **Deaths**: number of deaths by day in Scotland [(CSV)](https://github.com/DataScienceScotland/COVID-19-Management-Information/blob/master/COVID19%20-%20Daily%20Management%20Information%20-%20Scotland%20-%20Deaths.csv)
+* **Source**: COVID-19 data by NHS Board [(XLSX)](https://www.gov.scot/publications/coronavirus-covid-19-trends-in-daily-data/) [(CSV)](https://github.com/DataScienceScotland/COVID-19-Management-Information/blob/master/COVID19%20-%20Daily%20Management%20Information%20-%20Scottish%20Health%20Boards%20-%20Cumulative%20cases.csv)
+    * Confirmed cases: number of confirmed cases (Pillar 1, and Pillar 2 since 15 June) by day by health board
+* Charts available on the [PHS dashboard](https://www.publichealthscotland.scot/our-areas-of-work/sharing-our-data-and-intelligence/coronavirus-covid-19-data/)
 * Twitter updates: [@scotgov](https://twitter.com/scotgov)
 
 ### Wales
 
-* Number of **tests, confirmed cases and deaths**, and **confirmed cases by local authority and health board**, are published on the [PHW dashboard][PHW-dashboard] at 2pm, with an accompanying XLSX download.
+* **Source**: Data download [(XLSX)](http://www2.nphs.wales.nhs.uk:8080/CommunitySurveillanceDocs.nsf/3dc04669c9e1eaa880257062003b246b/77fdb9a33544aee88025855100300cab/$FILE/Rapid%20COVID-19%20surveillance%20data.xlsx)
+    * **Tests**: number of people tested (Pillars 1 and 2) by day by local authority
+    * **Confirmed cases**: number of confirmed cases (Pillars 1 and 2) by day by local authority
+    * **Deaths**: number of deaths by day in Wales; number of cumulative deaths by health board
+* More information and charts available on the [PHW dashboard][PHW-dashboard]
 * Twitter updates: [@PublicHealthW](https://twitter.com/publichealthw)
 
 ### Northern Ireland
 
-* Number of **tests, confirmed cases and deaths**, and **confirmed cases by local authority** are published in the [Department of Health dashboard][NI-dashboard] at 2pm. There is no data download option, but the code in this repo uses a backend JSON API to download the daily data.
+* **Source**: No machine-readable dataset available
+* Charts available on the [Department of Health dashboard][NI-dashboard]
+    * Includes number of people tested and confirmed cases for Pillar 1, and Pillar 2 since 24 June.
 * Twitter updates: [@healthdpt](https://twitter.com/healthdpt)
 
 ### Local Authority and Health Board metadata
@@ -130,7 +144,6 @@ Raw data (including HTML pages, PDFs, CSV and XLSX files), is archived under _da
 * The [PHE dashboard][PHW-dashboard] is [open source](https://github.com/PublicHealthEngland/coronavirus-dashboard).
 * Ian Watt's [COVID-19 Scotland dataset](https://github.com/watty62/Scot_covid19) - no longer updated
 * Emma Doughty's [UK COVID-19 data](https://github.com/emmadoughty/Daily_COVID-19) - no longer updated
-* ODI Leeds mirror of PHE dashboard data: https://github.com/odileeds/coronavirus-data
 
 ## Tools
 

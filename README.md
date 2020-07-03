@@ -1,6 +1,6 @@
 # COVID-19 UK Historical Data
 
-:warning: **Update: 2 July 2020. This repository is deprecated and will stop being updated from 1 August 2020. Users are encouraged to move to official upstream data sources which are listed below https://github.com/tomwhite/covid-19-uk-data#data-sources** :warning:
+:warning: **Update: 2 July 2020. This repository is deprecated and will stop being updated from 1 August 2020. Users are encouraged to move to official upstream data sources which are [listed below](https://github.com/tomwhite/covid-19-uk-data#data-sources)** :warning:
 
 Data on numbers of tests, confirmed cases, and deaths for coronavirus (COVID-19) in the UK is published by the government, but it is fragmented and not always provided in consistent or machine-friendly formats. Also, in many cases only the latest numbers are available so it's not possible to look at changes over time.
 
@@ -28,7 +28,7 @@ Interpreting the numbers (more information on this [DHSC/PHE page](https://www.g
 * "Confirmed cases" are the number of people with a positive test.
 * "Deaths" are hospital deaths, so they don't include deaths of people with COVID-19 who died at home for example. (Although [this changed in England on 29 April 2020](https://coronavirus.data.gov.uk/about#changes-to-the-reporting-process).)
 
-Note that the totals for the UK don't necessarily equal the sum of the totals of the four nations (England, Scotland, Wales, Northern Ireland), due to differences in date reported. In particular, the number of people tested in the UK is significantly higher than the sum of totals for the nations, since the UK figure includes "pillar 2" tests that are not assigned to any nation (see this [note](https://coronavirus.data.gov.uk/about#total-and-daily-uk-cases)).
+Note that the totals for the UK don't necessarily equal the sum of the totals of the four nations (England, Scotland, Wales, Northern Ireland), due to differences in date reported.
 
 You can use these files without reading the rest of this document.
 
@@ -72,16 +72,6 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 * 20 March 2020. PHW is providing LA area breakdowns again, after not doing so for two days.
 * 18 March 2020. PHW is no longer providing LA area breakdowns. "Novel Coronavirus (COVID-19) is now circulating in every part of Wales. For this reason, we will not be reporting cases by local authority area from today. From tomorrow, we will update daily at 12 noon the case numbers by health board of residence."
 
-## Wishlist
-
-Here are my suggestions for how to improve the data being published by public bodies.
-
-The short version: **publish everything in CSV format, and include historical data!**
-
-* _Public Health Agency, Northern Ireland:_ Provide a machine readable version of the historical data on the dashboard.
-
-The reporting systems have changed a lot since the outbreak began, and overall they have improved, both in the amount of information being published, and the ease of access of machine-readable datasets. (Public Health Scotland provides all their data in XLSX and CSV format, including historical data. Public Health Wales provides a XLSX spreadsheet with historical data.)
-
 ## Data sources
 
 The following sources may include more data than described here. This summary includes only **Tests**, **Confirmed cases** and **Deaths**.
@@ -90,7 +80,7 @@ The following sources may include more data than described here. This summary in
 
 * **Source**: UK testing time series [(CSV)](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#time-series)
     * **Tests**: number of people tested (_Pillar 1 only_) by day in UK, England, Scotland, NI; (Pillar 1 and 2) Wales
-    * **Confirmed cases**: number of confirmed cases (_Pillar 1 only_) by day in England, Scotland, NI; (Pillar 1 and 2) UK and Wales
+    * **Confirmed cases**: number of confirmed cases (Pillar 1 and 2) by day in UK, England, Scotland, Wales, NI
 * **Source**: UK daily deaths time series [(CSV)](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#time-series)
     * **Deaths**: number of deaths by day in UK
 * **Source**: UK dashboard deaths [(CSV)](https://coronavirus.data.gov.uk/downloads/csv/coronavirus-deaths_latest.csv) [(JSON)](https://coronavirus.data.gov.uk/downloads/json/coronavirus-deaths_latest.json)
@@ -101,7 +91,7 @@ The following sources may include more data than described here. This summary in
 ### England
 
 * **Source**: UK dashboard cases [(CSV)](https://coronavirus.data.gov.uk/downloads/csv/coronavirus-cases_latest.csv) [(JSON)](https://coronavirus.data.gov.uk/downloads/json/coronavirus-cases_latest.json)
-    * **Confirmed cases**: number of confirmed cases (_Pillar 1 only_) by day in England, regions, UTLAs, LTLAs
+    * **Confirmed cases**: number of confirmed cases (Pillar 1 and 2) by day in England, regions, UTLAs, LTLAs
 * Charts available on the [PHE dashboard][PHE-dashboard]
 * Twitter updates: [@PHE_uk](https://twitter.com/PHE_uk)
 
@@ -148,6 +138,16 @@ The following sources may include more data than described here. This summary in
 * The [PHE dashboard][PHW-dashboard] is [open source](https://github.com/PublicHealthEngland/coronavirus-dashboard).
 * Ian Watt's [COVID-19 Scotland dataset](https://github.com/watty62/Scot_covid19) - no longer updated
 * Emma Doughty's [UK COVID-19 data](https://github.com/emmadoughty/Daily_COVID-19) - no longer updated
+
+## Wishlist
+
+Here are my suggestions for how to improve the data being published by public bodies.
+
+The short version: **publish everything in CSV format, and include historical data!**
+
+* _Public Health Agency, Northern Ireland:_ Provide a machine readable version of the historical data on the dashboard.
+
+The reporting systems have changed a lot since the outbreak began, and overall they have improved, both in the amount of information being published, and the ease of access of machine-readable datasets. (Public Health Scotland provides all their data in XLSX and CSV format, including historical data. Public Health Wales provides a XLSX spreadsheet with historical data.)
 
 ## Tools
 

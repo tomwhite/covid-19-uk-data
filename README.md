@@ -1,6 +1,6 @@
 # COVID-19 UK Historical Data
 
-:warning: **Update: 30 June 2020. Data for confirmed cases in England (including English local authorities) do not include "Pillar 2" tests, since that data is not published by the government. The case numbers reported here are therefore likely to be significantly lower than actual figures for England. See this [thread by John Burn-Murdoch](https://twitter.com/jburnmurdoch/status/1277961740697796620)** :warning:
+:warning: **Update: 2 July 2020. This repository is deprecated and will stop being updated from 1 August 2020. Users are encouraged to move to official upstream data sources which are listed below https://github.com/tomwhite/covid-19-uk-data#data-sources** :warning:
 
 Data on numbers of tests, confirmed cases, and deaths for coronavirus (COVID-19) in the UK is published by the government, but it is fragmented and not always provided in consistent or machine-friendly formats. Also, in many cases only the latest numbers are available so it's not possible to look at changes over time.
 
@@ -36,6 +36,7 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 
 ## News
 
+* 2 July 2020. PHE started including Pillar 2 data in England confirmed case numbers. This data is now being included in this repository.
 * 1 July 2020. England UTLA confirmed case data is no longer being included since it doesn't have Pillar 2 tests, which make up the vast majority of tests.
 * 1 July 2020. NI data is no longer being included since the (undocumented) backend API changed again, and the NI Department of Health does not provide a machine-readable alternative. (See 2 June 2020 entry below.)
 * 30 June 2020. With the new Leicester lockdown, media attention around the lack of Pillar 2 data in England has increased. I have added a prominent warning to the top of this README.

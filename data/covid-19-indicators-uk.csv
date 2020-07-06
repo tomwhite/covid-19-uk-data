@@ -2108,8 +2108,14 @@ Date,Country,Indicator,Value
 2020-07-04,Wales,Tests,148882
 2020-07-05,England,ConfirmedCases,245483
 2020-07-05,England,Deaths,39647
+2020-07-05,Scotland,ConfirmedCases,18296
+2020-07-05,Scotland,Deaths,2488
+2020-07-05,Scotland,Tests,278883
 2020-07-05,UK,ConfirmedCases,285416
 2020-07-05,UK,Deaths,44220
 2020-07-05,Wales,ConfirmedCases,15898
 2020-07-05,Wales,Deaths,1531
 2020-07-05,Wales,Tests,148903
+2020-07-06,Scotland,ConfirmedCases,18300
+2020-07-06,Scotland,Deaths,2488
+2020-07-06,Scotland,Tests,281741

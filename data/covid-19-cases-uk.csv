@@ -19730,7 +19730,7 @@ Date,Country,AreaCode,Area,TotalCases
 2020-07-02,Scotland,S08000030,Tayside,1769
 2020-07-02,Scotland,S08000028,Western Isles,7
 2020-07-02,Wales,W11000028,Aneurin Bevan,2640
-2020-07-02,Wales,W11000023,Betsi Cadwaladr,3716
+2020-07-02,Wales,W11000023,Betsi Cadwaladr,3717
 2020-07-02,Wales,W11000029,Cardiff and Vale,2984
 2020-07-02,Wales,W11000030,Cwm Taf,2887
 2020-07-02,Wales,W11000025,Hywel Dda,1127
@@ -19860,7 +19860,7 @@ Date,Country,AreaCode,Area,TotalCases
 2020-07-03,Scotland,S08000030,Tayside,1769
 2020-07-03,Scotland,S08000028,Western Isles,7
 2020-07-03,Wales,W11000028,Aneurin Bevan,2641
-2020-07-03,Wales,W11000023,Betsi Cadwaladr,3720
+2020-07-03,Wales,W11000023,Betsi Cadwaladr,3721
 2020-07-03,Wales,W11000029,Cardiff and Vale,2987
 2020-07-03,Wales,W11000030,Cwm Taf,2888
 2020-07-03,Wales,W11000025,Hywel Dda,1128
@@ -19959,9 +19959,9 @@ Date,Country,AreaCode,Area,TotalCases
 2020-07-04,Scotland,S08000030,Tayside,1771
 2020-07-04,Scotland,S08000028,Western Isles,7
 2020-07-04,Wales,W11000028,Aneurin Bevan,2641
-2020-07-04,Wales,W11000023,Betsi Cadwaladr,3721
+2020-07-04,Wales,W11000023,Betsi Cadwaladr,3722
 2020-07-04,Wales,W11000029,Cardiff and Vale,2988
-2020-07-04,Wales,W11000030,Cwm Taf,2889
+2020-07-04,Wales,W11000030,Cwm Taf,2890
 2020-07-04,Wales,W11000025,Hywel Dda,1128
 2020-07-04,Wales,,Outside Wales,128
 2020-07-04,Wales,W11000024,Powys,302
@@ -20063,14 +20063,14 @@ Date,Country,AreaCode,Area,TotalCases
 2020-07-05,Scotland,S08000030,Tayside,1772
 2020-07-05,Scotland,S08000028,Western Isles,7
 2020-07-05,Wales,W11000028,Aneurin Bevan,2641
-2020-07-05,Wales,W11000023,Betsi Cadwaladr,3721
-2020-07-05,Wales,W11000029,Cardiff and Vale,2988
-2020-07-05,Wales,W11000030,Cwm Taf,2889
+2020-07-05,Wales,W11000023,Betsi Cadwaladr,3722
+2020-07-05,Wales,W11000029,Cardiff and Vale,2991
+2020-07-05,Wales,W11000030,Cwm Taf,2891
 2020-07-05,Wales,W11000025,Hywel Dda,1129
 2020-07-05,Wales,,Outside Wales,128
 2020-07-05,Wales,W11000024,Powys,302
-2020-07-05,Wales,W11000031,Swansea Bay,1916
-2020-07-05,Wales,,Unknown,185
+2020-07-05,Wales,W11000031,Swansea Bay,1917
+2020-07-05,Wales,,Unknown,186
 2020-07-06,England,E08000025,Birmingham,4805
 2020-07-06,England,E08000001,Bolton,1817
 2020-07-06,England,E09000007,Camden,700
@@ -20122,15 +20122,15 @@ Date,Country,AreaCode,Area,TotalCases
 2020-07-06,Scotland,S08000026,Shetland,54
 2020-07-06,Scotland,S08000030,Tayside,1772
 2020-07-06,Scotland,S08000028,Western Isles,7
-2020-07-06,Wales,W11000028,Aneurin Bevan,2641
-2020-07-06,Wales,W11000023,Betsi Cadwaladr,3722
-2020-07-06,Wales,W11000029,Cardiff and Vale,2988
-2020-07-06,Wales,W11000030,Cwm Taf,2889
+2020-07-06,Wales,W11000028,Aneurin Bevan,2643
+2020-07-06,Wales,W11000023,Betsi Cadwaladr,3723
+2020-07-06,Wales,W11000029,Cardiff and Vale,2991
+2020-07-06,Wales,W11000030,Cwm Taf,2893
 2020-07-06,Wales,W11000025,Hywel Dda,1129
 2020-07-06,Wales,,Outside Wales,128
 2020-07-06,Wales,W11000024,Powys,302
-2020-07-06,Wales,W11000031,Swansea Bay,1916
-2020-07-06,Wales,,Unknown,185
+2020-07-06,Wales,W11000031,Swansea Bay,1917
+2020-07-06,Wales,,Unknown,186
 2020-07-07,England,E09000002,Barking and Dagenham,707
 2020-07-07,England,E09000003,Barnet,1588
 2020-07-07,England,E08000025,Birmingham,4805
@@ -20294,3 +20294,12 @@ Date,Country,AreaCode,Area,TotalCases
 2020-07-07,Scotland,S08000026,Shetland,54
 2020-07-07,Scotland,S08000030,Tayside,1772
 2020-07-07,Scotland,S08000028,Western Isles,7
+2020-07-07,Wales,W11000028,Aneurin Bevan,2643
+2020-07-07,Wales,W11000023,Betsi Cadwaladr,3724
+2020-07-07,Wales,W11000029,Cardiff and Vale,2991
+2020-07-07,Wales,W11000030,Cwm Taf,2893
+2020-07-07,Wales,W11000025,Hywel Dda,1129
+2020-07-07,Wales,,Outside Wales,128
+2020-07-07,Wales,W11000024,Powys,302
+2020-07-07,Wales,W11000031,Swansea Bay,1917
+2020-07-07,Wales,,Unknown,186

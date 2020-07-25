@@ -2249,6 +2249,9 @@ Date,Country,Indicator,Value
 2020-07-18,Wales,Tests,215510
 2020-07-19,England,ConfirmedCases,254802
 2020-07-19,England,Deaths,40706
+2020-07-19,Scotland,ConfirmedCases,18445
+2020-07-19,Scotland,Deaths,2491
+2020-07-19,Scotland,Tests,321754
 2020-07-19,UK,ConfirmedCases,294792
 2020-07-19,UK,Deaths,45301
 2020-07-19,Wales,ConfirmedCases,16971
@@ -2256,6 +2259,9 @@ Date,Country,Indicator,Value
 2020-07-19,Wales,Tests,216572
 2020-07-20,England,ConfirmedCases,255438
 2020-07-20,England,Deaths,40718
+2020-07-20,Scotland,ConfirmedCases,18452
+2020-07-20,Scotland,Deaths,2491
+2020-07-20,Scotland,Tests,323452
 2020-07-20,UK,ConfirmedCases,295372
 2020-07-20,UK,Deaths,45312
 2020-07-20,Wales,ConfirmedCases,17014
@@ -2263,6 +2269,9 @@ Date,Country,Indicator,Value
 2020-07-20,Wales,Tests,219204
 2020-07-21,England,ConfirmedCases,255960
 2020-07-21,England,Deaths,40828
+2020-07-21,Scotland,ConfirmedCases,18474
+2020-07-21,Scotland,Deaths,2491
+2020-07-21,Scotland,Tests,326367
 2020-07-21,UK,ConfirmedCases,295817
 2020-07-21,UK,Deaths,45422
 2020-07-21,Wales,ConfirmedCases,17067
@@ -2270,6 +2279,9 @@ Date,Country,Indicator,Value
 2020-07-21,Wales,Tests,221684
 2020-07-22,England,ConfirmedCases,256397
 2020-07-22,England,Deaths,40906
+2020-07-22,Scotland,ConfirmedCases,18484
+2020-07-22,Scotland,Deaths,2491
+2020-07-22,Scotland,Tests,329962
 2020-07-22,UK,ConfirmedCases,296377
 2020-07-22,UK,Deaths,45501
 2020-07-22,Wales,ConfirmedCases,17075
@@ -2277,6 +2289,9 @@ Date,Country,Indicator,Value
 2020-07-22,Wales,Tests,222300
 2020-07-23,England,ConfirmedCases,256428
 2020-07-23,England,Deaths,40959
+2020-07-23,Scotland,ConfirmedCases,18500
+2020-07-23,Scotland,Deaths,2491
+2020-07-23,Scotland,Tests,333613
 2020-07-23,UK,ConfirmedCases,297146
 2020-07-23,UK,Deaths,45554
 2020-07-23,Wales,ConfirmedCases,17075
@@ -2284,5 +2299,11 @@ Date,Country,Indicator,Value
 2020-07-23,Wales,Tests,222321
 2020-07-24,England,ConfirmedCases,256428
 2020-07-24,England,Deaths,41082
+2020-07-24,Scotland,ConfirmedCases,18520
+2020-07-24,Scotland,Deaths,2491
+2020-07-24,Scotland,Tests,337519
 2020-07-24,UK,ConfirmedCases,297914
 2020-07-24,UK,Deaths,45677
+2020-07-25,Scotland,ConfirmedCases,18547
+2020-07-25,Scotland,Deaths,2491
+2020-07-25,Scotland,Tests,341551

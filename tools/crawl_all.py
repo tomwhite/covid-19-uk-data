@@ -184,13 +184,15 @@ def crawl_phs(use_local=False):
     df = pd.read_excel(file, sheet_name="Table 1 - Cumulative cases", skiprows=2)
     df["Date"] = df["Date"].apply(lambda x: x.strftime('%Y-%m-%d')).astype(str)
     df = df.drop(columns=['Scotland'])
-    area_cases = df.melt(id_vars=["Date"], var_name="Area", value_name="TotalCases")
-    area_cases = area_cases.replace("*", "NaN")
-    area_cases["Area"] = area_cases["Area"].apply(lambda hb: hb.replace("NHS", "").replace("&", "and").strip())
-    area_cases["AreaCode"] = area_cases["Area"].apply(lambda hb: lookup_health_board_code(hb))
-    area_cases["Country"] = "Scotland"
-    area_cases = area_cases[["Date", "Country", "AreaCode", "Area", "TotalCases"]]
-    save_cases_df_to_sqlite(area_cases, "Scotland")
+    df = df[[c for c in df.columns if c.startswith('Unnamed')]]
+    print(df)
+    # area_cases = df.melt(id_vars=["Date"], var_name="Area", value_name="TotalCases")
+    # area_cases = area_cases.replace("*", "NaN")
+    # area_cases["Area"] = area_cases["Area"].apply(lambda hb: hb.replace("NHS", "").replace("&", "and").strip())
+    # area_cases["AreaCode"] = area_cases["Area"].apply(lambda hb: lookup_health_board_code(hb))
+    # area_cases["Country"] = "Scotland"
+    # area_cases = area_cases[["Date", "Country", "AreaCode", "Area", "TotalCases"]]
+    # save_cases_df_to_sqlite(area_cases, "Scotland")
 
 def get_phs_xlsx_urls():
     # URLs have dates embedded in them, so scrape them from HTML page

@@ -103,6 +103,7 @@ The following sources may include more data than described here. This summary in
     * **Deaths**: number of deaths by day in Scotland [(CSV)](https://github.com/DataScienceScotland/COVID-19-Management-Information/blob/master/COVID19%20-%20Daily%20Management%20Information%20-%20Scotland%20-%20Deaths.csv)
 * **Source**: COVID-19 data by NHS Board [(XLSX)](https://www.gov.scot/publications/coronavirus-covid-19-trends-in-daily-data/) [(CSV)](https://github.com/DataScienceScotland/COVID-19-Management-Information/blob/master/COVID19%20-%20Daily%20Management%20Information%20-%20Scottish%20Health%20Boards%20-%20Cumulative%20cases.csv)
     * Confirmed cases: number of confirmed cases (Pillar 1, and Pillar 2 since 15 June) by day by health board
+* See also [statistics.gov.scot](https://statistics.gov.scot/resource?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Fcoronavirus-covid-19-management-information)
 * Charts available on the [PHS dashboard](https://www.publichealthscotland.scot/our-areas-of-work/sharing-our-data-and-intelligence/coronavirus-covid-19-data/)
 * Twitter updates: [@scotgov](https://twitter.com/scotgov)
 
@@ -136,6 +137,7 @@ The following sources may include more data than described here. This summary in
 * ONS: [Deaths registered weekly in England and Wales, provisional](https://www.ons.gov.uk/peoplepopulationandcommunity/birthsdeathsandmarriages/deaths/datasets/weeklyprovisionalfiguresondeathsregisteredinenglandandwales)
 * NISRA: [Weekly Deaths](https://www.nisra.gov.uk/publications/weekly-deaths)
 * The [PHE dashboard][PHW-dashboard] is [open source](https://github.com/PublicHealthEngland/coronavirus-dashboard).
+* Russ Garrett's [covidtracker](https://russss.github.io/covidtracker/) and [coviddata](https://github.com/russss/coviddata) (Python/xarray )
 * Ian Watt's [COVID-19 Scotland dataset](https://github.com/watty62/Scot_covid19) - no longer updated
 * Emma Doughty's [UK COVID-19 data](https://github.com/emmadoughty/Daily_COVID-19) - no longer updated
 

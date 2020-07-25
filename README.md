@@ -78,10 +78,10 @@ The following sources may include more data than described here. This summary in
 
 ### UK
 
-* **Source**: UK testing time series [(CSV)](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#time-series)
+* **Source**: UK testing time series [(CSV)](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#time-series-documents)
     * **Tests**: number of people tested (_Pillar 1 only_) by day in UK, England, Scotland, NI; (Pillar 1 and 2) Wales
     * **Confirmed cases**: number of confirmed cases (Pillar 1 and 2) by day in UK, England, Scotland, Wales, NI
-* **Source**: UK daily deaths time series [(CSV)](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#time-series)
+* **Source**: UK daily deaths time series [(CSV)](https://www.gov.uk/guidance/coronavirus-covid-19-information-for-the-public#ttime-series-documents)
     * **Deaths**: number of deaths by day in UK
 * **Source**: UK dashboard deaths [(CSV)](https://coronavirus.data.gov.uk/downloads/csv/coronavirus-deaths_latest.csv) [(JSON)](https://coronavirus.data.gov.uk/downloads/json/coronavirus-deaths_latest.json)
     * **Deaths**: number of deaths by day in UK, England, Scotland, Wales, NI

@@ -1831,7 +1831,7 @@ Date,Country,Indicator,Value
 2020-06-12,UK,Deaths,41581
 2020-06-12,Wales,ConfirmedCases,15376
 2020-06-12,Wales,Deaths,1451
-2020-06-12,Wales,Tests,130651
+2020-06-12,Wales,Tests,130650
 2020-06-13,England,ConfirmedCases,232088
 2020-06-13,England,Deaths,37342
 2020-06-13,Northern Ireland,ConfirmedCases,4832
@@ -1844,7 +1844,7 @@ Date,Country,Indicator,Value
 2020-06-13,UK,Deaths,41764
 2020-06-13,Wales,ConfirmedCases,15446
 2020-06-13,Wales,Deaths,1457
-2020-06-13,Wales,Tests,132473
+2020-06-13,Wales,Tests,132472
 2020-06-14,England,ConfirmedCases,232835
 2020-06-14,England,Deaths,37368
 2020-06-14,Northern Ireland,ConfirmedCases,4834
@@ -1857,7 +1857,7 @@ Date,Country,Indicator,Value
 2020-06-14,UK,Deaths,41800
 2020-06-14,Wales,ConfirmedCases,15500
 2020-06-14,Wales,Deaths,1464
-2020-06-14,Wales,Tests,134012
+2020-06-14,Wales,Tests,134011
 2020-06-15,England,ConfirmedCases,233773
 2020-06-15,England,Deaths,37401
 2020-06-15,Northern Ireland,ConfirmedCases,4841
@@ -1870,7 +1870,7 @@ Date,Country,Indicator,Value
 2020-06-15,UK,Deaths,41838
 2020-06-15,Wales,ConfirmedCases,15566
 2020-06-15,Wales,Deaths,1470
-2020-06-15,Wales,Tests,136419
+2020-06-15,Wales,Tests,136418
 2020-06-16,England,ConfirmedCases,234764
 2020-06-16,England,Deaths,37629
 2020-06-16,Northern Ireland,ConfirmedCases,4848
@@ -1883,7 +1883,7 @@ Date,Country,Indicator,Value
 2020-06-16,UK,Deaths,42074
 2020-06-16,Wales,ConfirmedCases,15648
 2020-06-16,Wales,Deaths,1478
-2020-06-16,Wales,Tests,138786
+2020-06-16,Wales,Tests,138785
 2020-06-17,England,ConfirmedCases,235674
 2020-06-17,England,Deaths,37797
 2020-06-17,Northern Ireland,ConfirmedCases,4851
@@ -1896,7 +1896,7 @@ Date,Country,Indicator,Value
 2020-06-17,UK,Deaths,42258
 2020-06-17,Wales,ConfirmedCases,15714
 2020-06-17,Wales,Deaths,1479
-2020-06-17,Wales,Tests,140850
+2020-06-17,Wales,Tests,140847
 2020-06-18,England,ConfirmedCases,236620
 2020-06-18,England,Deaths,37919
 2020-06-18,Northern Ireland,ConfirmedCases,4851
@@ -1909,7 +1909,7 @@ Date,Country,Indicator,Value
 2020-06-18,UK,Deaths,42395
 2020-06-18,Wales,ConfirmedCases,15776
 2020-06-18,Wales,Deaths,1479
-2020-06-18,Wales,Tests,142989
+2020-06-18,Wales,Tests,142986
 2020-06-19,England,ConfirmedCases,237432
 2020-06-19,England,Deaths,38086
 2020-06-19,Northern Ireland,ConfirmedCases,4856
@@ -1922,7 +1922,7 @@ Date,Country,Indicator,Value
 2020-06-19,UK,Deaths,42568
 2020-06-19,Wales,ConfirmedCases,15916
 2020-06-19,Wales,Deaths,1483
-2020-06-19,Wales,Tests,145588
+2020-06-19,Wales,Tests,145585
 2020-06-20,England,ConfirmedCases,238061
 2020-06-20,England,Deaths,38208
 2020-06-20,Northern Ireland,ConfirmedCases,4856
@@ -1935,7 +1935,7 @@ Date,Country,Indicator,Value
 2020-06-20,UK,Deaths,42698
 2020-06-20,Wales,ConfirmedCases,15963
 2020-06-20,Wales,Deaths,1486
-2020-06-20,Wales,Tests,146936
+2020-06-20,Wales,Tests,146933
 2020-06-21,England,ConfirmedCases,238613
 2020-06-21,England,Deaths,38247
 2020-06-21,Northern Ireland,ConfirmedCases,4858
@@ -1948,7 +1948,7 @@ Date,Country,Indicator,Value
 2020-06-21,UK,Deaths,42741
 2020-06-21,Wales,ConfirmedCases,16039
 2020-06-21,Wales,Deaths,1491
-2020-06-21,Wales,Tests,148390
+2020-06-21,Wales,Tests,148387
 2020-06-22,England,ConfirmedCases,239428
 2020-06-22,England,Deaths,38261
 2020-06-22,Northern Ireland,ConfirmedCases,4859
@@ -1961,7 +1961,7 @@ Date,Country,Indicator,Value
 2020-06-22,UK,Deaths,42756
 2020-06-22,Wales,ConfirmedCases,16105
 2020-06-22,Wales,Deaths,1493
-2020-06-22,Wales,Tests,150814
+2020-06-22,Wales,Tests,150811
 2020-06-23,England,ConfirmedCases,240157
 2020-06-23,England,Deaths,38427
 2020-06-23,Northern Ireland,ConfirmedCases,4863
@@ -1974,7 +1974,7 @@ Date,Country,Indicator,Value
 2020-06-23,UK,Deaths,42927
 2020-06-23,Wales,ConfirmedCases,16236
 2020-06-23,Wales,Deaths,1494
-2020-06-23,Wales,Tests,153784
+2020-06-23,Wales,Tests,153781
 2020-06-24,England,ConfirmedCases,240886
 2020-06-24,England,Deaths,38568
 2020-06-24,Northern Ireland,ConfirmedCases,4864
@@ -1987,7 +1987,7 @@ Date,Country,Indicator,Value
 2020-06-24,UK,Deaths,43081
 2020-06-24,Wales,ConfirmedCases,16273
 2020-06-24,Wales,Deaths,1500
-2020-06-24,Wales,Tests,156254
+2020-06-24,Wales,Tests,156251
 2020-06-25,England,ConfirmedCases,241523
 2020-06-25,England,Deaths,38706
 2020-06-25,Northern Ireland,ConfirmedCases,4868
@@ -2000,7 +2000,7 @@ Date,Country,Indicator,Value
 2020-06-25,UK,Deaths,43230
 2020-06-25,Wales,ConfirmedCases,16333
 2020-06-25,Wales,Deaths,1509
-2020-06-25,Wales,Tests,158894
+2020-06-25,Wales,Tests,158890
 2020-06-26,England,ConfirmedCases,242168
 2020-06-26,England,Deaths,38888
 2020-06-26,Northern Ireland,ConfirmedCases,4871
@@ -2013,7 +2013,7 @@ Date,Country,Indicator,Value
 2020-06-26,UK,Deaths,43414
 2020-06-26,Wales,ConfirmedCases,16352
 2020-06-26,Wales,Deaths,1511
-2020-06-26,Wales,Tests,161179
+2020-06-26,Wales,Tests,161175
 2020-06-27,England,ConfirmedCases,242668
 2020-06-27,England,Deaths,38982
 2020-06-27,Northern Ireland,ConfirmedCases,4872
@@ -2026,7 +2026,7 @@ Date,Country,Indicator,Value
 2020-06-27,UK,Deaths,43514
 2020-06-27,Wales,ConfirmedCases,16492
 2020-06-27,Wales,Deaths,1517
-2020-06-27,Wales,Tests,163090
+2020-06-27,Wales,Tests,163086
 2020-06-28,England,ConfirmedCases,243077
 2020-06-28,England,Deaths,39015
 2020-06-28,Northern Ireland,ConfirmedCases,4875
@@ -2039,7 +2039,7 @@ Date,Country,Indicator,Value
 2020-06-28,UK,Deaths,43550
 2020-06-28,Wales,ConfirmedCases,16520
 2020-06-28,Wales,Deaths,1519
-2020-06-28,Wales,Tests,164110
+2020-06-28,Wales,Tests,164106
 2020-06-29,England,ConfirmedCases,243745
 2020-06-29,England,Deaths,39036
 2020-06-29,Northern Ireland,ConfirmedCases,4878
@@ -2052,7 +2052,7 @@ Date,Country,Indicator,Value
 2020-06-29,UK,Deaths,43575
 2020-06-29,Wales,ConfirmedCases,16563
 2020-06-29,Wales,Deaths,1522
-2020-06-29,Wales,Tests,166641
+2020-06-29,Wales,Tests,166636
 2020-06-30,England,ConfirmedCases,244316
 2020-06-30,England,Deaths,39187
 2020-06-30,Northern Ireland,ConfirmedCases,4880
@@ -2065,7 +2065,7 @@ Date,Country,Indicator,Value
 2020-06-30,UK,Deaths,43730
 2020-06-30,Wales,ConfirmedCases,16598
 2020-06-30,Wales,Deaths,1526
-2020-06-30,Wales,Tests,169526
+2020-06-30,Wales,Tests,169521
 2020-07-01,England,ConfirmedCases,244924
 2020-07-01,England,Deaths,39354
 2020-07-01,Northern Ireland,Deaths,551
@@ -2076,7 +2076,7 @@ Date,Country,Indicator,Value
 2020-07-01,UK,Deaths,43906
 2020-07-01,Wales,ConfirmedCases,16625
 2020-07-01,Wales,Deaths,1530
-2020-07-01,Wales,Tests,172312
+2020-07-01,Wales,Tests,172306
 2020-07-02,England,ConfirmedCases,245483
 2020-07-02,England,Deaths,39434
 2020-07-02,Scotland,ConfirmedCases,18264
@@ -2086,7 +2086,7 @@ Date,Country,Indicator,Value
 2020-07-02,UK,Deaths,43995
 2020-07-02,Wales,ConfirmedCases,16653
 2020-07-02,Wales,Deaths,1533
-2020-07-02,Wales,Tests,175231
+2020-07-02,Wales,Tests,175225
 2020-07-03,England,ConfirmedCases,246026
 2020-07-03,England,Deaths,39567
 2020-07-03,Scotland,ConfirmedCases,18276
@@ -2096,7 +2096,7 @@ Date,Country,Indicator,Value
 2020-07-03,UK,Deaths,44131
 2020-07-03,Wales,ConfirmedCases,16672
 2020-07-03,Wales,Deaths,1533
-2020-07-03,Wales,Tests,178212
+2020-07-03,Wales,Tests,178205
 2020-07-04,England,ConfirmedCases,246413
 2020-07-04,England,Deaths,39626
 2020-07-04,Scotland,ConfirmedCases,18287
@@ -2106,7 +2106,7 @@ Date,Country,Indicator,Value
 2020-07-04,UK,Deaths,44198
 2020-07-04,Wales,ConfirmedCases,16681
 2020-07-04,Wales,Deaths,1535
-2020-07-04,Wales,Tests,179613
+2020-07-04,Wales,Tests,179606
 2020-07-05,England,ConfirmedCases,246952
 2020-07-05,England,Deaths,39647
 2020-07-05,Scotland,ConfirmedCases,18296
@@ -2116,7 +2116,7 @@ Date,Country,Indicator,Value
 2020-07-05,UK,Deaths,44220
 2020-07-05,Wales,ConfirmedCases,16693
 2020-07-05,Wales,Deaths,1537
-2020-07-05,Wales,Tests,180721
+2020-07-05,Wales,Tests,180714
 2020-07-06,England,ConfirmedCases,247604
 2020-07-06,England,Deaths,39663
 2020-07-06,Scotland,ConfirmedCases,18300
@@ -2126,7 +2126,7 @@ Date,Country,Indicator,Value
 2020-07-06,UK,Deaths,44236
 2020-07-06,Wales,ConfirmedCases,16728
 2020-07-06,Wales,Deaths,1539
-2020-07-06,Wales,Tests,183699
+2020-07-06,Wales,Tests,183691
 2020-07-07,England,ConfirmedCases,248157
 2020-07-07,England,Deaths,39815
 2020-07-07,Scotland,ConfirmedCases,18302
@@ -2136,7 +2136,7 @@ Date,Country,Indicator,Value
 2020-07-07,UK,Deaths,44391
 2020-07-07,Wales,ConfirmedCases,16756
 2020-07-07,Wales,Deaths,1540
-2020-07-07,Wales,Tests,186468
+2020-07-07,Wales,Tests,186460
 2020-07-08,England,ConfirmedCases,248817
 2020-07-08,England,Deaths,39936
 2020-07-08,Scotland,ConfirmedCases,18309
@@ -2146,7 +2146,7 @@ Date,Country,Indicator,Value
 2020-07-08,UK,Deaths,44517
 2020-07-08,Wales,ConfirmedCases,16770
 2020-07-08,Wales,Deaths,1541
-2020-07-08,Wales,Tests,189670
+2020-07-08,Wales,Tests,189662
 2020-07-09,England,ConfirmedCases,249498
 2020-07-09,England,Deaths,40018
 2020-07-09,Scotland,ConfirmedCases,18315
@@ -2156,7 +2156,7 @@ Date,Country,Indicator,Value
 2020-07-09,UK,Deaths,44602
 2020-07-09,Wales,ConfirmedCases,16792
 2020-07-09,Wales,Deaths,1542
-2020-07-09,Wales,Tests,192844
+2020-07-09,Wales,Tests,192836
 2020-07-10,England,ConfirmedCases,250019
 2020-07-10,England,Deaths,40066
 2020-07-10,Scotland,ConfirmedCases,18333
@@ -2166,7 +2166,7 @@ Date,Country,Indicator,Value
 2020-07-10,UK,Deaths,44650
 2020-07-10,Wales,ConfirmedCases,16821
 2020-07-10,Wales,Deaths,1542
-2020-07-10,Wales,Tests,195658
+2020-07-10,Wales,Tests,195650
 2020-07-11,England,ConfirmedCases,250434
 2020-07-11,England,Deaths,40213
 2020-07-11,Scotland,ConfirmedCases,18340
@@ -2176,7 +2176,7 @@ Date,Country,Indicator,Value
 2020-07-11,UK,Deaths,44798
 2020-07-11,Wales,ConfirmedCases,16833
 2020-07-11,Wales,Deaths,1543
-2020-07-11,Wales,Tests,197259
+2020-07-11,Wales,Tests,197251
 2020-07-12,England,ConfirmedCases,250778
 2020-07-12,England,Deaths,40234
 2020-07-12,Scotland,ConfirmedCases,18359
@@ -2186,7 +2186,7 @@ Date,Country,Indicator,Value
 2020-07-12,UK,Deaths,44819
 2020-07-12,Wales,ConfirmedCases,16843
 2020-07-12,Wales,Deaths,1543
-2020-07-12,Wales,Tests,198595
+2020-07-12,Wales,Tests,198587
 2020-07-13,England,ConfirmedCases,251459
 2020-07-13,England,Deaths,40245
 2020-07-13,Scotland,ConfirmedCases,18365
@@ -2196,7 +2196,7 @@ Date,Country,Indicator,Value
 2020-07-13,UK,Deaths,44830
 2020-07-13,Wales,ConfirmedCases,16867
 2020-07-13,Wales,Deaths,1545
-2020-07-13,Wales,Tests,201485
+2020-07-13,Wales,Tests,201476
 2020-07-14,England,ConfirmedCases,252103
 2020-07-14,England,Deaths,40379
 2020-07-14,Scotland,ConfirmedCases,18368
@@ -2206,7 +2206,7 @@ Date,Country,Indicator,Value
 2020-07-14,UK,Deaths,44968
 2020-07-14,Wales,ConfirmedCases,16890
 2020-07-14,Wales,Deaths,1546
-2020-07-14,Wales,Tests,204549
+2020-07-14,Wales,Tests,204540
 2020-07-15,England,ConfirmedCases,252822
 2020-07-15,England,Deaths,40462
 2020-07-15,Scotland,ConfirmedCases,18373
@@ -2216,7 +2216,7 @@ Date,Country,Indicator,Value
 2020-07-15,UK,Deaths,45053
 2020-07-15,Wales,ConfirmedCases,16908
 2020-07-15,Wales,Deaths,1546
-2020-07-15,Wales,Tests,208059
+2020-07-15,Wales,Tests,208050
 2020-07-16,England,ConfirmedCases,253457
 2020-07-16,England,Deaths,40528
 2020-07-16,Scotland,ConfirmedCases,18384
@@ -2226,7 +2226,7 @@ Date,Country,Indicator,Value
 2020-07-16,UK,Deaths,45119
 2020-07-16,Wales,ConfirmedCases,16933
 2020-07-16,Wales,Deaths,1547
-2020-07-16,Wales,Tests,211368
+2020-07-16,Wales,Tests,211359
 2020-07-17,England,ConfirmedCases,253992
 2020-07-17,England,Deaths,40640
 2020-07-17,Scotland,ConfirmedCases,18401
@@ -2236,7 +2236,7 @@ Date,Country,Indicator,Value
 2020-07-17,UK,Deaths,45233
 2020-07-17,Wales,ConfirmedCases,16950
 2020-07-17,Wales,Deaths,1547
-2020-07-17,Wales,Tests,214331
+2020-07-17,Wales,Tests,214322
 2020-07-18,England,ConfirmedCases,254451
 2020-07-18,England,Deaths,40680
 2020-07-18,Scotland,ConfirmedCases,18422
@@ -2246,7 +2246,7 @@ Date,Country,Indicator,Value
 2020-07-18,UK,Deaths,45273
 2020-07-18,Wales,ConfirmedCases,16961
 2020-07-18,Wales,Deaths,1547
-2020-07-18,Wales,Tests,215510
+2020-07-18,Wales,Tests,215516
 2020-07-19,England,ConfirmedCases,254828
 2020-07-19,England,Deaths,40706
 2020-07-19,Scotland,ConfirmedCases,18445
@@ -2256,7 +2256,7 @@ Date,Country,Indicator,Value
 2020-07-19,UK,Deaths,45301
 2020-07-19,Wales,ConfirmedCases,16971
 2020-07-19,Wales,Deaths,1547
-2020-07-19,Wales,Tests,216572
+2020-07-19,Wales,Tests,216583
 2020-07-20,England,ConfirmedCases,255531
 2020-07-20,England,Deaths,40718
 2020-07-20,Scotland,ConfirmedCases,18452
@@ -2266,7 +2266,7 @@ Date,Country,Indicator,Value
 2020-07-20,UK,Deaths,45312
 2020-07-20,Wales,ConfirmedCases,17014
 2020-07-20,Wales,Deaths,1547
-2020-07-20,Wales,Tests,219204
+2020-07-20,Wales,Tests,219372
 2020-07-21,England,ConfirmedCases,256142
 2020-07-21,England,Deaths,40828
 2020-07-21,Scotland,ConfirmedCases,18474
@@ -2274,9 +2274,9 @@ Date,Country,Indicator,Value
 2020-07-21,Scotland,Tests,326367
 2020-07-21,UK,ConfirmedCases,295817
 2020-07-21,UK,Deaths,45422
-2020-07-21,Wales,ConfirmedCases,17067
+2020-07-21,Wales,ConfirmedCases,17072
 2020-07-21,Wales,Deaths,1548
-2020-07-21,Wales,Tests,221684
+2020-07-21,Wales,Tests,222543
 2020-07-22,England,ConfirmedCases,256721
 2020-07-22,England,Deaths,40906
 2020-07-22,Scotland,ConfirmedCases,18484
@@ -2284,9 +2284,9 @@ Date,Country,Indicator,Value
 2020-07-22,Scotland,Tests,329962
 2020-07-22,UK,ConfirmedCases,296377
 2020-07-22,UK,Deaths,45501
-2020-07-22,Wales,ConfirmedCases,17075
+2020-07-22,Wales,ConfirmedCases,17092
 2020-07-22,Wales,Deaths,1548
-2020-07-22,Wales,Tests,222300
+2020-07-22,Wales,Tests,224549
 2020-07-23,England,ConfirmedCases,257122
 2020-07-23,England,Deaths,40959
 2020-07-23,Scotland,ConfirmedCases,18500
@@ -2294,9 +2294,9 @@ Date,Country,Indicator,Value
 2020-07-23,Scotland,Tests,333613
 2020-07-23,UK,ConfirmedCases,297146
 2020-07-23,UK,Deaths,45554
-2020-07-23,Wales,ConfirmedCases,17075
+2020-07-23,Wales,ConfirmedCases,17105
 2020-07-23,Wales,Deaths,1548
-2020-07-23,Wales,Tests,222321
+2020-07-23,Wales,Tests,225054
 2020-07-24,England,ConfirmedCases,257138
 2020-07-24,England,Deaths,41082
 2020-07-24,Scotland,ConfirmedCases,18520
@@ -2304,6 +2304,8 @@ Date,Country,Indicator,Value
 2020-07-24,Scotland,Tests,337519
 2020-07-24,UK,ConfirmedCases,297914
 2020-07-24,UK,Deaths,45677
+2020-07-24,Wales,ConfirmedCases,17105
+2020-07-24,Wales,Tests,225069
 2020-07-25,England,ConfirmedCases,257138
 2020-07-25,England,Deaths,41143
 2020-07-25,Scotland,ConfirmedCases,18547

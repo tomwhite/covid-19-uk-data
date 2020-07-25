@@ -21989,6 +21989,20 @@ Date,Country,AreaCode,Area,TotalCases
 2020-07-19,England,E10000034,Worcestershire,2386
 2020-07-19,England,E08000002,Bury,1305
 2020-07-19,England,E08000036,Wakefield,1778
+2020-07-19,Scotland,S08000015,Ayrshire and Arran,1266
+2020-07-19,Scotland,S08000016,Borders,346
+2020-07-19,Scotland,S08000017,Dumfries and Galloway,300
+2020-07-19,Scotland,S08000029,Fife,936
+2020-07-19,Scotland,S08000019,Forth Valley,1092
+2020-07-19,Scotland,S08000020,Grampian,1440
+2020-07-19,Scotland,S08000031,Greater Glasgow and Clyde,4912
+2020-07-19,Scotland,S08000022,Highland,378
+2020-07-19,Scotland,S08000032,Lanarkshire,2747
+2020-07-19,Scotland,S08000024,Lothian,3177
+2020-07-19,Scotland,S08000025,Orkney,9
+2020-07-19,Scotland,S08000026,Shetland,54
+2020-07-19,Scotland,S08000030,Tayside,1781
+2020-07-19,Scotland,S08000028,Western Isles,7
 2020-07-19,Wales,W11000028,Aneurin Bevan,2721
 2020-07-19,Wales,W11000023,Betsi Cadwaladr,4426
 2020-07-19,Wales,W11000029,Cardiff and Vale,3073
@@ -22120,6 +22134,20 @@ Date,Country,AreaCode,Area,TotalCases
 2020-07-20,England,E06000014,York,917
 2020-07-20,England,E08000002,Bury,1309
 2020-07-20,England,E08000036,Wakefield,1790
+2020-07-20,Scotland,S08000015,Ayrshire and Arran,1267
+2020-07-20,Scotland,S08000016,Borders,346
+2020-07-20,Scotland,S08000017,Dumfries and Galloway,300
+2020-07-20,Scotland,S08000029,Fife,936
+2020-07-20,Scotland,S08000019,Forth Valley,1092
+2020-07-20,Scotland,S08000020,Grampian,1440
+2020-07-20,Scotland,S08000031,Greater Glasgow and Clyde,4914
+2020-07-20,Scotland,S08000022,Highland,378
+2020-07-20,Scotland,S08000032,Lanarkshire,2748
+2020-07-20,Scotland,S08000024,Lothian,3180
+2020-07-20,Scotland,S08000025,Orkney,9
+2020-07-20,Scotland,S08000026,Shetland,54
+2020-07-20,Scotland,S08000030,Tayside,1781
+2020-07-20,Scotland,S08000028,Western Isles,7
 2020-07-20,Wales,W11000028,Aneurin Bevan,2723
 2020-07-20,Wales,W11000023,Betsi Cadwaladr,4450
 2020-07-20,Wales,W11000029,Cardiff and Vale,3078
@@ -22239,6 +22267,20 @@ Date,Country,AreaCode,Area,TotalCases
 2020-07-21,England,E06000025,South Gloucestershire,752
 2020-07-21,England,E06000021,Stoke-on-Trent,1481
 2020-07-21,England,E08000036,Wakefield,1795
+2020-07-21,Scotland,S08000015,Ayrshire and Arran,1269
+2020-07-21,Scotland,S08000016,Borders,346
+2020-07-21,Scotland,S08000017,Dumfries and Galloway,300
+2020-07-21,Scotland,S08000029,Fife,937
+2020-07-21,Scotland,S08000019,Forth Valley,1092
+2020-07-21,Scotland,S08000020,Grampian,1440
+2020-07-21,Scotland,S08000031,Greater Glasgow and Clyde,4918
+2020-07-21,Scotland,S08000022,Highland,378
+2020-07-21,Scotland,S08000032,Lanarkshire,2762
+2020-07-21,Scotland,S08000024,Lothian,3181
+2020-07-21,Scotland,S08000025,Orkney,9
+2020-07-21,Scotland,S08000026,Shetland,54
+2020-07-21,Scotland,S08000030,Tayside,1781
+2020-07-21,Scotland,S08000028,Western Isles,7
 2020-07-21,Wales,W11000028,Aneurin Bevan,2727
 2020-07-21,Wales,W11000023,Betsi Cadwaladr,4468
 2020-07-21,Wales,W11000029,Cardiff and Vale,3086
@@ -22347,6 +22389,20 @@ Date,Country,AreaCode,Area,TotalCases
 2020-07-22,England,E08000002,Bury,1312
 2020-07-22,England,E06000021,Stoke-on-Trent,1482
 2020-07-22,England,E08000036,Wakefield,1802
+2020-07-22,Scotland,S08000015,Ayrshire and Arran,1270
+2020-07-22,Scotland,S08000016,Borders,346
+2020-07-22,Scotland,S08000017,Dumfries and Galloway,300
+2020-07-22,Scotland,S08000029,Fife,938
+2020-07-22,Scotland,S08000019,Forth Valley,1092
+2020-07-22,Scotland,S08000020,Grampian,1440
+2020-07-22,Scotland,S08000031,Greater Glasgow and Clyde,4921
+2020-07-22,Scotland,S08000022,Highland,378
+2020-07-22,Scotland,S08000032,Lanarkshire,2765
+2020-07-22,Scotland,S08000024,Lothian,3182
+2020-07-22,Scotland,S08000025,Orkney,9
+2020-07-22,Scotland,S08000026,Shetland,54
+2020-07-22,Scotland,S08000030,Tayside,1782
+2020-07-22,Scotland,S08000028,Western Isles,7
 2020-07-22,Wales,W11000028,Aneurin Bevan,2730
 2020-07-22,Wales,W11000023,Betsi Cadwaladr,4471
 2020-07-22,Wales,W11000029,Cardiff and Vale,3086
@@ -22381,6 +22437,20 @@ Date,Country,AreaCode,Area,TotalCases
 2020-07-23,England,E08000030,Walsall,1517
 2020-07-23,England,E10000034,Worcestershire,2397
 2020-07-23,England,E06000014,York,918
+2020-07-23,Scotland,S08000015,Ayrshire and Arran,1272
+2020-07-23,Scotland,S08000016,Borders,346
+2020-07-23,Scotland,S08000017,Dumfries and Galloway,300
+2020-07-23,Scotland,S08000029,Fife,939
+2020-07-23,Scotland,S08000019,Forth Valley,1092
+2020-07-23,Scotland,S08000020,Grampian,1441
+2020-07-23,Scotland,S08000031,Greater Glasgow and Clyde,4926
+2020-07-23,Scotland,S08000022,Highland,379
+2020-07-23,Scotland,S08000032,Lanarkshire,2769
+2020-07-23,Scotland,S08000024,Lothian,3183
+2020-07-23,Scotland,S08000025,Orkney,9
+2020-07-23,Scotland,S08000026,Shetland,54
+2020-07-23,Scotland,S08000030,Tayside,1783
+2020-07-23,Scotland,S08000028,Western Isles,7
 2020-07-23,Wales,W11000028,Aneurin Bevan,2730
 2020-07-23,Wales,W11000023,Betsi Cadwaladr,4471
 2020-07-23,Wales,W11000029,Cardiff and Vale,3086
@@ -22539,3 +22609,31 @@ Date,Country,AreaCode,Area,TotalCases
 2020-07-24,England,E06000025,South Gloucestershire,752
 2020-07-24,England,E06000021,Stoke-on-Trent,1482
 2020-07-24,England,E08000036,Wakefield,1802
+2020-07-24,Scotland,S08000015,Ayrshire and Arran,1273
+2020-07-24,Scotland,S08000016,Borders,346
+2020-07-24,Scotland,S08000017,Dumfries and Galloway,300
+2020-07-24,Scotland,S08000029,Fife,939
+2020-07-24,Scotland,S08000019,Forth Valley,1091
+2020-07-24,Scotland,S08000020,Grampian,1442
+2020-07-24,Scotland,S08000031,Greater Glasgow and Clyde,4940
+2020-07-24,Scotland,S08000022,Highland,381
+2020-07-24,Scotland,S08000032,Lanarkshire,2770
+2020-07-24,Scotland,S08000024,Lothian,3184
+2020-07-24,Scotland,S08000025,Orkney,9
+2020-07-24,Scotland,S08000026,Shetland,54
+2020-07-24,Scotland,S08000030,Tayside,1784
+2020-07-24,Scotland,S08000028,Western Isles,7
+2020-07-25,Scotland,S08000015,Ayrshire and Arran,1274
+2020-07-25,Scotland,S08000016,Borders,347
+2020-07-25,Scotland,S08000017,Dumfries and Galloway,300
+2020-07-25,Scotland,S08000029,Fife,940
+2020-07-25,Scotland,S08000019,Forth Valley,1091
+2020-07-25,Scotland,S08000020,Grampian,1445
+2020-07-25,Scotland,S08000031,Greater Glasgow and Clyde,4949
+2020-07-25,Scotland,S08000022,Highland,381
+2020-07-25,Scotland,S08000032,Lanarkshire,2778
+2020-07-25,Scotland,S08000024,Lothian,3187
+2020-07-25,Scotland,S08000025,Orkney,9
+2020-07-25,Scotland,S08000026,Shetland,54
+2020-07-25,Scotland,S08000030,Tayside,1785
+2020-07-25,Scotland,S08000028,Western Isles,7

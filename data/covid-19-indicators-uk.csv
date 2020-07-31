@@ -2361,3 +2361,6 @@ Date,Country,Indicator,Value
 2020-07-30,Scotland,Tests,355898
 2020-07-30,UK,ConfirmedCases,302301
 2020-07-30,UK,Deaths,45999
+2020-07-31,Scotland,ConfirmedCases,18627
+2020-07-31,Scotland,Deaths,2491
+2020-07-31,Scotland,Tests,359537

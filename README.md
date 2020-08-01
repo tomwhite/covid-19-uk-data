@@ -1,6 +1,6 @@
 # COVID-19 UK Historical Data
 
-:warning: **Update: 2 July 2020. This repository is deprecated and will stop being updated from 1 August 2020. Users are encouraged to move to official upstream data sources which are [listed below](https://github.com/tomwhite/covid-19-uk-data#data-sources)** :warning:
+:warning: **Update: 1 August 2020. This repository is deprecated and is no longer updated. Users are encouraged to move to official upstream data sources which are [listed below](https://github.com/tomwhite/covid-19-uk-data#data-sources)** :warning:
 
 Data on numbers of tests, confirmed cases, and deaths for coronavirus (COVID-19) in the UK is published by the government, but it is fragmented and not always provided in consistent or machine-friendly formats. Also, in many cases only the latest numbers are available so it's not possible to look at changes over time.
 
@@ -10,7 +10,7 @@ Ideally the data publishers will start doing this so this site becomes redundant
 
 ## Data files
 
-The following CSV files are available:
+The following CSV files are available (note they are no longer updated):
 
 * [data/covid-19-cases-uk.csv](data/covid-19-cases-uk.csv): daily counts of confirmed cases for (upper tier) local authorities in England, health boards in Scotland and Wales, and local government district for Northern Ireland.
     * Note that prior to 18 March 2020 Wales data was broken down by local authority, not heath board, and prior to 27 March 2020 there were no breakdowns by area for Northern Ireland.
@@ -36,6 +36,7 @@ There is an *experimental* [Datasette instance](https://covid-19-uk-datasette-65
 
 ## News
 
+* 1 August 2020. Retired this repo. See discussion [here](https://github.com/tomwhite/covid-19-uk-data/issues/68).
 * 2 July 2020. PHE started including Pillar 2 data in England confirmed case numbers. This data is now being included in this repository.
 * 1 July 2020. England UTLA confirmed case data is no longer being included since it doesn't have Pillar 2 tests, which make up the vast majority of tests.
 * 1 July 2020. NI data is no longer being included since the (undocumented) backend API changed again, and the NI Department of Health does not provide a machine-readable alternative. (See 2 June 2020 entry below.)

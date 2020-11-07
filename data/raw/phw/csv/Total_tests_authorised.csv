@@ -1,26 +1,28 @@
 Date Authorised,Testing laboratory,Total tests,Newly reported today
-2020-11-05,NHS Wales,617,617
-2020-11-05,Other,4256,4256
-2020-11-04,NHS Wales,3967,3308
-2020-11-04,Other,7362,5004
+2020-11-06,NHS Wales,810,810
+2020-11-06,Other,2690,2690
+2020-11-05,NHS Wales,3924,3307
+2020-11-05,Other,8603,4347
+2020-11-04,NHS Wales,3970,3
+2020-11-04,Other,7377,15
 2020-11-03,NHS Wales,3215,0
-2020-11-03,Other,5905,15
+2020-11-03,Other,5912,7
 2020-11-02,NHS Wales,3101,0
-2020-11-02,Other,5392,18
+2020-11-02,Other,5401,9
 2020-11-01,NHS Wales,3261,0
-2020-11-01,Other,7723,6
+2020-11-01,Other,7723,0
 2020-10-31,NHS Wales,3262,0
-2020-10-31,Other,7948,12
+2020-10-31,Other,7954,6
 2020-10-30,NHS Wales,4028,0
-2020-10-30,Other,7369,2
+2020-10-30,Other,7370,1
 2020-10-29,NHS Wales,3886,0
-2020-10-29,Other,8224,1
+2020-10-29,Other,8225,1
 2020-10-28,NHS Wales,3570,0
 2020-10-28,Other,7895,0
 2020-10-27,NHS Wales,3172,0
 2020-10-27,Other,6135,0
 2020-10-26,NHS Wales,2939,0
-2020-10-26,Other,6377,1
+2020-10-26,Other,6377,0
 2020-10-25,NHS Wales,2907,0
 2020-10-25,Other,7474,0
 2020-10-24,NHS Wales,3822,0
@@ -28,10 +30,10 @@ Date Authorised,Testing laboratory,Total tests,Newly reported today
 2020-10-23,NHS Wales,3856,0
 2020-10-23,Other,8385,0
 2020-10-22,NHS Wales,3768,0
-2020-10-22,Other,9675,0
+2020-10-22,Other,9680,5
 2020-10-21,NHS Wales,3983,0
 2020-10-21,Other,5825,0
-2020-10-20,NHS Wales,3665,1
+2020-10-20,NHS Wales,3665,0
 2020-10-20,Other,6549,0
 2020-10-19,NHS Wales,3384,0
 2020-10-19,Other,7558,0
@@ -40,7 +42,7 @@ Date Authorised,Testing laboratory,Total tests,Newly reported today
 2020-10-17,NHS Wales,4114,0
 2020-10-17,Other,6316,0
 2020-10-16,NHS Wales,3719,0
-2020-10-16,Other,7704,0
+2020-10-16,Other,7745,41
 2020-10-15,NHS Wales,3604,0
 2020-10-15,Other,5810,0
 2020-10-14,NHS Wales,3676,0
@@ -58,7 +60,7 @@ Date Authorised,Testing laboratory,Total tests,Newly reported today
 2020-10-08,NHS Wales,3611,0
 2020-10-08,Other,7474,0
 2020-10-07,NHS Wales,3139,0
-2020-10-07,Other,7762,0
+2020-10-07,Other,7771,9
 2020-10-06,NHS Wales,3330,0
 2020-10-06,Other,6788,0
 2020-10-05,NHS Wales,3002,0
@@ -72,7 +74,7 @@ Date Authorised,Testing laboratory,Total tests,Newly reported today
 2020-10-01,NHS Wales,3689,0
 2020-10-01,Other,7146,0
 2020-09-30,NHS Wales,3825,0
-2020-09-30,Other,7053,0
+2020-09-30,Other,7054,1
 2020-09-29,NHS Wales,2736,0
 2020-09-29,Other,4237,0
 2020-09-28,NHS Wales,3224,0
